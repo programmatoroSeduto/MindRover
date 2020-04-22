@@ -16,6 +16,11 @@
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
     <script src="https://kit.fontawesome.com/f61875768d.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- carosello -->
+    <script src="../js/carousel.js"></script>
 
 </head>
 
@@ -23,7 +28,7 @@
 <body class="bg--fixed" style="background-image: url('../assets/img/home-sfondo.jpg');">
 
     <!-- Carosello iniziale con link alle pagine del sito -->
-    <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash.jpg'); opacity: 0.9;">
+    <div id="carousel" class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash.jpg'); opacity: 0.9;" onclick="changeImg();">
         <div class="splash-body">
             
             <h1 class="splash-body-heading">
@@ -31,11 +36,12 @@
             </h1>
 
             <p class="splash-body-paragraph text-content">
-                mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto. Un comodo sistema composto unicamente da un casco ergonomico, in totale sicurezza. 
+                <span id="splashtext">mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto. Un comodo sistema composto unicamente da un casco ergonomico, in totale sicurezza. </span>
                 <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
             </p>
 
         </div>
+        
     </div>
     
     <!-- Navbar -->
