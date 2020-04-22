@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update profile</title>
+</head>
+<body>
+    <h1>Update Account</h1>
+    
+    <h2>Modifica la tua email</h2>
+    <form method="post" action="../php/update_profile.php">
+        <input type="email" name="email" placeholder="email..."><br>
+        <input type="password" name="password" placeholder="pass..."><br>
+        <input type="submit" value="Cambia Email...">
+    </form>
+
+    <h2>Modifica la tua password</h2>
+    <form method="POST" action="../php/update_profile.php">
+        <input type="email" name="email" placeholder="email..."><br>
+        <input type="password" name="password" placeholder="vecchia password..."><br>
+        <input type="password" name="new_password" placeholder="nuova password..."><br>
+        <input type="password" name="confirm_password" placeholder="conferma nuova password..."><br>
+        <input type="submit" value="Cambia password...">
+    </form>
+
+    <h2>modifica opzioni di profilo</h2>
+    <form method="POST" action="../php/update_profile.php">
+        <input type="text" name="nickname" placeholder="nuovo nickname..."><br>
+        <input type="text" name="firstname" placeholder="nuovo nome..."><br>
+        <input type="text" name="lastname" placeholder="nuovo cognome..."><br>
+        <textarea rows="10" cols="50" name="description" placeholder="descrizione..."></textarea><br>
+        <input type="text" name="status" placeholder="nuovo stato..."><br>
+        <input type="checkbox" name="anonimo" value="true">anonimo?<br>
+        <input type="submit" value="Cambia info di profilo...">
+    </form>
+</body>
+</html>

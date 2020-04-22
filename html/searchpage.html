@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <form action="../php/search_engine.php" method="GET">
+        <input type="text" name="use_interface" value="url" style="display: none;">
+        
+        <ul>
+            <li>
+                <label for="search_type">tipo di ricerca:</label>
+                <select name="search_type">
+                    <option value="article">articoli</option>
+                    <option value="user">utenti</option>
+                    <option value="all">utenti e articoli</option>
+                </select>
+            </li>
+            <li>
+                <input type="checkbox" name="use_all_data" value="1"><label for="use_all_data">ricerca totale</label>
+            </li>
+            <li>
+                <input type="checkbox" name="strict" value="1"><label for="strict">modalità strict</label>
+            </li>
+            <br>
+            <li>
+                <ul>ricerca per articoli:
+                    <li><label for="a_title">titolo articolo:</label><input type="text" name="a_title"></li>
+                    <li><label for="a_tags">lista di tag:</label><input type="text" name="a_tags"></li>
+                    <li><label for="a_content">contenuto dell'articolo:</label><input type="text" name="a_content"></li>
+                    <li><label for="a_min_timestamp">periodo di pubblicazione: da </label><input type="date" name="a_min_timestamp" min="0"><label for="a_max_timestamp"> a </label><input type="date" name="a_max_timestamp"></li>
+                    <li><label for="a_author">nickname autore: </label><input type="text" name="a_author"></li>
+                </ul>
+                <br>
+            </li>
+            <li>
+                <ul>ricerca per utenti:
+                    <li><label for="u_nickname">nickname utente da cercare: </label><input type="text" name="u_nickname"></li>
+                </ul>
+                <br>
+            </li>
+        </ul>
+
+        <input type="submit" value="Search">
+    </form>    
+</body>
+</html>

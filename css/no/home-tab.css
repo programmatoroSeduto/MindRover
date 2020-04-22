@@ -1,0 +1,19 @@
+.tab{
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    /* background-attachment: fixed; */
+    min-height: 300px;
+    margin: 30px;
+    display: grid;
+
+}
+
+.tab-content{
+
+    background-color: rgba(150, 150, 150, 0.485);
+    margin: 10px;
+    color: black;
+
+}

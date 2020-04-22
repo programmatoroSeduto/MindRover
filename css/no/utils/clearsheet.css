@@ -1,0 +1,16 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*
+body {
+    min-height: 100vh;
+}
+*/
+
+p, h1, h2 {
+    margin: 0;
+}

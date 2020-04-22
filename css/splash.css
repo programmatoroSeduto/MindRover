@@ -1,0 +1,53 @@
+/* Contenitore sfondo pagina */
+.splash-container {
+    display: grid;
+    margin: 0;
+    background-color: rgb(255, 248, 220);
+    padding: 6% 4% 8% 7%;
+}
+
+.splash-container * {
+    box-sizing: border-box;
+}
+
+/* Attributi per lo sfondo della pagina */
+.splash-bg-main {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Contenitore sfondo pagina dove scrivere */
+.splash-body {
+    display: block;
+    background-color: transparent;
+    margin: 0;
+    padding: 5% 0 10% 5%;
+    overflow: hidden;
+}
+
+/* Titolo sfondo pagina */
+.splash-body-heading {
+    margin: 0;
+    padding: 80px;
+    padding-top: 10px;
+    padding-left: 0;
+
+    letter-spacing: 10px;
+    color: cornsilk;
+    font-weight: bolder;
+    font-size: 3.3em;
+}
+
+/* Didascalia sotto il titolo */
+.splash-body-paragraph {
+    padding-left: 50px;
+    margin: 0;
+    padding-right: 10%;
+
+    color: cornsilk;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}

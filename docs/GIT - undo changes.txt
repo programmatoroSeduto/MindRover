@@ -1,0 +1,25 @@
+LOCALE add ma no commit:
+-	metti da parte le modifiche per un futuro eventuale riutilizzo, poi annulla le modifiche (ripristinabile)
+		git stash
+	ripristina lo stato iniziale con
+		git stash pop
+		
+-	annullamento modifiche, non reversibile, per un certo file
+		git checkout -- <percorso o singolo file>
+		
+-	annulla tutte le modifiche, ripristina l'ultimo commit, NON REVERSIBILE!
+		git reset --hard
+	
+LOCAL commit:
+-	elimina dalla staging area il file che non va:
+		git reset HEAD <file>
+-	elimina tutto dalla staging area
+		git reset
+-	torna indietro, ma salvando le ultime modifiche:
+		git stash
+-	torna all'ultimo commit:
+		git reset
+		
+COMMIT PRECEDENTE:
+-	ripristinare lo stato dopo un certo commit:
+		git revert <id del commit al quale tornare>

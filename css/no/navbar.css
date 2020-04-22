@@ -1,0 +1,27 @@
+.navbar-container {
+    position: sticky;
+    top: 0;
+    background-color: rgb(143, 40, 29);
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.navbar-right-section {
+    float: right;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.navbar-btn {
+    float: left;
+    text-align: center;
+    padding: 2px;
+    margin-right: 2%;
+    margin-left: 2%;
+
+    line-height: 50px;
+
+    color: cornsilk;
+}

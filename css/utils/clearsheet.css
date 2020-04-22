@@ -1,0 +1,20 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+}
+
+p, h1, h2 {
+    margin: 0;
+}
+
+
+.d {
+font-family: "ganesh", sans-serif;
+}
+
+/* Metodo per i link nel footer */
+.d:hover {
+    color: #8f281d;
+}
