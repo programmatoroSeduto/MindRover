@@ -4,6 +4,8 @@
     margin: 0;
     background-color: rgb(255, 248, 220);
     padding: 6% 4% 8% 7%;
+
+    max-height: 35vh;
 }
 
 .splash-container * {

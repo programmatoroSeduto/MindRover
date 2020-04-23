@@ -1,13 +1,22 @@
-let i=0;
-
-function changeImg()
+function carouselImage(n)
 {
-    let imgs = ['../assets/img/home-splash.jpg', '../assets/img/Alieni.jpg', '../assets/img/Nebulosa.jpg'];
-    let txt = ['mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto. Un comodo sistema composto unicamente da un casco ergonomico, in totale sicurezza. ',
-    'frase stupida 1',
-    'frase stupida 2'];
+    //riferimento a tutti i pannelli nel carosello
+    let panels = $(".splash-carousel-content").children();
+    
+    //nascondi tutti i pannelli
+    panels.css({"display": "none"});
 
-    i = (i + 1) % imgs.length;
-    $('#carousel').css({"background-image":"url(" + imgs[i] + ")"});
-    $('#splashtext').text(txt[i]);
+    //visualizza solo il pannello indicato dal numero
+    let elem = panels.first();
+    for(let i=1; i<=panels.length; i++)
+    {
+        if(i == n)
+        {
+            elem.css({"display": "block"});
+        }
+        else
+        {
+            elem = elem.next();
+        }
+    }
 }
