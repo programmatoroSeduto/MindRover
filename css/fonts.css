@@ -1,4 +1,9 @@
 @font-face {
-    font-family: ganesh;
-    src: url(../assets/font/saira/regular.ttf);
-  }
+  font-family: ganesh;
+  src: url(../assets/font/saira/regular.ttf);
+}
+
+body, html 
+{
+  font-family: "ganesh", sans-serif;
+}

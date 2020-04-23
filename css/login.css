@@ -1,0 +1,63 @@
+.login-bg
+{
+    background-image: url('../assets/img/space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box
+{
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 1em;
+    padding: 5rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.loginform-body
+{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    row-gap: 0.8rem;
+}
+
+.loginform-body input
+{
+    min-width: 25rem;
+    margin-left: 0;
+}
+
+.loginform-submit
+{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.auth-error
+{
+    flex-grow: 2;
+    text-align: center;
+    color: red;
+}
+
+.frog
+{
+    max-width: 15%; 
+    position: absolute; 
+    bottom: 5vh; 
+    right: 4vw;
+}
+
+.register-here
+{
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+}

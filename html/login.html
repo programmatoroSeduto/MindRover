@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link type="text/css" rel="stylesheet" href="../css/fonts.css">
+    <title>Accedi</title>
+</head>
+<body class="login-bg">
+    <!-- <h1>login!</h1>
+    <form action="../php/login.php" method="POST">
+        <input type="email" name="email" placeholder="email...">
+        <input type="password" name="pass" placeholder="password...">
+        <input type="submit" value="Submit">
+    </form>
+    <p>Non ancora registrato? <a href="./registrazione.html"><i>clicca qui!</i></a></p> -->
+    
+    <div class="box">
+        <h1>Login!</h1><br>
+        <form action="../php/login.php" method="POST">
+            <div class="loginform-body">
+                <label for="email">Email: </label><input type="email" name="email">
+                <label for="pass">Password: </label><input type="password" name="pass">
+            </div>
+            <div class="loginform-submit">
+                <input class="submin-button" type="submit" value="Accedi"><span class="auth-error"><b>errore</b> di autenticazione</span>
+            </div>
+        </form>
+        
+        <p class="register-here">Non ancora registrato? <a href="./registrazione.html"><i>clicca qui!</i></a></p>
+    </div>
+
+    <img src="../assets/img/logo.png" class="frog">
+</body>
+</html>
