@@ -15,32 +15,78 @@
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
+    <link type="text/css" rel="stylesheet" href="../css/splash-carousel-style.css">
+
     <script src="https://kit.fontawesome.com/f61875768d.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script src="../js/carousel.js"></script>
+
 </head>
 
 <!-- Sfondo generico della pagina -->
-<body class="bg--fixed" style="background-image: url('../assets/img/home-sfondo.jpg');">
+<body class="bg--fixed" style="background-color: black;">
 
     <!-- Carosello iniziale con link alle pagine del sito -->
-    <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash.jpg');">
-        <div class="splash-body">
-            
-            <h1 class="splash-body-heading">
-                Scopri mindROVER 
-            </h1>
+    <div class="splash-carousel">
+        <div class="splash-carousel-content">
 
-            <p class="splash-body-paragraph text-content">
-                mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto. Un comodo sistema composto unicamente da un casco ergonomico, in totale sicurezza.
-                <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
-            </p>
+        <!-- sezione 1 -->
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash.jpg');">
+                <div class="splash-body">
+                    
+                    <h1 class="splash-body-heading">
+                        Frog Studios
+                    </h1>
+
+                    <p class="splash-body-paragraph text-content">
+                        Benvenuti nel nostro croccantissimo sito. <i>cra cra</i>
+                        <!-- <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a> -->
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- sezione 2 -->
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/alieni.jpg');display: none">
+                <div class="splash-body">
+                    
+                    <h1 class="splash-body-heading">
+                        Scopri mindROVER 
+                    </h1>
+
+                    <p class="splash-body-paragraph text-content">
+                        mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto. Un comodo sistema composto unicamente da un casco ergonomico, in totale sicurezza.
+                        <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- sezione 3 -->
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/nebulosa.jpg');display: none">
+                <div class="splash-body">
+                    
+                    <h1 class="splash-body-heading">
+                        I nostri altri progetti
+                    </h1>
+
+                    <p class="splash-body-paragraph text-content">
+                        tua madre è un'angora... eh?
+                        <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
+                    </p>
+
+                </div>
+            </div>
 
         </div>
-        
+        <div style="text-align:center; position: absolute; bottom: 5%; width: 100%">
+            <span class="dot" onclick="carouselImage(1);"></span>
+            <span class="dot" onclick="carouselImage(2);"></span>
+            <span class="dot" onclick="carouselImage(3);"></span>
+        </div>
     </div>
-    
     <!-- Navbar -->
     <div id="nav-wrapper">
         <nav id="nav">
@@ -62,7 +108,7 @@
     </div>
 
     <!-- Bacheca notizie -->
-    <div>
+    <div style="background-image: url('../assets/img/home-sfondo.jpg');">
         <h1 class="text-content" style="text-align: center; margin-top: 40px; letter-spacing: 10px; font-size: xx-large;">In Evidenza</h1>
         <div class="board-container text-content">
 
