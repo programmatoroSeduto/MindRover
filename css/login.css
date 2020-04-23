@@ -3,6 +3,7 @@
     background-image: url('../assets/img/space.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 0 45px;
 }
 
 .box
@@ -11,7 +12,7 @@
     border-radius: 1em;
     padding: 5rem;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);

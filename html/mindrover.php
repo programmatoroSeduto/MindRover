@@ -1,3 +1,8 @@
+<?php
+session_start();
+$ganesh = "MINDROVER";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,26 +38,21 @@
         </div>
     </div>
     
-    <!-- Navbar -->
-    <div id="nav-wrapper">
-        <nav id="nav">
+<!-- Navbar -->
+<?php
 
-            <a href="../HTML/homepage.html">
-            <div class="nav left">
-                <span class="gradient skew"><h1 class="logo un-skew"><img src="../assets/img/logo2.png" style="width: 350px; height: auto; margin-top: 20px;"></h1></span>
-                <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
-            </div>
-            </a>
-  
-            <div class="nav right">
-                <a href="../HTML/frogstudios.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">CHI SIAMO</span></span></a>
-                <a href="../HTML/mindrover.html" class="nav-link active"><span class="nav-link-span"><span class="u-nav">MINDROVER</span></span></a>
-                <a href="../HTML/crowdfunding.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">CROWDFUNDING</span></span></a>
-                <a href="#log" class="nav-link"><span class="nav-link-span"><span class="u-nav">ACCEDI</span></span></a>
-            </div>
-  
-      </nav>
-    </div>
+require_once('../php/modules/navbar.php');
+
+if(isset($_SESSION['user_id']))
+{
+    get_private_navbar($ganesh);
+}
+else
+{
+    get_public_navbar($ganesh);
+}
+
+?>
 
     <!-- Scheda -->
     <div class="text-container" style="background-image: linear-gradient(to right,rgba(255, 0, 0, 0.30),rgba(0, 4, 255, 0.20)),url('../assets/img/mr-cos.png'); grid-template-columns: 5fr 4fr">

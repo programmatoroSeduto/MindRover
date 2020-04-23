@@ -14,6 +14,7 @@ require_once('./utils/sessionsUtils.php');
 //ricavare e sanificare le informazioni dal client
 $email = "";
 $password = "";
+$error = false;
 
 function verify_data($data)
 {
@@ -29,14 +30,24 @@ function verify_data($data)
 
 if(!($email = verify_data("email")))
 {
-    echo "ERRORE: dato mancante. -> " . "email";
-    die();
+    //echo "ERRORE: dato mancante. -> " . "email";
+    header('location: ../html/login.php?error_email=true');
+    $error = true;
 }
 if(!($password = verify_data("pass")))
 {
-    echo "ERRORE: dato mancante. -> " . "pass";
-    die();
+    //echo "ERRORE: dato mancante. -> " . "pass";
+    if($error)
+    {
+        header('location: ../html/login.php?error_pass=true&error_email=true');
+    }
+    else
+        header('location: ../html/login.php?error_pass=true');
+    $error = true;
 }
+
+//termina lo script in caso di errore
+if($error) /*when table deserves to */die();
 
 //interfacce col database
 $hash = new HashMethods();
@@ -51,8 +62,7 @@ $user_id = $table_credenziali->getId($email, $password);
 if($user_id < 0)
 {
     //errore durante l'accesso
-    echo "<h1>Qualcosa è andato storto durante l'accesso...</h1>";
-    echo '<p>SQL: codice(' . $dbms->errno . ') <i>' . $dbms->error . '</i></p>';
+    header('location: ../html/login.php?error=true');
     die();
 }
 
@@ -60,5 +70,5 @@ if($user_id < 0)
 $password_hash = $hash->getHash($password);
 openSession($user_id, $email, $password, $password_hash, $table_profili, new Donazioni($dbms));
 
-echo "accesso effettuato.";
+header('location: ../html/profiloprivato.php');
 ?>

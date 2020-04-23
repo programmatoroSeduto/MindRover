@@ -1,3 +1,8 @@
+<?php
+session_start();
+$ganesh = "HOMEPAGE";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,25 +92,22 @@
             <span class="dot" onclick="carouselImage(3);"></span>
         </div>
     </div>
-    <!-- Navbar -->
-    <div id="nav-wrapper">
-        <nav id="nav">
 
-            <a href="../HTML/homepage.html">
-                <div class="nav left">
-                <span class="gradient skew"><h1 class="logo un-skew"><img src="../assets/img/logo2.png" style="width: 350px; height: auto; margin-top: 20px;"></h1></span>
-                </div>
-            </a>
-  
-            <div class="nav right">
-                <a href="../HTML/frogstudios.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">CHI SIAMO</span></span></a>
-                <a href="../HTML/mindrover.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">MINDROVER</span></span></a>
-                <a href="../HTML/crowdfunding.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">CROWDFUNDING</span></span></a>
-                <a href="#log" class="nav-link"><span class="nav-link-span"><span class="u-nav">ACCEDI</span></span></a>
-            </div>
-  
-        </nav>
-    </div>
+
+<?php
+
+require_once('../php/modules/navbar.php');
+
+if(isset($_SESSION['user_id']))
+{
+    get_private_navbar($ganesh);
+}
+else
+{
+    get_public_navbar($ganesh);
+}
+
+?>
 
     <!-- Bacheca notizie -->
     <div style="background-image: url('../assets/img/home-sfondo.jpg');">

@@ -14,5 +14,5 @@ session_unset();
 //distruggi la sessione
 session_destroy();
 
-echo "sessione chiusa.";
+header('location: ../html/homepage.php');
 ?>

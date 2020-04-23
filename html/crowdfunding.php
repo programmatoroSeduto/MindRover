@@ -1,3 +1,8 @@
+<?php
+session_start();
+$ganesh = "CROWDFUNDING";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,24 +40,20 @@
     </div>
     
     <!-- Navbar -->
-    <div id="nav-wrapper">
-        <nav id="nav">
+<?php
 
-            <a href="../HTML/homepage.html">
-            <div class="nav left">
-                <span class="gradient skew"><h1 class="logo un-skew"><img src="../assets/img/logo2.png" style="width: 350px; height: auto; margin-top: 20px;"></h1></span>
-            </div>
-            </a>
-  
-            <div class="nav right">
-                <a href="../HTML/frogstudios.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">CHI SIAMO</span></span></a>
-                <a href="../HTML/mindrover.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">MINDROVER</span></span></a>
-                <a href="../HTML/crowdfunding.html" class="nav-link active"><span class="nav-link-span"><span class="u-nav">CROWDFUNDING</span></span></a>
-                <a href="#log" class="nav-link"><span class="nav-link-span"><span class="u-nav">ACCEDI</span></span></a>
-            </div>
-  
-        </nav>
-    </div>
+require_once('../php/modules/navbar.php');
+
+if(isset($_SESSION['user_id']))
+{
+    get_private_navbar($ganesh);
+}
+else
+{
+    get_public_navbar($ganesh);
+}
+
+?>
 
     <!-- Scheda -->
     <div class="text-container" style="background-image: linear-gradient(to left,rgba(163, 22, 22, 0.40),rgba(255, 0, 0, 0.2)),url('../assets/img/crowd-supportaci.jpg'); grid-template-columns: 4fr 4fr">
