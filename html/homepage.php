@@ -38,23 +38,23 @@ $ganesh = "HOMEPAGE";
         <div class="splash-carousel-content">
 
         <!-- sezione 1 -->
-            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash.jpg');">
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash2.jpg');">
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
                         Frog Studios
                     </h1>
 
-                    <p class="splash-body-paragraph text-content">
-                        Benvenuti nel nostro croccantissimo sito. <i>cra cra</i>
-                        <!-- <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a> -->
+                    <p class="splash-body-paragraph text-content text">
+                        Benvenuti nel nostro croccantissimo sito. <i>Cra Cra</i>.
+                        
                     </p>
 
                 </div>
             </div>
 
             <!-- sezione 2 -->
-            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/alieni.jpg');display: none">
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash1.jpg');display: none">
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
@@ -70,11 +70,27 @@ $ganesh = "HOMEPAGE";
             </div>
 
             <!-- sezione 3 -->
-            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/nebulosa.jpg');display: none">
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash3.jpg');display: none">
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
                         I nostri altri progetti
+                    </h1>
+
+                    <p class="splash-body-paragraph text-content">
+                        Scopri i nostri incredibili titoli!
+                        <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- sezione 4 -->
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash4.jpg');display: none">
+                <div class="splash-body">
+                    
+                    <h1 class="splash-body-heading">
+                        Aner Allbe
                     </h1>
 
                     <p class="splash-body-paragraph text-content">
@@ -90,6 +106,7 @@ $ganesh = "HOMEPAGE";
             <span class="dot" onclick="carouselImage(1);"></span>
             <span class="dot" onclick="carouselImage(2);"></span>
             <span class="dot" onclick="carouselImage(3);"></span>
+            <span class="dot" onclick="carouselImage(4);"></span>
         </div>
     </div>
 
@@ -110,9 +127,9 @@ else
 ?>
 
     <!-- Bacheca notizie -->
-    <div style="background-image: url('../assets/img/home-sfondo.jpg');">
-        <h1 class="text-content" style="text-align: center; margin-top: 40px; letter-spacing: 10px; font-size: xx-large;">In Evidenza</h1>
-        <div class="board-container text-content">
+    <div class="text-container" style="background-image: url('../assets/img/home-sfondo.jpg');">
+        <h1 class="text-content" style="text-align: center; margin-top: 20px; margin-bottom: 20px; letter-spacing: 10px; font-size: xx-large;">In Evidenza</h1>
+        <div class="board-container text-content" style="margin: 60px; grid-column-gap: 80px;">
 
             <!-- Notizia 1 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia1.jpg');">
