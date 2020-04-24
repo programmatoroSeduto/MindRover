@@ -9,21 +9,24 @@
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     width: 30%;
-    min-height: 300px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
 }
 
-.tab button 
+.tab button
 {
     display: block;
     background-color: inherit;
     color: black;
-    padding: 22px 16px;
+    /* padding: 30px 15px; */
     width: 100%;
+    flex: 1;
     border: none;
     outline: none;
     text-align: left;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .tab button:hover 
@@ -43,5 +46,5 @@
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
-    height: 300px;
+    height: 380px;
 }

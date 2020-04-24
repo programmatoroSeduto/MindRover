@@ -38,7 +38,7 @@ $ganesh = "HOMEPAGE";
         <div class="splash-carousel-content">
 
         <!-- sezione 1 -->
-            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash2.jpg');">
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash1.jpg');">
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
@@ -54,7 +54,7 @@ $ganesh = "HOMEPAGE";
             </div>
 
             <!-- sezione 2 -->
-            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash1.jpg');display: none">
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash2.jpg');display: none">
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
@@ -63,7 +63,7 @@ $ganesh = "HOMEPAGE";
 
                     <p class="splash-body-paragraph text-content">
                         mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto. Un comodo sistema composto unicamente da un casco ergonomico, in totale sicurezza.
-                        <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
+                        <a href="../HTML/mindrover.php"><i class="d">Scopri di più</i></a>
                     </p>
 
                 </div>
@@ -79,7 +79,7 @@ $ganesh = "HOMEPAGE";
 
                     <p class="splash-body-paragraph text-content">
                         Scopri i nostri incredibili titoli!
-                        <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
+                        <a href="../HTML/mindrover.php"><i class="d">Scopri di più</i></a>
                     </p>
 
                 </div>
@@ -94,19 +94,19 @@ $ganesh = "HOMEPAGE";
                     </h1>
 
                     <p class="splash-body-paragraph text-content">
-                        tua madre è un'angora... eh?
-                        <a href="../HTML/mindrover.html"><i class="d">Scopri di più</i></a>
+                        tua madre è un'angora... puzza di fondo e va a pesce.
+                        <a href="../HTML/mindrover.php"><i class="d">Scopri di più</i></a>
                     </p>
 
                 </div>
             </div>
 
         </div>
-        <div style="text-align:center; position: absolute; bottom: 5%; width: 100%">
-            <span class="dot" onclick="carouselImage(1);"></span>
-            <span class="dot" onclick="carouselImage(2);"></span>
-            <span class="dot" onclick="carouselImage(3);"></span>
-            <span class="dot" onclick="carouselImage(4);"></span>
+        <div class="shiva" style="text-align:center; position: absolute; bottom: 5%; width: 100%">
+            <span class="dot dot-active" onclick="carouselImage(1); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
+            <span class="dot" onclick="carouselImage(2); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
+            <span class="dot" onclick="carouselImage(3); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
+            <span class="dot" onclick="carouselImage(4); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
         </div>
     </div>
 

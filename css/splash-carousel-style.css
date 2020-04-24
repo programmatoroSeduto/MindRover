@@ -11,11 +11,10 @@
 .dot 
 {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
+    height: 10px;
+    width: 150px;
+    margin: 0 15px;
     background-color: cornsilk;
-    border-radius: 50%;
     display: inline-block;
     transition: background-color 0.5s ease;
 }
@@ -27,5 +26,10 @@
 
 .dot:hover 
 {
-    background-color: #717171;
+    background-color: #da4112;
+}
+
+.dot-active
+{
+    background-color: #da4112;
 }

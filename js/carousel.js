@@ -10,9 +10,10 @@ function carouselImage(n)
         carousel_active_panel = carousel_elements_list.first();
     }
     
+    let animDuration = 500;
     //nascondi tutti i pannelli
     //panels.css({"display": "none"});
-    carousel_active_panel.fadeOut(600).css({"display": "none"});
+    carousel_active_panel.fadeOut(animDuration).css({"display": "none"});
 
     //visualizza solo il pannello indicato dal numero
     let elem = carousel_elements_list.first();
@@ -20,7 +21,7 @@ function carouselImage(n)
     {
         if(i == n)
         {
-            elem.fadeIn(600).css({"display": "block"});
+            elem.fadeIn(animDuration).css({"display": "block"});
             carousel_active_panel = elem;
         }
         else
