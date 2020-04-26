@@ -43,15 +43,150 @@ else
         </div>
 
         <div class="panel-container">
-            <div class="tabcontent"></div>
-            <!-- <div class="tabcontent">le tue credenziali</div>
-            <div class="tabcontent">il tuo profilo</div>
-            <div class="tabcontent">le tue donazioni</div> -->
+
+            <div class="tabcontent" style="grid-template-columns: 11fr 8fr; grid-column-gap: 200px; padding: 2%;">
+            
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 2;">
+                        <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
+                        <b style="text-align: center;">Imperatore Genoveffo Peppolesto III</b>
+                    </div>
+
+                </div>
+
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 1;">
+                        genoveffo.peppolesto@truffa.it
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        Hai donato il tumore al pancreas a Luigino il bambino birichino
+                    </div>
+
+                    <div style="flex: 1;">
+                        <img src="../assets/img/logo.png" style="height: auto; width: 100px; border-radius: 50%; background-color: green; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
+                        Bravo! Con la tua donazione ti conferiamo il titolo di BASTARDO!
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="tabcontent" style="grid-template-columns: 11fr 8fr; grid-column-gap: 200px; padding: 2%; display: none;">
+            
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                <div style="flex: 1;">
+                        La tua e-mail:
+                        <br>genoveffo.peppolesto@truffa.it
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        La tua password:
+                        <br> sexypeppone69
+                    </div>
+
+                </div>
+
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 1;">
+                        Modifica e-mail
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        Modifica password
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="tabcontent" style="grid-template-columns: 1fr 4fr 4fr; grid-column-gap: 100px; padding: 2%; display: none;">
+            
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 1;">
+                        <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
+                        La tua immagine di profilo
+                    </div>
+
+                </div>
+
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 1;">
+                        Il tuo nickname:
+                        <br>Imperatore Genoveffo Peppolesto III
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        Il tuo informazione2:
+                        <br>Sas?
+                    </div>
+
+                    <div style="flex: 1;">
+                        Il tuo informazione3:
+                        <br>Callafix?
+                    </div>
+
+                </div>
+
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 1;">
+                        Modifica il tuo nickname
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        Modifica il tuo informazione2
+                    </div>
+
+                    <div style="flex: 1;">
+                        Modifica il tuo informazione3
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tabcontent" style="grid-template-columns: 4fr 4fr; grid-column-gap: 100px; padding: 2%; display: none;">
+            
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 1;">
+                        <img src="../assets/img/logo.png" style="height: auto; width: 300px; border-radius: 50%; background-color: green; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
+                        Il tuo Tier
+                    </div>
+
+                </div>
+
+                <div class="vishnu" style="display: flex; flex-direction: column;">
+
+                    <div style="flex: 1;">
+                        Le tue donazioni:
+                        <br>Codifica donazione1
+                        <br>Codifica donazione2
+                        <br>Codifica donazHai rotto il cazzo, fai una sola donazione.
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        Il Tier su cui ricadi:
+                        <br>Complimenti, sei Tier I! 
+                        <br><a href="../HTML/crowdfunding.html"><i class="d">Clicca qui</i></a> per scoprire tutti i vantaggi!
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="footer-container footer-bg" style="min-height: 270px"> 
+    <div class="footer-container footer-bg" style="min-height: 277px"> 
         <div class="footer-content">
 
             <img src="../assets/img/logo.png" style="width: 6%;">   
