@@ -15,6 +15,9 @@ $ganesh = "ACCOUNT";
     <link type="text/css" rel="stylesheet" href="../css/fonts.css">
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
     <link type="text/css" rel="stylesheet" href="../css/profile_settings_style.css">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- navbar -->
@@ -34,47 +37,50 @@ else
 }
 
 ?>
+
     <div class="settings-container">
         <div class="tab">
-            <button class="tablinks" onclick="">Il tuo profilo</button>
-            <button class="tablinks" onclick="">Le tue credenziali</button>
-            <button class="tablinks" onclick="">Le tue informazioni di profilo</button>
-            <button class="tablinks" onclick="">Le tue donazioni</button>
+            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s1').removeClass('kali').addClass('tabcontent');">Il tuo profilo</button>
+            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s2').removeClass('kali').addClass('tabcontent');">Le tue credenziali</button>
+            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s3').removeClass('kali').addClass('tabcontent');">Le tue informazioni di profilo</button>
+            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s4').removeClass('kali').addClass('tabcontent');">Le tue donazioni</button>
         </div>
 
         <div class="panel-container">
 
-            <div class="tabcontent" style="grid-template-columns: 11fr 8fr; grid-column-gap: 200px; padding: 2%;">
+            <!-- 
+                profilo
+             -->
+            <div class="tabcontent" id="s1" style="grid-template-columns: 5fr 16fr; grid-column-gap: 200px; padding: 2%;">
             
                 <div class="vishnu" style="display: flex; flex-direction: column;">
-
-                    <div style="flex: 2;">
-                        <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
-                        <b style="text-align: center;">Imperatore Genoveffo Peppolesto III</b>
-                    </div>
-
+                    <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);">
+                    <b style="text-align:center">Imperatore Genoveffo Peppolesto III</b>
                 </div>
 
                 <div class="vishnu" style="display: flex; flex-direction: column;">
 
                     <div style="flex: 1;">
-                        genoveffo.peppolesto@truffa.it
+                        Genoveffo Peppolesto
                     </div>
                     
                     <div style="flex: 1;">
-                        Hai donato il tumore al pancreas a Luigino il bambino birichino
+                        genoveffo.peppolesto@truffa.it
                     </div>
 
                     <div style="flex: 1;">
                         <img src="../assets/img/logo.png" style="height: auto; width: 100px; border-radius: 50%; background-color: green; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
-                        Bravo! Con la tua donazione ti conferiamo il titolo di BASTARDO!
+                        Davvero Rospotente, sei Tier I!
                     </div>
 
                 </div>
 
             </div>
             
-            <div class="tabcontent" style="grid-template-columns: 11fr 8fr; grid-column-gap: 200px; padding: 2%; display: none;">
+            <!-- 
+                credenziali 
+            -->
+            <div class="tabcontent kali" id="s2" style="grid-template-columns: 11fr 8fr; grid-column-gap: 200px; padding: 5%;">
             
                 <div class="vishnu" style="display: flex; flex-direction: column;">
 
@@ -104,32 +110,30 @@ else
 
             </div>
             
-            <div class="tabcontent" style="grid-template-columns: 1fr 4fr 4fr; grid-column-gap: 100px; padding: 2%; display: none;">
+            <!--
+                modifica profilo 
+            -->
+            <div class="tabcontent kali" id="s3" style="grid-template-columns: 10fr 9fr 9fr; grid-column-gap: 200px; padding: 2%;">
             
                 <div class="vishnu" style="display: flex; flex-direction: column;">
-
-                    <div style="flex: 1;">
-                        <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
-                        La tua immagine di profilo
-                    </div>
-
+                        <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);">
+                        <b style="text-align:center">La tua immagine di profilo</b>
                 </div>
 
                 <div class="vishnu" style="display: flex; flex-direction: column;">
 
+                    <div style="flex: 1;">
+                        Genoveffo Peppolesto
+                    </div>
+                    
                     <div style="flex: 1;">
                         Il tuo nickname:
                         <br>Imperatore Genoveffo Peppolesto III
                     </div>
-                    
-                    <div style="flex: 1;">
-                        Il tuo informazione2:
-                        <br>Sas?
-                    </div>
 
                     <div style="flex: 1;">
-                        Il tuo informazione3:
-                        <br>Callafix?
+                        La tua bio:
+                        <br>Sono Peppo sono Lesto son Peppolesto Sparalesto!
                     </div>
 
                 </div>
@@ -137,47 +141,62 @@ else
                 <div class="vishnu" style="display: flex; flex-direction: column;">
 
                     <div style="flex: 1;">
-                        Modifica il tuo nickname
+                        Modifica nome e cognome
                     </div>
                     
                     <div style="flex: 1;">
-                        Modifica il tuo informazione2
+                        Modifica nickname
                     </div>
 
                     <div style="flex: 1;">
-                        Modifica il tuo informazione3
+                        Modifica bio
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="tabcontent" style="grid-template-columns: 4fr 4fr; grid-column-gap: 100px; padding: 2%; display: none;">
-            
+            <!-- 
+                donazioni 
+            -->
+            <div class="tabcontent kali" id="s4" style="grid-template-columns: 16fr 5fr; grid-column-gap: 200px; padding: 2%;">
+
                 <div class="vishnu" style="display: flex; flex-direction: column;">
 
-                    <div style="flex: 1;">
-                        <img src="../assets/img/logo.png" style="height: auto; width: 300px; border-radius: 50%; background-color: green; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
-                        Il tuo Tier
-                    </div>
+                    <table>
+                        <tr>
+                            <th>ID Donazione</th>
+                            <th>Somma Donata</th>
+                            <th>Data</th>
+                        </tr>
+                        <tr>
+                            <td>SR909P21</td>
+                            <td>100€</td>
+                            <td>21/7/2020 16:43</td>
+                        </tr>
+                        <tr>
+                            <td>CZ202R43</td>
+                            <td>50€</td>
+                            <td>3/9/2020 6:13</td>
+                        </tr>
+                        <tr>
+                            <td>RZ989Q12</td>
+                            <td>5€</td>
+                            <td>30/10/2020 22:22</td>
+                        </tr>
+                        <tr>
+                            <td>WW212K23</td>
+                            <td>25€</td>
+                            <td>7/12/2020 23:32</td>
+                        </tr>
+                    </table>
+                    <br><b style="text-align:center">Le tue donazioni</b>
 
                 </div>
 
                 <div class="vishnu" style="display: flex; flex-direction: column;">
-
-                    <div style="flex: 1;">
-                        Le tue donazioni:
-                        <br>Codifica donazione1
-                        <br>Codifica donazione2
-                        <br>Codifica donazHai rotto il cazzo, fai una sola donazione.
-                    </div>
-                    
-                    <div style="flex: 1;">
-                        Il Tier su cui ricadi:
-                        <br>Complimenti, sei Tier I! 
-                        <br><a href="../HTML/crowdfunding.html"><i class="d">Clicca qui</i></a> per scoprire tutti i vantaggi!
-                    </div>
-
+                        <img src="../assets/img/logo.png" style="height: auto; width: 300px; border-radius: 50%; background-color: green; border: 1.5px solid rgba(0, 0, 0, 0.8);">
+                        <b style="text-align:center">Il tuo Tier</b>
                 </div>
 
             </div>
@@ -186,7 +205,7 @@ else
     </div>
 
     <!-- Footer -->
-    <div class="footer-container footer-bg" style="min-height: 277px"> 
+    <div class="footer-container footer-bg" style="min-height: 207px"> 
         <div class="footer-content">
 
             <img src="../assets/img/logo.png" style="width: 6%;">   
@@ -202,5 +221,12 @@ else
         </div>
     </div>
     
+
+    <script>
+
+
+
+    </script>
+
 </body>
 </html>
