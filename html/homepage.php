@@ -102,6 +102,7 @@ $ganesh = "HOMEPAGE";
             </div>
 
         </div>
+        
         <div class="shiva" style="text-align:center; position: absolute; bottom: 5%; width: 100%">
             <span class="dot dot-active" onclick="carouselImage(1); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
             <span class="dot" onclick="carouselImage(2); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
@@ -128,7 +129,7 @@ else
 
     <!-- Bacheca notizie -->
     <div class="text-container" style="background-image: url('../assets/img/home-sfondo.jpg');">
-        <h1 class="text-content" style="text-align: center; margin-top: 20px; margin-bottom: 20px; letter-spacing: 10px; font-size: xx-large;">In Evidenza</h1>
+        <h1 class="news">In Evidenza</h1>
         <div class="board-container text-content" style="margin: 60px; grid-column-gap: 80px;">
 
             <!-- Notizia 1 -->
@@ -141,14 +142,14 @@ else
             <!-- Notizia 2 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia2.jpg');">
                 <div class="card-content">
-                    Il free roaming in mindROVER: ci si stancherà davvero a "immaginare" di camminare per la mappa?
+                    Il free roaming e mindROVER
                 </div>
             </div>
 
             <!-- Notizia 3 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia3.jpg');">
                 <div class="card-content">
-                    Come il retrogaming ha influenzato mindROVER
+                    Aggiornamenti su Golarion© e Toad of Duty©
                 </div>
             </div>
 
@@ -170,7 +171,7 @@ else
         <div class="text-content">
             Frog Studios è una famiglia, e anche voi da casa potete far parte del nostro team. 
             Supportaci oggi stesso, ottenendo una vasta gamma di vantaggi e accessi anticipati ed esclusivi a mindROVER! 
-            <a href="../HTML/crowdfunding.html"><i class="d">Scopri di più</i></a>
+            <a href="../HTML/crowdfunding.php"><i class="d">Scopri di più</i></a>
         </div>
     </div>
 
@@ -185,7 +186,7 @@ else
         <div class="text-content">
             Pensi di avere quel che serve per portare grosse novità nel team Frog Studios? Facci subito sapere le tue abilità! 
             Frog Studios è sempre alla ricerca di nuove menti per i suoi ranghi! 
-            <a href="../HTML/frogstudios.html"><i class="d">Scopri di più</i></a>
+            <a href="../HTML/frogstudios.php"><i class="d">Scopri di più</i></a>
         </div>
 
         <h1 class="title">

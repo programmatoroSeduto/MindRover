@@ -31,7 +31,6 @@ if(isset($_SESSION['user_id']))
 }
 else
 {
-    //get_public_navbar($ganesh);
     header('location: ../html/login.php');
     die();
 }
@@ -39,26 +38,49 @@ else
 ?>
 
     <div class="settings-container">
+
+        <!-- 
+            Aggiornamento barra
+        -->
+        <script>
+            function activator(panel_tag, but)
+            {
+
+                $('.panel-container').children().addClass('kali');
+                $('.tab').children().removeClass('active');
+
+                $(panel_tag).removeClass('kali').addClass('tabcontent');
+                $(but).addClass('active');
+
+            }
+        </script>
+
+        <!-- 
+            Barra sinistra
+        -->
         <div class="tab">
-            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s1').removeClass('kali').addClass('tabcontent');">Il tuo profilo</button>
-            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s2').removeClass('kali').addClass('tabcontent');">Le tue credenziali</button>
-            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s3').removeClass('kali').addClass('tabcontent');">Le tue informazioni di profilo</button>
-            <button class="tablinks" onclick="$('.panel-container').children().addClass('kali'); $('#s4').removeClass('kali').addClass('tabcontent');">Le tue donazioni</button>
+            <button class="tablinks active" onclick="activator('#s1', this);">Il tuo profilo</button>
+            <button class="tablinks" onclick="activator('#s2', this);">Le tue credenziali</button>
+            <button class="tablinks" onclick="activator('#s3', this);">Le tue informazioni di profilo</button>
+            <button class="tablinks" onclick="activator('#s4', this);">Le tue donazioni</button>
         </div>
 
+        <!-- 
+            Barra destra
+        -->
         <div class="panel-container">
 
             <!-- 
                 profilo
              -->
-            <div class="tabcontent" id="s1" style="grid-template-columns: 5fr 16fr; grid-column-gap: 200px; padding: 2%;">
+            <div class="tabcontent" id="s1" style="grid-template-columns: 5fr 16fr;">
             
-                <div class="vishnu" style="display: flex; flex-direction: column;">
-                    <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);">
+                <div class="vishnu">
+                    <img src="../assets/img/ronin.png" class="brahma-profile">
                     <b style="text-align:center">Imperatore Genoveffo Peppolesto III</b>
                 </div>
 
-                <div class="vishnu" style="display: flex; flex-direction: column;">
+                <div class="vishnu">
 
                     <div style="flex: 1;">
                         Genoveffo Peppolesto
@@ -69,8 +91,8 @@ else
                     </div>
 
                     <div style="flex: 1;">
-                        <img src="../assets/img/logo.png" style="height: auto; width: 100px; border-radius: 50%; background-color: green; border: 1.5px solid rgba(0, 0, 0, 0.8);"><br>
-                        Davvero Rospotente, sei Tier I!
+                        <img src="../assets/img/logo.png" class="brahma-tier" style="width: 100px;">
+                        <br>Davvero Rospotente, sei Tier I!
                     </div>
 
                 </div>
@@ -80,23 +102,23 @@ else
             <!-- 
                 credenziali 
             -->
-            <div class="tabcontent kali" id="s2" style="grid-template-columns: 11fr 8fr; grid-column-gap: 200px; padding: 5%;">
+            <div class="tabcontent kali" id="s2" style="grid-template-columns: 11fr 8fr;">
             
-                <div class="vishnu" style="display: flex; flex-direction: column;">
+                <div class="vishnu">
 
-                <div style="flex: 1;">
+                    <div style="flex: 1;">
                         La tua e-mail:
                         <br>genoveffo.peppolesto@truffa.it
                     </div>
                     
                     <div style="flex: 1;">
                         La tua password:
-                        <br> sexypeppone69
+                        <br>sexypeppone69
                     </div>
 
                 </div>
 
-                <div class="vishnu" style="display: flex; flex-direction: column;">
+                <div class="vishnu">
 
                     <div style="flex: 1;">
                         Modifica e-mail
@@ -113,14 +135,14 @@ else
             <!--
                 modifica profilo 
             -->
-            <div class="tabcontent kali" id="s3" style="grid-template-columns: 10fr 9fr 9fr; grid-column-gap: 200px; padding: 2%;">
+            <div class="tabcontent kali" id="s3" style="grid-template-columns: 10fr 9fr 9fr;">
             
-                <div class="vishnu" style="display: flex; flex-direction: column;">
-                        <img src="../assets/img/ronin.png" style="height: auto; width: 300px; border-radius: 50%; background-color: red; border: 1.5px solid rgba(0, 0, 0, 0.8);">
-                        <b style="text-align:center">La tua immagine di profilo</b>
+                <div class="vishnu">
+                    <img src="../assets/img/ronin.png" class="brahma-profile">
+                    <b style="text-align:center">La tua immagine di profilo</b>
                 </div>
 
-                <div class="vishnu" style="display: flex; flex-direction: column;">
+                <div class="vishnu">
 
                     <div style="flex: 1;">
                         Genoveffo Peppolesto
@@ -138,7 +160,7 @@ else
 
                 </div>
 
-                <div class="vishnu" style="display: flex; flex-direction: column;">
+                <div class="vishnu">
 
                     <div style="flex: 1;">
                         Modifica nome e cognome
@@ -159,9 +181,9 @@ else
             <!-- 
                 donazioni 
             -->
-            <div class="tabcontent kali" id="s4" style="grid-template-columns: 16fr 5fr; grid-column-gap: 200px; padding: 2%;">
+            <div class="tabcontent kali" id="s4" style="grid-template-columns: 16fr 5fr;">
 
-                <div class="vishnu" style="display: flex; flex-direction: column;">
+                <div class="vishnu">
 
                     <table>
                         <tr>
@@ -194,9 +216,9 @@ else
 
                 </div>
 
-                <div class="vishnu" style="display: flex; flex-direction: column;">
-                        <img src="../assets/img/logo.png" style="height: auto; width: 300px; border-radius: 50%; background-color: green; border: 1.5px solid rgba(0, 0, 0, 0.8);">
-                        <b style="text-align:center">Il tuo Tier</b>
+                <div class="vishnu">
+                    <img src="../assets/img/logo.png" class="brahma-tier">
+                    <b style="text-align:center">Il tuo Tier</b>
                 </div>
 
             </div>
@@ -205,7 +227,7 @@ else
     </div>
 
     <!-- Footer -->
-    <div class="footer-container footer-bg" style="min-height: 207px"> 
+    <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
             <img src="../assets/img/logo.png" style="width: 6%;">   
@@ -220,13 +242,6 @@ else
             
         </div>
     </div>
-    
-
-    <script>
-
-
-
-    </script>
 
 </body>
 </html>
