@@ -134,7 +134,7 @@ if($id_profilo === -1)
 }
 
 //registrazione dei dati di profilo
-$table_profili->createAccount($id_profilo, $nickname, $firstname, $lastname);
+$table_profili->createAccount($id_profilo, $nickname, $firstname, $lastname /* GENERARE LE INFO SULLE IMMAGINI DI PROFILO! */);
 
 //registrazione completata con successo; ora, fai qualcosa
 echo 'registrazione completata.';

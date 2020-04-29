@@ -62,6 +62,7 @@ class ProfiliUtenti
                 flag_anonimo BOOLEAN NOT NULL DEFAULT false,
                 flag_autore BOOLEAN NOT NULL DEFAULT false,
                 flag_supporter BOOLEAN NOT NULL DEFAULT false,
+                id_img_profilo INT NOT NULL DEFAULT 0,
                 PRIMARY KEY (id_utente),
                 FOREIGN KEY (id_utente) REFERENCES credenziali_utenti(id)
             );';
@@ -493,6 +494,66 @@ class ProfiliUtenti
 
         return $this->dbms->errno;
     }
+
+    //imposta una certa immagine di profilo
+    function setProfileImg($user_id, $img_id)
+    {
+        if(!$this->table_exists) return -1;
+
+        $query = 'UPDATE ' . self::TABLE_NAME . ' SET id_img_profilo = ? WHERE id_utente = ? ;';
+
+        $dbms_op = $this->dbms->prepare($query);
+        if(!$dbms_op->bind_param("ii", $img_id, $user_id))
+        {
+            return $this->dbms->errno;
+        }
+        $dbms_op->execute();
+
+        return $this->dbms->errno;
+    }
+
+    //ritorna l'immagine di profilo di un certo utente
+    /*
+        ritorna id dell'immagine di profilo scelta
+        o -1 nel caso ci fossero problemi
+    */
+    function getProfileImg($user_id)
+    {
+        $data = $this->getProfileDataById($user_id);
+
+        if(!$data) return -1;
+        else return  $data['id_img_profilo'];
+    }
+
+    /*
+    //imposta un colore del banner
+    function setBannerColor($r, $g, $b)
+    {
+        if(!$this->table_exists) return -1;
+
+        $query = 'UPDATE ' . self::TABLE_NAME . ' SET colore_banner = ? WHERE id_utente = ? ;';
+
+        $banner_color = implode(",", array($r, $g, $b));
+        $dbms_op = $this->dbms->prepare($query);
+        if(!$dbms_op->bind_param("ii", $banner_color, $user_id))
+        {
+            return $this->dbms->errno;
+        }
+        $dbms_op->execute();
+
+        return $this->dbms->errno;
+    }
+
+    //ritorna il colore del banner in formato rgb
+    function getBannerColor($user_id)
+    {
+        $data = $this->getProfileDataById($user_id);
+        if(!$data) return null;
+
+        $rgb = explode(",", $data['colore_banner']);
+        return $rgb;
+    }
+    */
 }
 
 ?>

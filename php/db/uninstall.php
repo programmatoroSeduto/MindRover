@@ -73,6 +73,8 @@ else
     echo 'la tabella non esiste. <br>';
 }
 
+/* ELIMINARE TABELLA IMMAGINI */
+
 echo '>> --- Tabelle del database eliminate. --- <<';
 
 //chiusura connessione
