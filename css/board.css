@@ -1,5 +1,6 @@
 /* Contenitore per le carte */
-.board-container{
+.board-container
+{
 background-color: transparent;
 display: grid;
 grid-template-columns: repeat(3,1fr);
@@ -10,7 +11,8 @@ margin: 110px;
 }
 
 /* Contenitore della singola carta */
-.card{
+.card
+{
 background-color: rgb(143, 40, 29);
 flex: 1;
 transition: .5s ease;
@@ -23,30 +25,35 @@ display: grid;
 }
 
 /* Contenuto della singola carta */
-.card-content{
+.card-content
+{
 margin: 20px;  
 font-size: medium;
 }
 
 /* Metodo per mostrare un contenuto nascosto con hover */
-.card-content:hover{
+.card-content:hover
+{
     opacity: 1;
 }
 
 /* Metodo per nascondere il contenuto */
-.ganesh{
+.ganesh
+{
     opacity: 0;
     transition: .5s ease;
     background-color: rgb(143, 40, 29);
 }
 
 /* Metodo per aggiungere attributi utili alle carte dei tier in crowdfunding */
-.tier{
+.tier
+{
     background-color: rgb(143, 40, 29);
     background-repeat: no-repeat;
 }
 
 /* Metodo per le schede delle notizie in homepage */
-.news:hover{
+.news:hover
+{
     background-size: 110% 110%;
 }

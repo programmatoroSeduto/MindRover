@@ -24,12 +24,23 @@
     position: relative;
 }
 
+/* Hover per i rettangoli navigazione carosello */
 .dot:hover 
 {
     background-color: #da4112;
 }
 
+/* Modificatore "active" per i rettangoli navigazione carosello */
 .dot-active
 {
     background-color: #da4112;
+}
+
+/* Attributi per il posizionamento dei rettangoli navigazione carosello */
+.dot-position
+{
+    text-align: center; 
+    position: absolute; 
+    bottom: 5%; 
+    width: 100%
 }

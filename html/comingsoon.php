@@ -1,3 +1,8 @@
+<?php
+session_start();
+$ganesh = "COMINGSOON";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frog Studios</title>
  
+    <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
     <link type="text/css" rel="stylesheet" href="../css/utils/bg.css">
     <link type="text/css" rel="stylesheet" href="../css/splash.css">
@@ -13,15 +19,10 @@
     <link type="text/css" rel="stylesheet" href="../css/containers.css">
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/board.css">
-    <style>
-        .sticky-element {
-            position: sticky;
-            top: 0;
-            background-color: yellow;
-        }
-    </style>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
     <!-- Immagine iniziale pagina -->
@@ -40,39 +41,34 @@
         </div>
     </div>
 
-    <!-- Navbar -->
-    <div id="nav-wrapper">
-        <nav id="nav">
+<!-- Navbar -->
+<?php
 
-            <a href="../HTML/homepage.html">
-            <div class="nav left">
-                <span class="gradient skew"><h1 class="logo un-skew"><img src="../assets/img/logo2.png" style="width: 350px; height: auto; margin-top: 20px;"></h1></span>
-                <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
-            </div>
-            </a>
-  
-            <div class="nav right">
-                <a href="../HTML/frogstudios.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">CHI SIAMO</span></span></a>
-                <a href="../HTML/mindrover.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">MINDROVER</span></span></a>
-                <a href="../HTML/crowdfunding.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">CROWDFUNDING</span></span></a>
-                <a href="#log" class="nav-link"><span class="nav-link-span"><span class="u-nav">ACCEDI</span></span></a>
-            </div>
-  
-        </nav>
-    </div>
+require_once('../php/modules/navbar.php');
+
+if(isset($_SESSION['user_id']))
+{
+    get_private_navbar($ganesh);
+}
+else
+{
+    get_public_navbar($ganesh);
+}
+
+?>
 
     <!-- Footer -->
-    <div class="footer-container footer-bg">
+    <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
-            <img src="../assets/img/logo.png" style="width: 6%;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="width: 4%;">
+            <img src="../assets/img/logo.png" style="height: 11vh;">   
+            <img src="../assets/img/unige.png" alt="Unige" style="height: 10vh;">
             <i class="fab fa-facebook-square d"></i>
             <i class="fab fa-youtube d"></i>
             <i class="fab fa-instagram d"></i>
             <i class="fas fa-envelope d"></i>
             <br>
-            <span style="font-size: 12px; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
+            <span style="font-size: 0.8rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
             Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
             
         </div>

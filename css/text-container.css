@@ -1,5 +1,6 @@
 /* Contenitore per la singola scheda */
-.text-container{
+.text-container
+{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -10,7 +11,8 @@
 }
 
 /* Contenuto della singola scheda */
-.text-content{
+.text-content
+{
   text-align: justify;
   color: whitesmoke;
   font-size: large;
@@ -18,17 +20,18 @@
   text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
-.text-container:hover{
+.text-container:hover
+{
     background-color: #8f281d;
 }
 
 /* Titolo della singola scheda */
-.title{
+.title
+{
   margin: 0;
   padding: 80px;
   padding-top: 10px;
   padding-left: 0;
-
   letter-spacing: 10px;
   color: cornsilk;
   font-weight: bolder;
@@ -38,7 +41,8 @@
 }
 
 /* "In evidenza" */
-.news{
+.news
+{
   text-align: center; 
   margin-top: 20px; 
   margin-bottom: 20px; 
@@ -50,26 +54,31 @@
 }
 
 /* Sriscia tra schede */
-.split{
-    background-color: whitesmoke; 
-    text-align: center; 
-    color: #da4112; 
-    padding: 1%;
+.split
+{
+  background-color: whitesmoke; 
+  text-align: center; 
+  color: #da4112; 
+  padding: 1%;
 }
 
-/* Metodi per i link */
-a:link {
-    text-decoration: none;
-  } 
+/* Metodi per normalizzare i link */
+a:link 
+{
+  text-decoration: none;
+} 
  
-  a:visited {
-    text-decoration: none;
-  }
+a:visited 
+{
+  text-decoration: none;
+}
   
-  a:hover {
-    text-decoration: none;
-  }
+a:hover 
+{
+  text-decoration: none;
+}
   
-  a:active {
-    text-decoration: none;
-  }
+a:active 
+{
+  text-decoration: none;
+}

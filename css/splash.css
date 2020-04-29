@@ -1,10 +1,10 @@
 /* Contenitore sfondo pagina */
-.splash-container {
+.splash-container 
+{
     display: grid;
     margin: 0;
     background-color: rgb(255, 248, 220);
     padding: 6% 4% 8% 7%;
-
     max-height: 45vh;
 }
 
@@ -13,7 +13,8 @@
 }
 
 /* Attributi per lo sfondo della pagina */
-.splash-bg-main {
+.splash-bg-main 
+{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -21,7 +22,8 @@
 }
 
 /* Contenitore sfondo pagina dove scrivere */
-.splash-body {
+.splash-body 
+{
     display: block;
     background-color: transparent;
     margin: 0;
@@ -30,12 +32,12 @@
 }
 
 /* Titolo sfondo pagina */
-.splash-body-heading {
+.splash-body-heading 
+{
     margin: 0;
     padding: 80px;
     padding-top: 10px;
     padding-left: 0;
-
     letter-spacing: 10px;
     color: cornsilk;
     font-weight: bolder;
@@ -43,11 +45,11 @@
 }
 
 /* Didascalia sotto il titolo */
-.splash-body-paragraph {
+.splash-body-paragraph 
+{
     padding-left: 50px;
     margin: 0;
     padding-right: 10%;
-
     color: cornsilk;
     font-size: 1.1rem;
     letter-spacing: 1px;

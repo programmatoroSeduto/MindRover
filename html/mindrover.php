@@ -9,7 +9,8 @@ $ganesh = "MINDROVER";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mindROVER</title>
- 
+
+    <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
     <link type="text/css" rel="stylesheet" href="../css/utils/bg.css">
     <link type="text/css" rel="stylesheet" href="../css/splash.css">
@@ -19,6 +20,8 @@ $ganesh = "MINDROVER";
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -147,16 +150,16 @@ else
    <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
-            <img src="../assets/img/logo.png" style="width: 6%;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="width: 4%;">
+            <img src="../assets/img/logo.png" style="height: 11vh;">   
+            <img src="../assets/img/unige.png" alt="Unige" style="height: 10vh;">
             <i class="fab fa-facebook-square d"></i>
             <i class="fab fa-youtube d"></i>
             <i class="fab fa-instagram d"></i>
             <i class="fas fa-envelope d"></i>
             <br>
-            <span style="font-size: 12px; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
+            <span style="font-size: 0.8rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
             Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
-        
+            
         </div>
     </div>
 

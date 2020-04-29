@@ -14,137 +14,7 @@ $ganesh = "ACCOUNT";
     <link type="text/css" rel="stylesheet" href="../css/nav.css">
     <link type="text/css" rel="stylesheet" href="../css/fonts.css">
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
-    <!-- <link type="text/css" rel="stylesheet" href="../css/profile_settings_style.css"> -->
-    <style>
-        /** file profile_settings_style.css */
-
-        .settings-container *
-        {
-            box-sizing: border-box;
-        }
-
-        /* Barra sinistra */
-        .tab 
-        {
-            float: left;
-            border: 1px solid black;
-            background-color: whitesmoke;
-            width: 20%;
-            height: 75.5vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Bottoni barra sinistra */
-        .tab button
-        {
-            display: block;
-            background-color: inherit;
-            color: #da4112;
-            width: 100%;
-            height: 5rem;
-            /* flex: 1; */
-            border: none;
-            outline: none;
-            text-align: left;
-            cursor: pointer;
-            transition: 0.5s;
-            font-family: "ganesh", sans-serif;
-            text-transform: uppercase;
-            font-size: medium;
-            padding-left: 3%;
-        }
-
-        .tab button:hover 
-        {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .tab button.active 
-        {
-            background: linear-gradient(45deg, #8f281d, #da4112);
-            color: whitesmoke;
-        }
-
-        /* Barra destra */
-        .tabcontent 
-        {
-            float: left;
-            padding: 4%;
-            border: 1px solid #000000;
-            width: 80%;
-            background-color: whitesmoke;
-            border-left: none;
-            height: 75.5vh;
-            display: grid;
-            grid-column-gap: 200px;
-            overflow: auto;
-        }
-
-        .table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        
-        td, th {
-            border: 1px solid #000000;
-            text-align: left;
-            padding: 8px;
-        }
-        
-        tr:nth-child(even) {
-            background-color: cornsilk;
-        }
-
-        tr:nth-child(odd) {
-            background-color: whitesmoke;
-        }
-
-        /* Metodo per nascondere le schede della barra sinistra */
-        .kali{
-
-            display: none;
-        }
-
-        /* Immagine di profilo */
-        .brahma-profile
-        {
-            background: linear-gradient(45deg, #da4112, #00dddd);
-            height: auto; 
-            width: 300px; 
-            border-radius: 50%; 
-            border: 1.5px solid rgba(0, 0, 0, 0.8);
-        }
-
-        /* Immagine di tier */
-        .brahma-tier
-        {
-            background: linear-gradient(90deg, #da4112, #fff8dc);
-            height: auto; 
-            width: 300px; 
-            border-radius: 50%; 
-            border: 1.5px solid rgba(0, 0, 0, 0.8);
-        }
-
-        /* Incolonnamento barra destra */
-        .vishnu
-        {
-            display: flex; 
-            flex-direction: column;
-        }
-
-        /** file footer.css */
-        .footer-container-18-vh
-        {
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            min-height: 18vh;
-            background-color: rgb(0, 0, 0);   
-            display: grid; 
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="../css/profile_settings_style.css">
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -167,17 +37,6 @@ else
 
 ?>
 
-    <div style="background-color: darkslateblue; min-height: 35vh; display: grid; grid-template-columns: 3fr 7fr;">
-        <div style="display: grid; margin: auto;">
-            <!-- click: seleziona altra immagine di profilo -->
-            <!-- hover: overlay trasparente sull'immagine, compare il tasto per selezionare la nuova immagine di profilo -->
-            <img src="../assets/img/ronin.png" class="brahma-profile" style="width: 30vh;"></img>
-        </div>
-        <div style="padding-left: 5vw; ">
-            <h1 style="line-height: 15vh;">Imperatore Genoveffo Peppolesto III</h1>
-            <p>Sono Peppo sono Lesto son Peppolesto Sparalesto!</p>
-        </div>
-    </div>
     <div class="settings-container">
 
         <!-- 
@@ -204,8 +63,6 @@ else
             <button class="tablinks" onclick="activator('#s2', this);">Le tue credenziali</button>
             <button class="tablinks" onclick="activator('#s3', this);">Le tue informazioni di profilo</button>
             <button class="tablinks" onclick="activator('#s4', this);">Le tue donazioni</button>
-            <button class="tablinks" onclick="activator('#s5', this);">I miei articoli</button>
-            <button class="tablinks" onclick="activator('#s6', this);">Scrivi un articolo...</button>
         </div>
 
         <!-- 
@@ -216,9 +73,8 @@ else
             <!-- 
                 profilo
              -->
-            <div class="tabcontent" id="s1">
+            <div class="tabcontent" id="s1" style="grid-template-columns: 5fr 16fr;">
             
-                <!--
                 <div class="vishnu">
                     <img src="../assets/img/ronin.png" class="brahma-profile">
                     <b style="text-align:center">Imperatore Genoveffo Peppolesto III</b>
@@ -239,22 +95,6 @@ else
                         <br>Davvero Rospotente, sei Tier I!
                     </div>
 
-                </div>
-                -->
-
-                <!-- informazioni  -->
-                <div style="padding-left:5vw; display:grid; grid-template-columns: 2fr 1fr; max-height: 50vh; width: 100%;">
-                    <div>Iscritto da: </div><div>16/09/2019 23:44</div>
-                    <div>Email: </div><div>e.mail@mail.it</div>
-                    <div> --------------- </div><div> --------------- </div>
-                    <div>Nickname: </div><div>nickname</div>
-                    <div>Nome e cognome: </div><div>Firstname Lastname</div>
-                    <div>Anonimo? </div><div>X</div>
-                    <div>Autore? </div><div>X</div>
-                    <div>Supporter?</div><div>X</div>
-                    <div>Quante donazioni hai fatto: </div><div>23</div>
-                    <div>Quanto hai donato: </div><div>100.000.000,00 €</div>
-                    <div>Posizione classifica supporter: </div><div><b>n° 23</b></div>
                 </div>
 
             </div>
@@ -383,20 +223,11 @@ else
 
             </div>
 
-            <!-- i miei articoli -->
-            <div class="tabcontent kali" id="s5">
-                i miei articoli
-            </div>
-            
-            <!-- scrivi un articolo -->
-            <div class="tabcontent kali" id="s6">
-                scrivi un articolo
-            </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="footer-container-18-vh footer-bg"> 
+    <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
             <img src="../assets/img/logo.png" style="width: 6%;">   

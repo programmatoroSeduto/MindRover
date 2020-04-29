@@ -10,6 +10,7 @@ $ganesh = "CHI SIAMO";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frog Studios</title>
  
+    <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
     <link type="text/css" rel="stylesheet" href="../css/utils/bg.css">
     <link type="text/css" rel="stylesheet" href="../css/splash.css">
@@ -19,6 +20,8 @@ $ganesh = "CHI SIAMO";
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -65,7 +68,7 @@ else
             videogiochi: giocarci è un conto, programmarli è ben altra storia. 
             <br><br>Sono anni che lavoriamo a progetti come Toad of Duty e 
             Golarion, in tutta segretezza, mostrandoci al Mondo solamente da qualche anno e in pompa magna, con l’annuncio del nostro 
-            ambizioso ed unico progetto, il mindROVER. Se non sai ancora di cosa stiamo parlando, clicca <a href="../HTML/mindrover.html"><i class="d">qui</i></a>.
+            ambizioso ed unico progetto, il mindROVER. Se non sai ancora di cosa stiamo parlando, clicca <a href="../HTML/mindrover.php"><i class="d">qui</i></a>.
         </div>
         
     </div>
@@ -106,7 +109,7 @@ else
             Insomma, amiamo definirci giocatori con qualche skill in più, piuttosto che dei programmatori rigorosi e distanti da voi. 
             La nostra passione arde ancora in noi, e siamo sempre alla ricerca di qualcuno con i nostri stessi ideali. Se dovessi
             rientrare in questa categoria di persone, non esitare a cliccare
-            <a href="../HTML/comingsoon.html"><i class="d">qui</i></a>.
+            <a href="../HTML/comingsoon.php"><i class="d">qui</i></a>.
             <br><br>Questo è quello che siamo, quello a cui puntiamo e quello che non vogliamo mai perdere di vista.
         </div>
         
@@ -120,14 +123,15 @@ else
     <!-- Footer -->
     <div class="footer-container footer-bg"> 
         <div class="footer-content">
-            <img src="../assets/img/logo.png" style="width: 6%;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="width: 4%;">
+
+            <img src="../assets/img/logo.png" style="height: 11vh;">   
+            <img src="../assets/img/unige.png" alt="Unige" style="height: 10vh;">
             <i class="fab fa-facebook-square d"></i>
             <i class="fab fa-youtube d"></i>
             <i class="fab fa-instagram d"></i>
             <i class="fas fa-envelope d"></i>
             <br>
-            <span style="font-size: 12px; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
+            <span style="font-size: 0.8rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
             Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
             
         </div>

@@ -10,7 +10,8 @@ $ganesh = "HOMEPAGE";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
- 
+
+    <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
     <link type="text/css" rel="stylesheet" href="../css/utils/bg.css">
     <link type="text/css" rel="stylesheet" href="../css/splash.css">
@@ -22,7 +23,9 @@ $ganesh = "HOMEPAGE";
     <link type="text/css" rel="stylesheet" href="../css/board.css">
     <link type="text/css" rel="stylesheet" href="../css/splash-carousel-style.css">
 
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f61875768d.js" crossorigin="anonymous"></script>
+
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -70,7 +73,7 @@ $ganesh = "HOMEPAGE";
             </div>
 
             <!-- sezione 3 -->
-            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash3.jpg');display: none">
+            <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/home-splash3.jpg'); display: none">
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
@@ -103,15 +106,15 @@ $ganesh = "HOMEPAGE";
 
         </div>
         
-        <div class="shiva" style="text-align:center; position: absolute; bottom: 5%; width: 100%">
+        <div class="dot-position">
             <span class="dot dot-active" onclick="carouselImage(1); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
-            <span class="dot" onclick="carouselImage(2); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
-            <span class="dot" onclick="carouselImage(3); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
-            <span class="dot" onclick="carouselImage(4); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
+            <span class="dot" onclick="carouselImage(2); $('.dot-position').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
+            <span class="dot" onclick="carouselImage(3); $('.dot-position').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
+            <span class="dot" onclick="carouselImage(4); $('.dot-position').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
         </div>
     </div>
 
-
+<!-- Navbar -->
 <?php
 
 require_once('../php/modules/navbar.php');
@@ -130,6 +133,7 @@ else
     <!-- Bacheca notizie -->
     <div class="text-container" style="background-image: url('../assets/img/home-sfondo.jpg');">
         <h1 class="news">In Evidenza</h1>
+
         <div class="board-container text-content" style="margin: 60px; grid-column-gap: 80px;">
 
             <!-- Notizia 1 -->
@@ -154,6 +158,7 @@ else
             </div>
 
         </div>
+
     </div>
 
     <!-- Striscia tra schede -->
@@ -205,14 +210,14 @@ else
     <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
-            <img src="../assets/img/logo.png" style="width: 6%;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="width: 4%;">
+            <img src="../assets/img/logo.png" style="height: 11vh;">   
+            <img src="../assets/img/unige.png" alt="Unige" style="height: 10vh;">
             <i class="fab fa-facebook-square d"></i>
             <i class="fab fa-youtube d"></i>
             <i class="fab fa-instagram d"></i>
             <i class="fas fa-envelope d"></i>
             <br>
-            <span style="font-size: 12px; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
+            <span style="font-size: 0.8rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
             Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
             
         </div>

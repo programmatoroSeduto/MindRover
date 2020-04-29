@@ -10,6 +10,7 @@ $ganesh = "CROWDFUNDING";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crowdfunding</title>
  
+    <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
     <link type="text/css" rel="stylesheet" href="../css/utils/bg.css">
     <link type="text/css" rel="stylesheet" href="../css/splash.css">
@@ -19,13 +20,15 @@ $ganesh = "CROWDFUNDING";
     <link type="text/css" rel="stylesheet" href="../css/nav.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
 
     <!-- Immagine iniziale pagina -->
-    <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/crowd-splash.jpg'); opacity: 0.9;">
+    <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/crowd-splash.jpg'); opacity: 0.9">
         <div class="splash-body">
 
             <h1 class="splash-body-heading">
@@ -39,7 +42,7 @@ $ganesh = "CROWDFUNDING";
         </div>
     </div>
     
-    <!-- Navbar -->
+<!-- Navbar -->
 <?php
 
 require_once('../php/modules/navbar.php');
@@ -216,14 +219,14 @@ else
     <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
-            <img src="../assets/img/logo.png" style="width: 6%;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="width: 4%;">
+            <img src="../assets/img/logo.png" style="height: 11vh;">   
+            <img src="../assets/img/unige.png" alt="Unige" style="height: 10vh;">
             <i class="fab fa-facebook-square d"></i>
             <i class="fab fa-youtube d"></i>
             <i class="fab fa-instagram d"></i>
             <i class="fas fa-envelope d"></i>
             <br>
-            <span style="font-size: 12px; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
+            <span style="font-size: 0.8rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
             Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
             
         </div>
