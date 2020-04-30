@@ -47,7 +47,8 @@ else
         <div style="display: grid; margin: auto;">
             <!-- click: seleziona altra immagine di profilo -->
             <div class="brahma-profile">
-                <img src="../assets/img/ronin.png" style="width: 30vh;"> </img>
+                <img src="../assets/avatar/fagiolo.png" style="width: 30vh; max-height: 30vh; min-height: 30vh;"> </img>
+                
                 <div class="overlay">
                     <div class="text-img">Cambia immagine di profilo</div>
                 </div>
@@ -58,8 +59,8 @@ else
         <div style="padding-left: 5vw; ">
             <h1 style="line-height: 15vh;">Imperatore Genoveffo Peppolesto III <img class="brahma-tier" src="../assets/img/logo.png" style="width: 7vh; transform: translate(5vh, 2vh);"> </img></h1>
             <p> <i>"Tua madre è un cactus... É spinosa e vive nel deserto."</i> </p>
-            <p> <span style="background-color: white; padding: 0 0.5vh;"><i class="fas fa-frog" style="color:green;"></i>  supporter </span> </p>
-            <p> <span style="background-color: red; padding: 0 0.5vh;"><i class="fas fa-frog" style="color:white;"></i>  autore </span> </p>
+            <p> <span style="background-color: white; padding: 0 0.5vh; border-radius: 7%;"><i class="fas fa-frog" style="color:green;"></i>  supporter </span> </p>
+            <p> <span style="background-color: red; padding: 0 0.5vh; border-radius: 7%;"><i class="fas fa-frog" style="color:white;"></i>  autore </span> </p>
         </div>
     </div>
 
