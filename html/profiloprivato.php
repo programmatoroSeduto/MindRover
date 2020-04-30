@@ -23,6 +23,15 @@ $ganesh = "ACCOUNT";
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        .tablinks
+        {
+            flex: 1;
+        }
+
+
+    </style>
 </head>
 
 <body>
@@ -88,7 +97,7 @@ else
             <button class="tablinks" onclick="activator('#s3', this);">Le tue donazioni</button>
             <button class="tablinks" onclick="activator('#s4', this);">I miei articoli</button>
             <button class="tablinks" onclick="activator('#s5', this);">Scrivi un articolo</button>
-            <button class="ghandi"> </button>
+            <button class="ghandi" style="flex: 2;"> </button>
             <button class="tablinks"> <a href="../php/logout.php" style="color:blue;">Logout</a> </button>
         </div>
 
