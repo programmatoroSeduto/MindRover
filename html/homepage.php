@@ -107,7 +107,7 @@ $ganesh = "HOMEPAGE";
         </div>
         
         <div class="dot-position">
-            <span class="dot dot-active" onclick="carouselImage(1); $('.shiva').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
+            <span class="dot dot-active" onclick="carouselImage(1); $('.dot-position').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
             <span class="dot" onclick="carouselImage(2); $('.dot-position').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
             <span class="dot" onclick="carouselImage(3); $('.dot-position').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
             <span class="dot" onclick="carouselImage(4); $('.dot-position').children().removeClass('dot-active'); $(this).addClass('dot-active');"></span>
