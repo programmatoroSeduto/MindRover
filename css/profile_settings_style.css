@@ -39,6 +39,18 @@
     background-color: #ddd;
     color: black;
 }
+
+/* Bottone bello per separare il bottone di logout */
+.tab button.ghandi{
+    transition: 0s ease;
+    cursor: unset;
+}
+
+.tab button.ghandi:hover{
+    opacity: 0;
+
+}
+
 /* Stile per bottoni barra sinistra quando attivi */
 .tab button.active 
 {
@@ -76,7 +88,7 @@
     border-radius: 50%; 
     border: 1.5px solid rgba(0, 0, 0, 0.8);
     position: relative;
-     overflow: hidden; /* ringraziando vishnu */
+    overflow: hidden; /* ringraziando vishnu */
 }
 
 /* Stili per immagine di tier */
