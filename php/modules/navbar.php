@@ -7,6 +7,7 @@ function get_public_navbar($page)
     $mindrover = "./mindrover.php";
     $crowdfunding = "./crowdfunding.php";
     $login_form = "./login.php";
+    $searchpage = "./search.html";
 
     echo '
     <div id="nav-wrapper"  style="position: sticky; top: 0; margin: 0; max-height: 75px; overflow: hidden;">
@@ -21,6 +22,7 @@ function get_public_navbar($page)
                 <a href="' . (($page !== 'CHI SIAMO') ? $chi_siamo : '#') . '" class="nav-link ' . (($page === "CHI SIAMO") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">CHI SIAMO</span></span></a>
                 <a href="' . (($page !== 'MINDROVER') ? $mindrover : '#') . '" class="nav-link ' . (($page === "MINDROVER") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">MINDROVER</span></span></a>
                 <a href="' . (($page !== 'CROWDFUNDING') ? $crowdfunding : '#') . '" class="nav-link ' . (($page === "CROWDFUNDING") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">CROWDFUNDING</span></span></a>
+                <a href="' . (($page !== 'SEARCH') ? $searchpage : '#') . '" class="nav-link ' . (($page === "SEARCH") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">CERCA</span></span></a>
                 <a href="' . (($page !== 'LOGIN') ? $login_form : '#') . '" class="nav-link ' . (($page === "LOGIN") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">ACCEDI</span></span></a>
             </div>
         </nav>
@@ -36,6 +38,10 @@ function get_private_navbar($page)
     $mindrover = "./mindrover.php";
     $crowdfunding = "./crowdfunding.php";
     $profile = "./profiloprivato.php";
+    $searchpage = "./search.html";
+
+
+    $logout = "../php/logout.php";
 
     echo '
     <div id="nav-wrapper"  style="position: sticky; top: 0; margin: 0; max-height: 75px; overflow: hidden;">
@@ -50,6 +56,7 @@ function get_private_navbar($page)
                 <a href="' . (($page !== 'CHI SIAMO') ? $chi_siamo : '#') . '" class="nav-link ' . (($page === "CHI SIAMO") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">CHI SIAMO</span></span></a>
                 <a href="' . (($page !== 'MINDROVER') ? $mindrover : '#') . '" class="nav-link ' . (($page === "MINDROVER") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">MINDROVER</span></span></a>
                 <a href="' . (($page !== 'CROWDFUNDING') ? $crowdfunding : '#') . '" class="nav-link ' . (($page === "CROWDFUNDING") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">CROWDFUNDING</span></span></a>
+                <a href="' . (($page !== 'SEARCH') ? $searchpage : '#') . '" class="nav-link ' . (($page === "SEARCH") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">CERCA</span></span></a>
                 <a href="' . (($page !== 'ACCOUNT') ? $profile : '#') . '" class="nav-link ' . (($page === "ACCOUNT") ? "active" : "") . '"><span class="nav-link-span"><span class="u-nav">GESTIONE ACCOUNT</span></span></a>
             </div>
         </nav>
