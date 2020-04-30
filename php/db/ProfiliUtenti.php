@@ -62,9 +62,10 @@ class ProfiliUtenti
                 flag_anonimo BOOLEAN NOT NULL DEFAULT false,
                 flag_autore BOOLEAN NOT NULL DEFAULT false,
                 flag_supporter BOOLEAN NOT NULL DEFAULT false,
-                id_img_profilo INT NOT NULL DEFAULT 0,
+                id_img_profilo INT NOT NULL,
                 PRIMARY KEY (id_utente),
-                FOREIGN KEY (id_utente) REFERENCES credenziali_utenti(id)
+                FOREIGN KEY (id_utente) REFERENCES credenziali_utenti(id),
+                FOREIGN KEY (id_img_profilo) REFERENCES img_profilo(id_img)
             );';
 
             //creazione tabella
@@ -178,10 +179,13 @@ class ProfiliUtenti
         if(!$this->table_exists) return -1;
 
         //inserimento nel database dei dati (prepared statement)
-        $query = 'INSERT INTO ' . self::TABLE_NAME . ' (id_utente, nickname, first_name, last_name) VALUES (?, ?, ?, ?);';
+        $query = 'INSERT INTO ' . self::TABLE_NAME . ' (id_utente, nickname, first_name, last_name, id_img_profilo) VALUES (?, ?, ?, ?, ?);';
+
+        require_once('./ImgProfilo.php');
+        $id_img = (new ImgProfilo($this->dbms))->getFirstAvailableStyleId();
 
         $dbms_op = $this->dbms->prepare($query);
-        if(!$dbms_op->bind_param("isss", $id, $nickname, $first_name, $last_name))
+        if(!$dbms_op->bind_param("isssi", $id, $nickname, $first_name, $last_name, $id_img))
         {
             return $this->dbms->errno;
         }
@@ -524,36 +528,6 @@ class ProfiliUtenti
         if(!$data) return -1;
         else return  $data['id_img_profilo'];
     }
-
-    /*
-    //imposta un colore del banner
-    function setBannerColor($r, $g, $b)
-    {
-        if(!$this->table_exists) return -1;
-
-        $query = 'UPDATE ' . self::TABLE_NAME . ' SET colore_banner = ? WHERE id_utente = ? ;';
-
-        $banner_color = implode(",", array($r, $g, $b));
-        $dbms_op = $this->dbms->prepare($query);
-        if(!$dbms_op->bind_param("ii", $banner_color, $user_id))
-        {
-            return $this->dbms->errno;
-        }
-        $dbms_op->execute();
-
-        return $this->dbms->errno;
-    }
-
-    //ritorna il colore del banner in formato rgb
-    function getBannerColor($user_id)
-    {
-        $data = $this->getProfileDataById($user_id);
-        if(!$data) return null;
-
-        $rgb = explode(",", $data['colore_banner']);
-        return $rgb;
-    }
-    */
 }
 
 ?>

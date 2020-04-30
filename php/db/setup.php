@@ -14,6 +14,7 @@ require_once('./CredenzialiUtenti.php');
 require_once('./ProfiliUtenti.php');
 require_once('./Donazioni.php');
 require_once('./Articoli.php');
+require_once('./ImgProfilo.php');
 require_once('../utils/HashMethods.php');
 
 
@@ -26,6 +27,7 @@ $credenzialiUtenti = new CredenzialiUtenti($dbms, $hashMethods);
 $profiliUtenti = new ProfiliUtenti($dbms);
 $donazioni = new Donazioni($dbms);
 $articoli = new Articoli($dbms);
+$imgProfilo = new ImgProfilo($dbms);
 
 
 //installa le tabelle solo se non esistono ancora
@@ -33,6 +35,18 @@ echo "--- creazione tabella [credenziali_utenti]---<br>";
 if(!$credenzialiUtenti->exists())
 {
     $credenzialiUtenti->createTable();
+    echo 'ritorno ultima operazione:' . $dbms->errno . ' ' . $dbms->error . '<br>';
+}
+else
+{
+    echo 'la tabella esiste già nel database. <br>';
+}
+
+
+echo "--- creazione tabella [img_profilo]---<br>";
+if(!$imgProfilo->exists())
+{
+    $imgProfilo->createTable();
     echo 'ritorno ultima operazione:' . $dbms->errno . ' ' . $dbms->error . '<br>';
 }
 else

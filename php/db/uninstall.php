@@ -14,6 +14,7 @@ require_once('./CredenzialiUtenti.php');
 require_once('./ProfiliUtenti.php');
 require_once('./Donazioni.php');
 require_once('./Articoli.php');
+require_once('./ImgProfilo.php');
 require_once('../utils/HashMethods.php');
 
 
@@ -26,12 +27,24 @@ $credenzialiUtenti = new CredenzialiUtenti($dbms, $hashMethods);
 $profiliUtenti = new ProfiliUtenti($dbms);
 $donazioni = new Donazioni($dbms);
 $articoli = new Articoli($dbms);
+$imgProfilo = new ImgProfilo($dbms);
 
 
 echo "--- tabella [profili_utenti] ---<br>";
 if($profiliUtenti->exists())
 {
     $profiliUtenti->destroyTable();
+    echo 'ritorno ultima operazione:' . $dbms->errno . ' ' . $dbms->error . '<br>';
+}
+else
+{
+    echo 'la tabella non esiste. <br>';
+}
+
+echo "--- tabella [img_profilo] ---<br>";
+if($imgProfilo->exists())
+{
+    $imgProfilo->destroyTable();
     echo 'ritorno ultima operazione:' . $dbms->errno . ' ' . $dbms->error . '<br>';
 }
 else

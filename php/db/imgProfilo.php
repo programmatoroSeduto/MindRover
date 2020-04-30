@@ -165,6 +165,8 @@ class ImgProfilo
         grad_rgb_1  array rgb del primo gradiente
         grad_rgb_2  array rgb del secondo gradiente
         banner_rgb  array rgb, colore del banner
+
+        ritorna il codice sql riferito all'ultima operazione effettuata, o -1 in caso di altri problemi.
     */
     function addNewStyle($img_path, $grad_rgb_1, $grad_rgb_2, $banner_rgb)
     {
@@ -200,13 +202,37 @@ class ImgProfilo
     //controlla se un id è ancora disponibile
     function isValidId($id)
     {
-
+        return (($row = $this->getStyleById($id)) !== null ? (count($row) > 0) : false);
     }
 
     //trova i dati di uno stile a partire da un id
     function getStyleById($style_id)
     {
+        if(!$this->table_exists) return null;
+
+        $query = 'SELECT * FROM ' . self::TABLE_NAME . ' WHERE id = ' . $user_id . ' ;';
+        $result = $this->dbms->query($query);
         
+        if(!$result) return null;
+        if($result->num_rows === 0) return array();
+
+        return $result->fetch_assoc();
+    }
+
+    //get di una riga con formato colori corretto
+    function getStyle($style_id)
+    {
+        if(!$this->table_exists) return null;
+
+        $row = $this->getStyleById($id);
+        $res = array();
+
+        $res['icon_path'] = $row['img_path'];
+        $res['banner'] = explode(',', $row['colore_banner']);
+        $res['color_1'] = explode(',', $row['sfondo_colore_1']);
+        $res['color_2'] = explode(',', $row['sfondo_colore_2']);
+        
+        return $res;
     }
 }
 
