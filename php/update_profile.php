@@ -34,6 +34,9 @@
 
     >> anonimato
     -   anonimo ("true"/"")
+
+    >> stile di profilo
+    -   id_stile (int)
 */
 
 
@@ -51,6 +54,7 @@ if(!isset($_SESSION['user_id']))
 require_once('./db/mysql_credentials.php');
 require_once('./db/CredenzialiUtenti.php');
 require_once('./db/ProfiliUtenti.php');
+require_once('./db/ImgProfilo.php');
 
 require_once('./utils/hashMethods.php');
 require_once('./utils/sanitize_input.php');
@@ -61,6 +65,7 @@ $hash = new HashMethods();
 $dbms = connect();
 $credenziali = new CredenzialiUtenti($dbms, $hash);
 $profili = new ProfiliUtenti($dbms);
+$imgProfilo = new ImgProfilo($dbms);
 
 //funzioni per purificare l'input
 function verify_data($data)
@@ -408,6 +413,45 @@ function setNewAnonymousFlag()
     }
 }
 
+//id_stile
+function setStyle()
+{
+    global $profili;
+    global $imgProfilo;
+
+    if(isset($_POST['id_stile']))
+    {
+        //l'informazione
+        /** TODO try/catch per eventuali eccezioni nella conversione numerica? */
+        $style_id = (int) sanitize($_POST['id_stile']);
+
+        //controllo che l'indice sia valido; se non lo è, prendo il primo disponibile
+        if(!$imgProfilo->isValidId($style_id)) $style_id = $imgProfilo->getFirstAvailableStyleId();
+
+        //verifico che l'opzione sia veramente cambiata
+        if($_SESSION['account_style_id'] !== $style_id)
+        {
+            echo "set stile WARNING: nulla da cambiare! chiusura...";
+            die();
+        }
+
+        //cambio l'impostazione nel database
+        if($profili->setProfileStyle($_SESSION['user_id'], $style_id))
+        {
+            //operazione fallita
+            echo "set stile OPERAZIONE FALLITA: (" . $dbms->errno . ") " . $dbms->error;
+            die();
+        }
+
+        //informazioni di sessione
+        $_SESSION['account_style_id'] = $value;
+        $_SESSION['account_style_data'] = $imgProfilo->getStyle($style_id);
+
+        //conferma operazione
+        echo "set stile OPERAZIONE RIUSCITA" . "<br>";
+    }
+}
+
 setNewPassword();
 setNewEmail();
 setNewFirstname();
@@ -416,5 +460,6 @@ setNewNickname();
 setNewStatus();
 setNewDescription();
 setNewAnonymousFlag();
+setStyle();
 
 ?>

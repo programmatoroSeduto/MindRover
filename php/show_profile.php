@@ -1,4 +1,7 @@
 <?php
+//utile solo per i test automatici; non eliminare.
+
+
 session_start();
 
 //controlla prima che sia stato fatto il login

@@ -1,5 +1,66 @@
 <?php
 
+class RankObject 
+{
+    public $last_update;
+
+    //formato: 
+    //tier[n_tier][rank]['id']
+    //tier[n_tier][rank]['sum']
+    public $tier = array(array(), array(), array());
+
+    public $tier_size = array(0, 0, 0);
+
+    //registra in automatico la data odierna
+    function __construct()
+    {
+        $this->last_update = new DateTime();
+    }
+
+    //ordinamento degli utenti in base a quanto hanno donato
+    /*
+        ordine decrescente
+    */
+    function sort_records()
+    {
+        if(count($this->tier[$n_tier]) == 0) return;
+
+        $callback = function($a, $b)
+        {
+            $sum_a = $a['sum'];
+            $sum_b = $b['sum'];
+
+            if($sum_a === $sum_b) return 0;
+            elseif ($sum_a < $sum_b) return 1;
+            elseif ($sum_a > $sum_b) return -1;
+        };
+
+        usort($this->tier[1], $callback);
+        usort($this->tier[2], $callback);
+        usort($this->tier[3], $callback);
+    }
+
+    //aggiungi una donazione di un utente
+    function add($tier, $id, $sum)
+    {
+        array_push($this->tier[$tier], array('id' => $id, 'sum' => $sum));
+        $this->$tier_size[$tier]++;
+    }
+
+    //l'oggetto è vuoto?
+    function isEmpty($tier = -1)
+    {
+        if($tier < 0)
+        {
+            return ($tier_size[0] > 0) || ($tier_size[1] > 0) || ($tier_size[2] > 0);
+        }
+        else
+        {
+            return ($tier_size[$tier] > 0);
+        }
+    }
+}
+
 class Donazioni 
 {
     //-------------------------------------------------------------
@@ -281,13 +342,226 @@ class Donazioni
     //lista di tutte le donazioni fatte da un certo utente
     /*
         ritorna una select della tabella, o null in caso di problemi.
+        la tabella ritornata contiene:
+        -   id,
+        -   somma,
+        -   data
+        -   ora
     */
     function getDonationListFrom($user_id)
     {
         if(!$this->table_exists) return null;
 
-        $query = 'SELECT somma_donazione, timestamp AS data FROM ' . self::TABLE_NAME . ' WHERE id_utente = ' . $user_id . ' ;';
-        return $this->dbms->query($query);
+        $query = 'SELECT id_donazione AS id, somma_donazione AS somma, timestamp AS data_ora FROM ' . self::TABLE_NAME . ' WHERE id_utente = ' . $user_id . ' ;';
+        $result = $this->dbms->query($query);
+        if(!$result) return null;
+        if($result->num_rows == 0) return array();
+
+        $return = array();
+        while($row = $result->fetch_assoc())
+            array_push($result, array('id' => $row['id'], 'somma' => $row['somma'], 'data' => (new DateTime($row['data_ora']))->format('y/m/d'), 'ora' => (new DateTime($row['data_ora']))->format('h:m:s')));
+
+        return $return;
+    }
+
+    //classifica degli utenti che hanno donato
+    /*
+        la classifica è riportata su un file in formato json aggiornato ogni 10 ore
+        quando richiesto. il file riporterà la data dell'ultimo aggiornamento, e tre array:
+        -   classifica per il tier 1 (sopra i 200 €)
+        -   classifica per il tier 2 (tra i 100€ e i 199€)
+        -   classifica per il tier 3 (sotto i 100€ ma maggiore di zero)
+        ogni array associa una posizione della classifica a
+        -   l'id dell'utente (id)
+        -   quanto ha donato l'utente (sum)
+
+        campi del json:
+        -   last_update     timestamp dell'ultima donazione
+        -   tier[1]          classifica tier 1
+        -   tier[2]          classifica tier 2
+        -   tier[3]          classifica tier 3
+        struttura interna dell'array:
+        tier[n_tier][rank]['id']
+        tier[n_tier][rank]['sum']
+
+        il metodo ritorna l'oggetto json associato al file.
+    */
+    function getRankObject($force_update = false)
+    {
+        //l'oggetto da ritornare
+        $rankObj = null;
+
+        //forzare l'aggiornamento?
+        if($force_update)
+        {
+            $rankObj = updateRankObject();
+        }
+        else
+        {
+            //il file esiste?
+            $flag = !file_exists('../rank.txt');
+
+            //il file è vuoto?
+            $flag = ($flag ? true : filesize('../rank.txt') == 0);
+
+            if(!$flag)
+            {
+                //lettura del file
+                $rankObj = json_decode(readfile('../rank.txt'));
+
+                //l'ultimo aggiornamento è stato fatto meno di 10 ore fa?
+                $last_update_date = new DateTime($rankObj.last_update);
+                $today = new DateTime();
+                $flag = ($last_update_date > $today + (new DateTime("00:10:00")));
+            }
+            
+            if($flag)
+            {
+                $rankObj = updateRankObject();
+            }
+        }
+
+        return $rankObj;
+    }
+
+    //aggiornamento della classifica delle donazioni
+    /*
+        ritorna la rappresentazione json del file rank.txt, dopo averlo scritto sul server.
+    */
+    function updateRankObject()
+    {
+        //scrivi il nuovo file
+        $rankFile = fopen("rank.txt", "w");
+
+        //oggetto da convertire in json e stampare su file
+        $rankObj = new RankObject();
+
+        //ottengo tutti gli id pubblici
+        require_once('./ProfiliUtenti.php');
+        $users = (new ProfiliUtenti($this->dbms))->getAllPublicId(); /* campi: id, supporter */
+        if(!users)
+        {
+            /** TODO notifica errore query */
+        }
+        elseif(count($user) == 0)
+        {
+            /** TODO stampa file vuoto */
+        }
+
+        //per ogni id...
+        while($row = $users->fetch_assoc())
+        {
+            //skip se l'utente non è un supporter
+            if(row['supporter'] == 0) continue;
+
+            //trova quanto ha donato l'utente indicato
+            $sum = $this->getDonationAmountFrom(row['id']);
+            if($sum < 0)
+            {
+                /** TODO problemi con la query */
+            }
+
+            //a quale tier appartiene l'utente?
+            $tier = 1;
+            {
+                $tier_3 = 99;
+                $tier_2 = 199;
+                if($sum > $tier_2)
+                {
+                    $tier = 1;
+                }
+                else if($sum > $tier_3)
+                {
+                    $tier = 2;
+                }
+                else if($sum > 0)
+                {
+                    $tier = 3;
+                }
+            }
+
+            //registra la donazione
+            $rankObj->add($tier, $row['id'], $sum);
+        }
+
+        //sorting delle donazioni
+        $rankObj->sort_records();
+
+        //salvo il json della classe su file
+        fwrite($rankFile, json_encode($rankObj));
+        fclose($rankFile);
+
+        return $rankObj;
+    }
+
+    //posizione di un utente nella classifica
+    /*
+        nota bene: il metodo deve tener conto anche del fatto che la classifica potrebbe nonessere aggiornata!
+        se l'utente non risulta nella classifica, ritorna -1.
+    */
+    function getRankOf($user_id)
+    {
+        //prima, verifica che l'utente sia pubblico
+        require_once('./ProfiliUtenti.php');
+        if((new ProfiliUtenti($this->dbms))->getProfileDataById($user_id)['flag_anonimo'] === 1 ) 
+            return -1;
+        if((new ProfiliUtenti($this->dbms))->getProfileDataById($user_id)['flag_supporter'] === 0 ) 
+            return -1;
+
+        $rankObj = $this->getRankObject();
+        if($rankObj->isEmpty()) return -1;
+
+        //per ogni tier...
+        for($i = 0; $i < 3; $i++)
+        {
+            for($r = 0; $r<count($rankObj->tier[$i]); $r++)
+            {
+                if($rankObj->tier[$i][$r]['id'] === $user_id)
+                    return $r;
+            }
+        }
+
+        return -1;
+    }
+
+    //ritorna i 3 utenti più in alto nella classifica, per un certo tier
+    /*
+        array di struttura
+        ganesh (tier 1)
+            1
+            2
+            3
+        shiva (tier 2)
+            1
+            2
+            3
+        vishnu (tier 3)
+            1
+            2
+            3
+    */
+    function grandiVeneratoriDelDioGaneshNelTier($n_tier)
+    {
+        $rankObj = $this->getRankObject();
+
+        /** TODO da rivedere nel caso non ci fossero abbastanza donazioni */
+        return array(
+            'ganesh' => array(
+                $rankObj->tier[1][1],                
+                $rankObj->tier[1][2],
+                $rankObj->tier[1][3]
+            ),
+            'shiva' => array(
+                $rankObj->tier[2][1],                
+                $rankObj->tier[2][2],
+                $rankObj->tier[2][3]
+            ),
+            'vishnu' => array(
+                $rankObj->tier[3][1],                
+                $rankObj->tier[3][2],
+                $rankObj->tier[3][3]
+            )
+        );
     }
 }
 

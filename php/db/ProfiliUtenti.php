@@ -275,6 +275,20 @@ class ProfiliUtenti
         return $results;
     }
 
+    //ritorna tutti gli id pubblici
+    function getAllPublicId()
+    {
+        if(!$this->table_exists) return null;
+
+        $query = 'SELECT id_utente AS id, flag_supporter AS supporter FROM ' . self::TABLE_NAME . ' WHERE flag_anonimo = 0 ;';
+        $result = $this->dbms->query($query);
+
+        if(!$result) return null;
+        if($result->num_rows === 0) return array();
+
+        return $result;
+    }
+
     //test esistenza di un nickname
     /*
         ritorna false se il nickname non esiste;
@@ -500,7 +514,7 @@ class ProfiliUtenti
     }
 
     //imposta una certa immagine di profilo
-    function setProfileImg($user_id, $img_id)
+    function setProfileStyle($user_id, $img_id)
     {
         if(!$this->table_exists) return -1;
 
@@ -521,7 +535,7 @@ class ProfiliUtenti
         ritorna id dell'immagine di profilo scelta
         o -1 nel caso ci fossero problemi
     */
-    function getProfileImg($user_id)
+    function getProfileStyle($user_id)
     {
         $data = $this->getProfileDataById($user_id);
 
