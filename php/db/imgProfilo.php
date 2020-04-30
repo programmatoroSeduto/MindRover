@@ -62,7 +62,17 @@ class ImgProfilo
             //creazione tabella
             $this->dbms->query($query_create_table);
 
-            if($this->dbms->errno === 0) $this->table_exists = true;
+            if($this->dbms->errno === 0) 
+            {
+                $this->table_exists = true;
+                
+                $this->dbms->query
+                (
+                    "INSERT 
+                        INTO img_profilo (img_path, sfondo_colore_1, sfondo_colore_2, colore_banner) 
+                        VALUES ('../assets/img/rana.jpg', '255,0,0', '255,0,0', '255,0,0');"
+                );
+            }
 
             return $this->dbms->errno;
         }
@@ -193,8 +203,9 @@ class ImgProfilo
     {
         if(!$this->table_exists) return -1;
 
-        $data = getTableContent();
+        $data = $this->getTableContent();
         if(!$data) return -1;
+        if($data->num_rows == 0) return -1;
 
         return $data->fetch_assoc()['id_img'];
     }
@@ -210,7 +221,7 @@ class ImgProfilo
     {
         if(!$this->table_exists) return null;
 
-        $query = 'SELECT * FROM ' . self::TABLE_NAME . ' WHERE id = ' . $user_id . ' ;';
+        $query = 'SELECT * FROM ' . self::TABLE_NAME . ' WHERE id_img = ' . $style_id . ' ;';
         $result = $this->dbms->query($query);
         
         if(!$result) return null;
@@ -224,7 +235,7 @@ class ImgProfilo
     {
         if(!$this->table_exists) return null;
 
-        $row = $this->getStyleById($id);
+        $row = $this->getStyleById($style_id);
         $res = array();
 
         $res['icon_path'] = $row['img_path'];

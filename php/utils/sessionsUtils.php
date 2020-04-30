@@ -1,19 +1,18 @@
 <?php
 
 //crea una sessione (inserisci solo i dati di sessione)
-function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $donazioni)
+function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $donazioni, $stile)
 {
     //dati di base
     $_SESSION['user_id'] = $user_id;
-    $_SESSION['subscription_timestamp'] = $profile_data['data_iscrizione'];
     
     //credenziali
     $_SESSION['email'] = $email;
     $_SESSION['password'] = $password;
-    //$_SESSION['password_hash'] = $pass_hash;
 
     //dati di profilo
     $profile_data = $profiliUtenti->getProfileDataById($user_id);
+    $_SESSION['subscription_timestamp'] = $profile_data['data_iscrizione'];
     $_SESSION['nickname'] = $profile_data['nickname'];
     $_SESSION['firstname'] = $profile_data['first_name'];
     $_SESSION['lastname'] = $profile_data['last_name'];
@@ -71,11 +70,8 @@ function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $d
     }
 
     //stile del profilo
-    require_once('../db/ImgProfilo.php');
-    $style_table = new ImgProfilo($donazioni->dbms);
-
     $_SESSION['style_id'] = $profile_data['id_img_profilo'];
-    $_SESSION['style_data'] = $style_table->getStyle($_SESSION['style_id']);
+    $_SESSION['style_data'] = $stile->getStyle($_SESSION['style_id']);
 }
 
 ?>

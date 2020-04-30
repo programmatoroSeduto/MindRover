@@ -5,6 +5,7 @@ session_start();
 require_once('./db/mysql_credentials.php');
 require_once('./db/CredenzialiUtenti.php');
 require_once('./db/ProfiliUtenti.php');
+require_once('./db//ImgProfilo.php');
 require_once('./utils/hashMethods.php');
 require_once('./utils/sanitize_input.php');
 
@@ -134,7 +135,11 @@ if($id_profilo === -1)
 }
 
 //registrazione dei dati di profilo
-$table_profili->createAccount($id_profilo, $nickname, $firstname, $lastname);
+if($errcode = $table_profili->createAccount($id_profilo, $nickname, $firstname, $lastname, (new ImgProfilo($dbms))->getFirstAvailableStyleId()))
+{
+    echo $errcode . "<br>" . $dbms->errno . " - " . $dbms->error . "<br>";
+    die("errore!");
+}
 
 //registrazione completata con successo; ora, fai qualcosa
 echo 'registrazione completata.';

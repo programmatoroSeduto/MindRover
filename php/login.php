@@ -6,6 +6,7 @@ require_once('./db/mysql_credentials.php');
 require_once('./db/CredenzialiUtenti.php');
 require_once('./db/ProfiliUtenti.php');
 require_once('./db/Donazioni.php');
+require_once('./db/ImgProfilo.php');
 
 require_once('./utils/hashMethods.php');
 require_once('./utils/sanitize_input.php');
@@ -53,7 +54,6 @@ if($error) /*when table deserves to */die();
 $hash = new HashMethods();
 $dbms = connect();
 $table_credenziali = new CredenzialiUtenti($dbms, $hash);
-$table_profili = new ProfiliUtenti($dbms);
 
 //tento di ottenere l'id dell'utente che vorrebbe loggarsi
 $user_id = $table_credenziali->getId($email, $password);
@@ -68,7 +68,7 @@ if($user_id < 0)
 
 //l'utente esiste! carico tutti i dati sulla sessione
 $password_hash = $hash->getHash($password);
-openSession($user_id, $email, $password, $password_hash, $table_profili, new Donazioni($dbms));
+openSession($user_id, $email, $password, $password_hash, new ProfiliUtenti($dbms), new Donazioni($dbms), new ImgProfilo($dbms));
 
 header('location: ../html/profiloprivato.php');
 ?>

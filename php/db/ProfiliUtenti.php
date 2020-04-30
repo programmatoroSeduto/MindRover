@@ -174,15 +174,12 @@ class ProfiliUtenti
 
         ritorna il codice errore SQL associato alla query.
     */
-    function createAccount($id, $nickname, $first_name, $last_name)
+    function createAccount($id, $nickname, $first_name, $last_name, $id_img)
     {
         if(!$this->table_exists) return -1;
 
         //inserimento nel database dei dati (prepared statement)
         $query = 'INSERT INTO ' . self::TABLE_NAME . ' (id_utente, nickname, first_name, last_name, id_img_profilo) VALUES (?, ?, ?, ?, ?);';
-
-        require_once('./ImgProfilo.php');
-        $id_img = (new ImgProfilo($this->dbms))->getFirstAvailableStyleId();
 
         $dbms_op = $this->dbms->prepare($query);
         if(!$dbms_op->bind_param("isssi", $id, $nickname, $first_name, $last_name, $id_img))
