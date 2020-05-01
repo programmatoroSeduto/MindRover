@@ -21,8 +21,8 @@ function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $d
     $_SESSION['status'] = $profile_data['stato'];
     
     //impostazioni di profilo
-    $_SESSION['is_anonymous'] = $profile_data['flag_anonimo'];
-    $_SESSION['is_author'] = $profile_data['flag_autore'];
+    $_SESSION['is_anonymous'] = ($profile_data['flag_anonimo'] == 1);
+    $_SESSION['is_author'] = ($profile_data['flag_autore'] == 1);
 
     //informazioni crowdfunding
     $crowdfunding_count = $donazioni->getDonationNumberFrom($user_id);
@@ -67,6 +67,8 @@ function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $d
         $_SESSION['crowdfunding_tier'] = -1;
         $_SESSION['crowdfunding_position'] = -1;
         $_SESSION['crowdfunding_donation_list'] = array();
+
+        $_SESSION['crowdfunding_rank'] = -1;
     }
 
     //stile del profilo

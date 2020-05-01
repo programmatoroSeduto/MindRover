@@ -73,6 +73,14 @@
     float: left;
 }
 
+/* stile per l'avatar */
+.avatar
+{
+    width: 30vh; 
+    max-height: 30vh; 
+    min-height: 30vh;
+}
+
 /* Metodo per nascondere le schede della barra destra */
 .kali
 {
@@ -82,7 +90,7 @@
 /* Stili per immagine di profilo */
 .brahma-profile
 {
-    background: linear-gradient(45deg, #da4112, #00dddd);
+    /* background: linear-gradient(45deg, #da4112, #00dddd); */
     height: auto; 
     width: 30vh; 
     border-radius: 50%; 
@@ -111,7 +119,6 @@
 /* Banner superiore profilo*/
 .banner
 {
-    background: linear-gradient(90deg, rgb(40, 33, 82), rgb(72, 61, 139)); 
     min-height: 35vh; 
     display: grid; 
     grid-template-columns: 3fr 7fr;
@@ -123,7 +130,7 @@
 {
     display: grid; 
     grid-template-columns: 1fr 2fr; 
-    max-height: 50vh; 
+    /* max-height: 50vh;  */
     width: 100%;
 }
 /* Overlay per la modifica dell'immagine di profilo */
@@ -158,4 +165,41 @@
 .brahma-profile:hover .overlay 
 {
     opacity: 0.8;
+}
+
+.userinfo-tag
+{
+    padding: 0 0.6vh; 
+    border-radius: 7%;
+    font-family: 'ganesh';
+}
+
+.tag-supporter
+{
+    background-color: white;
+}
+
+.tag-supporter i
+{
+    color:green;
+}
+
+.tag-author
+{
+    background-color: red;
+}
+
+.tag-author i
+{
+    color:whte;
+}
+
+.tag-basic
+{
+    background-color: goldenrod;
+}
+
+.tag-basic i
+{
+    color:red;
 }
