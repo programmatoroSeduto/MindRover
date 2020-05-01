@@ -29,8 +29,6 @@ $ganesh = "ACCOUNT";
         {
             flex: 1;
         }
-
-
     </style>
 </head>
 
@@ -220,7 +218,7 @@ function datetime_funny()
 
             <!-- logout -->
             <button class="ghandi" style="<?php if(!$is_author) echo 'flex: 4;'; else echo 'flex: 2;' ?>"> </button>
-            <button class="tablinks"> <a href="../php/logout.php" style="color:blue;">Logout</a> </button>
+            <button class="tablinks" onclick="location.href='../php/logout.php';"><p style="color: blue;">Logout</p></button>
         </div>
 
         <!-- Barra destra -->
