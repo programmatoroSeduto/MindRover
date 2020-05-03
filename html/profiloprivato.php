@@ -17,6 +17,7 @@ $ganesh = "ACCOUNT";
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/profile_settings_style.css">
+    <link type="text/css" rel="stylesheet" href="../css/modal.css">
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f61875768d.js" crossorigin="anonymous"></script>
@@ -99,10 +100,12 @@ function funny()
     $funny[] = "Non lo conosci? Beh, dovresti.";
     $funny[] = "Supremo imburratore";
     $funny[] = "É un uccello? É un ufo? No, è";
+    $funny[] = "Sei stato eliminato da";
     $funny[] = "L'incredibile pompelmo denonminato";
     $funny[] = "Il fantomatico profilo di";
     $funny[] = "É QUI LA FESTA?";
     $funny[] = "Il famigerato";
+    $funny[] = "Ti ha appena ultato in faccia";
     $funny[] = "Ladies and gentlemen,";
     $funny[] = "É appena atterrato";
     $funny[] = "Bentornato,";
@@ -353,7 +356,26 @@ function datetime_funny()
                     <div class="sep"></div> <div class="sep"></div> <div class="sep"></div>
                     
                     <div><b>Nickname:</b></div> <div><b><?php echo $nickname; ?></b></div> 
-                    <div><i>chiamatemi diversamente.</i></div>
+                    <div><!-- Trigger/Open The Modal -->
+                    <a class="d text-content modifica" id="myBtn">modifica</a>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h5>Il tuo nuovo nickname:</h2>
+                        </div>
+                        <div class="modal-body">
+                        <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+
+                    </div></div>
                     
                     <div>Nome:</div> <div>Genoveffo</div> 
                     <div><i>ho cambiato nome.</i></div>
@@ -410,7 +432,34 @@ function datetime_funny()
         </div>
     </div>
 
-    
+<!-- Script per il modal -->
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script> 
 
 </body>
 
