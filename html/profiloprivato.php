@@ -88,22 +88,27 @@ $crowd_rank = $_SESSION['crowdfunding_rank'];
 //appellativo divertente prima del nome
 function funny()
 {
-    $style = 'font-size: 1.0rem; line-height: 2.2rem; margin: 0;';
+    $style = 'font-size: 1.0rem; line-height: 2.2rem; margin: 0; font-style: italic; font-weight: lighter;';
 
-    $funny[] = "imperatore";
-    $funny[] = "è proprio lui!";
-    $funny[] = "sergente";
-    $funny[] = "sergente maggiore";
-    $funny[] = "grande capo";
+    $funny[] = "Imperatore";
+    $funny[] = "É proprio lui!";
+    $funny[] = "Sergente";
+    $funny[] = "Sergente maggiore";
+    $funny[] = "Grande capo";
     $funny[] = "Eccolo!";
     $funny[] = "Non lo conosci? Beh, dovresti.";
-    $funny[] = "supremo imburratore";
-    $funny[] = "WEEeEeEEeEeEEeEeEEeEeEEeEeEEeEe";
-    $funny[] = "L'incredibile Pompelmo denonminato";
+    $funny[] = "Supremo imburratore";
+    $funny[] = "É un uccello? É un ufo? No, è";
+    $funny[] = "L'incredibile pompelmo denonminato";
     $funny[] = "Il fantomatico profilo di";
-    $funny[] = "E' QUI LA FESTA?";
-    $funny[] = "<i>il famigerato</i>";
-    $funny[] = "ladies and gentlemen,";
+    $funny[] = "É QUI LA FESTA?";
+    $funny[] = "Il famigerato";
+    $funny[] = "Ladies and gentlemen,";
+    $funny[] = "É appena atterrato";
+    $funny[] = "Bentornato,";
+    $funny[] = "State attenti, è arrivato";
+    $funny[] = "Ecco il buontempone,";
+    $funny[] = "Houston, abbiamo un problema. É arrivato ";
 
     $n = (rand(0, count($funny) - 1));
     return '<span style="' . $style . '">' . $funny[$n] . '</span>' . '<br>';
@@ -112,17 +117,22 @@ function funny()
 //frasi divertenti per indicare data e ora della registrazione:
 function datetime_funny()
 {
-    $funny[] = "ci segue dal";
-    $funny[] = "va a raccogliere papere in fiore dal";
-    $funny[] = "beve uno shottino di vodka ogni mattina dal";
-    $funny[] = "va ad abbracciare cactus splendenti dal";
-    $funny[] = "si è dimenticato il bicentenario di Zio Paperone nel";
-    $funny[] = "è ufficialmente diventato un rettiliano nel giorno";
-    $funny[] = "vuole andare a vedere il Taj Mahal dal";
-    $funny[] = "aveva un cesto di pesche sciroppate nel lontano";
-    $funny[] = "sta ricordando quel fatidico giorno del";
-    $funny[] = "fa cose, dal";
-    $funny[] = "non smette mai di fare cose dal";
+    $funny[] = "Ci segue dal";
+    $funny[] = "Va a raccogliere papere in fiore dal";
+    $funny[] = "Beve uno shottino di vodka ogni mattina in nostro onore dal";
+    $funny[] = "Va ad abbracciare cactus nel deserto dal";
+    $funny[] = "Si è dimenticato il bicentenario di Zio Paperone nel";
+    $funny[] = "É ufficialmente diventato un rettiliano nel giorno";
+    $funny[] = "Visita assiduamente il Taj Mahal dal";
+    $funny[] = "Deambula col suo cesto di pesche sciroppate dal lontano";
+    $funny[] = "Sta ricordando quel fatidico giorno del";
+    $funny[] = "Fa cose, dal";
+    $funny[] = "Non smette mai di fare cose dal";
+    $funny[] = "Soffia nelle cannucce dal";
+    $funny[] = "É iscritto dal";
+    $funny[] = "Si è iscritto per sbaglio il";
+    $funny[] = "Non riesce ad annullare l'iscrizione dal";
+    $funny[] = "Ha scoperto di avere le mani nel";
 
     $n = (rand(0, count($funny) - 1));
     return $funny[$n];
@@ -154,7 +164,8 @@ function datetime_funny()
             <div>
                 <h1 style="padding-top: 5vh;">
                     <span style="padding-top: 7.5vh;">
-                        <?php echo funny() . ' ' . $first_name . ' ' . $last_name; ?>
+                        <!-- <?php echo funny() . ' ' . $first_name . ' ' . $last_name; ?> -->
+                        <?php echo funny() . ' ' . $nickname; ?>
                     </span>
                 </h1>            
                 
@@ -206,14 +217,14 @@ function datetime_funny()
         <!-- Barra sinistra -->
         <div class="tab">
             <!-- voci generali per il profilo privato -->
-            <button class="tablinks active" onclick="activator('#s1', this);" title="un'occhiata generale al tuo profilo.">Il tuo profilo</button>
-            <button class="tablinks" onclick="activator('#s2', this);" title="puoi modificare da qui le tue credenziali, il tuo nickname, la tua bio, e molto altro.">Modifica il tuo profilo</button>
-            <button class="tablinks" onclick="activator('#s3', this);" title="vedi quante donazioni hai fatto, quando le hai fatte, la tua posizione in classifica, e molto altro.">Le tue donazioni</button>
+            <button class="tablinks active" onclick="activator('#s1', this);" title="Un'occhiata generale al tuo profilo.">Il tuo profilo</button>
+            <button class="tablinks" onclick="activator('#s2', this);" title="Puoi modificare da qui le tue credenziali, il tuo nickname, la tua bio, e molto altro.">Modifica il tuo profilo</button>
+            <button class="tablinks" onclick="activator('#s3', this);" title="Vedi quante donazioni hai fatto, quando le hai fatte, la tua posizione in classifica, e molto altro.">Le tue donazioni</button>
 
             <?php if($is_author): ?>
                 <!-- voci riservate agli autori -->
-                <button class="tablinks" onclick="activator('#s4', this);" tilte="una lista di tutti gli articoli che hai scritto finora.">I miei articoli</button>
-                <button class="tablinks" onclick="activator('#s5', this);" tilte="puoi pubblicare un nuovo articolo da qui.">Scrivi un articolo</button>
+                <button class="tablinks" onclick="activator('#s4', this);" tilte="Una lista di tutti gli articoli che hai scritto finora.">I miei articoli</button>
+                <button class="tablinks" onclick="activator('#s5', this);" tilte="Puoi pubblicare un nuovo articolo da qui.">Scrivi un articolo</button>
             <?php endif ?>
 
             <!-- logout -->
@@ -230,15 +241,15 @@ function datetime_funny()
                 <div class="vishnu">
                     <!-- email e data creazione del profilo -->
                     <div><?php echo datetime_funny(); ?></div> <div><?php echo $date_subscr ?> alle <?php echo $time_subscr ?></div>
-                    <div>la tua Email:</div> <div><?php echo $email ?></div>
+                    <div>La tua Email:</div> <div><?php echo $email ?></div>
 
                     <div class="sep"></div> <div class="sep"></div>
 
                     <!-- nome e cognome -->
-                    <div>nome e cognome:</div> <div><?php echo $first_name ?> <?php echo $last_name ?></div>
+                    <div>Nome e cognome:</div> <div><?php echo $first_name ?> <?php echo $last_name ?></div>
 
                     <!-- nickname -->
-                    <div><b>anche detto</b></div> <div><b><?php echo $nickname ?></b></div>
+                    <div><b>Nickname:</b></div> <div><b><?php echo $nickname ?></b></div>
 
                     <div class="sep"></div> <div class="sep"></div>
 
@@ -270,7 +281,7 @@ function datetime_funny()
                     </script>
 
                     <!-- check: profilo anonimo? -->
-                    <div title="Significa che gli altri possono trovarti sul motore di ricerca, e visionare i tuoi dati pubblici. Puoi modificare questa opzione dal pannello 'modifica il tuo profilo' .">
+                    <div title="Non vuoi che gli altri utenti ti trovino tramite il nostro motore di ricerca? Spunta questa opzione su 'modifica il tuo profilo', timidone.">
                         il tuo profilo è anonimo?
                     </div> 
                     <div id="info-profilo-anonimo">
@@ -282,8 +293,8 @@ function datetime_funny()
                     </div>
                     
                     <!-- check: sei un autore? -->
-                    <div title="possibilità riservata solo ai portavoce ufficialmente riconosciuti dalla Frog Studios.">
-                        puoi scrivere articoli?
+                    <div title="Possibilità riservata solo ai portavoce ufficialmente riconosciuti dalla Frog Studios.">
+                        Puoi scrivere articoli?
                     </div> 
                     <div id="info-profilo-autore">
                         <?php if($is_author): ?>
@@ -294,8 +305,8 @@ function datetime_funny()
                     </div>
                     
                     <!-- check: supporter? -->
-                    <div title="sei un supporter se hai fatto almeno una donazione al nostro progetto.">
-                        sei un supporter?
+                    <div title="Sei un supporter se hai fatto almeno una donazione alla Frog Studios">
+                        Sei un supporter?
                     </div> 
                     <div id="info-profilo-supporter">
                         <?php if($supporter): ?>
@@ -310,9 +321,9 @@ function datetime_funny()
 
                         <div class="sep"></div> <div class="sep"></div>
 
-                        <div title="evvai!">Quante donazioni hai effettuato:</div> <div title="evviva!"><?php echo $crowd_count; ?></div>
-                        <div title="evviva!">Somma donata alla Causa:</div> <div title="evvai!"><?php echo $crowd_sum; ?> €</div>
-                        <div title="scala la vetta! e soprattutto, vantatene coi tuoi amici"><b>Posizione classifica Top Donators:</b></div> <div title="scala la vetta! e soprattutto, vantatene coi tuoi amici"><b>n° <?php echo $crowd_rank; ?></b></div>
+                        <div title="Evvai!">Quante donazioni hai effettuato:</div> <div title="evviva!"><?php echo $crowd_count; ?></div>
+                        <div title="Evviva!">Somma donata alla causa:</div> <div title="evvai!"><?php echo $crowd_sum; ?> €</div>
+                        <div title="Scala la vetta! E soprattutto, vantatene coi tuoi amici"><b>Posizione classifica Top Donators:</b></div> <div title="Scala la vetta! E soprattutto, vantatene coi tuoi amici"><b>n° <?php echo $crowd_rank; ?></b></div>
                     <?php endif ?>
                 </div>
 
@@ -342,7 +353,7 @@ function datetime_funny()
                     <div class="sep"></div> <div class="sep"></div> <div class="sep"></div>
                     
                     <div><b>Nickname:</b></div> <div><b><?php echo $nickname; ?></b></div> 
-                    <div><i>Chiamatemi diversamente.</i></div>
+                    <div><i>chiamatemi diversamente.</i></div>
                     
                     <div>Nome:</div> <div>Genoveffo</div> 
                     <div><i>ho cambiato nome.</i></div>
