@@ -35,6 +35,14 @@ if(!($email = verify_data("email")))
     header('location: ../html/login.php?error_email=true');
     $error = true;
 }
+
+//verifica che la mail sia effettivamente una mail
+if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) 
+{
+    header('location: ../html/login.php?error_email=true');
+    $error = true;
+}
+
 if(!($password = verify_data("pass")))
 {
     //echo "ERRORE: dato mancante. -> " . "pass";
@@ -70,5 +78,22 @@ if($user_id < 0)
 $password_hash = $hash->getHash($password);
 openSession($user_id, $email, $password, $password_hash, new ProfiliUtenti($dbms), new Donazioni($dbms), new ImgProfilo($dbms));
 
-header('location: ../html/profiloprivato.php');
+if(isset($_GET['target']))
+{
+    if($_GET['target'] === 'profilo')
+        header('location: ../html/profiloprivato.php');
+    elseif($_GET['target'] === 'crowdfunding')
+        header('location: ../html/crowdfunding.php'); //modificare...
+    /*
+    elseif($_GET['target'] === '')
+        header('location: ');
+    */
+    else
+        header('location: ../html/profiloprivato.php');
+}
+else
+{
+    header('location: ../html/profiloprivato.php');
+}
+
 ?>

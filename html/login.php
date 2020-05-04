@@ -32,6 +32,10 @@ else
         <h1 style="line-height: 5rem;">Login!</h1><br>
         <form action="../php/login.php" method="POST">
             <div class="loginform-body">
+                <?php
+                    if(isset($_GET['target']))
+                        echo '<input name="target" style="display: none;" value="' . $_GET['target'] . '">';
+                ?>
                 <label for="email">Email: </label><input type="email" name="email">
                 <label for="pass">Password: </label><input type="password" name="pass">
             </div>
@@ -58,7 +62,7 @@ else
             </div>
         </form>
         
-        <p class="register-here">Non ancora registrato? <a href="./registrazione.html"><i>clicca qui!</i></a></p>
+        <p class="register-here">Non ancora registrato? <a href="./registrazione.php"><i>clicca qui!</i></a></p>
     </div>
 
     <img src="../assets/img/logo.png" class="frog">

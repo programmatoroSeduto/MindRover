@@ -21,11 +21,47 @@
     max-height: 800px;
 }
 
+.reg-box
+{
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 1em;
+    padding: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 80vh;
+    min-width: 75vh;
+    max-height: 80vh;
+    max-height: 75vh;
+}
+
+
+
 .loginform-body
 {
     display: grid;
     grid-template-columns: 1fr 5fr;
     row-gap: 0.8rem;
+}
+
+.registrationform-body
+{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    row-gap: 0.8rem;
+}
+
+.registrationform-body label
+{
+    line-height: 4vh;
+}
+
+.registrationform-body input
+{
+    max-height: 1.8vh;
 }
 
 .loginform-body input

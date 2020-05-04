@@ -37,6 +37,14 @@ $pass = "";
         echo "ERRORE: dato mancante. ->" . "email";
         die();
     }
+
+    //verifica che la mail sia effettivamente una mail
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) 
+    {
+        echo "ERRORE: non è una mail. ->" . "email";
+        die();
+    }
+        
     if(!($firstname = verify_data("firstname")))
     {
         echo "ERRORE: dato mancante. ->" . "firstname";
