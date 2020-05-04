@@ -91,7 +91,7 @@
 .brahma-profile
 {
     /* background: linear-gradient(45deg, #da4112, #00dddd); */
-    height: auto; 
+    max-height: 30vh; 
     width: 30vh; 
     border-radius: 50%; 
     border: 1.5px solid rgba(0, 0, 0, 0.8);
@@ -146,7 +146,7 @@
     opacity: 0;
     transition: .5s ease;
     border-radius: 50%; 
-    background-color: rgba(72, 61, 139, 0.5);
+    background-color: rgba(140, 140, 140, 0.4);
     
 }
 /* Testo dell'overlay per la modifica dell'immagine di profilo */
