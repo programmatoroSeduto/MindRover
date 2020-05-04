@@ -51,14 +51,31 @@ require_once('../php/modules/navbar.php');
                 
                 <span class="auth-error">
                     <?php
-                        if(isset($_GET['error_no_first'])) echo '<b>Attenzione!</b> Manca il nome...';
-                        elseif(isset($_GET['error_no_last'])) echo '<b>Attenzione!</b> Manca il cognome...';
-                        elseif(isset($_GET['error_no_email'])) echo '<b>Attenzione!</b> mail non inserita...';
-                        elseif(isset($_GET['error_email'])) echo '<b>Attenzione!</b> Questa mail esiste già. Accedi! <br> <a href="./login.php"><i>Login qui</i></a>';
-                        elseif(isset($_GET['error_no_pass'])) echo '<b>Attenzione!</b> Manca la password...';
-                        elseif(isset($_GET['error_no_confirm'])) echo '<b>Attenzione!</b> Manca la conferma della password...';
-                        elseif(isset($_GET['error_pass_confirm'])) echo '<b>Attenzione!</b> Occhio alla conferma della password!';
+                        //nessun nome inserito
+                        if(isset($_GET['error_no_first'])) echo '';
+
+                        //nessun cognome inserito
+                        elseif(isset($_GET['error_no_last'])) echo '';
+
+                        //manca la mail
+                        elseif(isset($_GET['error_no_email'])) echo '';
+
+                        //la mail esiste già nel database
+                        elseif(isset($_GET['error_email'])) echo '';
+
+                        //nessuna password inserita
+                        elseif(isset($_GET['error_no_pass'])) echo '';
+
+                        //nessuna conferma password inserita
+                        elseif(isset($_GET['error_no_confirm'])) echo '';
+
+                        //la password e la conferma non coincidono
+                        elseif(isset($_GET['error_pass_confirm'])) echo '';
+
+                        //errore SQL
                         elseif(isset($_GET['il_garbato_distruttore_colpisce_ancora'])) echo 'Errore tecnico.';
+
+                        //nessun errore
                         else echo "";
                     ?>
                 </span>
