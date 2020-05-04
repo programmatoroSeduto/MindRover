@@ -178,11 +178,11 @@ if(isset($_GET['target']))
         header('location: ');
     */
     else
-        header('location: ../html/profiloprivato.php');
+        header('location: ../html/login.php');
 }
 else
 {
-    header('location: ../html/profiloprivato.php');
+    header('location: ../html/login.php');
 }
 
 ?>
