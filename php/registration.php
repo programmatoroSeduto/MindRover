@@ -34,44 +34,53 @@ $pass = "";
     }
     if(!($email = verify_data("email")))
     {
-        echo "ERRORE: dato mancante. ->" . "email";
+        //echo "ERRORE: dato mancante. ->" . "email";
+        header('location: ../html/registrazione.php&' . 'error_no_email=true');
         die();
     }
 
     //verifica che la mail sia effettivamente una mail
     if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) 
     {
-        echo "ERRORE: non è una mail. ->" . "email";
+        //echo "ERRORE: non è una mail. ->" . "email";
+        header('location: ../html/registrazione.php&' . 'error_email=true');
         die();
     }
         
     if(!($firstname = verify_data("firstname")))
     {
-        echo "ERRORE: dato mancante. ->" . "firstname";
+        //echo "ERRORE: dato mancante. ->" . "firstname";
+        header('location: ../html/registrazione.php&' . 'error_no_first=true');
         die();
     }
     if(!($lastname = verify_data("lastname")))
     {
-        echo "ERRORE: dato mancante. ->" . "lastname";
+        //echo "ERRORE: dato mancante. ->" . "lastname";
+        header('location: ../html/registrazione.php&' . 'error_no_last=true');
         die();
     }
     if(!($pass = verify_data("pass")))
     {
-        echo "ERRORE: dato mancante. ->" . "pass";
+        //echo "ERRORE: dato mancante. ->" . "pass";
+        header('location: ../html/registrazione.php&' . 'error_no_pass=true');
         die();
     }
     if(!($confirm = verify_data("confirm")))
     {
-        echo "ERRORE: dato mancante. ->" . "confirm";
+        //echo "ERRORE: dato mancante. ->" . "confirm";
+        header('location: ../html/registrazione.php&' . 'error_no_confirm=true');
         die();
     }
 
     //posso verificare subito che le due password coincidano
     if($pass !== $confirm)
     {
+        /*
         echo "ERRORE nella conferma delle password!<br>" 
             . "password: $pass <br>"
             . "conferma: $confirm<br>";
+        */
+        header('location: ../html/registrazione.php&' . 'error_pass_confirm=true');
         die();
     }
 }
@@ -88,7 +97,8 @@ $table_profili = new ProfiliUtenti($dbms);
 if($table_credenziali->isSetEmail($email))
 {
     //l'email esiste già; rifiuta la registrazione
-    echo 'la mail ' . $email . ' esiste già nel database. REGISTRAZIONE RIFIUTATA.';
+    //echo 'la mail ' . $email . ' esiste già nel database. REGISTRAZIONE RIFIUTATA.';
+    header('location: ../html/registrazione.php&' . 'error_email=true');
     die();
 }
 
@@ -139,17 +149,40 @@ if($table_credenziali->createAccount($email, $hashOfPass) === -1)
 $id_profilo = $table_credenziali->getId($email, $pass);
 if($id_profilo === -1)
 {
-    die("errore nella ricerca dell'id!");
+    //die("errore nella ricerca dell'id!");
+    header('location: ../html/registrazione.php&' . 'il_garbato_distruttore_colpisce_ancora=true');
+    die();
 }
 
 //registrazione dei dati di profilo
 if($errcode = $table_profili->createAccount($id_profilo, $nickname, $firstname, $lastname, (new ImgProfilo($dbms))->getFirstAvailableStyleId()))
 {
+    /*
     echo $errcode . "<br>" . $dbms->errno . " - " . $dbms->error . "<br>";
     die("errore!");
+    */
+    header('location: ../html/registrazione.php&' . 'il_garbato_distruttore_colpisce_ancora=true');
+    die();
 }
 
 //registrazione completata con successo; ora, fai qualcosa
-echo 'registrazione completata.';
+//echo 'registrazione completata.';
+if(isset($_GET['target']))
+{
+    if($_GET['target'] === 'profilo')
+        header('location: ../html/profiloprivato.php');
+    elseif($_GET['target'] === 'crowdfunding')
+        header('location: ../html/crowdfunding.php'); //modificare...
+    /*
+    elseif($_GET['target'] === '')
+        header('location: ');
+    */
+    else
+        header('location: ../html/profiloprivato.php');
+}
+else
+{
+    header('location: ../html/profiloprivato.php');
+}
 
 ?>
