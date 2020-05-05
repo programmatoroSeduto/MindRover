@@ -1,6 +1,6 @@
 <?php
 
-function funny()
+function funny() 
 {
     $style = 'font-size: 1.0rem; line-height: 2.2rem; margin: 0; font-style: italic; font-weight: lighter;';
 

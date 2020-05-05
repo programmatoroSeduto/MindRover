@@ -286,10 +286,40 @@ require_once('../php/modules/funny.php');
                 <div class="vishnu" style="grid-template-columns: 1fr 2fr 2fr;">
                     
                     <div>la tua Email:</div> <div><?php echo $email ?></div> 
-                    <div><i>cambia la tua mail</i></div>
+                    <!-- <div><i>cambia la tua mail</i></div> -->
+                    <div>
+                        <a class="d text-content modifica" id="email_btn">modifica</a>
+                        <div id="email_modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span id="email_close" class="close">&times;</span>
+                                    <h5>La tua nuova mail:</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p><i>seeeeeEEEEEeeeees</i></p>
+                                </div>
+                                <div class="modal-footer"><!-- solo per decorazione --></div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div>Password:</div> <div><i>(Una password incredibilmente sicura e affidabile)</i></div> 
-                    <div><i>cambiala con una ancora più sicura!</i></div>
+                    <!-- <div><i>cambiala con una ancora più sicura!</i></div> -->
+                    <div>
+                        <a class="d text-content modifica" id="pass_btn">modifica</a>
+                        <div id="pass_modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span id="pass_close" class="close">&times;</span>
+                                    <h5>La tua nuova password:</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p><i>seeeeeEEEEEeeeees</i></p>
+                                </div>
+                                <div class="modal-footer"><!-- solo per decorazione --></div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div title="clicca sul check per modificare">sei anonimo?</div> 
                     <div>
@@ -304,40 +334,95 @@ require_once('../php/modules/funny.php');
                     <div class="sep"></div> <div class="sep"></div> <div class="sep"></div>
                     
                     <div><b>Nickname:</b></div> <div><b><?php echo $nickname; ?></b></div> 
-                    <div><!-- Trigger/Open The Modal -->
-                    <a class="d text-content modifica" id="myBtn">modifica</a>
-
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h5>Il tuo nuovo nickname:</h2>
-                        </div>
-                        <div class="modal-body">
-                        <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
-                        </div>
-                        <div class="modal-footer">
+                    <div>
+                        <a class="d text-content modifica" id="nick_btn">modifica</a>
+                        <div id="nick_modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span id="nick_close" class="close">&times;</span>
+                                    <h5>Il tuo nuovo nickname:</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                </div>
+                                <div class="modal-footer"><!-- solo per decorazione --></div>
+                            </div>
                         </div>
                     </div>
-
-                    </div></div>
                     
                     <div>Nome:</div> <div>Genoveffo</div> 
-                    <div><i>ho cambiato nome.</i></div>
+                    <!-- <div><i>ho cambiato nome.</i></div> -->
+                    <div>
+                        <a class="d text-content modifica" id="first_btn">modifica</a>
+                        <div id="first_modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span id="first_close" class="close">&times;</span>
+                                    <h5>Il tuo nuovo nome:</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                </div>
+                                <div class="modal-footer"><!-- solo per decorazione --></div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div>Cognome:</div> <div>Peppolesto</div> 
-                    <div><i>ho cambiato cognome.</i></div>
+                    <!-- <div><i>ho cambiato cognome.</i></div> -->
+                    <div>
+                        <a class="d text-content modifica" id="last_btn">modifica</a>
+                        <div id="last_modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span id="last_close" class="close">&times;</span>
+                                    <h5>Il tuo nuovo cognome:</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                </div>
+                                <div class="modal-footer"><!-- solo per decorazione --></div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="sep"></div> <div class="sep"></div> <div class="sep"></div>
 
                     <div>Stato:</div> <div><?php echo ($status === '' ? '<i>Nessuno stato.</i>' : $status); ?></div> 
-                    <div><i>modifica</i></div>
+                    <!-- <div><i>modifica</i></div> -->
+                    <div>
+                        <a class="d text-content modifica" id="status_btn">modifica</a>
+                        <div id="status_modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span id="status_close" class="close">&times;</span>
+                                    <h5>Il tuo nuovo stato:</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                </div>
+                                <div class="modal-footer"><!-- solo per decorazione --></div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div>Bio:</div> <div style="text-align: justify; padding-right: 10px;"><?php echo ($descr === '' ? '<i>Nessuna bio.</i>' : substr($descr, 0, 50)) . (strlen($descr) > 50 ? '...' : ''); ?></div> 
-                    <div><i>modifica</i></div>
+                    <!-- <div><i>modifica</i></div> -->
+                    <div>
+                        <a class="d text-content modifica" id="descr_btn">modifica</a>
+                        <div id="descr_modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span id="descr_close" class="close">&times;</span>
+                                    <h5>Descrizione:</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                </div>
+                                <div class="modal-footer"><!-- solo per decorazione --></div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -381,33 +466,7 @@ require_once('../php/modules/funny.php');
     </div>
 
 <!-- Script per il modal -->
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script> 
+<script src="../js/profilo_privato_modals.js"></script> 
 
 </body>
 
