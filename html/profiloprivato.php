@@ -166,16 +166,22 @@ require_once('../php/modules/funny.php');
         </script>
 
         <!-- Barra sinistra -->
+        <script>
+            function changeTitlePage(newtitle)
+            {
+                document.getElementsByTagName('title')[0].innerHTML = newtitle;
+            }
+        </script>
         <div class="tab">
             <!-- voci generali per il profilo privato -->
-            <button class="tablinks active" onclick="activator('#s1', this);" title="Un'occhiata generale al tuo profilo.">Il tuo profilo</button>
-            <button class="tablinks" onclick="activator('#s2', this);" title="Puoi modificare da qui le tue credenziali, il tuo nickname, la tua bio, e molto altro.">Modifica il tuo profilo</button>
-            <button class="tablinks" onclick="activator('#s3', this);" title="Vedi quante donazioni hai fatto, quando le hai fatte, la tua posizione in classifica, e molto altro.">Le tue donazioni</button>
+            <button class="tablinks active" onclick="activator('#s1', this); changeTitlePage('<?php echo $nickname; ?>');" title="Un'occhiata generale al tuo profilo.">Il tuo profilo</button>
+            <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('Impostazioni di Profilo');" title="Puoi modificare da qui le tue credenziali, il tuo nickname, la tua bio, e molto altro.">Modifica il tuo profilo</button>
+            <button class="tablinks" onclick="activator('#s3', this); changeTitlePage('Donazioni');" title="Vedi quante donazioni hai fatto, quando le hai fatte, la tua posizione in classifica, e molto altro.">Le tue donazioni</button>
 
             <?php if($is_author): ?>
                 <!-- voci riservate agli autori -->
-                <button class="tablinks" onclick="activator('#s4', this);" tilte="Una lista di tutti gli articoli che hai scritto finora.">I miei articoli</button>
-                <button class="tablinks" onclick="activator('#s5', this);" tilte="Puoi pubblicare un nuovo articolo da qui.">Scrivi un articolo</button>
+                <button class="tablinks" onclick="activator('#s4', this); changeTitlePage('I miei articoli');" tilte="Una lista di tutti gli articoli che hai scritto finora.">I miei articoli</button>
+                <button class="tablinks" onclick="activator('#s5', this); changeTitlePage('Scrivi un articolo');" tilte="Puoi pubblicare un nuovo articolo da qui.">Scrivi un articolo</button>
             <?php endif ?>
 
             <!-- logout -->
@@ -293,10 +299,17 @@ require_once('../php/modules/funny.php');
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="email_close" class="close">&times;</span>
-                                    <h5>La tua nuova mail:</h2>
+                                    <h2>Modifica Email</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <p><i>seeeeeEEEEEeeeees</i></p>
+                                    <div style="padding: 5vh 3vh">
+                                        <form>
+                                            <label for="">la tua nuova email: </label><input type="text" name="" id=""><br>
+                                            <label for="">Per conferma, devi inserire anche la tua email: </label><input type="text" name="" id=""><br>
+                                            <br>
+                                            <button>Applica</button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
                             </div>
@@ -311,10 +324,19 @@ require_once('../php/modules/funny.php');
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="pass_close" class="close">&times;</span>
-                                    <h5>La tua nuova password:</h2>
+                                    <h2>La tua nuova password:</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <p><i>seeeeeEEEEEeeeees</i></p>
+                                    <div style="padding: 5vh 3vh">
+                                    <form>
+                                        <label for="">la tua nuova password: </label><input type="text" name="" id=""><br>
+                                        <label for="">conferma la tua nuova password: </label><input type="text" name="" id=""><br>
+                                        <label for="">Per conferma, devi inserire anche la tua email: </label><input type="text" name="" id=""><br>
+                                        <label for="">Serve anche la tua vecchia password: </label><input type="text" name="" id=""><br>
+                                        <br>
+                                        <button>Applica</button>
+                                    </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
                             </div>
@@ -343,7 +365,14 @@ require_once('../php/modules/funny.php');
                                     <h5>Il tuo nuovo nickname:</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                    <div style="padding: 5vh 3vh">
+                                        <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                        <form>
+                                            <label for="">nuovo nickname: </label><input type="text" name="" id=""><br>
+                                            <br>
+                                            <button>Applica</button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
                             </div>
@@ -361,7 +390,13 @@ require_once('../php/modules/funny.php');
                                     <h5>Il tuo nuovo nome:</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                    <div style="padding: 5vh 3vh">
+                                        <form>
+                                            <label for="">nuovo nome: </label><input type="text" name="" id=""><br>
+                                            <br>
+                                            <button>Applica</button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
                             </div>
@@ -379,7 +414,13 @@ require_once('../php/modules/funny.php');
                                     <h5>Il tuo nuovo cognome:</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                    <div style="padding: 5vh 3vh">
+                                        <form>
+                                            <label for="">nuovo conome: </label><input type="text" name="" id=""><br>
+                                            <br>
+                                            <button>Applica</button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
                             </div>
@@ -399,7 +440,13 @@ require_once('../php/modules/funny.php');
                                     <h5>Il tuo nuovo stato:</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                    <div style="padding: 5vh 3vh">
+                                        <form>
+                                            <label for="">nuovo stato: </label><input type="text" name="" id=""><br>
+                                            <br>
+                                            <button>Applica</button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
                             </div>
@@ -417,7 +464,14 @@ require_once('../php/modules/funny.php');
                                     <h5>Descrizione:</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
+                                    <div style="padding: 5vh 3vh">
+                                    <p><?php echo $descr; ?></p>
+                                        <form>
+                                            <label for="">descrizione: </label><input type="text" name="" id=""><br>
+                                            <br>
+                                            <button>Applica</button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
                             </div>
