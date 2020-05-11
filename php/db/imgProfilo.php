@@ -183,7 +183,7 @@ class ImgProfilo
         if(!$this->table_exists) return -1;
 
         //inserimento nel database dei dati (prepared statement)
-        $query = 'INSERT INTO ' . self::TABLE_NAME . ' (img_path, sfondo_colore_1, sfondo_colore_2, banner) VALUES (?, ?, ?, ?);';
+        $query = 'INSERT INTO ' . self::TABLE_NAME . ' (img_path, sfondo_colore_1, sfondo_colore_2, colore_banner) VALUES (?, ?, ?, ?);';
 
         $dbms_op = $this->dbms->prepare($query);
         $grad_rgb_1 = implode(",", $grad_rgb_1);
@@ -244,6 +244,34 @@ class ImgProfilo
         $res['color_2'] = explode(',', $row['sfondo_colore_2']);
         
         return $res;
+    }
+
+
+    //ritorna tutti gli stili
+    /*
+        id 
+        stile:
+            icon_path
+            banner
+            color_1
+            color_2
+    */
+    function getAllStyles()
+    {
+        if(!$this->table_exists) return null;
+
+        $data = $this->getTableContent();
+        if(!$data) return -1;
+        if($data->num_rows == 0) return -1;
+
+        $styles = array();
+
+        while($row = $data->fetch_assoc())
+        {
+            $styles[] = array('id' => $row['id_img'], 'stile' => $this->getStyle($row['id_img']));
+        }
+
+        return $styles;
     }
 }
 

@@ -213,15 +213,11 @@ $data[] = array(
     'colore2' => array(0, 0, 0)
 );
 
-/*
-    INSERISCI AL POSTO DI QUESTO COMMENTO tutte le altre ennuple.
-*/
-
 //inserimento nel database
 require_once('../ImgProfilo.php');
-require_once('../mysqli_credentials.php');
+require_once('../mysql_credentials.php');
 
-$imgs = new ImgProfilo(connect());
+$img = new ImgProfilo(connect());
 
 foreach($data as $k)
 {

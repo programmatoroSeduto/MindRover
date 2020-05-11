@@ -8,7 +8,7 @@ $ganesh = "ACCOUNT";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il tuo profilo</title>
+    <title>Benvenuto <?php echo $_SESSION['nickname']; ?>!</title>
 
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
@@ -39,6 +39,13 @@ $ganesh = "ACCOUNT";
 <?php
 
 require_once('../php/modules/navbar.php');
+require_once('../php/db/mysql_credentials.php');
+require_once('../php/db/ImgProfilo.php');
+$imgProfilo_stili = array();
+{
+    $table = new ImgProfilo(connect());
+    $imgProfilo_stili = $table->getAllStyles();
+}
 
 if(isset($_SESSION['user_id']))
 {
@@ -100,8 +107,38 @@ require_once('../php/modules/funny.php');
             <div class="brahma-profile" style="background: linear-gradient(45deg, rgb(<?php echo $color1_rgb; ?>), rgb(<?php echo $color2_rgb; ?>));">
                 <img src="<?php echo $avatar; ?>" class="avatar">
                 
-                <div class="overlay">
+                <div class="overlay" id="style_btn" style="cursor: pointer;">
                     <div class="text-img">Cambia immagine di profilo</div>
+                </div>
+                <div id="style_modal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span id="style_close" class="close">&times;</span>
+                            <h2>Modifica Stile</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div style="min-height: 50vh; max-height: 50vh; overflow-y: scroll; padding: 5vh 3vh; display: flex; flex-direction: column;">
+                                <div style="min-height: 2.5rem;"></div>
+                                <?php
+                                    foreach($imgProfilo_stili as $stile)
+                                    {
+                                        $stile['stile']['banner'] = 'rgb(' . implode(', ', $stile['stile']['banner']) . ')';
+                                        $stile['stile']['color_1'] = 'rgb(' . implode(', ', $stile['stile']['color_1']) . ')';
+                                        $stile['stile']['color_2'] = 'rgb(' . implode(', ', $stile['stile']['color_2']) . ')';
+                                        echo '<div style="background-color: ' . $stile['stile']['banner'] . '; flex: 1; min-height: 8vh; max-height: 8vh; margin-top: 1rem;">';
+                                            echo '<a href="../php/update_profile.php?id_stile=' . $stile['id'] . '">';
+                                                echo '<div class="brahma-profile-mini" style="margin-top: 1vh; margin-left: 1vw; background: linear-gradient(45deg, '. $stile['stile']['color_1'] .', ' . $stile['stile']['color_2'] . ');">';
+                                                    echo '<img src="' . $stile['stile']['icon_path'] . '" class="avatar-mini">';
+                                                echo '</div>';
+                                            echo '</a>';
+                                        echo '</div>';
+                                    }
+                                ?>
+                                <div style="min-height: 2.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><!-- solo per decorazione --></div>
+                    </div>
                 </div>
             
             </div>
@@ -128,11 +165,11 @@ require_once('../php/modules/funny.php');
                 <!-- ruoli -->
 
                 <?php if($supporter): ?>
-                    <p> <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i>  supporter </span> </p>
+                    <p> <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span> </p>
                 <?php endif ?>
 
                 <?php if($is_author): ?>
-                    <p> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i>  autore </span> </p>
+                    <p> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span> </p>
                 <?php endif ?>
 
                 <?php if(!$is_author and !$supporter): ?>
@@ -174,7 +211,7 @@ require_once('../php/modules/funny.php');
         </script>
         <div class="tab">
             <!-- voci generali per il profilo privato -->
-            <button class="tablinks active" onclick="activator('#s1', this); changeTitlePage('<?php echo $nickname; ?>');" title="Un'occhiata generale al tuo profilo.">Il tuo profilo</button>
+            <button class="tablinks active" onclick="activator('#s1', this); changeTitlePage('Benvenuto <?php echo $nickname; ?>!');" title="Un'occhiata generale al tuo profilo.">Il tuo profilo</button>
             <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('Impostazioni di Profilo');" title="Puoi modificare da qui le tue credenziali, il tuo nickname, la tua bio, e molto altro.">Modifica il tuo profilo</button>
             <button class="tablinks" onclick="activator('#s3', this); changeTitlePage('Donazioni');" title="Vedi quante donazioni hai fatto, quando le hai fatte, la tua posizione in classifica, e molto altro.">Le tue donazioni</button>
 
@@ -208,42 +245,15 @@ require_once('../php/modules/funny.php');
                     <!-- nickname -->
                     <div><b>Nickname:</b></div> <div><b><?php echo $nickname ?></b></div>
 
-                    <div class="sep"></div> <div class="sep"></div>
-
-                    <!-- dato che gli indicatori andranno modificati dinamicamente dopo aggiornamento ajax, 
-                        memorizzo l'html degli indicatori in modo da poterli utilizzare in furuto via js -->
-                    <script>
-                        let check_ok = '<i class="fas fa-check" style="color:green;"></i>';
-                        let check_no = '<i class="fas fa-times" style="color:red;"></i>';
-
-                        //funzione per cambiare gli indicatori
-                        /*
-                            id disponibili:
-                            info-profilo-...
-                                ...anonimo
-                                ...autore
-                                ...supporter
-                        */
-                        function setCheck(/*dove*/id, /*bool*/val)
-                        {
-                            //rimuovi il precedente check
-                            $('#' + id).children().remove();
-
-                            //inserisci il nuovo check
-                            if(val)
-                                $('#' + id).append(check_ok);
-                            else
-                                $('#' + id).append(check_no);
-                        }
-                    </script>
+                    <div class="sep"></div> <div class="sep"></div>                    
 
                     <!-- check: profilo anonimo? -->
                     <div title="Non vuoi che gli altri utenti ti trovino tramite il nostro motore di ricerca? Spunta questa opzione su 'modifica il tuo profilo', timidone.">
                         il tuo profilo è anonimo?
-                    </div> 
+                    </div>
                     <div id="info-profilo-anonimo">
                         <?php if($is_anonymous): ?>
-                            <i class="fas fa-check" style="color:green;"></i> 
+                            <i class="fas fa-check" style="color:green;"></i>
                         <?php else: ?>
                             <i class="fas fa-times" style="color:red;"></i>
                         <?php endif ?>
@@ -252,10 +262,10 @@ require_once('../php/modules/funny.php');
                     <!-- check: sei un autore? -->
                     <div title="Possibilità riservata solo ai portavoce ufficialmente riconosciuti dalla Frog Studios.">
                         Puoi scrivere articoli?
-                    </div> 
+                    </div>
                     <div id="info-profilo-autore">
                         <?php if($is_author): ?>
-                            <i class="fas fa-check" style="color:green;"></i> 
+                            <i class="fas fa-check" style="color:green;"></i>
                         <?php else: ?>
                             <i class="fas fa-times" style="color:red;"></i>
                         <?php endif ?>
@@ -291,8 +301,7 @@ require_once('../php/modules/funny.php');
             
                 <div class="vishnu" style="grid-template-columns: 1fr 2fr 2fr;">
                     
-                    <div>la tua Email:</div> <div><?php echo $email ?></div> 
-                    <!-- <div><i>cambia la tua mail</i></div> -->
+                    <div>la tua Email:</div> <div id="email-info"><?php echo $email ?></div> 
                     <div>
                         <a class="d text-content modifica" id="email_btn">modifica</a>
                         <div id="email_modal" class="modal">
@@ -303,11 +312,11 @@ require_once('../php/modules/funny.php');
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                        <form>
-                                            <label for="">la tua nuova email: </label><input type="text" name="" id=""><br>
-                                            <label for="">Per conferma, devi inserire anche la tua email: </label><input type="text" name="" id=""><br>
+                                        <form method="POST" action="../php/update_profile.php">
+                                            <label for="email">la tua nuova email: </label><input type="email" name="email"><br>
+                                            <label for="password">Per conferma, devi inserire anche la tua password: </label><input type="password" name="password"><br>
                                             <br>
-                                            <button>Applica</button>
+                                            <input type="submit" valure="Applica"></input>
                                         </form>
                                     </div>
                                 </div>
@@ -316,7 +325,7 @@ require_once('../php/modules/funny.php');
                         </div>
                     </div>
                     
-                    <div>Password:</div> <div><i>(Una password incredibilmente sicura e affidabile)</i></div> 
+                    <div>Password:</div> <div><i>(Una password incredibilmente sicura e affidabile)</i></div>
                     <!-- <div><i>cambiala con una ancora più sicura!</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="pass_btn">modifica</a>
@@ -328,14 +337,14 @@ require_once('../php/modules/funny.php');
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                    <form>
-                                        <label for="">la tua nuova password: </label><input type="text" name="" id=""><br>
-                                        <label for="">conferma la tua nuova password: </label><input type="text" name="" id=""><br>
-                                        <label for="">Per conferma, devi inserire anche la tua email: </label><input type="text" name="" id=""><br>
-                                        <label for="">Serve anche la tua vecchia password: </label><input type="text" name="" id=""><br>
-                                        <br>
-                                        <button>Applica</button>
-                                    </form>
+                                        <form method="POST" action="../php/update_profile.php">
+                                            <label for="new_password">la tua nuova password: </label><input type="password" name="new_password"><br>
+                                            <label for="confirm_password">conferma la tua nuova password: </label><input type="password" name="confirm_password"><br>
+                                            <label for="email">Per conferma, devi inserire anche la tua email: </label><input type="email" name="email"><br>
+                                            <label for="password">Serve anche la tua attuale password: </label><input type="password" name="password"><br>
+                                            <br>
+                                            <input type="submit" valure="Applica"></input>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
@@ -344,14 +353,14 @@ require_once('../php/modules/funny.php');
                     </div>
                     
                     <div title="clicca sul check per modificare">sei anonimo?</div> 
-                    <div>
-                       <?php if($is_anonymous): ?>
-                            <i class="fas fa-check" style="color:green;"></i> 
+                        <?php if($is_anonymous): ?>
+                            <a href="../php/update_profile.php?anonimo=0"><i class="fas fa-check" style="color:green;"></i></a>
                         <?php else: ?>
-                            <i class="fas fa-times" style="color:red;"></i>
+                            <a href="../php/update_profile.php?anonimo=1"><i class="fas fa-times" style="color:red;"></i></a>
                         <?php endif ?>
-                    </div> 
-                    <div><!--<i>modifica</i>--></div>
+                    <div>
+                        
+                    </div>
                     
                     <div class="sep"></div> <div class="sep"></div> <div class="sep"></div>
                     
@@ -367,10 +376,10 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
-                                        <form>
-                                            <label for="">nuovo nickname: </label><input type="text" name="" id=""><br>
+                                        <form method="POST" action="../php/update_profile.php">
+                                            <label for="nickname">nuovo nickname: </label><input type="text" name="nickname"><br>
                                             <br>
-                                            <button>Applica</button>
+                                            <input type="submit" valure="Applica"></input>
                                         </form>
                                     </div>
                                 </div>
@@ -379,7 +388,7 @@ require_once('../php/modules/funny.php');
                         </div>
                     </div>
                     
-                    <div>Nome:</div> <div>Genoveffo</div> 
+                    <div>Nome:</div> <div><?php echo $first_name; ?></div> 
                     <!-- <div><i>ho cambiato nome.</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="first_btn">modifica</a>
@@ -391,11 +400,13 @@ require_once('../php/modules/funny.php');
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                        <form>
-                                            <label for="">nuovo nome: </label><input type="text" name="" id=""><br>
-                                            <br>
-                                            <button>Applica</button>
-                                        </form>
+                                        <div style="padding: 5vh 3vh">
+                                            <form method="POST" action="../php/update_profile.php">
+                                                <label for="firstname">nuovo nome: </label><input type="text" name="firstname"><br>
+                                                <br>
+                                                <input type="submit" valure="Applica"></input>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
@@ -403,7 +414,7 @@ require_once('../php/modules/funny.php');
                         </div>
                     </div>
                     
-                    <div>Cognome:</div> <div>Peppolesto</div> 
+                    <div>Cognome:</div> <div><?php echo $last_name; ?></div> 
                     <!-- <div><i>ho cambiato cognome.</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="last_btn">modifica</a>
@@ -415,10 +426,10 @@ require_once('../php/modules/funny.php');
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                        <form>
-                                            <label for="">nuovo conome: </label><input type="text" name="" id=""><br>
+                                        <form method="POST" action="../php/update_profile.php">
+                                            <label for="lastname">nuovo conome: </label><input type="text" name="lastname"><br>
                                             <br>
-                                            <button>Applica</button>
+                                            <input type="submit" valure="Applica"></input>
                                         </form>
                                     </div>
                                 </div>
@@ -441,10 +452,10 @@ require_once('../php/modules/funny.php');
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                        <form>
-                                            <label for="">nuovo stato: </label><input type="text" name="" id=""><br>
+                                        <form method="POST" action="../php/update_profile.php">
+                                            <label for="status">nuovo stato: </label><input type="text" name="status"><br>
                                             <br>
-                                            <button>Applica</button>
+                                            <input type="submit" valure="Applica"></input>
                                         </form>
                                     </div>
                                 </div>
@@ -465,11 +476,12 @@ require_once('../php/modules/funny.php');
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                    <p><?php echo $descr; ?></p>
-                                        <form>
-                                            <label for="">descrizione: </label><input type="text" name="" id=""><br>
+                                        <p><?php echo $descr; ?></p>
+                                        <div style="min-height: 2rem;"><!-- separatore --></div>
+                                        <form method="POST" action="../php/update_profile.php">
+                                            <label for="description">descrizione: </label><input type="text" name="description"><br>
                                             <br>
-                                            <button>Applica</button>
+                                            <input type="submit" valure="Applica"></input>
                                         </form>
                                     </div>
                                 </div>
@@ -480,6 +492,7 @@ require_once('../php/modules/funny.php');
 
                 </div>
 
+                <script src="../js/autocomplete.js"></script>
             </div>
 
             <!-- Donazioni -->

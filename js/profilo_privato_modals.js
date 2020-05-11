@@ -6,7 +6,8 @@ let modal = {
     'first' : document.getElementById("first_modal"),
     'last' : document.getElementById("last_modal"),
     'status' : document.getElementById("status_modal"),
-    'descr' : document.getElementById("descr_modal")
+    'descr' : document.getElementById("descr_modal"),
+    'style' : document.getElementById("style_modal"),
 };
 
 let btn = {
@@ -16,7 +17,8 @@ let btn = {
     'first' : document.getElementById("first_btn"),
     'last' : document.getElementById("last_btn"),
     'status' : document.getElementById("status_btn"),
-    'descr' : document.getElementById("descr_btn")
+    'descr' : document.getElementById("descr_btn"),
+    'style' : document.getElementById("style_btn"),
 };
 
 let close = {
@@ -26,7 +28,8 @@ let close = {
     'first' : document.getElementById("first_close"),
     'last' : document.getElementById("last_close"),
     'status' : document.getElementById("status_close"),
-    'descr' : document.getElementById("descr_close")
+    'descr' : document.getElementById("descr_close"),
+    'style' : document.getElementById("style_close"),
 };
 
 {
