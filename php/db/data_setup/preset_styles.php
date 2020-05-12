@@ -213,6 +213,27 @@ $data[] = array(
     'colore2' => array(0, 0, 0)
 );
 
+$data[] = array(
+    'path' => '../assets/avatar/cerberus.jpg', 
+    'banner' => array(0, 154, 55),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/gan.jpg', 
+    'banner' => array(160, 0, 50),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/toast.jpg', 
+    'banner' => array(165, 100, 5),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
 //inserimento nel database
 require_once('../ImgProfilo.php');
 require_once('../mysql_credentials.php');
