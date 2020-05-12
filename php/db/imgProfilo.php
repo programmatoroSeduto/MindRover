@@ -61,7 +61,7 @@ class ImgProfilo
 
             //creazione tabella
             $this->dbms->query($query_create_table);
-
+            /*
             if($this->dbms->errno === 0) 
             {
                 $this->table_exists = true;
@@ -73,7 +73,7 @@ class ImgProfilo
                         VALUES ('../assets/img/rana.jpg', '255,0,0', '255,0,0', '255,0,0');"
                 );
             }
-
+            */
             return $this->dbms->errno;
         }
     }

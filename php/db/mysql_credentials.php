@@ -37,4 +37,13 @@ function connect($show_confirm = false)
 	return $conn;
 }
 
+function getSQLerror($dbms, $die = false)
+{
+	echo '>> codice SQL dell\'ultima operazione: ' . $dbms->errno . ' testo: ' . $dbms->error . '<br>';
+	if($die)
+	{
+		die('>> --- ERRORE - chiusura... --- <<');
+	}
+}
+
 ?>
