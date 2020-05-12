@@ -249,7 +249,7 @@ require_once('../php/modules/funny.php');
 
                     <!-- check: profilo anonimo? -->
                     <div title="Non vuoi che gli altri utenti ti trovino tramite il nostro motore di ricerca? Spunta questa opzione su 'modifica il tuo profilo', timidone.">
-                        il tuo profilo è anonimo?
+                        Il tuo profilo è anonimo?
                     </div>
                     <div id="info-profilo-anonimo">
                         <?php if($is_anonymous): ?>
@@ -301,7 +301,7 @@ require_once('../php/modules/funny.php');
             
                 <div class="vishnu" style="grid-template-columns: 1fr 2fr 2fr;">
                     
-                    <div>la tua Email:</div> <div id="email-info"><?php echo $email ?></div> 
+                    <div>La tua Email:</div> <div id="email-info"><?php echo $email ?></div> 
                     <div>
                         <a class="d text-content modifica" id="email_btn">modifica</a>
                         <div id="email_modal" class="modal">
@@ -313,7 +313,7 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="email">la tua nuova email: </label><input type="email" name="email"><br>
+                                            <label for="email">La tua nuova email: </label><input type="email" name="email"><br>
                                             <label for="password">Per conferma, devi inserire anche la tua password: </label><input type="password" name="password"><br>
                                             <br>
                                             <input type="submit" valure="Applica"></input>
@@ -338,8 +338,8 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="new_password">la tua nuova password: </label><input type="password" name="new_password"><br>
-                                            <label for="confirm_password">conferma la tua nuova password: </label><input type="password" name="confirm_password"><br>
+                                            <label for="new_password">La tua nuova password: </label><input type="password" name="new_password"><br>
+                                            <label for="confirm_password">Conferma la tua nuova password: </label><input type="password" name="confirm_password"><br>
                                             <label for="email">Per conferma, devi inserire anche la tua email: </label><input type="email" name="email"><br>
                                             <label for="password">Serve anche la tua attuale password: </label><input type="password" name="password"><br>
                                             <br>
@@ -352,7 +352,7 @@ require_once('../php/modules/funny.php');
                         </div>
                     </div>
                     
-                    <div title="clicca sul check per modificare">sei anonimo?</div> 
+                    <div title="clicca sul check per modificare">Sei anonimo?</div> 
                         <?php if($is_anonymous): ?>
                             <a href="../php/update_profile.php?anonimo=0"><i class="fas fa-check" style="color:green;"></i></a>
                         <?php else: ?>
@@ -377,7 +377,7 @@ require_once('../php/modules/funny.php');
                                     <div style="padding: 5vh 3vh">
                                         <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="nickname">nuovo nickname: </label><input type="text" name="nickname"><br>
+                                            <label for="nickname">Nuovo nickname: </label><input type="text" name="nickname"><br>
                                             <br>
                                             <input type="submit" valure="Applica"></input>
                                         </form>
@@ -402,7 +402,7 @@ require_once('../php/modules/funny.php');
                                     <div style="padding: 5vh 3vh">
                                         <div style="padding: 5vh 3vh">
                                             <form method="POST" action="../php/update_profile.php">
-                                                <label for="firstname">nuovo nome: </label><input type="text" name="firstname"><br>
+                                                <label for="firstname">Nuovo nome: </label><input type="text" name="firstname"><br>
                                                 <br>
                                                 <input type="submit" valure="Applica"></input>
                                             </form>
@@ -427,7 +427,7 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="lastname">nuovo conome: </label><input type="text" name="lastname"><br>
+                                            <label for="lastname">Nuovo cognome: </label><input type="text" name="lastname"><br>
                                             <br>
                                             <input type="submit" valure="Applica"></input>
                                         </form>
@@ -453,7 +453,7 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="status">nuovo stato: </label><input type="text" name="status"><br>
+                                            <label for="status">Nuovo stato: </label><input type="text" name="status"><br>
                                             <br>
                                             <input type="submit" valure="Applica"></input>
                                         </form>
@@ -479,7 +479,7 @@ require_once('../php/modules/funny.php');
                                         <p><?php echo $descr; ?></p>
                                         <div style="min-height: 2rem;"><!-- separatore --></div>
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="description">descrizione: </label><input type="text" name="description"><br>
+                                            <label for="description">Descrizione: </label><input type="text" name="description"><br>
                                             <br>
                                             <input type="submit" valure="Applica"></input>
                                         </form>

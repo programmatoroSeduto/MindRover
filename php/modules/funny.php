@@ -16,6 +16,8 @@ function funny()
     $funny[] = "Sei stato eliminato da";
     $funny[] = "L'incredibile pompelmo denonminato";
     $funny[] = "Il fantomatico profilo di";
+    $funny[] = "Attenti, è davvero scarso";
+    $funny[] = "Nascondete i bambini, è arrivato";
     $funny[] = "É QUI LA FESTA?";
     $funny[] = "Il famigerato";
     $funny[] = "Ti ha appena ultato in faccia";
@@ -43,6 +45,8 @@ function datetime_funny()
     $funny[] = "Deambula col suo cesto di pesche sciroppate dal lontano";
     $funny[] = "Sta ricordando quel fatidico giorno del";
     $funny[] = "Fa cose, dal";
+    $funny[] = "Prega assiduamente Ganesha dal";
+    $funny[] = "É stato benedetto dalla luce di Vishnu il";
     $funny[] = "Non smette mai di fare cose dal";
     $funny[] = "Soffia nelle cannucce dal";
     $funny[] = "É iscritto dal";

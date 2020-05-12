@@ -14,6 +14,7 @@ $data[] = array(
 */
 
 //path, banner, colore1, colore2
+
 $data[] = array(
     'path' => '../assets/avatar/fagiolo.png', 
     'banner' => array(20, 86, 3),
@@ -189,12 +190,12 @@ $data[] = array(
     'colore2' => array(255, 141, 249)
 );
 
-$data[] = array(
-    'path' => '../assets/avatar/sub.png', 
-    'banner' => array(155, 75, 0),
-    'colore1' => array(45, 189, 30),
-    'colore2' => array(255, 255, 255)
-);
+// $data[] = array(
+//     'path' => '../assets/avatar/sub.png', 
+//     'banner' => array(155, 75, 0),
+//     'colore1' => array(45, 189, 30),
+//     'colore2' => array(255, 255, 255)
+// );
 
 $data[] = array(
     'path' => '../assets/avatar/verde.png', 
@@ -256,7 +257,7 @@ foreach($data as $k)
         echo 'ERRORE! impossibile inserire la seguente: path(' . $k['path'] . ') colore1(' . implode(', ', $k['colore1']) . ') colore2(' . implode(', ', $k['colore2']) . ') banner(' . implode(', ', $k['banner']) . ')<br>';
         echo "codice d'errore " . $err . ' codice SQL ' . $img->dbms->errno . ' errore: ' . $img->dbms->error . '<br>';
     }
-    echo 'SQL: ' . $img->dbms->errno;
+    echo 'SQL: ' . $img->dbms->errno.'<br>';
 }
 
 echo '<br><br><br><br><br>';
