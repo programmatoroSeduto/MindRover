@@ -117,8 +117,8 @@ require_once('../php/modules/funny.php');
                             <h2>Modifica Stile</h2>
                         </div>
                         <div class="modal-body">
-                            <div style="min-height: 50vh; max-height: 50vh; overflow-y: scroll; padding: 5vh 3vh; display: flex; flex-direction: column;">
-                                <div style="min-height: 2.5rem;"></div>
+                            <div style="min-height: 50vh; max-height: 50vh; overflow-y: scroll; padding: 3vh 3vh; display: flex; flex-direction: column;">
+                                <!-- <div style="min-height: 2.5rem;"></div> -->
                                 <?php
                                     foreach($imgProfilo_stili as $stile)
                                     {
@@ -134,7 +134,7 @@ require_once('../php/modules/funny.php');
                                         echo '</div>';
                                     }
                                 ?>
-                                <div style="min-height: 2.5rem;"></div>
+                                <!-- <div style="min-height: 2.5rem;"></div> -->
                             </div>
                         </div>
                         <div class="modal-footer"><!-- solo per decorazione --></div>
@@ -316,7 +316,8 @@ require_once('../php/modules/funny.php');
                                             <label for="email">La tua nuova email: </label><input type="email" name="email"><br>
                                             <label for="password">Per conferma, devi inserire anche la tua password: </label><input type="password" name="password"><br>
                                             <br>
-                                            <input type="submit" valure="Applica"></input>
+                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -326,14 +327,13 @@ require_once('../php/modules/funny.php');
                     </div>
                     
                     <div>Password:</div> <div><i>(Una password incredibilmente sicura e affidabile)</i></div>
-                    <!-- <div><i>cambiala con una ancora più sicura!</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="pass_btn">modifica</a>
                         <div id="pass_modal" class="modal">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="pass_close" class="close">&times;</span>
-                                    <h2>La tua nuova password:</h2>
+                                    <h2>Modifica Password</h2>
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
@@ -343,7 +343,8 @@ require_once('../php/modules/funny.php');
                                             <label for="email">Per conferma, devi inserire anche la tua email: </label><input type="email" name="email"><br>
                                             <label for="password">Serve anche la tua attuale password: </label><input type="password" name="password"><br>
                                             <br>
-                                            <input type="submit" valure="Applica"></input>
+                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -371,15 +372,15 @@ require_once('../php/modules/funny.php');
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="nick_close" class="close">&times;</span>
-                                    <h5>Il tuo nuovo nickname:</h2>
+                                    <h2>Modifica Nickname</h2>
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                        <p><i>...un incredibile e innovativo nickname nato dalla tua mente perversa...</i></p>
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="nickname">Nuovo nickname: </label><input type="text" name="nickname"><br>
                                             <br>
-                                            <input type="submit" valure="Applica"></input>
+                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -389,14 +390,13 @@ require_once('../php/modules/funny.php');
                     </div>
                     
                     <div>Nome:</div> <div><?php echo $first_name; ?></div> 
-                    <!-- <div><i>ho cambiato nome.</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="first_btn">modifica</a>
                         <div id="first_modal" class="modal">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="first_close" class="close">&times;</span>
-                                    <h5>Il tuo nuovo nome:</h2>
+                                    <h2>Modifica Nome</h2>
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
@@ -404,7 +404,8 @@ require_once('../php/modules/funny.php');
                                             <form method="POST" action="../php/update_profile.php">
                                                 <label for="firstname">Nuovo nome: </label><input type="text" name="firstname"><br>
                                                 <br>
-                                                <input type="submit" valure="Applica"></input>
+                                                <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            </div>
                                             </form>
                                         </div>
                                     </div>
@@ -415,21 +416,21 @@ require_once('../php/modules/funny.php');
                     </div>
                     
                     <div>Cognome:</div> <div><?php echo $last_name; ?></div> 
-                    <!-- <div><i>ho cambiato cognome.</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="last_btn">modifica</a>
                         <div id="last_modal" class="modal">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="last_close" class="close">&times;</span>
-                                    <h5>Il tuo nuovo cognome:</h2>
+                                    <h2>Modifica Cognome</h2>
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="lastname">Nuovo cognome: </label><input type="text" name="lastname"><br>
                                             <br>
-                                            <input type="submit" valure="Applica"></input>
+                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -441,21 +442,21 @@ require_once('../php/modules/funny.php');
                     <div class="sep"></div> <div class="sep"></div> <div class="sep"></div>
 
                     <div>Stato:</div> <div><?php echo ($status === '' ? '<i>Nessuno stato.</i>' : $status); ?></div> 
-                    <!-- <div><i>modifica</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="status_btn">modifica</a>
                         <div id="status_modal" class="modal">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="status_close" class="close">&times;</span>
-                                    <h5>Il tuo nuovo stato:</h2>
+                                    <h2>Modifica Stato</h2>
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="status">Nuovo stato: </label><input type="text" name="status"><br>
                                             <br>
-                                            <input type="submit" valure="Applica"></input>
+                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -465,14 +466,13 @@ require_once('../php/modules/funny.php');
                     </div>
                     
                     <div>Bio:</div> <div style="text-align: justify; padding-right: 10px;"><?php echo ($descr === '' ? '<i>Nessuna bio.</i>' : substr($descr, 0, 50)) . (strlen($descr) > 50 ? '...' : ''); ?></div> 
-                    <!-- <div><i>modifica</i></div> -->
                     <div>
                         <a class="d text-content modifica" id="descr_btn">modifica</a>
                         <div id="descr_modal" class="modal">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <span id="descr_close" class="close">&times;</span>
-                                    <h5>Descrizione:</h2>
+                                    <h2>Modifica Bio</h2>
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
@@ -481,7 +481,8 @@ require_once('../php/modules/funny.php');
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="description">Descrizione: </label><input type="text" name="description"><br>
                                             <br>
-                                            <input type="submit" valure="Applica"></input>
+                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>

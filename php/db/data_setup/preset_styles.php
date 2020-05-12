@@ -190,13 +190,6 @@ $data[] = array(
     'colore2' => array(255, 141, 249)
 );
 
-// $data[] = array(
-//     'path' => '../assets/avatar/sub.png', 
-//     'banner' => array(155, 75, 0),
-//     'colore1' => array(45, 189, 30),
-//     'colore2' => array(255, 255, 255)
-// );
-
 $data[] = array(
     'path' => '../assets/avatar/verde.png', 
     'banner' => array(155, 75, 0),
