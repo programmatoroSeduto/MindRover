@@ -316,7 +316,8 @@ require_once('../php/modules/funny.php');
                                             <label for="email">La tua nuova email: </label><input type="email" name="email"><br>
                                             <label for="password">Per conferma, devi inserire anche la tua password: </label><input type="password" name="password"><br>
                                             <br>
-                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            <div>
+                                                <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
                                             </div>
                                         </form>
                                     </div>
@@ -343,7 +344,8 @@ require_once('../php/modules/funny.php');
                                             <label for="email">Per conferma, devi inserire anche la tua email: </label><input type="email" name="email"><br>
                                             <label for="password">Serve anche la tua attuale password: </label><input type="password" name="password"><br>
                                             <br>
-                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            <div>
+                                                <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
                                             </div>
                                         </form>
                                     </div>
@@ -379,7 +381,8 @@ require_once('../php/modules/funny.php');
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="nickname">Nuovo nickname: </label><input type="text" name="nickname"><br>
                                             <br>
-                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            <div>
+                                                <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
                                             </div>
                                         </form>
                                     </div>
@@ -404,8 +407,9 @@ require_once('../php/modules/funny.php');
                                             <form method="POST" action="../php/update_profile.php">
                                                 <label for="firstname">Nuovo nome: </label><input type="text" name="firstname"><br>
                                                 <br>
-                                                <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
-                                            </div>
+                                                <div>
+                                                    <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -429,7 +433,8 @@ require_once('../php/modules/funny.php');
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="lastname">Nuovo cognome: </label><input type="text" name="lastname"><br>
                                             <br>
-                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            <div>
+                                                <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
                                             </div>
                                         </form>
                                     </div>
@@ -455,7 +460,8 @@ require_once('../php/modules/funny.php');
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="status">Nuovo stato: </label><input type="text" name="status"><br>
                                             <br>
-                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            <div>
+                                                <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
                                             </div>
                                         </form>
                                     </div>
@@ -481,7 +487,8 @@ require_once('../php/modules/funny.php');
                                         <form method="POST" action="../php/update_profile.php">
                                             <label for="description">Descrizione: </label><input type="text" name="description"><br>
                                             <br>
-                                            <div style="display: grid;"><input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
+                                            <div>
+                                                <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
                                             </div>
                                         </form>
                                     </div>

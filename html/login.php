@@ -14,6 +14,8 @@ require_once('../php/modules/navbar.php');
     <link type="text/css" rel="stylesheet" href="../css/fonts.css">
     <link type="text/css" rel="stylesheet" href="../css/nav.css">
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
+    <link type="text/css" rel="stylesheet" href="../css/text-container.css">
+    <link type="text/css" rel="stylesheet" href="../css/modal.css">
 
     <title>Accedi</title>
 </head>
@@ -29,7 +31,7 @@ require_once('../php/modules/navbar.php');
         }
     ?>
     <div class="box">
-        <h1 style="line-height: 5rem;">Login!</h1><br>
+        <h1 style="line-height: 5rem; font-family: ganesh">Login</h1><br>
         <form action="../php/login.php" method="POST">
             <div class="loginform-body">
                 <?php
@@ -40,7 +42,8 @@ require_once('../php/modules/navbar.php');
                 <label for="pass">Password: </label><input type="password" name="pass">
             </div>
             <div class="loginform-submit">
-                <input class="submin-button" type="submit" value="Accedi">
+                <!-- <input class="submin-button" type="submit" value="Accedi"> -->
+                <input class="d text-content modifica" type="submit" value="Accedi" style="background-color: transparent; border-style: none;"></input>
                 
                 <span class="auth-error">
                     <?php
@@ -62,7 +65,7 @@ require_once('../php/modules/navbar.php');
             </div>
         </form>
         
-        <p class="register-here">Non ancora registrato? <a href="./registrazione.php"><i>clicca qui!</i></a></p>
+        <p class="register-here">Non ancora registrato? <a href="./registrazione.php" class="d text-content modifica"><i>Provvedi subito!</i></a></p>
     </div>
 
     <img src="<?php echo (isset($_GET['target']) ? '../assets/img/logo.png&target=' . $_GET['target'] : '../assets/img/logo.png'); ?>" class="frog">

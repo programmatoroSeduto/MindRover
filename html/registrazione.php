@@ -13,7 +13,12 @@ require_once('../php/modules/navbar.php');
     <link rel="stylesheet" type="text/css" href="../css/login.css">
     <link type="text/css" rel="stylesheet" href="../css/fonts.css">
     <link type="text/css" rel="stylesheet" href="../css/nav.css">
+    <link type="text/css" rel="stylesheet" href="../css/text-container.css">
+    <link type="text/css" rel="stylesheet" href="../css/modal.css">
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <title>Registrazione</title>
 </head>
@@ -31,7 +36,7 @@ require_once('../php/modules/navbar.php');
     ?>    
 
     <div class="reg-box">
-        <h1 style="line-height: 5rem;">Registrazione</h1><br>
+        <h1 style="line-height: 5rem; font-family: ganesh">Registrazione</h1><br>
         <form action="../php/registration.php" method="POST">
             
             <div class="registrationform-body">
@@ -41,13 +46,14 @@ require_once('../php/modules/navbar.php');
                 ?>
                 <label for="firstname">Nome:</label><input type="text" name="firstname">
                 <label for="lastname">Cognome:</label><input type="text" name="lastname">
-                <label for="email">E-mail</label><input type="email" name="email">
-                <label for="pass">Password</label><input type="password" name="pass">
-                <label for="confirm">Conferma Password</label><input type="password" name="confirm">
+                <label for="email">Email:</label><input type="email" name="email">
+                <label for="pass">Password:</label><input type="password" name="pass">
+                <label for="confirm">Conferma password:</label><input type="password" name="confirm">
             </div>
 
             <div class="loginform-submit">
-                <input class="submin-button" type="submit" value="Registrati!">
+                <!-- <input class="submin-button" type="submit" value="Registrati!"> -->
+                <input class="d text-content modifica" type="submit" value="Registrati!" style="background-color: transparent; border-style: none;"></input>
                 
                 <span class="auth-error">
                     <?php
