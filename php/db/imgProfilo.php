@@ -53,7 +53,7 @@ class ImgProfilo
             //la query
             $query_create_table = 'CREATE TABLE ' . self::TABLE_NAME . ' (
                 id_img INT NOT NULL AUTO_INCREMENT KEY,
-                img_path VARCHAR(500) NOT NULL UNIQUE,
+                img_path VARCHAR(500) NOT NULL,
                 sfondo_colore_1 VARCHAR(12) NOT NULL DEFAULT "255,0,0",
                 sfondo_colore_2 VARCHAR(12) NOT NULL DEFAULT "255,0,0",
                 colore_banner VARCHAR(12) NOT NULL DEFAULT "255,255,255"
@@ -196,6 +196,23 @@ class ImgProfilo
         $dbms_op->execute();
 
         return $this->dbms->errno;
+    }
+
+    //verifica se un certo stile esiste
+    function isSetStyle($img_path, $grad_rgb_1, $grad_rgb_2, $banner_rgb)
+    {
+        if(!$this->table_exists) return 0;
+
+        $grad_rgb_1 = implode(",", $grad_rgb_1);
+        $grad_rgb_2 = implode(",", $grad_rgb_2);
+        $banner_rgb = implode(",", $banner_rgb);
+
+        $q = 'SELECT id_img FROM ' . self::TABLE_NAME . ' WHERE img_path="' . $img_path . '" AND sfondo_colore_1="' . $grad_rgb_1 . '" AND sfondo_colore_2="' . $grad_rgb_2 . '"AND colore_banner="' . $banner_rgb . '";';
+
+        $data = $this->dbms->query($q);
+        if(!$data) return 0;
+
+        return ($data->num_rows > 0);
     }
 
     //trova il primo id disponibile nel catalogo di stili

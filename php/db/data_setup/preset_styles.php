@@ -1,5 +1,9 @@
 <?php
 
+echo '<br><br>';
+echo '>> --- IMPORTAZIONE STILI --- <<';
+echo '<br><br><br><br><br>';
+
 /* TEMPLATE PER L'INSERIMENTO DI DATI NEL DATABASE
 $data[] = array(
     'path' => '../assets/avatar/ ', 
@@ -242,10 +246,20 @@ $img = new ImgProfilo(connect());
 
 foreach($data as $k)
 {
+    if($img->isSetStyle($k['path'], $k['colore1'], $k['colore2'], $k['banner']))
+    {
+        echo 'stile già presente nel database.<br><i> path(' . $k['path'] . ') colore1(' . implode(', ', $k['colore1']) . ') colore2(' . implode(', ', $k['colore2']) . ') banner(' . implode(', ', $k['banner']) . ')</i><br>';
+        continue;
+    }
     if($err = $img->addNewStyle($k['path'], $k['colore1'], $k['colore2'], $k['banner']))
     {
         echo 'ERRORE! impossibile inserire la seguente: path(' . $k['path'] . ') colore1(' . implode(', ', $k['colore1']) . ') colore2(' . implode(', ', $k['colore2']) . ') banner(' . implode(', ', $k['banner']) . ')<br>';
         echo "codice d'errore " . $err . ' codice SQL ' . $img->dbms->errno . ' errore: ' . $img->dbms->error . '<br>';
     }
+    echo 'SQL: ' . $img->dbms->errno;
 }
+
+echo '<br><br><br><br><br>';
+echo '>> --- IMPORTAZIONE TERMINATA --- <<';
+echo '<br><br><br><br><br>';
 ?>
