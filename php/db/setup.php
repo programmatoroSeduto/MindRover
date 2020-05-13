@@ -10,6 +10,7 @@
 
 <?php
 require_once('./mysql_credentials.php');
+{
 require_once('./CredenzialiUtenti.php');
 require_once('./ProfiliUtenti.php');
 require_once('./Donazioni.php');
@@ -94,6 +95,15 @@ echo '>> --- Database creato. --- <<';
 
 //chiusura connessione
 $dbms->close();
+}
+
+{
+require_once('./data_setup/preset_styles.php');
+}
+
+{
+require_once('./data_setup/account_data.php');
+}
 ?>
 
 </body>

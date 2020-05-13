@@ -52,7 +52,8 @@ function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $d
         }
 
         //in che posizione della classifica si trova
-        $_SESSION['crowdfunding_rank'] = $donazioni->getRankOf($user_id);
+        //$_SESSION['crowdfunding_rank'] = $donazioni->getRankOf($user_id);
+        $_SESSION['crowdfunding_rank'] = -1;
 
         //lista delle donazioni da parte dell'utente
         $_SESSION['crowdfunding_donation_list'] = $donazioni->getDonationListFrom($user_id);

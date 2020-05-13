@@ -139,7 +139,7 @@ if($table_credenziali->createAccount($email, $hashOfPass) === -1)
 
 //ottieni l'id appena registrato
 $id_profilo = $table_credenziali->getId($email, $pass);
-if($id_profilo === -1)
+if($id_profilo == -1)
 {
     //die("errore nella ricerca dell'id!");
     header('location: ../html/registrazione.php?' . 'il_garbato_distruttore_colpisce_ancora=true');
@@ -149,12 +149,10 @@ if($id_profilo === -1)
 //registrazione dei dati di profilo
 if($errcode = $table_profili->createAccount($id_profilo, $nickname, $firstname, $lastname, (new ImgProfilo($dbms))->getFirstAvailableStyleId()))
 {
-    /*
     echo $errcode . "<br>" . $dbms->errno . " - " . $dbms->error . "<br>";
     die("errore!");
-    */
-    header('location: ../html/registrazione.php?' . 'il_garbato_distruttore_colpisce_ancora=true');
-    die();
+    //header('location: ../html/registrazione.php?' . 'il_garbato_distruttore_colpisce_ancora=true');
+    //die();
 }
 
 //registrazione completata con successo; ora, fai qualcosa

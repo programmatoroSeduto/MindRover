@@ -233,8 +233,10 @@ $data[] = array(
 );
 
 //inserimento nel database
-require_once('../ImgProfilo.php');
-require_once('../mysql_credentials.php');
+//require_once('../ImgProfilo.php');
+//require_once('../mysql_credentials.php');
+require_once('./ImgProfilo.php');
+require_once('./mysql_credentials.php');
 
 $img = new ImgProfilo(connect());
 
