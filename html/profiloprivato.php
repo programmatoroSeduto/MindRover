@@ -1,6 +1,7 @@
 <?php
 session_start();
 $ganesh = "ACCOUNT";
+$dictator = false;
 ?>
 
 <!DOCTYPE html>
@@ -164,17 +165,24 @@ require_once('../php/modules/funny.php');
                 
                 <!-- ruoli -->
 
-                <?php if($supporter): ?>
-                    <p> <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span> </p>
+                <?php if(!$dictator): ?>
+
+                    <?php if($supporter): ?>
+                        <p> <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span> </p>
+                    <?php endif ?>
+
+                    <?php if($is_author): ?>
+                        <p> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span> </p>
+                    <?php endif ?>
+
+                    <!-- <?php if(!$is_author and !$supporter): ?>
+                        <p> <span class="userinfo-tag tag-basic"><i class="fas fa-frog" style="margin-top: 1rem"></i> base </span> </p>
+                    <?php endif ?> -->
+
+                <?php else: ?>
+                    <p> <span class="userinfo-tag tag-dictator"><i class="fas fa-frog"></i> dittatore supremo </span> </p>
                 <?php endif ?>
 
-                <?php if($is_author): ?>
-                    <p> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span> </p>
-                <?php endif ?>
-
-                <?php if(!$is_author and !$supporter): ?>
-                    <p> <span class="userinfo-tag tag-basic"><i class="fas fa-frog"></i> base </span> </p>
-                <?php endif ?>
             </div>
 
             <!-- icona tier -->
@@ -492,7 +500,11 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="status">Nuovo stato: </label><input type="text" name="status"><br>
+                                            <div class="form-container">
+                                                <input type="text" name="status" placeholder="Una citazione acculturata, magari?" class="form">
+                                                <i class="fas fa-comment"></i>
+                                            </div>
+                                            <!-- <label for="status">Nuovo stato: </label><input type="text" name="status"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -519,7 +531,11 @@ require_once('../php/modules/funny.php');
                                         <p><?php echo $descr; ?></p>
                                         <div style="min-height: 2rem;"><!-- separatore --></div>
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="description">Descrizione: </label><input type="text" name="description"><br>
+                                            <div class="form-container">
+                                                <input type="text" name="description" placeholder="Parlaci di te, non so, dicci se hai dei cani." class="form">
+                                                <i class="fas fa-comment"></i>
+                                            </div>
+                                            <!-- <label for="description">Descrizione: </label><input type="text" name="description"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>

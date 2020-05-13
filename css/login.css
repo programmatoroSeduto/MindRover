@@ -10,7 +10,7 @@
 {
     background-color: rgba(128, 128, 128, 0.5);
     border-radius: 0.5em;
-    padding: 3rem 6rem;
+    padding: 3rem 7rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,7 +25,7 @@
 {
     background-color: rgba(128, 128, 128, 0.5);
     border-radius: 0.5em;
-    padding: 5rem;
+    padding: 2rem 5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,8 +37,6 @@
     max-height: 80vh;
     max-height: 75vh;
 }
-
-
 
 /* .loginform-body
 {

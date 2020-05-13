@@ -108,6 +108,7 @@ require_once('../php/modules/navbar.php');
 
             </div>
         </form>
+        <p class="register-here">Hai già un account? <a href="./login.php" class="d text-content modifica"><i>Accedi subito!</i></a></p>
     </div>
 
     <img src="../assets/img/logo.png" class="frog">

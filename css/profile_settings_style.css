@@ -189,7 +189,7 @@
 .userinfo-tag
 {
     padding: 0 0.6vh; 
-    border-radius: 7%;
+    border-radius: 10%;
     font-family: 'ganesh';
 }
 
@@ -201,26 +201,29 @@
 .tag-supporter i
 {
     color:green;
+    margin-bottom: 1rem
 }
 
 .tag-author
 {
-    background-color: red;
+    background-color: white;
 }
 
 .tag-author i
 {
-    color:whte;
+    color:rgb(0, 108, 248);
+    margin-bottom: 1rem
 }
 
-.tag-basic
+.tag-dictator
 {
-    background-color: goldenrod;
+    background-color: blueviolet;
 }
 
-.tag-basic i
+.tag-dictator i
 {
-    color:red;
+    color:white;
+    margin-bottom: 1rem
 }
 
 .error
