@@ -93,11 +93,11 @@ $ganesh = "HOMEPAGE";
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
-                        Aner Allbe
+                        Rimani aggiornato
                     </h1>
 
                     <p class="splash-body-paragraph text-content">
-                        tua madre è un'angora... puzza di fondo e va a pesce.
+                        Visita la nostra sezione notizie per tutte le novità!
                         <a href="../HTML/mindrover.php"><i class="d">Scopri di più</i></a>
                     </p>
 

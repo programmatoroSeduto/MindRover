@@ -533,7 +533,7 @@ require_once('../php/modules/funny.php');
                                         <form method="POST" action="../php/update_profile.php">
                                             <div class="form-container">
                                                 <input type="text" name="description" placeholder="Parlaci di te, non so, dicci se hai dei cani." class="form">
-                                                <i class="fas fa-comment"></i>
+                                                <i class="fas fa-book-open"></i>
                                             </div>
                                             <!-- <label for="description">Descrizione: </label><input type="text" name="description"><br> -->
                                             <br>
