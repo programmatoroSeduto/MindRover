@@ -17,6 +17,9 @@ require_once('../php/modules/navbar.php');
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/modal.css">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
     <title>Accedi</title>
 </head>
 <body class="login-bg">
@@ -38,8 +41,16 @@ require_once('../php/modules/navbar.php');
                     if(isset($_GET['target']))
                         echo '<input name="target" style="display: none;" value="' . $_GET['target'] . '">';
                 ?>
-                <label for="email">Email: </label><input type="email" name="email">
-                <label for="pass">Password: </label><input type="password" name="pass">
+                <!-- <label for="email">Email: </label><input type="email" name="email"> -->
+                <div class="form-container">
+                    <input type="email" name="email" placeholder="Email" class="form">
+                    <i class="fas fa-envelope" style="top: 2.2vh"></i>
+                </div>
+                <!-- <label for="pass">Password: </label><input type="password" name="pass"> -->
+                <div class="form-container">
+                    <input type="password" name="pass" placeholder="Password" class="form">
+                    <i class="fas fa-key" style="top: 2.2vh"></i>
+                </div>
             </div>
             <div class="loginform-submit">
                 <!-- <input class="submin-button" type="submit" value="Accedi"> -->

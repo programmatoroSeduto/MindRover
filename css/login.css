@@ -9,8 +9,8 @@
 .box
 {
     background-color: rgba(128, 128, 128, 0.5);
-    border-radius: 1em;
-    padding: 5rem;
+    border-radius: 0.5em;
+    padding: 3rem 6rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,7 +24,7 @@
 .reg-box
 {
     background-color: rgba(128, 128, 128, 0.5);
-    border-radius: 1em;
+    border-radius: 0.5em;
     padding: 5rem;
     position: absolute;
     top: 50%;
@@ -40,19 +40,19 @@
 
 
 
-.loginform-body
+/* .loginform-body
 {
     display: grid;
     grid-template-columns: 1fr 5fr;
     row-gap: 0.8rem;
-}
+} */
 
-.registrationform-body
+/* .registrationform-body
 {
     display: grid;
     grid-template-columns: 2fr 5fr;
     row-gap: 0.8rem;
-}
+} */
 
 .registrationform-body label
 {
@@ -97,4 +97,35 @@
     padding-top: 3rem;
     padding-left: 1.5rem;
     font-size: 1.1rem;
+}
+
+.form{
+    width: 100%;
+    border: 0.25vh solid #8f281d;
+    border-radius: 0.5vh;
+    padding: 2vh 5vh;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.form:focus{
+    border-color: tomato;
+    box-shadow: tomato;
+}
+
+.form-container{
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+.form-container i{
+    position: absolute;
+    left: 1.5vh;
+    top: 1.2vh;
+    color: #8f281d;
+    transition: .5s;
+}
+
+.form-container input:focus + i{
+    color: tomato;
 }

@@ -313,8 +313,16 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="email">La tua nuova email: </label><input type="email" name="email"><br>
-                                            <label for="password">Per conferma, devi inserire anche la tua password: </label><input type="password" name="password"><br>
+                                            <div class="form-container">
+                                                <input type="email" name="email" placeholder="La tua nuova email" class="form">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <!-- <label for="email">La tua nuova email: </label><input type="email" name="email"><br> -->
+                                            <div class="form-container">
+                                                <input type="password" name="password" placeholder="Conferma inserendo la tua password" class="form">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                            <!-- <label for="password">Per conferma, devi inserire anche la tua password: </label><input type="password" name="password"> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -339,10 +347,26 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="new_password">La tua nuova password: </label><input type="password" name="new_password"><br>
-                                            <label for="confirm_password">Conferma la tua nuova password: </label><input type="password" name="confirm_password"><br>
-                                            <label for="email">Per conferma, devi inserire anche la tua email: </label><input type="email" name="email"><br>
-                                            <label for="password">Serve anche la tua attuale password: </label><input type="password" name="password"><br>
+                                            <div class="form-container">
+                                                <input type="password" name="new_password" placeholder="La tua nuova password" class="form">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                            <!-- <label for="new_password">La tua nuova password: </label><input type="password" name="new_password"><br> -->
+                                            <div class="form-container">
+                                                <input type="password" name="confirm_password" placeholder="Conferma la tua nuova password" class="form">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                            <!-- <label for="confirm_password">Conferma la tua nuova password: </label><input type="password" name="confirm_password"><br> -->
+                                            <div class="form-container">
+                                                <input type="email" name="email" placeholder="Conferma inserendo la tua email" class="form">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <!-- <label for="email">Per conferma, devi inserire anche la tua email: </label><input type="email" name="email"><br> -->
+                                            <div class="form-container">
+                                                <input type="password" name="password" placeholder="La tua attuale password" class="form">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                            <!-- <label for="password">Serve anche la tua attuale password: </label><input type="password" name="password"> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -379,7 +403,11 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="nickname">Nuovo nickname: </label><input type="text" name="nickname"><br>
+                                            <div class="form-container">
+                                                <input type="text" name="nickname" placeholder="Un nuovo incredibile nickname" class="form">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <!-- <label for="nickname">Nuovo nickname: </label><input type="text" name="nickname"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -403,15 +431,17 @@ require_once('../php/modules/funny.php');
                                 </div>
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
-                                        <div style="padding: 5vh 3vh">
                                             <form method="POST" action="../php/update_profile.php">
-                                                <label for="firstname">Nuovo nome: </label><input type="text" name="firstname"><br>
+                                                <div class="form-container">
+                                                    <input type="text" name="firstname" placeholder="Hai davvero cambiato nome?" class="form">
+                                                    <i class="fas fa-signature"></i>
+                                                </div>
+                                                <!-- <label for="firstname">Nuovo nome: </label><input type="text" name="firstname"><br> -->
                                                 <br>
                                                 <div>
                                                     <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
                                                 </div>
                                             </form>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer"><!-- solo per decorazione --></div>
@@ -431,7 +461,11 @@ require_once('../php/modules/funny.php');
                                 <div class="modal-body">
                                     <div style="padding: 5vh 3vh">
                                         <form method="POST" action="../php/update_profile.php">
-                                            <label for="lastname">Nuovo cognome: </label><input type="text" name="lastname"><br>
+                                            <div class="form-container">
+                                                <input type="text" name="lastname" placeholder="Hai davvero cambiato cognome?" class="form">
+                                                <i class="fas fa-signature"></i>
+                                            </div>
+                                            <!-- <label for="lastname">Nuovo cognome: </label><input type="text" name="lastname"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>

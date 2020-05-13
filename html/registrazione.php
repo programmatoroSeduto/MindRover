@@ -44,11 +44,31 @@ require_once('../php/modules/navbar.php');
                     if(isset($_GET['target']))
                         echo '<input name="target" style="display: none;" value="' . $_GET['target'] . '">';
                 ?>
-                <label for="firstname">Nome:</label><input type="text" name="firstname">
-                <label for="lastname">Cognome:</label><input type="text" name="lastname">
-                <label for="email">Email:</label><input type="email" name="email">
-                <label for="pass">Password:</label><input type="password" name="pass">
-                <label for="confirm">Conferma password:</label><input type="password" name="confirm">
+                <!-- <label for="firstname">Nome:</label><input type="text" name="firstname"> -->
+                <div class="form-container">
+                    <input type="text" name="firstname" placeholder="Nome" class="form">
+                    <i class="fas fa-signature"></i>
+                </div>
+                <!-- <label for="lastname">Cognome:</label><input type="text" name="lastname"> -->
+                <div class="form-container">
+                    <input type="text" name="lastname" placeholder="Cognome" class="form">
+                    <i class="fas fa-signature"></i>
+                </div>
+                <!-- <label for="email">Email:</label><input type="email" name="email"> -->
+                <div class="form-container">
+                    <input type="email" name="email" placeholder="Email" class="form">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <!-- <label for="pass">Password:</label><input type="password" name="pass"> -->
+                <div class="form-container">
+                    <input type="password" name="pass" placeholder="Password" class="form">
+                    <i class="fas fa-key"></i>
+                </div>
+                <!-- <label for="confirm">Conferma password:</label><input type="password" name="confirm"> -->
+                <div class="form-container">
+                    <input type="password" name="confirm" placeholder="Conferma password" class="form">
+                    <i class="fas fa-key"></i>
+                </div>
             </div>
 
             <div class="loginform-submit">
