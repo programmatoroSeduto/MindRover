@@ -79,38 +79,90 @@ $data[] = array(
     'donazioni' => array(500, 250, 300, 24.50)
 );
 
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'capocchia.lucente@hotmail.com',
+        'password' => 'cazziamari'
+    ),
+    'profilo' => array(
+        'nickname' => 'xXxCapocchiaLucentexXx',
+        'nome' => 'Fernando',
+        'cognome' => 'Cartomastro',
+        'stato' => 'Dal mattino alla sera, bella Lore bella Rena!',
+        'descrizione' => 'La mia capocchia è lucente',
+        'flag_anonimo' => false,
+        'id_img_profilo' => -1
+    ),
+    'donazioni' => array(1, 2, 3, 4444)
+);
 
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'c.asdrubale@gmail.it',
+        'password' => 'ringhiera'
+    ),
+    'profilo' => array(
+        'nickname' => 'PetardoIndiano777',
+        'nome' => 'Francesco',
+        'cognome' => 'Asdrubale',
+        'stato' => 'Ciccio Asdrubale sta arrivando!',
+        'descrizione' => 'Sono Ciccio, ho 43 anni, vivo con mia madre e guardo i piedini online.',
+        'flag_anonimo' => false,
+        'id_img_profilo' => -1
+    ),
+    'donazioni' => array()
+);
 
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'cangrande@live.it',
+        'password' => 'dantesuca'
+    ),
+    'profilo' => array(
+        'nickname' => 'xxBIGDOG',
+        'nome' => 'Cangrande',
+        'cognome' => 'Della Scala',
+        'stato' => 'Vuolsì così, colà, che cazzo vuol dire?',
+        'descrizione' => 'Sono un ricco figlio di papà arrabbiato con Dante.',
+        'flag_anonimo' => false,
+        'id_img_profilo' => -1
+    ),
+    'donazioni' => array()
+);
 
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'cliff.unger@gmail.us',
+        'password' => 'bb'
+    ),
+    'profilo' => array(
+        'nickname' => 'CombatVeteran',
+        'nome' => 'Cliff',
+        'cognome' => 'Unger',
+        'stato' => 'Dov\'è il mio BB?',
+        'descrizione' => 'Fa ridere perchè Cliff Unger sembra "cliffhanger", e la mia identità è proprio un colpo di scena. SaS.',
+        'flag_anonimo' => false,
+        'id_img_profilo' => -1
+    ),
+    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'lorenzo.terranova96@hotmail.com',
+        'password' => 'lorenzo96'
+    ),
+    'profilo' => array(
+        'nickname' => 'Kallaari',
+        'nome' => 'Lorenzo',
+        'cognome' => 'Terranova',
+        'stato' => '"This time I finally let you... Go."',
+        'descrizione' => 'Ieri mattina ho fatto colazione coi pancakes, stamattina con le uova strapazzate e il succo d\'arancia.',
+        'flag_anonimo' => false,
+        'id_img_profilo' => -1
+    ),
+    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+);
 
 
 

@@ -232,6 +232,13 @@ $data[] = array(
     'colore2' => array(0, 0, 0)
 );
 
+$data[] = array(
+    'path' => '../assets/avatar/cliff.png', 
+    'banner' => array(50, 50, 50),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
 //inserimento nel database
 //require_once('../ImgProfilo.php');
 //require_once('../mysql_credentials.php');
