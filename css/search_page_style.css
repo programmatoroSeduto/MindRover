@@ -21,14 +21,27 @@
     overflow-y: scroll;
 }
 
-.result-item
+.result-item-article
 {
     flex: 1;
     background-color: white;
     margin-top: 1rem;
-    min-height: 10vh;
-    max-height: 10vh;
+    max-height: 17.5vh;
+    min-height: 17.5vh;
+    display: grid;
+    grid-template-columns: 2fr 28fr;
+}
+
+.result-item-user
+{
+    flex: 1;
+    background-color: white;
+    margin-top: 1rem;
+    max-height: 12.5vh;
+    min-height: 12.5vh;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 2fr 28fr;
 }
 
 .result-item:last-child
@@ -49,15 +62,22 @@
     height: 2.2rem;
     background-color: khaki;
     text-align: center;
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-top: 0.4rem;
+    margin-left: 0.8rem;
+    margin-right: 0.4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.search-toolbar div:hover
+{
+    background-color: red;
 }
 
 .search-settings-maximized
 {
     display: grid;
-    grid-template-columns: 2fr 14fr 1fr;
+    grid-template-columns: 3fr 14fr 1fr;
     height: 22vh; 
 }
 

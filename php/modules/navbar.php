@@ -7,7 +7,7 @@ function get_public_navbar($page)
     $mindrover = "./mindrover.php";
     $crowdfunding = "./crowdfunding.php";
     $login_form = "./login.php";
-    $searchpage = "./search.html";
+    $searchpage = "./search.php";
 
     echo '
     <div id="nav-wrapper"  style="position: sticky; top: 0; margin: 0; max-height: 75px; overflow: hidden;">
@@ -38,7 +38,7 @@ function get_private_navbar($page)
     $mindrover = "./mindrover.php";
     $crowdfunding = "./crowdfunding.php";
     $profile = "./profiloprivato.php";
-    $searchpage = "./search.html";
+    $searchpage = "./search.php";
 
 
     $logout = "../php/logout.php";
