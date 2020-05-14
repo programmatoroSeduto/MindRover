@@ -1,0 +1,97 @@
+.page-container
+{
+    min-height: 80vh;
+}
+
+.search-settings-panel
+{
+    background-color: gray;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 29fr 1fr;
+}
+
+.results-list-panel
+{
+    height: 58vh; 
+    background-color: lightgray; 
+    display: flex; 
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+.result-item
+{
+    flex: 1;
+    background-color: white;
+    margin-top: 1rem;
+    min-height: 10vh;
+    max-height: 10vh;
+    overflow: hidden;
+}
+
+.result-item:last-child
+{
+    margin-bottom: 2rem;
+}
+
+.search-toolbar
+{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px black solid;
+}
+
+.search-toolbar div
+{
+    /* flex: 1; */
+    height: 2.2rem;
+    background-color: khaki;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.search-settings-maximized
+{
+    display: grid;
+    grid-template-columns: 2fr 14fr 1fr;
+    height: 22vh; 
+}
+
+.search-settings-minimized
+{
+    height: 5vh;
+    padding-left: 10vh;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.body-maximized
+{
+    height: 75vh;
+}
+
+.search-settings-button
+{
+    background-color: yellow; 
+    display: flex; 
+    flex-direction: column-reverse;
+}
+
+.search-settings-button i
+{
+    text-align: center; 
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.search-inner-panel
+{
+    padding: 2rem;
+}
