@@ -49,13 +49,13 @@ require_once('../php/modules/navbar.php');
         }
     ?>
     
-    <div style="height: 92vh; display: grid; grid-template-columns: 15fr 5fr;">
-        <div style="background-color: red; overflow-y: scroll; padding: 4rem;">
+    <div style="height: 91vh; display: grid; grid-template-columns: 15fr 5fr;">
+        <div style="background-color: red; overflow-y: scroll; padding: 3rem;">
             <div style="background-color: lightblue; height: 10vh; padding: 1rem; line-height: 2.5rem;">
-                <h1>chambray pok pok narwhal banjo</h1>
-                <p>un articolo di <i>pinco pallino</i>.</p>
+                <h1 style="font-family: ganesh">Ma se dicono che la Conad sei tu, allora perchè stai chiamando la polizia?</h1>
+                <p>un articolo di <i>Mentato Raizzia</i>.</p>
             </div>
-            <div style="background-color: lightgoldenrodyellow; padding: 1rem; margin-top: 2rem; margin-bottom: 10rem;">
+            <div style="background-color: lightgoldenrodyellow; padding: 1rem; margin-top: 2rem; margin-bottom: 1rem;">
                 I'm baby single-origin coffee meditation pork belly sriracha small batch. Helvetica letterpress iPhone farm-to-table vexillologist. Trust fund air plant flannel brooklyn irony, pop-up mumblecore lyft prism humblebrag butcher tattooed. Church-key godard taiyaki, helvetica beard iceland thundercats disrupt copper mug heirloom health goth offal. Fam gastropub leggings truffaut health goth.
                 Iceland whatever shaman marfa, sriracha mumblecore neutra keytar 90's. Tacos taiyaki af pop-up tofu taxidermy etsy ennui. Forage freegan seitan, normcore pour-over skateboard scenester chillwave. Neutra kombucha polaroid iceland pickled fam XOXO lumbersexual.
                 <br>
