@@ -188,8 +188,9 @@
 
 .userinfo-tag
 {
-    padding: 0 0.6vh; 
-    border-radius: 10%;
+    padding: 0 0.6vh;
+    border: 0.1vh solid rgba(0, 0, 0);
+    border-radius: 5%;
     font-family: 'ganesh';
 }
 

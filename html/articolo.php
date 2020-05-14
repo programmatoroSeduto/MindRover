@@ -21,6 +21,7 @@ require_once('../php/modules/navbar.php');
     <link type="text/css" rel="stylesheet" href="../css/footer.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
+    <link type="text/css" rel="stylesheet" href="../css/profile_settings_style.css">
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -28,16 +29,53 @@ require_once('../php/modules/navbar.php');
     <style>
         .list-item
         {
-            flex: 1;
-            min-height: 5vh;
-            padding-top: 1vh;
-            padding-bottom: 1vh;
+            /* flex: 1; */
+            display: block;
+            height: 17vh;
+            padding: 1vh;
             background-color: white;
-            margin-top: 3vh;
+            background-size: 100% 100%;
+            background-position: center;
+            transition: .5s;
+            border: 0.1vh solid black;
+            /* margin-top: 3vh; */
+            color: white;
+            text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+            cursor: pointer;
         }
+
+        .list-item:hover{
+            background-size: 110% 110%;
+        }
+
+        .hh2{
+            transition: .5s;
+            padding: 1rem; 
+            font-family: ganesh; 
+            text-transform: uppercase; 
+            font-size: medium; 
+            text-align: center;
+        }
+
+        .hh2.titolo{
+            background: linear-gradient(45deg, #8f281d, #da4112);
+            color: white;
+        }
+
+        .hh2.back{
+            background-color: whitesmoke;
+            color: #da4112;
+            cursor: pointer;
+        }
+
+        .hh2.back:hover{
+            background: linear-gradient(45deg, #8f281d, #da4112);
+            color: black;
+        }
+
     </style>
 </head>
-<body>
+<body style="background-image: url('../assets/img/home-splash3.jpg')">
     <?php
         if(isset($_SESSION['user_id']))
         {
@@ -49,15 +87,14 @@ require_once('../php/modules/navbar.php');
         }
     ?>
     
-    <div style="height: 91vh; display: grid; grid-template-columns: 15fr 5fr;">
-        <div style="background-color: red; overflow-y: scroll; padding: 3rem;">
-            <div style="background-color: lightblue; height: 10vh; padding: 1rem; line-height: 2.5rem;">
-                <h1 style="font-family: ganesh">Ma se dicono che la Conad sei tu, allora perchè stai chiamando la polizia?</h1>
+    <div style="height: 91.5vh; display: grid; grid-template-columns: 15fr 5fr;">
+        <div style="overflow-y: scroll; padding: 3rem;">
+            <div style="background-color: rgba(173, 216, 230, 0.50); height: 15vh; padding: 1rem; line-height: 2.5rem;">
+                <h1 style="font-family: ganesh">Ma se la gente dice che la Conad sei tu, allora perchè stai chiamando la polizia?</h1>
                 <p>un articolo di <i>Mentato Raizzia</i>.</p>
             </div>
-            <div style="background-color: lightgoldenrodyellow; padding: 1rem; margin-top: 2rem; margin-bottom: 1rem;">
-                I'm baby single-origin coffee meditation pork belly sriracha small batch. Helvetica letterpress iPhone farm-to-table vexillologist. Trust fund air plant flannel brooklyn irony, pop-up mumblecore lyft prism humblebrag butcher tattooed. Church-key godard taiyaki, helvetica beard iceland thundercats disrupt copper mug heirloom health goth offal. Fam gastropub leggings truffaut health goth.
-                Iceland whatever shaman marfa, sriracha mumblecore neutra keytar 90's. Tacos taiyaki af pop-up tofu taxidermy etsy ennui. Forage freegan seitan, normcore pour-over skateboard scenester chillwave. Neutra kombucha polaroid iceland pickled fam XOXO lumbersexual.
+            <div style=" background-color: rgba(250, 250, 210, 0.5); padding: 1rem; margin-top: 2rem; margin-bottom: 1rem;">
+                <i>Stavo solo cercando di rubarti il frigorifero, troia.</i>
                 <br>
                 Sriracha air plant roof party cold-pressed. Fanny pack authentic literally kogi ramps skateboard poutine fashion axe everyday carry selvage before they sold out unicorn. Coloring book everyday carry plaid single-origin coffee. Slow-carb kitsch readymade, tofu church-key blog selvage. Slow-carb YOLO cardigan brunch, biodiesel ennui palo santo blog retro.
                 <br>
@@ -69,7 +106,7 @@ require_once('../php/modules/navbar.php');
                 <br>
                 Officia brooklyn fam 3 wolf moon, cliche cray selvage pabst cred gochujang glossier kombucha. Dolore waistcoat street art, occupy nostrud man bun pariatur 3 wolf moon. Snackwave bitters actually, fixie nulla ea fugiat flannel crucifix. Organic bicycle rights fixie dolore aliqua migas. Ex kinfolk meggings woke.
                 <br>
-                Leggings ut drinking vinegar, hashtag ad swag sint cred vegan cloud bread banjo edison bulb etsy. Microdosing you probably haven't heard of them iPhone, poutine roof party ramps laborum disrupt. Af tousled iceland organic vice cornhole et austin kombucha, raw denim magna before they sold out chambray lo-fi literally. Godard slow-carb pariatur four loko 8-bit trust fund id celiac. Austin twee la croix flannel.
+                Nel dubbio, Ark bastardo.
                 <br>
                 Adaptogen chartreuse excepteur microdosing wayfarers, elit street art aute food truck man braid consequat. Raw denim try-hard fashion axe coloring book plaid viral. Edison bulb skateboard microdosing, listicle hella jean shorts green juice chillwave brooklyn PBR&B bicycle rights duis. Offal yuccie dolor swag fam eiusmod cillum gochujang.
                 <br>
@@ -105,22 +142,23 @@ require_once('../php/modules/navbar.php');
                 <br>
                 Id heirloom humblebrag, intelligentsia pok pok narwhal wolf beard shabby chic ipsum. Cray crucifix ad chambray whatever la croix irure tacos vinyl 8-bit voluptate. Franzen ipsum pickled, selvage mustache butcher swag deep v dolor pabst. Cray yr ea, pug knausgaard taxidermy typewriter XOXO hella actually.
                 <br>
-                Hell of umami church-key bitters kinfolk poutine. Hella vaporware you probably haven't heard of them tilde laboris aute pork belly pitchfork la croix selvage in godard. You probably haven't heard of them mustache affogato live-edge, fashion axe franzen schlitz shabby chic etsy aesthetic. Franzen post-ironic activated charcoal yr hella. Ullamco selfies swag actually. Ugh sartorial kitsch, enim PBR&B forage man braid stumptown godard yuccie butcher biodiesel officia taxidermy tilde. Id aesthetic vexillologist retro
+                Hell of umami church-key bitters kinfolk poutine. Hella vaporware you probably haven't heard of them tilde laboris aute pork belly pitchfork la croix selvage in godard. You probably haven't heard of them mustache affogato live-edge, fashion axe franzen schlitz shabby chic etsy aesthetic. Franzen post-ironic activated charcoal yr hella. Ullamco selfies SWAG BARCA actually. Ugh sartorial kitsch, enim PBR&B forage man braid stumptown godard yuccie butcher biodiesel officia taxidermy tilde. Id aesthetic vexillologist retro
             </div>
         </div>
-        <div style="background-color: green; padding: 2rem;">
-            <h2>Altri interessantissimi articoli</h2>
+        <div style="display: flex; flex-direction: column;">
+            <div class="hh2 titolo">Altri interessantissimi articoli</div>
             <div style="display: flex; flex-direction: column;">
-                <div class="list-item">ciao</div>
-                <div class="list-item">ciao</div>
-                <div class="list-item">ciao</div>
-                <div class="list-item">ciao</div>
+                <div class="list-item" style="background-image: url('../assets/img/news-rane.jpg');">Alla scoperta di Bella Rena, il videogioco autobiografico di Gregghy.</div>
+                <div class="list-item" style="background-image: url('../assets/img/news-vr.jpg');">Ma se ti seghi con mindROVER poi dove sborri?</div>
+                <div class="list-item" style="background-image: url('../assets/img/news-work.jpg');">Ma quando muori lo sai che l'unico reame che vedrai è largo 2 e profondo 6?</div>
+                <div class="list-item" style="background-image: url('../assets/img/news-volante.jpg');">Lo sai che MATTONE DOPO MATTONE DOPO MATTONE queste mura iniziano a cadere?</div>
             </div>
+            <div class="hh2 back">Torna alla homepage notizie</div>
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="footer-container footer-bg"> 
+    <div class="footer-container footer-bg" style="background: none;"> 
         <div class="footer-content">
 
             <img src="../assets/img/logo.png" style="height: 11vh;">   
