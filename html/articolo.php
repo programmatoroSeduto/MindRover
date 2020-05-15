@@ -55,6 +55,7 @@ require_once('../php/modules/navbar.php');
             text-transform: uppercase; 
             font-size: medium; 
             text-align: center;
+            border: 0.1vh solid black;
         }
 
         .hh2.titolo{
@@ -73,9 +74,20 @@ require_once('../php/modules/navbar.php');
             color: black;
         }
 
+        .example::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE,Edge e Firefox  */
+        .example {
+            overflow: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none; /* Firefox 64 */
+        }        
+
     </style>
 </head>
-<body style="background-image: url('../assets/img/home-splash3.jpg')">
+<body>
     <?php
         if(isset($_SESSION['user_id']))
         {
@@ -88,13 +100,16 @@ require_once('../php/modules/navbar.php');
     ?>
     
     <div style="height: 91.5vh; display: grid; grid-template-columns: 15fr 5fr;">
-        <div style="overflow-y: scroll; padding: 3rem;">
-            <div style="background-color: rgba(173, 216, 230, 0.50); height: 15vh; padding: 1rem; line-height: 2.5rem;">
-                <h1 style="font-family: ganesh">Ma se la gente dice che la Conad sei tu, allora perchè stai chiamando la polizia?</h1>
-                <p>un articolo di <i>Mentato Raizzia</i>.</p>
+        <div class="example" style="overflow-y: scroll; padding: 3rem; background-image: url('../assets/img/news-rane.jpg'); background-repeat: no-repeat; background-size: cover">
+            <div style="background-color: rgba(173, 216, 230, 0.50); min-height: 15vh; padding: 0.5rem 2rem; line-height: 2.5rem; display: grid; grid-template-rows: 1fr 1fr">
+                <h1 style="font-family: ganesh; text-align: center">Perchè non mi fate vedere le tette della Pausini?</h1>
+                <div style="display: flex; flex-direction: column-reverse"><p><i>Mentato Raizzia</i> || 12/12/2012 || 
+                <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> mentato </span> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> raizzia </span> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> piattinelculo </span></p> 
+                </div>
             </div>
             <div style=" background-color: rgba(250, 250, 210, 0.5); padding: 1rem; margin-top: 2rem; margin-bottom: 1rem;">
-                <i>Stavo solo cercando di rubarti il frigorifero, troia.</i>
+                <i>Ma se la gente dice che la Conad sei tu, allora perchè stai chiamando la polizia?<br>
+                Stavo solo cercando di rubarti il frigorifero, troia.</i>
                 <br>
                 Sriracha air plant roof party cold-pressed. Fanny pack authentic literally kogi ramps skateboard poutine fashion axe everyday carry selvage before they sold out unicorn. Coloring book everyday carry plaid single-origin coffee. Slow-carb kitsch readymade, tofu church-key blog selvage. Slow-carb YOLO cardigan brunch, biodiesel ennui palo santo blog retro.
                 <br>
@@ -158,7 +173,7 @@ require_once('../php/modules/navbar.php');
     </div>
 
     <!-- Footer -->
-    <div class="footer-container footer-bg" style="background: none;"> 
+    <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
             <img src="../assets/img/logo.png" style="height: 11vh;">   
