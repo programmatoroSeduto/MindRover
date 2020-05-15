@@ -71,11 +71,6 @@ $ganesh = "SEARCH";
 
                         active_panel_idx = idx;
                     }
-
-                    function search()
-                    {
-                        alert('sesso.');
-                    }
                 </script>
                 <div class="search-toolbar">
                     <div id="btn-1" onclick="openSearchTab(1);">Articoli</div>
@@ -84,26 +79,26 @@ $ganesh = "SEARCH";
                 </div>
                 <div class="search-inner-panel">
                     <div id="search-settings-panel-1" class="">
-                        <label for="a_title">titolo articolo:</label><input type="text" name="a_title"><br>
-                        <label for="a_tags">lista di tag:</label><input type="text" name="a_tags"><br>
-                        <label for="a_content">contenuto dell'articolo:</label><input type="text" name="a_content"><br>
-                        <label for="a_min_timestamp">periodo di pubblicazione: da </label><input type="date" name="a_min_timestamp" min="0"><label for="a_max_timestamp"> a </label><input type="date" name="a_max_timestamp"><br>
-                        <label for="a_author">nickname autore: </label><input type="text" name="a_author"><br>
+                        <label for="a_title">titolo articolo:</label><input type="text" name="a_title" id="a_title"><br>
+                        <label for="a_tags">lista di tag:</label><input type="text"  id="a_tags" name="a_tags"><br>
+                        <label for="a_content">contenuto dell'articolo:</label><input type="text" id="a_content" name="a_content"><br>
+                        <label for="a_min_timestamp">periodo di pubblicazione: da </label><input type="date" id="a_min_timestamp" name="a_min_timestamp" min="0"><label for="a_max_timestamp"> a </label><input type="date" id="a_max_timestamp" name="a_max_timestamp"><br>
+                        <label for="a_author">nickname autore: </label><input type="text" id="a_author" name="a_author"><br>
                         <button onclick="search();">Cerca!</button>
                     </div>
                     <div id="search-settings-panel-2" class="hidden">
-                        <label for="u_nickname">nickname utente da cercare: </label><input type="text" name="u_nickname"><br>
+                        <label for="u_nickname">nickname utente da cercare: </label><input type="text" id="u_nickname" name="u_nickname"><br>
                         <button onclick="search();">Cerca!</button>
                     </div>
                     <div id="search-settings-panel-3" class="hidden">
                         <label for="search_type">tipo di ricerca:</label>
-                        <select name="search_type">
+                        <select id="search_type" name="search_type">
                             <option value="all">utenti e articoli</option>
                             <option value="article">articoli</option>
                             <option value="user">utenti</option>
                         </select><br>
-                        <input type="checkbox" name="use_all_data" value="1"><label for="use_all_data">ricerca totale</label><br>
-                        <input type="checkbox" name="strict" value="1"><label for="strict">modalità strict</label><br>
+                        <input type="checkbox" id="use_all_data" name="use_all_data" value="1"><label for="use_all_data">ricerca totale</label><br>
+                        <input type="checkbox" id="strict" name="strict" value="1"><label for="strict">modalità strict</label><br>
                         <button onclick="search();">Cerca!</button>
                     </div>
                 </div>
@@ -140,46 +135,14 @@ $ganesh = "SEARCH";
         <div id="search-body" class="results-list-panel">
 
             <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
+                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-exclamation" style="font-size: 4rem;"></i></div>
                 <div style="background-color: green; padding: 1rem;">
                     <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
+                        <h1>Nessun risultato!</h1>
+                        <h2>di <i>KungKurth</i></h2>
                     </div>
                     <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-
-            <div class="result-item-user">
-                <div style="display: grid; margin: auto;"><img src="../assets/avatar/fagiolo.png" style="width: 10vh; margin: 0; padding: 0;"></div>
-                <div style="background-color: red; padding: 1rem; line-height: 2.2rem;">
-                    <h1>
-                        Germano Mosconi
-                    </h1>
-                    <p><i>Chi è quel mona che sbatte la porta????</i></p>
-                </div>
-            </div>
-
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-
-            <div class="result-item-user">
-                <div style="display: grid; margin: auto;"><img src="../assets/avatar/fagiolo.png" style="width: 10vh; margin: 0; padding: 0;"></div>
-                <div style="background-color: red; padding: 1rem; line-height: 2.2rem;">
-                    <h1>
-                        Germano Mosconi
-                    </h1>
-                    <p><i>Chi è quel mona che sbatte la porta????</i></p>
+                    <p>Eh sì! Non bastava un semplice messaggio. Abbiamo persino scritto un articolo a riguardo. </p>
                 </div>
             </div>
             
@@ -202,102 +165,6 @@ $ganesh = "SEARCH";
                         Germano Mosconi
                     </h1>
                     <p><i>Chi è quel mona che sbatte la porta????</i></p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
-                </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
-                    </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
                 </div>
             </div>
 

@@ -118,6 +118,16 @@ if(eq($interface_type, 'json'))
     //pacchetto json
     $packet = json_decode($_GET['json']);
 
+    //ricerca totale?
+    if(property_exists($data, 'use_all_data'))
+    {
+        $use_all_data = $packet->$use_all_data;
+        if($use_all_data) 
+            $use_all_data = true;
+        else 
+            $use_all_data = false;
+    }
+
     //tipo di ricerca
     if(property_exists($packet, 'search_type'))
     {
@@ -145,16 +155,6 @@ if(eq($interface_type, 'json'))
     {
         echo "motore di ricerca ERRORE: tipo di ricerca non riconosciuto.";
         die();
-    }
-
-    //ricerca totale?
-    if(property_exists($data, 'use_all_data'))
-    {
-        $use_all_data = $packet->$use_all_data;
-        if($use_all_data) 
-            $use_all_data = true;
-        else 
-            $use_all_data = false;
     }
 
     //dati per la ricerca per articolo
@@ -318,9 +318,18 @@ function isEmpty($string)
 if($use_all_data)
 {
     //prendi tutti gli id degli articoli
-    foreach($articoli->getTableContent() as $row)
+    if($use_article_search)
     {
-        array_push($a_results, $row['id_articolo']);
+        foreach($articoli->getTableContent() as $row)
+        {
+            array_push($a_results, $row['id_articolo']);
+        }
+    }
+    
+    //ricerca nickname
+    if($use_users_search)
+    {
+        $u_results = $profili->searchIdByNickname($u_nickname, $use_strict, false);
     }
 }
 else 
