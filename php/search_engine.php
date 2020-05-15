@@ -64,12 +64,14 @@ function eq($str1, $str2, $case = true)
 require_once('./db/mysql_credentials.php');
 require_once('./db/ProfiliUtenti.php');
 require_once('./db/Articoli.php');
+require_once('./db/ImgProfilo.php');
 require_once('./utils/sanitize_input.php');
 
 //interfacce col database
 $dbms = connect();
 $profili = new ProfiliUtenti($dbms);
 $articoli = new Articoli($dbms);
+$stili = new ImgProfilo($dbms);
 
 //che interfaccia utilizzare?
 if(!isset($_GET['use_interface']))
@@ -119,9 +121,9 @@ if(eq($interface_type, 'json'))
     $packet = json_decode($_GET['json']);
 
     //ricerca totale?
-    if(property_exists($data, 'use_all_data'))
+    if(property_exists($packet, 'use_all_data'))
     {
-        $use_all_data = $packet->$use_all_data;
+        $use_all_data = $packet->use_all_data;
         if($use_all_data) 
             $use_all_data = true;
         else 
@@ -161,27 +163,27 @@ if(eq($interface_type, 'json'))
     if($use_article_search){
         if(property_exists($packet, 'a_title'))
         {
-            $a_title = sanitize($data->title);
+            $a_title = sanitize($packet->a_title);
         }
         if(property_exists($packet, 'a_tags'))
         {
-            $a_tags = explode(';', sanitize($data->a_tags));
+            $a_tags = explode(';', sanitize($packet->a_tags));
         }
         if(property_exists($packet, 'a_content'))
         {
-            $a_content = sanitize($data->a_content);
+            $a_content = sanitize($packet->a_content);
         }
         if(property_exists($packet, 'a_min_timestamp'))
         {
-            $a_min_timestamp = new DateTime(sanitize($data->a_min_timestamp));
+            $a_min_timestamp = new DateTime(sanitize($packet->a_min_timestamp));
         }
         if(property_exists($packet, 'a_max_timestamp'))
         {
-            $a_max_timestamp = new DateTime(sanitize($data->a_max_timestamp));
+            $a_max_timestamp = new DateTime(sanitize($packet->a_max_timestamp));
         }
         if(property_exists($packet, 'a_author'))
         {
-            $a_author = sanitize($data->a_author);
+            $a_author = sanitize($packet->a_author);
         }
     }
 
@@ -190,7 +192,7 @@ if(eq($interface_type, 'json'))
     {
         if(property_exists($packet, 'u_nickname'))
         {
-            $u_nickname = sanitize($data->u_nickname);
+            $u_nickname = sanitize($packet->u_nickname);
         }
     }
 }
@@ -249,14 +251,16 @@ else
     }
 
     //dati per la ricerca per articolo
-    if($use_article_search){
+    if($use_article_search)
+    {
         if(isset($_GET['a_title']))
         {
             $a_title = sanitize($_GET['a_title']);
         }
         if(isset($_GET['a_tags']))
         {
-            $a_tags = explode(';', sanitize($_GET['a_tags']));
+            if($_GET['a_tags'] !== '')
+                $a_tags = explode(';', sanitize($_GET['a_tags']));
         }
         if(isset($_GET['a_content']))
         {
@@ -325,7 +329,7 @@ if($use_all_data)
             array_push($a_results, $row['id_articolo']);
         }
     }
-    
+
     //ricerca nickname
     if($use_users_search)
     {
@@ -345,7 +349,6 @@ else
         if(!isEmpty($a_title))
         {
             $a_temp_results = $articoli->searchByTitle($a_title);
-            var_dump($a_temp_results);
             echo "<br>";
             
             //eseguire il confronto con gli id già trovati?
@@ -457,6 +460,7 @@ else
 
 //estrearre i link dei risultati
 $to_send = array();
+class package_to_send {};
 class pack {};
 
 if($use_article_search)
@@ -466,7 +470,7 @@ if($use_article_search)
         $article_obj_json = new pack();
 
         $article_data = $articoli->getArticle($id);
-        $baseURL = 'https://localhost/saw/php/show_article.php';
+        $baseURL = '../html/articolo.php';
         
         $article_obj_json->type = "article";
         $article_obj_json->url = $baseURL . '?' . 'code=' . $id;
@@ -487,18 +491,45 @@ if($use_users_search)
         $user_obj_json = new pack();
 
         $data = $profili->getProfileDataById($id);
-        $baseURL = 'https://localhost/saw/php/show_public_profile.php';
+        $baseURL = '../html/profilopubblico.php';
 
         $user_obj_json->type = "user";
         $user_obj_json->url = $baseURL . '?' . 'code=' . $id;
         $user_obj_json->nick = $data['nickname'];
         $user_obj_json->status = $data['stato'];
+        $user_obj_json->style = $stili->getStyle($data['id_utente']);
 
         array_push($to_send, $user_obj_json);
     }
 }
 
+$to_encode = new package_to_send();
+$to_encode->lenght = count($to_send);
+$to_encode->content = $to_send;
 
 //ritorna il json della ricerca
-echo json_encode($to_send);
+echo json_encode($to_encode);
+/*
+    lenght : quanti elementi ci sono nell'insieme di risultato
+    content : i risultati della ricerca (array)
+        
+        contiene elementi di due tipi:
+        -   type=user
+            url : usato per richiamare il profilo
+            nick
+            status
+            style (vedi stili)
+                icon_path
+                banner
+                color_1
+                color_2
+        
+        -   type=article
+            url
+            title
+            author
+            description
+            timestamp 
+            tag_list (array)
+*/
 ?>

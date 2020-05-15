@@ -18,12 +18,7 @@ var no_results = '<div class="result-item-article">'+
 
 //ritorna l'oggetto da inviare al server sotto forma di json
 function getSearchData()
-{
-    //la richiesta da inviare al server
-    var request = function(){};
-    request.use_interface = 'json';
-    request.json = ''; //da ricavare in base ai dati del form
-
+{   /*
     //la richiesta json da inserire nella richiesta 'request'
     var json_request = function(){};
 
@@ -58,10 +53,21 @@ function getSearchData()
     {
         json_request.u_nickname = $('#u_nickname').val();
     }
+    */
+    var json_request = {
+        'use_all_data' : ($('#use_all_data').is(':checked') ? 1 : 0),
+        'search_type' : $('#search_type').val(),
+        'strict' : ($('#strict').is(':checked') ? 1 : 0),
+        'a_title' : $('#a_title').val(),
+        'a_tags' : $('#a_tags').val().replace(/\s+/g, ' ').trim().split(' ').filter(function(item, pos, self){return self.indexOf(item) == pos;}).join(';'),
+        'a_content' : $('#a_content').val(),
+        'a_min_timestamp' : $('#a_min_timestamp').val(),
+        'a_max_timestamp' : $('#a_max_timestamp').val(),
+        'a_author' : $('#a_author').val(),
+        'u_nickname' : $('#u_nickname').val()
+    };
 
-    request.json = json_request;
-
-    return request;
+    return json_request;
 }
 
 
@@ -70,14 +76,21 @@ function getSearchData()
 function search()
 {
     //dati da inviare al server
-    var json_data = getSearchData();
+    console.log(getSearchData());
+    var json_data =  JSON.stringify(getSearchData());
+    //console.log(json_data);
 
     //richiesta
     $.ajax({
         url : '../php/search_engine.php',
         method : 'GET',
-
-    })
+        data : 
+        {
+            use_interface : 'json',
+            json : json_data
+        },
+        success : showResults
+    });
 }
 
 
@@ -85,5 +98,32 @@ function search()
 //applica nella pagina i risultato della ricerca effettuata
 function showResults(data)
 {
+    data = JSON.parse(data);
+    if(data.lenght > 0)
+    {
+        //trovati dal motore di ricerca
+        var result = data.content;
 
+        result.forEach(r => {
+            console.log(r);
+        });
+    }
+    else
+    {
+        //nessun risultato
+    }
+}
+
+
+//ritorna l'html per un utente
+function getUserHTML(user_info)
+{
+
+}
+
+
+//ritorna l'html per un articolo
+function getArticleHTML(article_data)
+{
+    
 }

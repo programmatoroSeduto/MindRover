@@ -240,6 +240,7 @@ class ProfiliUtenti
     function searchIdByNickname($str, $strict = false, $only_authors = false)
     {
         if(!$this->table_exists) return null;
+        if($str === '') return array();
 
         $result = $this->getTableContent();
         if(!$result) return null;
@@ -253,7 +254,7 @@ class ProfiliUtenti
             if($row['flag_anonimo'] == 1) continue;
             if($only_authors and ($row['flag_autore'] == 0)) continue;
 
-            if($strict) 
+           if($strict) 
             {
                 if(!strcmp($nickname, $str))
                 {

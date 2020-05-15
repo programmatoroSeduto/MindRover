@@ -135,38 +135,42 @@ $ganesh = "SEARCH";
         <div id="search-body" class="results-list-panel">
 
             <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-exclamation" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Nessun risultato!</h1>
-                        <h2>di <i>KungKurth</i></h2>
-                    </div>
-                    <br>
-                    <p>Eh sì! Non bastava un semplice messaggio. Abbiamo persino scritto un articolo a riguardo. </p>
+                <div style="background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;">
+                    <i class="fas fa-book-open" style="font-size: 3.5rem;"></i>
                 </div>
-            </div>
-            
-            <div class="result-item-article">
-                <div style="display: grid; text-align: center; margin: auto;"><i class="fas fa-frog" style="font-size: 4rem;"></i></div>
-                <div style="background-color: green; padding: 1rem;">
-                    <div style="line-height: 2.3rem;">
-                        <h1>Un articolo molto interessante!</h1>
-                        <h2>di <i>unIndianoPerfetto</i></h2>
+                <div style="background-color: green; padding: 1.5rem 3rem;">
+                    <div>
+                        <h1 style="display: inline;">Questo articolo parla di tua madre!</h1>
+                        <span style="padding: 0 1.5rem;"></span>
+                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: yellow;">Allah</span>
+                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: blue;">Tette</span>
+                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: red;">GGMosconi</span>
                     </div>
-                    <br>
-                    <p>In questo articolo palrerò dell'importanza di dire sempre 'ZIH!' al dio Ganesh... ZIH?</p>
+                    <div style="line-height: 3vh;">
+                        <span>un articolo di <b>xXxGermanoGaneshxXx</b></span>
+                        <span style="padding: 0 1.5rem;"></span>
+                        <span>pubblicato il <i>20/02/2020 alle 23.47</i></span>
+                    </div>
+                    <p style="margin-top: 1.5rem;"><i>"Voglio vedere come sono fatte le tue budella" "allora, vai a pagina 38."</i></p>
                 </div>
             </div>
 
             <div class="result-item-user">
-                <div style="display: grid; margin: auto;"><img src="../assets/avatar/fagiolo.png" style="width: 10vh; margin: 0; padding: 0;"></div>
-                <div style="background-color: red; padding: 1rem; line-height: 2.2rem;">
-                    <h1>
-                        Germano Mosconi
-                    </h1>
-                    <p><i>Chi è quel mona che sbatte la porta????</i></p>
+                <div style="background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;">
+                    <img src="../assets/avatar/fagiolo.png" style="height: 8vh;">
+                </div>
+                <div style="background-color: red; padding: 1.5rem 3rem;">
+                    <div>
+                        <h1 style="display: inline;">xxXxSEXY-MARMOTTONE-56xXxx</h1>
+                        <span style="padding: 0 1.5rem;"></span>
+                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: green;"><i class="fas fa-frog" style="font-size: 0.8rem;"></i> Supporter</span>
+                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: violet;"><i class="fas fa-frog" style="font-size: 0.8rem;"></i> Autore</span>
+                    </div>
+                    <p style="margin-top: 1.5rem;">Lanciando aragoste ai bimbi ciechi...</p>
                 </div>
             </div>
+
+            <div style="min-height: 5vh;"></div>
 
         </div>
     </div>
