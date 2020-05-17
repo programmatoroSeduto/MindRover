@@ -192,6 +192,7 @@
     border: 0.1vh solid rgba(0, 0, 0);
     border-radius: 5%;
     font-family: 'ganesh';
+    margin-right: 0.6vh;
 }
 
 .tag-supporter
@@ -213,6 +214,17 @@
 .tag-author i
 {
     color:rgb(0, 108, 248);
+    margin-bottom: 1rem
+}
+
+.tag-tag
+{
+    background-color: white;
+}
+
+.tag-tag i
+{
+    color:rgb(255, 0, 160);
     margin-bottom: 1rem
 }
 

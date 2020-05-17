@@ -106,7 +106,7 @@
 
 .search-settings-button
 {
-    background-color: yellow; 
+    background-color: yellow;
     display: flex; 
     flex-direction: column-reverse;
 }
@@ -123,3 +123,55 @@
     padding: 2rem;
 }
 
+.userinfo-tag
+{
+    padding: 0 0.6vh;
+    border: 0.1vh solid rgba(0, 0, 0);
+    border-radius: 5%;
+    font-family: 'ganesh';
+    margin-right: 0.6vh;
+}
+
+.tag-supporter
+{
+    background-color: white;
+}
+
+.tag-supporter i
+{
+    color:green;
+    margin-bottom: 1rem
+}
+
+.tag-author
+{
+    background-color: white;
+}
+
+.tag-author i
+{
+    color:rgb(0, 108, 248);
+    margin-bottom: 1rem;
+}
+
+.tag-tag
+{
+    background-color: white;
+}
+
+.tag-tag i
+{
+    color:rgb(255, 0, 160);
+    margin-bottom: 1rem
+}
+
+.tag-dictator
+{
+    background-color: blueviolet;
+}
+
+.tag-dictator i
+{
+    color:white;
+    margin-bottom: 1rem
+}

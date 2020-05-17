@@ -136,22 +136,19 @@ $ganesh = "SEARCH";
 
             <div class="result-item-article">
                 <div style="background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;">
-                    <i class="fas fa-book-open" style="font-size: 3.5rem;"></i>
+                    <i class="fas fa-book-open" style="font-size: 3.5rem; text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000; color:#007882"></i>
                 </div>
-                <div style="background-color: green; padding: 1.5rem 3rem;">
+                <div style="background: linear-gradient(90deg, #007882, #000050); padding: 1.5rem 3rem;">
                     <div>
-                        <h1 style="display: inline;">Questo articolo parla di tua madre!</h1>
-                        <span style="padding: 0 1.5rem;"></span>
-                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: yellow;">Allah</span>
-                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: blue;">Tette</span>
-                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: red;">GGMosconi</span>
+                        <h1 style="display: inline; font-family: ganesh">Questo articolo parla di tua madre!</h1>
                     </div>
-                    <div style="line-height: 3vh;">
-                        <span>un articolo di <b>xXxGermanoGaneshxXx</b></span>
-                        <span style="padding: 0 1.5rem;"></span>
-                        <span>pubblicato il <i>20/02/2020 alle 23.47</i></span>
+                    <div style="display: flex; flex-direction: column-reverse; margin-top: 0.5rem">
+                        <p><i>xXxGermanoGaneshxXx</i> || 20/02/2020 || 
+                        <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> allah </span>
+                        <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette </span>
+                        <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> GGMosconi </span>
                     </div>
-                    <p style="margin-top: 1.5rem;"><i>"Voglio vedere come sono fatte le tue budella" "allora, vai a pagina 38."</i></p>
+                    <p style="margin-top: 1rem;"><i>"Voglio vedere come sono fatte le tue budella" "allora, vai a pagina 38."</i></p>
                 </div>
             </div>
 
@@ -159,14 +156,15 @@ $ganesh = "SEARCH";
                 <div style="background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;">
                     <img src="../assets/avatar/fagiolo.png" style="height: 8vh;">
                 </div>
-                <div style="background-color: red; padding: 1.5rem 3rem;">
+                <div style="background: linear-gradient(90deg, rgb(150, 0, 0), rgb(50, 30, 0)); padding: 1.5rem 3rem;">
                     <div>
-                        <h1 style="display: inline;">xxXxSEXY-MARMOTTONE-56xXxx</h1>
+                        <h1 style="display: inline; font-family: ganesh">xXxSEXY-MARMOTTONE-56xXx</h1>
                         <span style="padding: 0 1.5rem;"></span>
-                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: green;"><i class="fas fa-frog" style="font-size: 0.8rem;"></i> Supporter</span>
-                        <span style="margin-left: 1rem; padding: 0.2rem; border-radius: 10%; background-color: violet;"><i class="fas fa-frog" style="font-size: 0.8rem;"></i> Autore</span>
+                        <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>
+                        <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>
                     </div>
-                    <p style="margin-top: 1.5rem;">Lanciando aragoste ai bimbi ciechi...</p>
+                    <p style="margin-top: 1rem;">Lanciando aragoste ai bimbi ciechi...</p>
+                    
                 </div>
             </div>
 

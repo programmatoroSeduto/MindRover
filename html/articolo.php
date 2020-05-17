@@ -67,6 +67,7 @@ require_once('../php/modules/navbar.php');
             background-color: whitesmoke;
             color: #da4112;
             cursor: pointer;
+            
         }
 
         .hh2.back:hover{
@@ -104,7 +105,7 @@ require_once('../php/modules/navbar.php');
             <div style="background-color: rgba(173, 216, 230, 0.50); min-height: 15vh; padding: 0.5rem 2rem; line-height: 2.5rem; display: grid; grid-template-rows: 1fr 1fr">
                 <h1 style="font-family: ganesh; text-align: center">Perchè non mi fate vedere le tette della Pausini?</h1>
                 <div style="display: flex; flex-direction: column-reverse"><p><i>Mentato Raizzia</i> || 12/12/2012 || 
-                <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> mentato </span> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> raizzia </span> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> piattinelculo </span></p> 
+                <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> mentato </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> raizzia </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> piattinelculo </span></p> 
                 </div>
             </div>
             <div style=" background-color: rgba(250, 250, 210, 0.5); padding: 1rem; margin-top: 2rem; margin-bottom: 1rem;">
@@ -168,7 +169,7 @@ require_once('../php/modules/navbar.php');
                 <div class="list-item" style="background-image: url('../assets/img/news-work.jpg');">Ma quando muori lo sai che l'unico reame che vedrai è largo 2 e profondo 6?</div>
                 <div class="list-item" style="background-image: url('../assets/img/news-volante.jpg');">Lo sai che MATTONE DOPO MATTONE DOPO MATTONE queste mura iniziano a cadere?</div>
             </div>
-            <div class="hh2 back">Torna alla homepage notizie</div>
+            <div class="hh2 back">Torna alla pagina di ricerca</a></div>
         </div>
     </div>
 
