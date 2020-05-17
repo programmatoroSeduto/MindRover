@@ -168,21 +168,37 @@ class Articoli
         -   content: il contenuto dell'articolo, in html
         -   tag_list: un array di stringhe
     */
-    function addArticle($author_id, $title, $subtitle, $description, $content, $tag_list)
+    function addArticle($author_id, $title, $subtitle, $description, $content, $tag_list, $data_pubblicazione = -1)
     {
         if(!$this->table_exists) return -1;
         
         //prima, ricompongo la lista di tag
         $tag_list = implode(";", $tag_list);
 
-        $query = 'INSERT INTO ' . self::TABLE_NAME . ' (id_autore, titolo, sottotitolo, descrizione, contenuto, lista_tag) VALUES (?, ?, ?, ?, ?, ?);';
+        if($data_pubblicazione === -1)
+        {    
+            $query = 'INSERT INTO ' . self::TABLE_NAME . ' (id_autore, titolo, sottotitolo, descrizione, contenuto, lista_tag) VALUES (?, ?, ?, ?, ?, ?);';
 
-        $dbms_op = $this->dbms->prepare($query);
-        if(!$dbms_op->bind_param("isssss", $author_id, $title, $subtitle, $description, $content, $tag_list))
-        {
-            return $this->dbms->errno;
+            $dbms_op = $this->dbms->prepare($query);
+            if(!$dbms_op->bind_param("isssss", $author_id, $title, $subtitle, $description, $content, $tag_list))
+            {
+                return $this->dbms->errno;
+            }
+            $dbms_op->execute();
         }
-        $dbms_op->execute();
+        else
+        {
+            $query = 'INSERT INTO ' . self::TABLE_NAME . ' (id_autore, titolo, sottotitolo, descrizione, contenuto, lista_tag, data_pubblicazione) VALUES (?, ?, ?, ?, ?, ?, ?);';
+
+            $data_pubblicazione = (new DateTime($data_pubblicazione))->format('D/M/Y h:m:s');
+
+            $dbms_op = $this->dbms->prepare($query);
+            if(!$dbms_op->bind_param("issssss", $author_id, $title, $subtitle, $description, $content, $tag_list, $data_pubblicazione))
+            {
+                return $this->dbms->errno;
+            }
+            $dbms_op->execute();
+        }
 
         return $this->dbms->errno;
     }

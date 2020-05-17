@@ -98,13 +98,25 @@ $dbms->close();
 }
 
 {
-require_once('./data_setup/preset_styles.php');
+    require_once('./data_setup/preset_styles.php');
 }
 
 {
-require_once('./data_setup/account_data.php');
+    require_once('./data_setup/account_data.php');
+}
+
+{
+    require_once('./data_setup/articles_data.php');
 }
 ?>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </body>
 </html>

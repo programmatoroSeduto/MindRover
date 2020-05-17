@@ -486,6 +486,21 @@ class ProfiliUtenti
         return $this->dbms->errno;
     }
 
+    //controlla se l'utente è un autore
+    function isAuthor($user_id)
+    {
+        if(!$this->table_exists) return -1;
+
+        $query = 'SELECT * FROM profili_utenti WHERE id_utente = ' . $user_id . ' AND flag_autore = 1';
+        $result_set = $this->dbms->query($query);
+        if(!$result_set)
+        {
+            return false;
+        }
+
+        return ($result_set->num_rows > 0);
+    }
+
     //toggle: donatore
     /*
         in argomento:
