@@ -76,9 +76,10 @@ function getSearchData()
 function search()
 {
     //dati da inviare al server
-    console.log(getSearchData());
+    //console.log(getSearchData());
     var json_data =  JSON.stringify(getSearchData());
-    //console.log(json_data);
+    console.log('RICHIESTA: ');
+    console.log(json_data);
 
     //richiesta
     $.ajax({
@@ -98,53 +99,65 @@ function search()
 //applica nella pagina i risultato della ricerca effettuata
 function showResults(data)
 {
+    console.log('RITORNO:')
     data = JSON.parse(data);
+    console.log(data);
+    $('#search-body').empty();
+
     if(data.lenght > 0)
     {
         //trovati dal motore di ricerca
         var result = data.content;
 
         result.forEach(r => {
-            console.log(r);
+            if(r.type === 'user')
+            {
+                $('#search-body').append(getUserHTML(r.url, r.style.icon_path, r.nick, r.status, r.flag_supporter, r.flag_author, r.style.banner));
+            }
+            else if(r.type === 'article')
+            {
+                $('#search-body').append(getArticleHTML(r.url, r.title, r.author, r.timestamp, r.description, r.tag_list, true));
+            }
         });
     }
     else
     {
         //nessun risultato
+        var descr = 'Questo è un articolo che parla del fatto che non hai trovato nessun risultato sul motore di ricerca... hai capito bene.';
+        $('#search-body').append(getArticleHTML('#', 'Nessun risultato. Spiace? Spiace.', 'KungKurth', '29/09/1995 alle 17.43', descr, ['nessun', 'risultato', 'spiace?', 'spiace.'],  false));
     }
 }
 
 
 //ritorna l'html per un utente
-function getUserHTML(u_url, u_icon, u_nick, u_status, u_is_supporter, u_is_author)
+function getUserHTML(u_url, u_icon, u_nick, u_status, u_is_supporter, u_is_author, u_banner_rgb)
 {
-    return '<div class="result-item-user" onclick="location.href=\'#\';">'
+    return '<div class="result-item-user" onclick="window.open(\'' + u_url + '\', \'_blank\');">'
                 +'<div class="riu-icon">'
-                    +'<img src="../assets/avatar/fagiolo.png">'
+                    +'<img src="' + u_icon + '">'
                 +'</div>'
-                +'<div class="riu-info" style="background: linear-gradient(90deg, rgba(150, 0, 0, 1), rgba(150, 0, 0, 0.75));">'
+                +'<div class="riu-info" style="background: linear-gradient(90deg, rgba(' + u_banner_rgb + ', 1), rgba(' + u_banner_rgb + ', 0.75));">'
                     +'<div>'
-                        +'<h1>xXxSEXY-MARMOTTONE-56xXx</h1>'
+                        +'<h1>' + u_nick + '</h1>'
                         +'<span style="padding: 0 1.5rem;"><!-- separatore --></span>'
-                        +'<span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>'
-                        +'<span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>'
+                        + (u_is_supporter ? '<span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>' : '')
+                        + (u_is_author ? '<span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>' : '')
                     +'</div>'
-                    +'<p style="margin-top: 1rem; width: 70%;">Lanciando aragoste ai bimbi ciechi...</p>'
+                    +'<p style="margin-top: 1rem; width: 70%;"><i>' + u_status + '</i></p>'
                 +'</div>'
             +'</div>';
 }
 
 
 //ritorna l'html per un articolo
-function getArticleHTML(a_url, a_title, a_author, a_when, a_descr, tag_list)
+function getArticleHTML(a_url, a_title, a_author, a_when, a_descr, tag_list, use_blank = false)
 {
-    tag_list.forEach(function(tag, idx)
-    {
-        tag_list[idx] = '<span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> ' + tag + ' </span>'
-    });
-    tag_list.join(' ');
 
-    return '<div class="result-item-article"  onclick="location.href=\'' + a_url + '\';">' 
+    tag_list = tag_list.map(tag => {
+        return '<span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> ' + tag + ' </span>';
+    }).join('');
+
+    return '<div class="result-item-article"  onclick="window.open(\'' + a_url + '\'' + (use_blank ? ', \'_blank\'' : '' ) + ');">'
                 +'<div class="ria-icon">'
                     +'<i class="fas fa-book-open"></i>'
                 +'</div>'

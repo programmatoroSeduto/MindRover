@@ -349,7 +349,7 @@ else
         if(!isEmpty($a_title))
         {
             $a_temp_results = $articoli->searchByTitle($a_title);
-            echo "<br>";
+            //echo "<br>";
             
             //eseguire il confronto con gli id già trovati?
             if(!$init_state) 
@@ -399,8 +399,8 @@ else
         if(!(count($a_tags) === 1 and $a_tags[0] === '') and $next_step)
         {
             $a_temp_results = $articoli->searchByTagList($a_tags);
-            var_dump($a_temp_results);
-            echo "<br>";
+            //var_dump($a_temp_results);
+            //echo "<br>";
                 
             if(!$init_state) 
                 $a_results = getCommons($a_temp_results, $a_results);
@@ -416,8 +416,8 @@ else
         if(!isEmpty($a_content) and $next_step)
         {
             $a_temp_results = $articoli->searchByContent($a_content, $use_strict);
-            var_dump($a_temp_results);
-            echo "<br>";
+            //var_dump($a_temp_results);
+            //echo "<br>";
                 
             //eseguire il confronto con gli id già trovati?
             if(!$init_state) 
@@ -434,8 +434,8 @@ else
         if((($a_min_timestamp !== null) or ($a_max_timestamp !== null)) and $next_step)
         {
             $a_temp_results = $articoli->searchByTimeRange($a_min_timestamp, $a_max_timestamp);
-            var_dump($a_temp_results);
-            echo "<br>";
+            //var_dump($a_temp_results);
+            //echo "<br>";
                 
             //eseguire il confronto con gli id già trovati?
             if(!$init_state) 
@@ -498,6 +498,8 @@ if($use_users_search)
         $user_obj_json->nick = $data['nickname'];
         $user_obj_json->status = $data['stato'];
         $user_obj_json->style = $stili->getStyle($data['id_utente']);
+        $user_obj_json->flag_supporter = $data['flag_supporter'];
+        $user_obj_json->flag_author = $data['flag_autore'];
 
         array_push($to_send, $user_obj_json);
     }
@@ -518,6 +520,8 @@ echo json_encode($to_encode);
             url : usato per richiamare il profilo
             nick
             status
+            flag_supporter
+            flag_author
             style (vedi stili)
                 icon_path
                 banner
