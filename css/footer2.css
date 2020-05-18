@@ -1,8 +1,8 @@
-* {
+/* * {
     box-sizing: border-box;
-  }
+  } */
   
-  html, body {
+  /* html, body {
     height: 100%;
     background-color: teal;
   }
@@ -19,18 +19,18 @@
             flex-flow: column nowrap;
     -webkit-box-pack: justify;
             justify-content: space-between;
-  }
+  } */
   
-  ul {
+  /* ul {
     list-style: none;
-  }
+  } */
   
-  a {
+  /* a {
     text-decoration: none;
-  }
+  } */
   
   .generic-anchor {
-    color: #da4112;
+    color: whitesmoke;
   }
  
   
@@ -39,10 +39,10 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
   
-  main {
+  /* main {
     -webkit-box-flex: 1;
             flex: 1 1 auto;
     display: -webkit-box;
@@ -54,10 +54,10 @@
     font: 10em "Oswald", sans-serif;
     color: #6f00ff;
     line-height: 1;
-  }
+  } */
   
   footer {
-    background: whitesmoke;
+    background: #aa281e;
     margin-top: auto;
     width: 100%;
   }
@@ -87,7 +87,7 @@
             align-items: center;
     justify-content: space-around;
     position: relative;
-    margin-top: 5px;
+    margin-top: 4.5px;
   }
   
   .footer-social-section::after {
@@ -96,14 +96,14 @@
     z-index: 1;
     top: 50%;
     left: 10px;
-    border-top: 1px solid #da4112;
+    border-top: 1px solid whitesmoke;
     width: calc(100% - 20px);
   }
   
   .footer-social-overlap {
     position: relative;
     z-index: 2;
-    background: whitesmoke;
+    background: #aa281e;
     padding: 0 20px;
   }
   
@@ -113,7 +113,7 @@
     -webkit-box-align: center;
             align-items: center;
     font: 3.5em "Oswald", sans-serif;
-    color: #da4112;
+    color: whitesmoke;
   }
   
   .footer-social-small {
@@ -122,7 +122,7 @@
   }
   
   .footer-social-overlap > a {
-    font-size: 3em;
+    font-size: 2em;
   }
   
   .footer-social-overlap > a:not(:first-child) {
@@ -132,7 +132,7 @@
   .footer-bottom-section {
     width: 100%;
     padding: 10px;
-    border-top: 1px solid #da4112;
+    border-top: 1px solid whitesmoke;
     margin-top: 10px;
   }
   
@@ -141,8 +141,8 @@
   }
   
   .footer-bottom-wrapper {
-    font-size: 1.5em;
-    color: #da4112;
+    font-size: 1em;
+    color: whitesmoke;
   }
   
   .footer-address {
@@ -261,4 +261,12 @@
     .footer-bottom-wrapper {
       font-size: 1.3em;
     }
+  }
+
+  .aa:link, .aa:visited {
+    color: whitesmoke;
+  }
+
+  .aa:hover {
+    color: black;
   }

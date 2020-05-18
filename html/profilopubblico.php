@@ -47,13 +47,29 @@ $time_subscr = 26;
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
     <link type="text/css" rel="stylesheet" href="../css/nav.css">
     <link type="text/css" rel="stylesheet" href="../css/fonts.css">
-    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer2.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/profile_settings_style.css">
     <link type="text/css" rel="stylesheet" href="../css/modal.css">
+    <link type="text/css" rel="stylesheet" href="../css/search_page_style.css">
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f61875768d.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        .example::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE,Edge e Firefox  */
+        .example {
+            overflow: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none; /* Firefox 64 */
+        }      
+
+    </style>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -132,7 +148,7 @@ $time_subscr = 26;
 
             <?php if($is_author): ?>
                 <!-- voci riservate agli autori -->
-                <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('I miei articoli');">I miei articoli</button>
+                <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('I miei articoli');">Gli Articoli di barbagianni</button>
             <?php endif ?>
         </div>
 
@@ -141,20 +157,91 @@ $time_subscr = 26;
             <div id="s1" class="tabcontent">
                 <div class="vishnu">
                     <div><?php echo datetime_funny(); ?></div> <div><?php echo $date_subscr ?> alle <?php echo $time_subscr ?></div>
+                    <div class="sep"></div> <div class="sep"></div>
                     <div><b>Nickname:</b></div> <div><b><?php echo $nickname ?></b></div>
-                    <div><b>bio: </b></div><div><i><?php echo $descr ?></i></div>
+                    <div class="sep"></div> <div class="sep"></div>
+                    <div><b>Bio: </b></div><div><i><?php echo $descr ?></i></div>
                 </div>
             </div>
 
             <?php if($is_author): ?>
-                <div id="s2" class="tabcontent kali">
-                    articoli
+                <div id="s2" class="tabcontent kali example" style="overflow: scroll">
+                    <!-- <div>L'Incredibile Storia del Miazza Sommergibile</div>
+                    <div>Pelato Riazza a Caccia di Marmotte</div>
+                    <div>Conturbato Miazza nel Paese delle Scolopendre</div>
+                    <div>L'Avvincente Diatriba Artistica tra Pennellato Miazza e Architetturizzato Miazza</div> -->
+                <div>
+                    <div class="result-item-article"  onclick="location.href='#';">
+                        <div class="ria-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
+                            <div>
+                                <h1>Questo articolo parla di tua madre!</h1>
+                            </div>
+                        <div class="ria-inner">
+                            <p>
+                            <i>xXxGermanoGaneshxXx</i> || 20/02/2020 || 
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> allah </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> GGMosconi </span>
+                            </p>
+                        </div>
+                        <p style="margin-top: 1rem; width: 70%;"><i>"Questa stanza è bella. Anche questa stanza è bella. Questa stanza ... è bella. E guarda com'è bella anche questa stanza. Bella questa stanza. E anche questa stanza è bella. Fre, non ho mai visto stanza così bella."</i></p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="result-item-article"  onclick="location.href='#';">
+                        <div class="ria-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
+                            <div>
+                                <h1>Giulia hai cotto il razzo!</h1>
+                            </div>
+                        <div class="ria-inner">
+                            <p>
+                            <i>Kallaari</i> || 5/5/2020 || 
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> giug </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette -anche no- </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> MattiaèBello </span>
+                            </p>
+                        </div>
+                        <p style="margin-top: 1rem; width: 70%;"><i>"Piccola ebrea bastarda."</i></p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="result-item-article"  onclick="location.href='#';">
+                        <div class="ria-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
+                            <div>
+                                <h1>L'Incredibile Storia di Catapultato Miazza</h1>
+                            </div>
+                        <div class="ria-inner">
+                            <p>
+                            <i>xXxCucinatoMiazzaxXx</i> || 12/2/2020 || 
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> catapultato </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> miazza </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> ComeUnaCatapulta </span>
+                            </p>
+                        </div>
+                        <p style="margin-top: 1rem; width: 70%;"><i>"Bella Rena! Rena è stato catapultato contro una casa urlando AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!"</i></p>
+                    </div>
+                </div>
+                
+                </div>
+                <div style="height: 10vh"></div>
+            </div>
                 </div>
             <?php endif ?>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer
     <div class="profile-footer footer-bg"> 
         <div class="footer-content">
 
@@ -169,6 +256,32 @@ $time_subscr = 26;
             Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
             
         </div>
-    </div>
+    </div> -->
+
+    <footer class="flex-rw">
+
+        <section class="footer-social-section flex-rw">
+            <span class="footer-social-overlap footer-social-connect">
+                <img src="../assets/img/logo.png" style="height: 9vh;"> 
+            </span>
+
+            <span class="footer-social-overlap footer-social-icons-wrapper">
+            <a href="https://www.facebook.com/" class="generic-anchor aa" target="_blank" title="Facebook" itemprop="significantLink"><i class="fab fa-facebook-square d"></i></a>
+            <a href="https://twitter.com/explore" class="generic-anchor aa" target="_blank" title="Twitter" itemprop="significantLink"><i class="fab fa-twitter d"></i></a>
+            <a href="http://instagram.it" class="generic-anchor aa" target="_blank" title="Instagram" itemprop="significantLink"><i class="fab fa-instagram d"></i></a>
+            <a href="https://www.youtube.it" class="generic-anchor aa" target="_blank" title="Youtube" itemprop="significantLink"><i class="fab fa-youtube d"></i></a>
+            <a href="../HTML/comingsoon.php" class="generic-anchor aa" target="_blank" title="Email Frog Studios" itemprop="significantLink"><i class="fas fa-envelope d"></i></a>
+            <a href="https://unige.it/it/" class="generic-anchor aa" target="_blank" title="Università degli Studi di Genova" itemprop="significantLink"><i class="fas fa-university d"></i></a>
+        </span>
+    </section>
+    
+    <section class="footer-bottom-section" style="line-height: 0.8em">
+        <div class="footer-bottom-wrapper" style="font-family: ganesh; text-align: center;">   
+            © 2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.
+        </div>
+    </section>
+
+    </footer>
+
 </body>
 </html>
