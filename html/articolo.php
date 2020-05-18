@@ -104,6 +104,7 @@ require_once('../php/modules/navbar.php');
         <div class="example" style="overflow-y: scroll; padding: 3rem; background-image: url('../assets/img/news-rane.jpg'); background-repeat: no-repeat; background-size: cover">
             <div style="background-color: rgba(173, 216, 230, 0.50); min-height: 15vh; padding: 0.5rem 2rem; line-height: 2.5rem; display: grid; grid-template-rows: 1fr 1fr">
                 <h1 style="font-family: ganesh; text-align: center">Perchè non mi fate vedere le tette della Pausini?</h1>
+                <p style="font-family: ganesh; text-align: center; padding-bottom: 1vh">Tanto non ho niente da perdere</p>
                 <div style="display: flex; flex-direction: column-reverse"><p><i>Mentato Raizzia</i> || 12/12/2012 || 
                 <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> mentato </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> raizzia </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> piattinelculo </span></p> 
                 </div>
@@ -169,7 +170,7 @@ require_once('../php/modules/navbar.php');
                 <div class="list-item" style="background-image: url('../assets/img/news-work.jpg');">Ma quando muori lo sai che l'unico reame che vedrai è largo 2 e profondo 6?</div>
                 <div class="list-item" style="background-image: url('../assets/img/news-volante.jpg');">Lo sai che MATTONE DOPO MATTONE DOPO MATTONE queste mura iniziano a cadere?</div>
             </div>
-            <div class="hh2 back">Torna alla pagina di ricerca</a></div>
+            <div class="hh2 back" onclick="location.href='../HTML/search.php';">Torna alla pagina di ricerca</div>
         </div>
     </div>
 
