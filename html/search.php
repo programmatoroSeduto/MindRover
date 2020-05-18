@@ -16,7 +16,7 @@ $ganesh = "SEARCH";
     <link type="text/css" rel="stylesheet" href="../css/nav.css">
     <link type="text/css" rel="stylesheet" href="../css/fonts.css">
     <link type="text/css" rel="stylesheet" href="../css/containers.css">
-    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer2.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
     <link type="text/css" rel="stylesheet" href="../css/search_page_style.css">
@@ -176,20 +176,6 @@ $ganesh = "SEARCH";
     </div>
     
 
-    <div class="footer-container footer-bg"> 
-        <div class="footer-content">
-
-            <img src="../assets/img/logo.png" style="height: 11vh;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="height: 10vh;">
-            <i class="fab fa-facebook-square d"></i>
-            <i class="fab fa-youtube d"></i>
-            <i class="fab fa-instagram d"></i>
-            <i class="fas fa-envelope d"></i>
-            <br>
-            <span style="font-size: 0.8rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
-            Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
-            
-        </div>
-    </div>
+    <?php require_once('../php/modules/footer.php'); ?>
 </body>
 </html>

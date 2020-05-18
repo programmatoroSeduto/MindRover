@@ -396,7 +396,8 @@ else
         }
 
         //ricerca per tag
-        if(!(count($a_tags) === 1 and $a_tags[0] === '') and $next_step)
+        //var_dump($a_tags);
+        if(($a_tags !== '') and !(count($a_tags) === 1 and $a_tags[0] === '') and $next_step)
         {
             $a_temp_results = $articoli->searchByTagList($a_tags);
             //var_dump($a_temp_results);

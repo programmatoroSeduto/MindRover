@@ -18,7 +18,7 @@ $ganesh = "HOMEPAGE";
     <link type="text/css" rel="stylesheet" href="../css/nav.css">
     <link type="text/css" rel="stylesheet" href="../css/fonts.css">
     <link type="text/css" rel="stylesheet" href="../css/containers.css">
-    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer2.css">
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
     <link type="text/css" rel="stylesheet" href="../css/splash-carousel-style.css">
@@ -207,7 +207,7 @@ else
     </div>
 
     <!-- Footer -->
-    <div class="footer-container footer-bg"> 
+    <!-- <div class="footer-container footer-bg"> 
         <div class="footer-content">
 
             <img src="../assets/img/logo.png" style="height: 11vh;">   
@@ -221,7 +221,9 @@ else
             Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
             
         </div>
-    </div>
+    </div> -->
+
+    <?php require_once('../php/modules/footer.php'); ?>
 
 </body>
 
