@@ -116,14 +116,49 @@ function showResults(data)
 
 
 //ritorna l'html per un utente
-function getUserHTML(user_info)
+function getUserHTML(u_url, u_icon, u_nick, u_status, u_is_supporter, u_is_author)
 {
-
+    return '<div class="result-item-user" onclick="location.href=\'#\';">'
+                +'<div class="riu-icon">'
+                    +'<img src="../assets/avatar/fagiolo.png">'
+                +'</div>'
+                +'<div class="riu-info" style="background: linear-gradient(90deg, rgba(150, 0, 0, 1), rgba(150, 0, 0, 0.75));">'
+                    +'<div>'
+                        +'<h1>xXxSEXY-MARMOTTONE-56xXx</h1>'
+                        +'<span style="padding: 0 1.5rem;"><!-- separatore --></span>'
+                        +'<span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>'
+                        +'<span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>'
+                    +'</div>'
+                    +'<p style="margin-top: 1rem; width: 70%;">Lanciando aragoste ai bimbi ciechi...</p>'
+                +'</div>'
+            +'</div>';
 }
 
 
 //ritorna l'html per un articolo
-function getArticleHTML(article_data)
+function getArticleHTML(a_url, a_title, a_author, a_when, a_descr, tag_list)
 {
-    
+    tag_list.forEach(function(tag, idx)
+    {
+        tag_list[idx] = '<span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> ' + tag + ' </span>'
+    });
+    tag_list.join(' ');
+
+    return '<div class="result-item-article"  onclick="location.href=\'' + a_url + '\';">' 
+                +'<div class="ria-icon">'
+                    +'<i class="fas fa-book-open"></i>'
+                +'</div>'
+                +'<div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">'
+                    +'<div>'
+                        +'<h1>' + a_title + '</h1>'
+                    +'</div>'
+                    +'<div class="ria-inner">'
+                        +'<p>'
+                            +'<i>' + a_author + '</i> || ' + a_when + ' || '
+                            + tag_list
+                        +'</p>'
+                    +'</div>'
+                    +'<p style="margin-top: 1rem; width: 70%;"><i>' + a_descr + '</i></p>'
+                +'</div>'
+            +'</div>';
 }

@@ -134,41 +134,43 @@ $ganesh = "SEARCH";
         <!-- per adattare il contenuto alla riduzione di dimensioni della barra, applica la classe body-maximized -->
         <div id="search-body" class="results-list-panel">
 
-            <div class="result-item-article">
-                <div style="background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;">
-                    <i class="fas fa-book-open" style="font-size: 3.5rem; text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000; color:#007882"></i>
+            <div class="result-item-article"  onclick="location.href='#';">
+                <div class="ria-icon">
+                    <i class="fas fa-book-open"></i>
                 </div>
-                <div style="background: linear-gradient(90deg, #007882, #000050); padding: 1.5rem 3rem;">
+                <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
                     <div>
-                        <h1 style="display: inline; font-family: ganesh">Questo articolo parla di tua madre!</h1>
+                        <h1>Questo articolo parla di tua madre!</h1>
                     </div>
-                    <div style="display: flex; flex-direction: column-reverse; margin-top: 0.5rem">
-                        <p><i>xXxGermanoGaneshxXx</i> || 20/02/2020 || 
-                        <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> allah </span>
-                        <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette </span>
-                        <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> GGMosconi </span>
+                    <div class="ria-inner">
+                        <p>
+                            <i>xXxGermanoGaneshxXx</i> || 20/02/2020 || 
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> allah </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette </span>
+                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> GGMosconi </span>
+                        </p>
                     </div>
-                    <p style="margin-top: 1rem;"><i>"Voglio vedere come sono fatte le tue budella" "allora, vai a pagina 38."</i></p>
+                    <p style="margin-top: 1rem; width: 70%;"><i>"Questa stanza è bella. Anche questa stanza è bella. Questa stanza ... è bella. E guarda com'è bella anche questa stanza. Bella questa stanza. E anche questa stanza è bella. Fre, non ho mai visto stanza così bella."</i></p>
                 </div>
             </div>
 
-            <div class="result-item-user">
-                <div style="background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;">
-                    <img src="../assets/avatar/fagiolo.png" style="height: 8vh;">
+            <div class="result-item-user" onclick="location.href='#';">
+                <div class="riu-icon">
+                    <img src="../assets/avatar/fagiolo.png">
                 </div>
-                <div style="background: linear-gradient(90deg, rgb(150, 0, 0), rgb(50, 30, 0)); padding: 1.5rem 3rem;">
+                <div class="riu-info" style="background: linear-gradient(90deg, rgba(150, 0, 0, 1), rgba(150, 0, 0, 0.75));">
                     <div>
-                        <h1 style="display: inline; font-family: ganesh">xXxSEXY-MARMOTTONE-56xXx</h1>
-                        <span style="padding: 0 1.5rem;"></span>
+                        <h1>xXxSEXY-MARMOTTONE-56xXx</h1>
+                        
+                        <span style="padding: 0 1.5rem;"><!-- separatore --></span>
+                        
                         <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>
                         <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>
                     </div>
-                    <p style="margin-top: 1rem;">Lanciando aragoste ai bimbi ciechi...</p>
+                    <p style="margin-top: 1rem; width: 70%;">Lanciando aragoste ai bimbi ciechi...</p>
                     
                 </div>
             </div>
-
-            <div style="min-height: 5vh;"></div>
 
         </div>
     </div>

@@ -35,6 +35,8 @@
     grid-template-columns: 2fr 26fr;
 
     overflow: hidden;
+
+    cursor: pointer;
 }
 
 .result-item-user
@@ -49,6 +51,8 @@
     grid-template-columns: 2fr 26fr;
 
     overflow: hidden;
+
+    cursor: pointer;
 }
 
 .result-item:last-child
@@ -175,3 +179,51 @@
     color:white;
     margin-bottom: 1rem
 }
+
+.ria-icon
+{
+    background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;
+}
+
+.ria-icon i
+{
+    font-size: 3.5rem; text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000; color:#007882;
+}
+
+.ria-info
+{
+    padding: 1.5rem 3rem;
+    font-family: ganesh
+}
+
+.ria-info div h1
+{
+    display: inline;
+}
+
+.ria-inner
+{
+    display: flex; flex-direction: column-reverse; margin-top: 0.5rem;
+}
+
+.riu-icon
+{
+    background-color: white; display: grid; margin: auto; cursor: pointer; text-align: center;
+}
+
+.riu-icon img
+{
+    height: 8vh;
+}
+
+.riu-info
+{
+    padding: 1.5rem 3rem;
+    font-family: ganesh
+}
+
+.riu-info h1
+{
+    display: inline;
+}
+
