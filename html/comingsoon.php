@@ -57,6 +57,9 @@ else
 
 ?>
 
+    <div>
+        
+    </div>
     <!-- Footer -->
     <?php require_once('../php/modules/footer.php'); ?>
 

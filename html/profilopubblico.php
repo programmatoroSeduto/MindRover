@@ -1,12 +1,59 @@
 <?php
 session_start();
 $ganesh = "ACCOUNT_PUBBLICO";
+
+if(!isset($_GET['code']))
+{
+    //header('location: ./comingsoon.php');
+    echo 'niente get del code';
+    die();
+}
+elseif(!is_numeric($_GET['code']))
+{
+    //header('location: ./comingsoon.php');
+    echo 'niente get del code';
+    die();
+}
 ?>
 <?php
 require_once('../php/modules/navbar.php');
 require_once('../php/db/mysql_credentials.php');
+require_once('../php/db/ProfiliUtenti.php');
 require_once('../php/db/ImgProfilo.php');
+require_once('../php/db/Donazioni.php');
 require_once('../php/modules/funny.php');
+$dbms = connect();
+$profilo = new ProfiliUtenti($dbms);
+$stile = new ImgProfilo($dbms);
+$donazioni = new Donazioni($dbms);
+
+$profilo = $profilo->getProfileDataById($_GET['code']);
+$stile = $stile->getStyle($_GET['code']);
+if(!$profilo || !$stile)
+{
+    //header('location: ./comingsoon.php');
+    echo 'niente get del code';
+    die();
+}
+$donazioni = $donazioni->getDonationAmountFrom($_GET['code']);
+
+$my_tier = 0;
+{
+    $tier_3 = 99;
+    $tier_2 = 199;
+    if($donazioni > $tier_2)
+    {
+        $my_tier = 1;
+    }
+    elseif($donazioni > $tier_3)
+    {
+        $my_tier = 2;
+    }
+    elseif($donazioni > 0)
+    {
+        $my_tier = 3;
+    }
+}
 
 $tier_icon = array
 (
@@ -15,25 +62,24 @@ $tier_icon = array
     /* -- TIER 2 -- */'<img class="brahma-tier" src="../assets/img/imbrogliona.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
     /* -- TIER 3 -- */'<img class="brahma-tier" src="../assets/img/logo.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">'
 );
-$my_tier = 1;
 
-$banner_rgb = implode(', ', array(255, 0, 0));
-$color1_rgb = implode(', ', array(255, 255, 0));
-$color2_rgb = implode(', ', array(255, 0, 255));
-$avatar = '../assets/avatar/fagiolo.png';
+$banner_rgb = implode(', ', $stile['banner']);
+$color1_rgb = implode(', ', $stile['color_1']);
+$color2_rgb = implode(', ', $stile['color_1']);
+$avatar = $stile['icon_path'];
 
-$supporter = true;
-$is_author = true;
+$supporter = $profilo['flag_supporter'];
+$is_author = $profilo['flag_autore'];
 
-$nickname = 'barbagianni';
-$status = 'm\'illumino di CACTUS.';
-$descr = ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia dolor ratione perspiciatis modi? Omnis, tempora. Odit aspernatur nisi reprehenderit similique neque numquam, asperiores ipsa vitae obcaecati soluta blanditiis rem aliquid dolorum distinctio quo officiis, sint eius corporis, eos possimus modi minima culpa. Aut quam animi adipisci delectus, saepe consectetur? ';
+$nickname = $profilo['nickname'];
+$status = $profilo['stato'];
+$descr = $profilo['descrizione'];
 
-$first_name = 'ciao';
-$last_name = 'peraalgelsomino';
+$first_name = $profilo['first_name'];
+$last_name = $profilo['last_name'];
 
-$date_subscr = 50;
-$time_subscr = 26;
+$date_subscr = (new DateTime($profilo['data_iscrizione']))->format('d/m/Y');
+$time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
 ?>
 
 <!DOCTYPE html>
