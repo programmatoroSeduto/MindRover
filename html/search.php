@@ -72,34 +72,40 @@ $ganesh = "SEARCH";
                         active_panel_idx = idx;
                     }
                 </script>
+
                 <div class="search-toolbar">
-                    <div id="btn-1" onclick="openSearchTab(1);">Articoli</div>
-                    <div id="btn-2" onclick="openSearchTab(2);">Utenti</div>
-                    <div id="btn-3" onclick="openSearchTab(3);">Ricerca avanzata</div>
+                    <div id="btn-1" onclick="openSearchTab(1);" class="bottoneRicerca">Articoli</div>
+                    <div id="btn-2" onclick="openSearchTab(2);" class="bottoneRicerca">Utenti</div>
+                    <div id="btn-3" onclick="openSearchTab(3);" class="bottoneRicerca">Ricerca avanzata</div>
+                    <div id="btn-4" class="bottoneRicerca" onclick="search();">Cerca</div>
                 </div>
                 <div class="search-inner-panel">
-                    <div id="search-settings-panel-1" class="">
-                        <label for="a_title">titolo articolo:</label><input type="text" name="a_title" id="a_title"><br>
-                        <label for="a_tags">lista di tag:</label><input type="text"  id="a_tags" name="a_tags"><br>
-                        <label for="a_content">contenuto dell'articolo:</label><input type="text" id="a_content" name="a_content"><br>
-                        <label for="a_min_timestamp">periodo di pubblicazione: da </label><input type="date" id="a_min_timestamp" name="a_min_timestamp" min="0"><label for="a_max_timestamp"> a </label><input type="date" id="a_max_timestamp" name="a_max_timestamp"><br>
-                        <label for="a_author">nickname autore: </label><input type="text" id="a_author" name="a_author"><br>
-                        <button onclick="search();">Cerca!</button>
+                    <div id="search-settings-panel-1" class="vietnam">
+                        <div>
+                            <label for="a_title">Titolo articolo:</label><input type="text" name="a_title" id="a_title"><br>
+                            <label for="a_tags">Lista di tag:</label><input type="text"  id="a_tags" name="a_tags"><br>
+                            <label for="a_content">Contenuto dell'articolo:</label><input type="text" id="a_content" name="a_content"><br>
+                        </div>
+                        <div>
+                            <label for="a_min_timestamp">Periodo di pubblicazione: da </label><input type="date" id="a_min_timestamp" name="a_min_timestamp" min="0"><label for="a_max_timestamp"> a </label><input type="date" id="a_max_timestamp" name="a_max_timestamp"><br>
+                            <label for="a_author">Nickname autore: </label><input type="text" id="a_author" name="a_author"><br>
+    
+                        </div>
                     </div>
                     <div id="search-settings-panel-2" class="hidden">
-                        <label for="u_nickname">nickname utente da cercare: </label><input type="text" id="u_nickname" name="u_nickname"><br>
-                        <button onclick="search();">Cerca!</button>
+                        <label for="u_nickname">Nickname utente da cercare: </label><input type="text" id="u_nickname" name="u_nickname"><br>
+
                     </div>
                     <div id="search-settings-panel-3" class="hidden">
-                        <label for="search_type">tipo di ricerca:</label>
+                        <label for="search_type">Tipo di ricerca:</label>
                         <select id="search_type" name="search_type">
-                            <option value="all">utenti e articoli</option>
-                            <option value="article">articoli</option>
-                            <option value="user">utenti</option>
+                            <option value="all">Utenti e articoli</option>
+                            <option value="article">Articoli</option>
+                            <option value="user">Utenti</option>
                         </select><br>
-                        <input type="checkbox" id="use_all_data" name="use_all_data" value="1"><label for="use_all_data">ricerca totale</label><br>
-                        <input type="checkbox" id="strict" name="strict" value="1"><label for="strict">modalità strict</label><br>
-                        <button onclick="search();">Cerca!</button>
+                        <input type="checkbox" id="use_all_data" name="use_all_data" value="1"><label for="use_all_data">Ricerca totale</label><br>
+                        <input type="checkbox" id="strict" name="strict" value="1"><label for="strict">Modalità strict</label><br>
+
                     </div>
                 </div>
             </div>
@@ -171,6 +177,8 @@ $ganesh = "SEARCH";
                     
                 </div>
             </div>
+
+            
 
         </div>
     </div>

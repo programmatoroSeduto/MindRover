@@ -157,9 +157,9 @@ $data[] = array(
         'nome' => 'Lorenzo',
         'cognome' => 'Terranova',
         'stato' => '"This time I finally let you... Go."',
-        'descrizione' => '4 giorni fa ho fatto colazione coi pancakes, il giorno dopo invece con le uova strapazzate e il succo d\'arancia. Due mattine fa invece con delle specie di Egg McMuffin ma coi pancakes. Ieri invece ho mangiato i pancakes, però a sto giro solo col burro. Stamattina invece dieta, non avevo sbatti e non c\'era la mami.',
+        'descrizione' => '5 giorni fa ho fatto colazione coi pancakes, il giorno dopo invece con le uova strapazzate e il succo d\'arancia. Tre mattine fa invece con delle specie di Egg McMuffin ma coi pancakes. L\' altro ieri invece ho mangiato i pancakes, però a sto giro solo col burro. Ieri mattina invece dieta, non avevo sbatti e non c\'era la mami. Oggi mi sono svegliato tardi quindi il pancake con l\'uovo era freddo, ma ugualmente buono, evviva.',
         'flag_anonimo' => false,
-        'id_img_profilo' => -1
+        'id_img_profilo' => 15
     ),
     'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
 );
