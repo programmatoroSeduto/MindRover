@@ -22,71 +22,11 @@ require_once('../php/modules/navbar.php');
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
     <link type="text/css" rel="stylesheet" href="../css/profile_settings_style.css">
+    <link type="text/css" rel="stylesheet" href="../css/articolo.css">
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <style>
-        .list-item
-        {
-            /* flex: 1; */
-            display: block;
-            height: 17vh;
-            padding: 1vh;
-            background-color: white;
-            background-size: 100% 100%;
-            background-position: center;
-            transition: .5s;
-            border: 0.1vh solid black;
-            /* margin-top: 3vh; */
-            color: white;
-            text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
-            cursor: pointer;
-        }
-
-        .list-item:hover{
-            background-size: 110% 110%;
-        }
-
-        .hh2{
-            transition: .5s;
-            padding: 1rem; 
-            font-family: ganesh; 
-            text-transform: uppercase; 
-            font-size: medium; 
-            text-align: center;
-            border: 0.1vh solid black;
-        }
-
-        .hh2.titolo{
-            background: linear-gradient(45deg, #8f281d, #da4112);
-            color: white;
-        }
-
-        .hh2.back{
-            background-color: whitesmoke;
-            color: #da4112;
-            cursor: pointer;
-            
-        }
-
-        .hh2.back:hover{
-            background: linear-gradient(45deg, #8f281d, #da4112);
-            color: black;
-        }
-
-        .example::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Hide scrollbar for IE,Edge e Firefox  */
-        .example {
-            overflow: auto;
-            -ms-overflow-style: none;
-            scrollbar-width: none; /* Firefox 64 */
-        }        
-
-    </style>
 </head>
 <body>
     <?php
@@ -100,16 +40,19 @@ require_once('../php/modules/navbar.php');
         }
     ?>
     
-    <div style="height: 91.5vh; display: grid; grid-template-columns: 15fr 5fr;">
-        <div class="example" style="overflow-y: scroll; padding: 3rem; background-image: url('../assets/img/news-rane.jpg'); background-repeat: no-repeat; background-size: cover">
-            <div style="background-color: rgba(173, 216, 230, 0.50); min-height: 15vh; padding: 0.5rem 2rem; line-height: 2.5rem; display: grid; grid-template-rows: 1fr 1fr">
-                <h1 style="font-family: ganesh; text-align: center">Perchè non mi fate vedere le tette della Pausini?</h1>
-                <p style="font-family: ganesh; text-align: center; padding-bottom: 1vh">Tanto non ho niente da perdere</p>
-                <div style="display: flex; flex-direction: column-reverse"><p><i>Mentato Raizzia</i> || 12/12/2012 || 
-                <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> mentato </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> raizzia </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> piattinelculo </span></p> 
+    <div class="contenitore">
+        <div class="example articleStyle" style="background-image: url('../assets/img/news-rane.jpg');">
+            <div class="articleContainer" style="background-color: rgba(173, 216, 230, 0.50);">
+
+                <h1 class="articleTitle">Aggiornamenti su Golarion e Toad of Duty</h1>
+                <p class="articleTitle" style="padding-bottom: 1vh">La fase di Alpha si avvicina!</p>
+                <div class="articleTags">
+                    <p><i>Kallaari</i> || 19/05/2020 || <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> golarion </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tod </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> toad </span>  <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> duty </span> <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> alpha </span> </p> 
                 </div>
+                
             </div>
-            <div style=" background-color: rgba(250, 250, 210, 0.5); padding: 1rem; margin-top: 2rem; margin-bottom: 1rem;">
+
+            <div class="article" style="background-color: rgba(250, 250, 210, 0.5);">
                 <i>Ma se la gente dice che la Conad sei tu, allora perchè stai chiamando la polizia?<br>
                 Stavo solo cercando di rubarti il frigorifero, troia.</i>
                 <br>
@@ -127,9 +70,7 @@ require_once('../php/modules/navbar.php');
                 <br>
                 Adaptogen chartreuse excepteur microdosing wayfarers, elit street art aute food truck man braid consequat. Raw denim try-hard fashion axe coloring book plaid viral. Edison bulb skateboard microdosing, listicle hella jean shorts green juice chillwave brooklyn PBR&B bicycle rights duis. Offal yuccie dolor swag fam eiusmod cillum gochujang.
                 <br>
-                Narwhal authentic direct trade food truck, drinking vinegar polaroid put a bird on it. Blue bottle copper mug readymade green juice cornhole vinyl enim. Shaman williamsburg cray coloring book man bun. Knausgaard ad hashtag distillery VHS dreamcatcher, tattooed banh mi yr chillwave you probably haven't heard of them schlitz air plant cupidatat. Mlkshk woke tattooed non, fashion axe ugh literally four dollar toast ullamco.
-                <br>
-                Irony ethical woke cliche typewriter poutine. Migas non YOLO nulla aliqua small batch, fanny pack edison bulb vinyl offal exercitation direct trade chicharrones. Mlkshk nulla gentrify, raclette blue bottle vape culpa ex dolore vice dreamcatcher DIY cornhole affogato brooklyn. Nisi squid farm-to-table fugiat microdosing portland.
+                C'è da contare che SAAAAAAS.
                 <br>
                 Banjo brooklyn austin sriracha, selfies subway tile meditation sunt meggings. Duis cred wolf readymade bushwick hoodie meggings shaman etsy stumptown ex. Pop-up non ramps ugh, affogato twee green juice post-ironic man bun pug activated charcoal. Nulla knausgaard roof party, ramps letterpress iceland seitan. Lo-fi dreamcatcher kombucha activated charcoal. Vinyl brooklyn jean shorts man bun direct trade fanny pack.
                 <br>
@@ -161,36 +102,20 @@ require_once('../php/modules/navbar.php');
                 <br>
                 Hell of umami church-key bitters kinfolk poutine. Hella vaporware you probably haven't heard of them tilde laboris aute pork belly pitchfork la croix selvage in godard. You probably haven't heard of them mustache affogato live-edge, fashion axe franzen schlitz shabby chic etsy aesthetic. Franzen post-ironic activated charcoal yr hella. Ullamco selfies SWAG BARCA actually. Ugh sartorial kitsch, enim PBR&B forage man braid stumptown godard yuccie butcher biodiesel officia taxidermy tilde. Id aesthetic vexillologist retro
             </div>
+
         </div>
-        <div style="display: flex; flex-direction: column;">
+        
+        <div class="incolonnatoMiazza">
             <div class="hh2 titolo">Altri interessantissimi articoli</div>
-            <div style="display: flex; flex-direction: column;">
                 <div class="list-item" style="background-image: url('../assets/img/news-rane.jpg');">Alla scoperta di Bella Rena, il videogioco autobiografico di Gregghy.</div>
                 <div class="list-item" style="background-image: url('../assets/img/news-vr.jpg');">Ma se ti seghi con mindROVER poi dove sborri?</div>
                 <div class="list-item" style="background-image: url('../assets/img/news-work.jpg');">Ma quando muori lo sai che l'unico reame che vedrai è largo 2 e profondo 6?</div>
                 <div class="list-item" style="background-image: url('../assets/img/news-volante.jpg');">Lo sai che MATTONE DOPO MATTONE DOPO MATTONE queste mura iniziano a cadere?</div>
-            </div>
             <div class="hh2 back" onclick="location.href='../HTML/search.php';">Torna alla pagina di ricerca</div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <!-- <div class="footer-container footer-bg"> 
-        <div class="footer-content">
-
-            <img src="../assets/img/logo.png" style="height: 11vh;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="height: 10vh;">
-            <i class="fab fa-facebook-square d"></i>
-            <i class="fab fa-youtube d"></i>
-            <i class="fab fa-instagram d"></i>
-            <i class="fas fa-envelope d"></i>
-            <br>
-            <span style="font-size: 0.8rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
-            Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
-            
-        </div>
-    </div> -->
-
+    
     <?php require_once('../php/modules/footer.php'); ?>
+
 </body>
 </html>

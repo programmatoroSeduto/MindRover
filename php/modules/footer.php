@@ -1,11 +1,10 @@
 <div>
     <footer class="flex-rw">
-
         <section class="footer-social-section flex-rw">
             <span class="footer-social-overlap footer-social-connect">
-                <img src="../assets/img/logo.png" style="height: 9vh;"> 
+                <img src="../assets/img/logo.png" class="logoao"> 
             </span>
-
+            
             <span class="footer-social-overlap footer-social-icons-wrapper">
                 <a href="https://www.facebook.com/" class="generic-anchor aa" target="_blank" title="Facebook" itemprop="significantLink"><i class="fab fa-facebook-square aa"></i></a>
                 <a href="https://twitter.com/explore" class="generic-anchor aa" target="_blank" title="Twitter" itemprop="significantLink"><i class="fab fa-twitter aa"></i></a>

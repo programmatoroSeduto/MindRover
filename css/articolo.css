@@ -1,0 +1,102 @@
+.list-item
+{
+    flex: 1;
+    display: block;
+    height: 17vh;
+    padding: 1vh;
+    background-color: white;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: .5s;
+    border: 0.1vh solid black;
+    color: white;
+    text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    cursor: pointer;
+}
+
+.list-item:hover{
+    background-size: 110% 110%;
+}
+
+.hh2{
+    transition: .5s;
+    padding: 1rem; 
+    font-family: ganesh; 
+    text-transform: uppercase; 
+    font-size: medium; 
+    text-align: center;
+    border: 0.1vh solid black;
+}
+
+.hh2.titolo{
+    background: linear-gradient(45deg, #8f281d, #da4112);
+    color: white;
+}
+
+.hh2.back{
+    background-color: whitesmoke;
+    color: #da4112;
+    cursor: pointer;
+    
+}
+
+.hh2.back:hover{
+    background: linear-gradient(45deg, #8f281d, #da4112);
+    color: black;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE,Edge e Firefox  */
+.example {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox 64 */
+}
+
+.contenitore{
+    height: 91.5vh; 
+    display: grid; 
+    grid-template-columns: 15fr 5fr;
+}
+
+.articleStyle{
+    overflow-y: scroll; 
+    padding: 3rem;
+    background-repeat: no-repeat; 
+    background-size: cover
+}
+
+.articleContainer{
+    min-height: 15vh; 
+    padding: 0.5rem 2rem; 
+    line-height: 2rem; 
+    display: grid; 
+    grid-template-rows: 1fr 1fr;
+}
+
+.articleTitle{
+    font-family: ganesh; 
+    text-align: center;
+}
+
+.articleTags{
+    display: flex; 
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+}
+
+.article{
+    padding: 1rem; 
+    margin-top: 2rem; 
+    margin-bottom: 1rem;
+    line-height: 4vh;
+    font-size: 2.5vh;
+}
+
+.incolonnatoMiazza{
+    display: flex; 
+    flex-direction: column;
+}
