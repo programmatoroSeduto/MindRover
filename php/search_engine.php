@@ -175,11 +175,11 @@ if(eq($interface_type, 'json'))
         }
         if(property_exists($packet, 'a_min_timestamp'))
         {
-            $a_min_timestamp = new DateTime(sanitize($packet->a_min_timestamp));
+            if($packet->a_min_timestamp !== '') $a_min_timestamp = new DateTime(sanitize($packet->a_min_timestamp));
         }
         if(property_exists($packet, 'a_max_timestamp'))
         {
-            $a_max_timestamp = new DateTime(sanitize($packet->a_max_timestamp));
+            if($packet->a_max_timestamp !== '') $a_max_timestamp = new DateTime(sanitize($packet->a_max_timestamp));
         }
         if(property_exists($packet, 'a_author'))
         {
@@ -349,7 +349,9 @@ else
         if(!isEmpty($a_title))
         {
             $a_temp_results = $articoli->searchByTitle($a_title);
-            //echo "<br>";
+            // echo "<br>";
+            //echo 'ricerca per titolo articolo  ';
+            //var_dump($a_temp_results);
             
             //eseguire il confronto con gli id già trovati?
             if(!$init_state) 
@@ -359,6 +361,7 @@ else
             
             //trovato qualcosa?
             $next_step = (count($a_results) > 0);
+            //echo ( $next_step ? 'trovato qualcosa   ' : 'niente da fare.    ');
             if($next_step) $init_state = false;
         }
 
@@ -366,6 +369,7 @@ else
         if(!isEmpty($a_author) and $next_step)
         {
             //ottengo l'id dell'autore dal nickname, se esiste
+            //echo 'ricerca per autore   ';
             $a_author = $profili->searchIdByNickname($a_author, $use_strict, true);
             
             if(count($a_author) > 0)
@@ -399,6 +403,7 @@ else
         //var_dump($a_tags);
         if(($a_tags !== '') and !(count($a_tags) === 1 and $a_tags[0] === '') and $next_step)
         {
+            //echo 'ricerca per tags   ';
             $a_temp_results = $articoli->searchByTagList($a_tags);
             //var_dump($a_temp_results);
             //echo "<br>";
@@ -416,6 +421,7 @@ else
         //ricerca per contenuto
         if(!isEmpty($a_content) and $next_step)
         {
+            //echo 'ricerca per contenuto   ';
             $a_temp_results = $articoli->searchByContent($a_content, $use_strict);
             //var_dump($a_temp_results);
             //echo "<br>";
@@ -434,6 +440,7 @@ else
         //ricerca per timestamp
         if((($a_min_timestamp !== null) or ($a_max_timestamp !== null)) and $next_step)
         {
+            //echo 'ricerca per data di pubblicazione   ';
             $a_temp_results = $articoli->searchByTimeRange($a_min_timestamp, $a_max_timestamp);
             //var_dump($a_temp_results);
             //echo "<br>";

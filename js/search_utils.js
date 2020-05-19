@@ -99,9 +99,9 @@ function search()
 //applica nella pagina i risultato della ricerca effettuata
 function showResults(data)
 {
-    console.log('RITORNO:')
+    //console.log('RITORNO:')
     data = JSON.parse(data);
-    console.log(data);
+    console.log(data); 
     $('#search-body').empty();
 
     if(data.lenght > 0)
