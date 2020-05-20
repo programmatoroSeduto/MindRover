@@ -573,23 +573,6 @@ require_once('../php/modules/funny.php');
         </div>
     </div>
 
-    <!-- Footer
-    <div class="profile-footer footer-bg"> 
-        <div class="footer-content">
-
-            <img src="../assets/img/logo.png" style="height: 9vh;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="height: 8vh;">
-            <i class="fab fa-facebook-square d"></i>
-            <i class="fab fa-youtube d"></i>
-            <i class="fab fa-instagram d"></i>
-            <i class="fas fa-envelope d"></i>
-            <br>
-            <span style="font-size: 0.6rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
-            Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
-            
-        </div>
-    </div> -->
-
     <?php require_once('../php/modules/footer.php'); ?>
 
 <!-- Script per il modal -->
