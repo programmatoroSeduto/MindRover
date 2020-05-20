@@ -60,25 +60,29 @@ $ganesh = "SEARCH";
             </script>
             <div id="search-settings-maximized" class="search-settings-maximized">
                 <script>
-                    function openSearchTab(idx)
+                    function openSearchTab(idx, btn)
                     {
                         var panel_to_enable = 'search-settings-panel-' + idx;
                         var panel_to_disable = 'search-settings-panel-' + active_panel_idx;
-                        var btn_to_enable = 'btn-' . idx;
-                        var btn_to_disable = 'btn-' . active_panel_idx;
+                        var btn_to_enable = 'btn-' + idx;
+                        var btn_to_disable = 'btn-' + active_panel_idx;
 
                         $('#' + panel_to_disable).addClass('hidden').removeClass('panel');
-                        $('#' + panel_to_enable).removeClass('hidden').addClass('panel');
+                        $('#' + panel_to_enable).removeClass('hidden').addClass('panel');                        
+                        
+                        $('#'+ btn_to_enable).addClass('activeButton');
+                        $('#'+ btn_to_disable).removeClass('activeButton');
 
                         active_panel_idx = idx;
+
                     }
                 </script>
 
-                <div class="search-toolbar">
-                    <div id="btn-1" onclick="openSearchTab(1);" class="bottoneRicerca">Articoli</div>
+                <div class="search-toolbar" id="srcTlbr">
+                    <div id="btn-1" onclick="openSearchTab(1);" class="bottoneRicerca activeButton">Articoli</div>
                     <div id="btn-2" onclick="openSearchTab(2);" class="bottoneRicerca">Utenti</div>
                     <div id="btn-3" onclick="openSearchTab(3);" class="bottoneRicerca">Ricerca avanzata</div>
-                    <div id="btn-4" class="bottoneRicerca" onclick="search();">Cerca</div>
+                    <div id="btn-4" class="bottoneRicerca" onclick="search();" style="color: whitesmoke; background-color: green">Cerca</div>
                 </div>
 
                 <div class="search-inner-panel">
@@ -118,32 +122,48 @@ $ganesh = "SEARCH";
                             
                         </div>
 
-
-                            
-    
                     </div>
 
-                    <div id="search-settings-panel-2" class="hidden">
-                        <label for="u_nickname">Nickname utente da cercare: </label><input type="text" id="u_nickname" name="u_nickname"><br>
-
+                    <div id="search-settings-panel-2" class="hidden" class="panel">
+                        <div style="display: grid; grid-template-rows: 2fr 1fr 2fr">
+                            <div> </div>
+                            <div class="form-container">
+                                <input type="text" name="u_nickname" id="u_nickname" placeholder="Cerca un nickname utente" class="form">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <!-- <label for="u_nickname">Nickname utente da cercare: </label><input type="text" id="u_nickname" name="u_nickname"><br> -->
+                            <div> </div>
+                        </div>
                     </div>
 
-                    <div id="search-settings-panel-3" class="hidden">
-                        <label for="search_type">Tipo di ricerca:</label>
-                        <select id="search_type" name="search_type">
-                            <option value="all">Utenti e articoli</option>
-                            <option value="article">Articoli</option>
-                            <option value="user">Utenti</option>
-                        </select><br>
-                        <input type="checkbox" id="use_all_data" name="use_all_data" value="1"><label for="use_all_data">Ricerca totale</label><br>
-                        <input type="checkbox" id="strict" name="strict" value="1"><label for="strict">Modalità strict</label><br>
+                    <div id="search-settings-panel-3" class="hidden" class="panel" style="grid-gap: 2vh 0vh;">
+                        <!-- <label for="search_type">Tipo di ricerca:</label>
+                        <div class="form-container">
+                            <input type="text" name="u_nickname" id="u_nickname" placeholder="Cerca un nickname utente" class="form">
+                            <i class="fas fa-user"></i>
+                        </div> -->
+                        <span style=" font-family: ganesh; margin-top: 1vh">Tipo di ricerca:</span>
+                        <div style="margin-top: 1vh">
+                            <select id="search_type" name="search_type" class="form" style="padding-left: 1vh">
+                                <option value="all">Utenti e articoli</option>
+                                    
+                                <option value="article">Articoli</option>
+                                <option value="user">Utenti</option>
+                            </select>
+                        </div>
+                        <span style=" font-family: ganesh">Ricerca totale:</span>
+                        <input type="checkbox" id="use_all_data" name="use_all_data" value="1">
+                        <span style=" font-family: ganesh">Modalità strict: </span>
+                        <input type="checkbox" id="strict" name="strict" value="1">
                     </div>
+
+                    <!-- <i class="fas fa-globe-europe"></i> -->
 
                 </div>
 
             </div>
             <div id="search-settings-minimized" class="search-settings-minimized hidden">
-                <p>barra di ricerca minimizzata</p>
+                <!-- <p>barra di ricerca minimizzata</p> -->
             </div>
             <div class="search-settings-button">
                 <i class="fas fa-angle-up" onclick="

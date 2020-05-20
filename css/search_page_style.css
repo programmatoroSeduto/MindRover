@@ -5,7 +5,7 @@
 
 .search-settings-panel
 {
-    background-color: gray;
+    background-color: green;
     padding: 0;
     display: grid;
     grid-template-columns: 29fr 1fr;
@@ -17,9 +17,7 @@
     background-color: lightgray; 
     display: flex; 
     flex-direction: column;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
     overflow-y: scroll;
     scrollbar-width: none;
 }
@@ -123,7 +121,9 @@
 
 .search-inner-panel
 {
-    padding: 1rem;
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: whitesmoke;
     border-bottom: 1px black solid;
     border-top: 1px black solid;
@@ -198,7 +198,7 @@
 .ria-info
 {
     padding: 1.5rem 3rem;
-    font-family: ganesh
+    font-family: ganesh;
 }
 
 .ria-info div h1
@@ -282,4 +282,9 @@
 .panel{
     display: grid; 
     grid-template-columns: 1fr 1fr;
+}
+
+.activeButton{
+    background: linear-gradient(45deg, #8f281d, #da4112);
+    color: whitesmoke !important;
 }
