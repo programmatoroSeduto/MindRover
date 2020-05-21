@@ -20,6 +20,7 @@ $ganesh = "SEARCH";
     <link type="text/css" rel="stylesheet" href="../css/text-container.css">
     <link type="text/css" rel="stylesheet" href="../css/board.css">
     <link type="text/css" rel="stylesheet" href="../css/search_page_style.css">
+    <link type="text/css" rel="stylesheet" href="../css/modal.css">
 
     <script src="../js/search_utils.js"></script>
     
@@ -59,58 +60,113 @@ $ganesh = "SEARCH";
             </script>
             <div id="search-settings-maximized" class="search-settings-maximized">
                 <script>
-                    function openSearchTab(idx)
+                    function openSearchTab(idx, btn)
                     {
                         var panel_to_enable = 'search-settings-panel-' + idx;
                         var panel_to_disable = 'search-settings-panel-' + active_panel_idx;
-                        var btn_to_enable = 'btn-' . idx;
-                        var btn_to_disable = 'btn-' . active_panel_idx;
+                        var btn_to_enable = 'btn-' + idx;
+                        var btn_to_disable = 'btn-' + active_panel_idx;
 
-                        $('#' + panel_to_disable).addClass('hidden');
-                        $('#' + panel_to_enable).removeClass('hidden');
+                        $('#' + panel_to_disable).addClass('hidden').removeClass('panel');
+                        $('#' + panel_to_enable).removeClass('hidden').addClass('panel');                        
+                        
+                        $('#'+ btn_to_enable).addClass('activeButton');
+                        $('#'+ btn_to_disable).removeClass('activeButton');
 
                         active_panel_idx = idx;
+
                     }
                 </script>
 
-                <div class="search-toolbar">
-                    <div id="btn-1" onclick="openSearchTab(1);" class="bottoneRicerca">Articoli</div>
+                <div class="search-toolbar" id="srcTlbr">
+                    <div id="btn-1" onclick="openSearchTab(1);" class="bottoneRicerca activeButton">Articoli</div>
                     <div id="btn-2" onclick="openSearchTab(2);" class="bottoneRicerca">Utenti</div>
                     <div id="btn-3" onclick="openSearchTab(3);" class="bottoneRicerca">Ricerca avanzata</div>
-                    <div id="btn-4" class="bottoneRicerca" onclick="search();">Cerca</div>
+                    <div id="btn-4" class="bottoneRicerca" onclick="search();" style="color: whitesmoke; background-color: green">Cerca</div>
                 </div>
+
                 <div class="search-inner-panel">
-                    <div id="search-settings-panel-1" class="vietnam">
-                        <div>
-                            <label for="a_title">Titolo articolo:</label><input type="text" name="a_title" id="a_title"><br>
-                            <label for="a_tags">Lista di tag:</label><input type="text"  id="a_tags" name="a_tags"><br>
-                            <label for="a_content">Contenuto dell'articolo:</label><input type="text" id="a_content" name="a_content"><br>
+                    <div id="search-settings-panel-1" class="panel">
+                        <div style="display: grid; grid-template-rows: 1fr 1fr 1fr">
+                            <!-- <label for="a_title">Titolo articolo:</label><input type="text" name="a_title" id="a_title"><br> -->
+                            <div class="form-container">
+                                <input type="text" name="a_title" id="a_title" placeholder="Titolo articolo" class="form">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+
+                            <!-- <label for="a_tags">Lista di tag:</label><input type="text"  id="a_tags" name="a_tags"><br> -->
+                            <div class="form-container">
+                                <input type="text" name="a_tags" id="a_tags" placeholder="Tag articolo" class="form">
+                                <i class="fas fa-tags"></i>
+                            </div>
+
+                            <!-- <label for="a_content">Contenuto dell'articolo:</label><input type="text" id="a_content" name="a_content"><br> -->
+                            <div class="form-container" style="margin-bottom: 0">
+                                <input type="text" name="a_content" id="a_content" placeholder="Contenuto articolo" class="form">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
                         </div>
-                        <div>
-                            <label for="a_min_timestamp">Periodo di pubblicazione: da </label><input type="date" id="a_min_timestamp" name="a_min_timestamp" min="0"><label for="a_max_timestamp"> a </label><input type="date" id="a_max_timestamp" name="a_max_timestamp"><br>
-                            <label for="a_author">Nickname autore: </label><input type="text" id="a_author" name="a_author"><br>
-    
+
+                        <div style="display: grid; grid-template-rows: 1fr 2fr 1fr 2fr">
+                            <span style=" font-family: ganesh">Pubblicato tra il:</span>
+                            <div class="form-container">
+                                <!-- <label for="a_min_timestamp">Periodo di pubblicazione: da </label><input type="date" id="a_min_timestamp" name="a_min_timestamp" min="0"><label for="a_max_timestamp"> a </label><input type="date" id="a_max_timestamp" name="a_max_timestamp"> -->
+                                <input type="date" name="a_min_timestamp" id="a_min_timestamp" min="0" class="form">
+                                <i class="fas fa-clock" style="top: 1.1vh;"></i>
+                            </div>
+                            <span style=" font-family: ganesh">e il:</span>
+                            <div class="form-container" style="margin-bottom: 0">
+                                <input type="date" name="a_max_timestamp" id="a_max_timestamp" class="form">
+                                <i class="fas fa-clock" style="top: 1.1vh;"></i>
+                            </div>
+                            
                         </div>
-                    </div>
-                    <div id="search-settings-panel-2" class="hidden">
-                        <label for="u_nickname">Nickname utente da cercare: </label><input type="text" id="u_nickname" name="u_nickname"><br>
 
                     </div>
-                    <div id="search-settings-panel-3" class="hidden">
-                        <label for="search_type">Tipo di ricerca:</label>
-                        <select id="search_type" name="search_type">
-                            <option value="all">Utenti e articoli</option>
-                            <option value="article">Articoli</option>
-                            <option value="user">Utenti</option>
-                        </select><br>
-                        <input type="checkbox" id="use_all_data" name="use_all_data" value="1"><label for="use_all_data">Ricerca totale</label><br>
-                        <input type="checkbox" id="strict" name="strict" value="1"><label for="strict">Modalità strict</label><br>
 
+                    <div id="search-settings-panel-2" class="hidden" class="panel">
+                        <div style="display: grid; grid-template-rows: 2fr 1fr 2fr">
+                            <div> </div>
+                            <div class="form-container">
+                                <input type="text" name="u_nickname" id="u_nickname" placeholder="Cerca un nickname utente" class="form">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <!-- <label for="u_nickname">Nickname utente da cercare: </label><input type="text" id="u_nickname" name="u_nickname"><br> -->
+                            <div> </div>
+                        </div>
                     </div>
+
+                    <div id="search-settings-panel-3" class="hidden" class="panel" style="grid-gap: 2vh 0vh;">
+                        <!-- <label for="search_type">Tipo di ricerca:</label>
+                        <div class="form-container">
+                            <input type="text" name="u_nickname" id="u_nickname" placeholder="Cerca un nickname utente" class="form">
+                            <i class="fas fa-user"></i>
+                        </div> -->
+                        <span style=" font-family: ganesh; margin-top: 1vh">Tipo di ricerca:</span>
+                        <div style="margin-top: 1vh">
+                            <select id="search_type" name="search_type" class="form" style="padding-left: 1vh">
+                                <option value="all">Utenti e articoli</option>
+                                    
+                                <option value="article">Articoli</option>
+                                <option value="user">Utenti</option>
+                            </select>
+                        </div>
+                        <span style=" font-family: ganesh" title="Questa opzione permette di visualizzare tutti i contenuti più recenti del server">Ricerca totale:</span>
+                        <input type="checkbox" id="use_all_data" name="use_all_data" value="1">
+                        <span style=" font-family: ganesh" title="Questa opzione permette di visualizzare tutti i contenuti che hanno precisamente gli attributi da te inseriti">Modalità strict: </span>
+                        <input type="checkbox" id="strict" name="strict" value="1">
+                    </div>
+
+                    <!-- <i class="fas fa-globe-europe"></i> -->
+
                 </div>
+
             </div>
             <div id="search-settings-minimized" class="search-settings-minimized hidden">
-                <p>barra di ricerca minimizzata</p>
+                <!-- <p>barra di ricerca minimizzata</p> -->
+                <div style="margin-top: 0.8rem; font-family: ganesh; text-transform: uppercase; letter-spacing: 0.2rem; font-size: 1rem; color: white">
+                Barra di ricerca minimizzata - clicca a destra per riaprirla!
+                </div>
             </div>
             <div class="search-settings-button">
                 <i class="fas fa-angle-up" onclick="
@@ -138,7 +194,7 @@ $ganesh = "SEARCH";
 
 
         <!-- per adattare il contenuto alla riduzione di dimensioni della barra, applica la classe body-maximized -->
-        <div id="search-body" class="results-list-panel">
+        <div id="search-body" class="results-list-panel example">
 
             <div class="result-item-article"  onclick="location.href='#';">
                 <div class="ria-icon">

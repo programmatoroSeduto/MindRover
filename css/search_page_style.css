@@ -5,7 +5,7 @@
 
 .search-settings-panel
 {
-    background-color: gray;
+    background: linear-gradient(45deg, #8f281d, #da4112);
     padding: 0;
     display: grid;
     grid-template-columns: 29fr 1fr;
@@ -19,7 +19,6 @@
     flex-direction: column;
     padding: 1rem;
     overflow-y: scroll;
-
     scrollbar-width: none;
 }
 
@@ -30,12 +29,9 @@
     background-color: white;
     min-height: 20vh;
     max-height: 30vh;
-
     display: grid;
     grid-template-columns: 2fr 26fr;
-
     overflow: hidden;
-
     cursor: pointer;
 }
 
@@ -46,12 +42,9 @@
     background-color: white;
     min-height: 16vh;
     max-height: 16vh;
-
     display: grid;
     grid-template-columns: 2fr 26fr;
-
     overflow: hidden;
-
     cursor: pointer;
 }
 
@@ -65,6 +58,7 @@
     display: flex;
     flex-direction: column;
     border: 1px black solid;
+    z-index: 10;
 }
 
 .search-toolbar div
@@ -75,9 +69,6 @@
     text-align: left;
     padding: 1vh;
     color: #da4112; 
-    /* margin-top: 0.4rem;
-    margin-left: 0.8rem;
-    margin-right: 0.4rem; */
     cursor: pointer;
     transition: 0.5s ease;
     font-family: ganesh;
@@ -93,7 +84,7 @@
 .search-settings-maximized
 {
     display: grid;
-    grid-template-columns: 3fr 14fr 1fr;
+    grid-template-columns: 3fr 14fr;
     height: 22vh; 
 }
 
@@ -115,7 +106,8 @@
 
 .search-settings-button
 {
-    background: linear-gradient(45deg, #8f281d, #da4112);
+    /* background: linear-gradient(45deg, #8f281d, #da4112); */
+    background-color: #da4112;
     display: flex; 
     flex-direction: column-reverse;
     color: whitesmoke;
@@ -130,7 +122,15 @@
 
 .search-inner-panel
 {
-    padding: 2rem;
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: whitesmoke;
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+    border-right: 1px black solid;
+    z-index: 10;
+    
 }
 
 .userinfo-tag
@@ -150,7 +150,7 @@
 .tag-supporter i
 {
     color:green;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 .tag-author
@@ -199,7 +199,7 @@
 .ria-info
 {
     padding: 1.5rem 3rem;
-    font-family: ganesh
+    font-family: ganesh;
 }
 
 .ria-info div h1
@@ -233,11 +233,59 @@
     display: inline;
 }
 
-.vietnam{
-    column-count: 2;
-}
-
 .bottoneRicerca{
     flex: 1;
     margin: 0;
+}
+
+.form{
+    width: 70%;
+    border: 0.25vh solid #8f281d;
+    border-radius: 0.5vh;
+    padding: 0.5vh 3.5vh;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.form:focus{
+    border-color: tomato;
+    box-shadow: tomato;
+}
+
+.form-container{
+    /* margin-bottom: 1vh; */
+    position: relative;
+}
+
+.form-container i{
+    position: absolute;
+    left: 0.8vh;
+    top: 0.7vh;
+    color: #8f281d;
+    transition: .5s;
+}
+
+.form-container input:focus + i{
+    color: tomato;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE,Edge e Firefox  */
+.example {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox 64 */
+}
+
+.panel{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+.activeButton{
+    background: linear-gradient(45deg, #8f281d, #da4112);
+    color: whitesmoke !important;
 }
