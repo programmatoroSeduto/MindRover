@@ -151,9 +151,9 @@ $ganesh = "SEARCH";
                                 <option value="user">Utenti</option>
                             </select>
                         </div>
-                        <span style=" font-family: ganesh">Ricerca totale:</span>
+                        <span style=" font-family: ganesh" title="Questa opzione permette di visualizzare tutti i contenuti più recenti del server">Ricerca totale:</span>
                         <input type="checkbox" id="use_all_data" name="use_all_data" value="1">
-                        <span style=" font-family: ganesh">Modalità strict: </span>
+                        <span style=" font-family: ganesh" title="Questa opzione permette di visualizzare tutti i contenuti che hanno precisamente gli attributi da te inseriti">Modalità strict: </span>
                         <input type="checkbox" id="strict" name="strict" value="1">
                     </div>
 
@@ -164,6 +164,9 @@ $ganesh = "SEARCH";
             </div>
             <div id="search-settings-minimized" class="search-settings-minimized hidden">
                 <!-- <p>barra di ricerca minimizzata</p> -->
+                <div style="margin-top: 0.8rem; font-family: ganesh; text-transform: uppercase; letter-spacing: 0.2rem; font-size: 1rem; color: white">
+                Barra di ricerca minimizzata - clicca a destra per riaprirla!
+                </div>
             </div>
             <div class="search-settings-button">
                 <i class="fas fa-angle-up" onclick="
