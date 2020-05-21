@@ -157,12 +157,47 @@ $data[] = array(
         'nome' => 'Lorenzo',
         'cognome' => 'Terranova',
         'stato' => '"This time I finally let you... Go."',
-        'descrizione' => '5 giorni fa ho fatto colazione coi pancakes, il giorno dopo invece con le uova strapazzate e il succo d\'arancia. Tre mattine fa invece con delle specie di Egg McMuffin ma coi pancakes. L\' altro ieri invece ho mangiato i pancakes, però a sto giro solo col burro. Ieri mattina invece dieta, non avevo sbatti e non c\'era la mami. Oggi mi sono svegliato tardi quindi il pancake con l\'uovo era freddo, ma ugualmente buono, evviva.',
+        'descrizione' => 'Mi sono rotto il cazzo di contare quello che mangio, Giulia bastarda.',
         'flag_anonimo' => false,
         'id_img_profilo' => 15
     ),
     'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
 );
+
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'peppinodellapeppa@libero.it',
+        'password' => 'peppomelopeppi'
+    ),
+    'profilo' => array(
+        'nickname' => 'pep_PINO',
+        'nome' => 'Giuseppe',
+        'cognome' => 'Inguastato',
+        'stato' => '"Ci sono molte cose che mi piacciono, ma IL CAZZO è ciò che mi ispira."',
+        'descrizione' => 'Mi chiamo Giuseppe però le arance me le infilo nel culo lo stesso.',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 14
+    ),
+    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+);
+
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'tentennatoRiazza@albergo.frutta',
+        'password' => 'repartoortofrutta'
+    ),
+    'profilo' => array(
+        'nickname' => 'Lil\'ShoezZz',
+        'nome' => 'Nicola',
+        'cognome' => 'Scarpino',
+        'stato' => '"Qualcuno ha detto SCARPA?"',
+        'descrizione' => 'Mi piacciono le scarpe, gli scarponi, gli scarpini, i sandali, le infradito, il cazzo, e i piedini di Giulia.',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 11
+    ),
+    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+);
+
 
 
 
