@@ -23,6 +23,18 @@ $ganesh = "CROWDFUNDING";
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+    
+    .sas:hover{
+
+        background-color: whitesmoke;
+        transition: 0.5s
+    }
+
+    </style>
+
+
 </head>
 
 <body>
@@ -72,6 +84,11 @@ else
             qualche euro.
             <br><br>Se invece fossi interessato a supportarci in maniera più decisiva, continua a leggere per scoprire cosa propone il 
             nostro programma di crowdfunding! 
+        </div>
+
+        <!-- Bottone donazioni -->
+        <div>
+            <div class="d text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/donation.php'" style="cursor: pointer; font-size: xxx-large; border: 0.4vh solid #8f281d;;" class="sas">Fai subito una donazione!</b></div>
         </div>
         
     </div>
@@ -206,6 +223,11 @@ else
             di Golarion, o lo stesso del sergente maggiore di Toad of Duty!
             <br><br>
             Questo è l'ennesimo modo per ringraziarvi e dimostrarvi quanto il vostro supporto è importante per noi.
+        </div>
+
+        <!-- Bottone donazioni -->
+        <div>
+            <div class="d text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/donation.php'" style="cursor: pointer; font-size: xxx-large; border: 0.4vh solid #8f281d;;" class="sas">Fai subito una donazione!</b></div>
         </div>
         
     </div>
