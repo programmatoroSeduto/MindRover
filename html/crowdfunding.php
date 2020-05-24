@@ -165,7 +165,7 @@ else
                 <h1 class="splash-body-heading" style="padding: 0; margin-top: 15px; text-align: center;">TIER I</h1>
                 <div class="card-content ganesh" style="text-align: center;">
                     <div>Sei Davvero Rospotente!</div>
-                    <div style="font-size: larger;"><br>200 ed oltre €<br></div>
+                    <div style="font-size: larger;"><br>200€ ed oltre<br></div>
                     <ul style="list-style-type: square; text-align: left;">
                         <li>Accesso all’intera collezione di demo in early access</li>
                         <li>Sconti speciali per l’intera collezione del mindRover</li>

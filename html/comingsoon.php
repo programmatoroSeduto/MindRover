@@ -8,7 +8,7 @@ $ganesh = "COMINGSOON";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frog Studios</title>
+    <title>Coming Soon</title>
  
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../css/utils/clearsheet.css">
@@ -25,17 +25,18 @@ $ganesh = "COMINGSOON";
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
+<body style="background-color: #aa281e">
     <!-- Immagine iniziale pagina -->
     <div class="splash-container splash-bg-main" style="background-image: url('../assets/img/stanco.jpg'); 
     opacity: 0.9; background-size: auto; background-repeat: repeat; background-position: 65px 65px;">
        
         <div class="splash-body">
-            <h1 class="splash-body-heading">
-                In costruzione 
+            <h1 class="splash-body-heading" style="text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;">
+                Errore: pagina non esistente!
             </h1>
 
-            <p class="splash-body-paragraph">
-                Stiamo lavorando per voi...
+            <p class="splash-body-paragraph" style="text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;">
+                Forse non c'è proprio, forse la stiamo ancora costruendo...
             </p>
         
         </div>
@@ -60,6 +61,7 @@ else
     <div>
         
     </div>
+    
     <!-- Footer -->
     <?php require_once('../php/modules/footer.php'); ?>
 

@@ -23,6 +23,16 @@ $ganesh = "CHI SIAMO";
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+
+        .sas:hover{
+
+        background-color: whitesmoke;
+        transition: 0.5s
+        }
+
+    </style>
 </head>
 
 <body>
@@ -107,10 +117,13 @@ else
 
         <div class="text-content">
             Insomma, amiamo definirci giocatori con qualche skill in più, piuttosto che dei programmatori rigorosi e distanti da voi. 
-            La nostra passione arde ancora in noi, e siamo sempre alla ricerca di qualcuno con i nostri stessi ideali. Se dovessi
-            rientrare in questa categoria di persone, non esitare a cliccare
-            <a href="../HTML/comingsoon.php"><i class="d">qui</i></a>.
+            La nostra passione arde ancora in noi, e siamo sempre alla ricerca di qualcuno con i nostri stessi ideali: forse stiamo cercando proprio te!
             <br><br>Questo è quello che siamo, quello a cui puntiamo e quello che non vogliamo mai perdere di vista.
+        </div>
+
+        <!-- Bottone donazioni -->
+        <div>
+            <div class="d text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/comingsoon.php'" style="cursor: pointer; font-size: xxx-large; border: 0.4vh solid #8f281d;;" class="sas">Contattaci per un posto!</b></div>
         </div>
         
     </div>

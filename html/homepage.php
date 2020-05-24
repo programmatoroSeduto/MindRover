@@ -77,12 +77,12 @@ $ganesh = "HOMEPAGE";
                 <div class="splash-body">
                     
                     <h1 class="splash-body-heading">
-                        I nostri altri progetti
+                        Supportaci oggi
                     </h1>
 
                     <p class="splash-body-paragraph text-content">
-                        Scopri i nostri incredibili titoli!
-                        <a href="../HTML/mindrover.php"><i class="d">Scopri di più</i></a>
+                        Se credi in noi e nei nostri progetti, fai oggi una donazione.
+                        <a href="../HTML/donation.php"><i class="d">Scopri di più</i></a>
                     </p>
 
                 </div>
@@ -98,7 +98,7 @@ $ganesh = "HOMEPAGE";
 
                     <p class="splash-body-paragraph text-content">
                         Visita la nostra sezione notizie per tutte le novità!
-                        <a href="../HTML/mindrover.php"><i class="d">Scopri di più</i></a>
+                        <a href="../HTML/search.php"><i class="d">Scopri di più</i></a>
                     </p>
 
                 </div>
