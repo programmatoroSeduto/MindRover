@@ -58,6 +58,7 @@ $data[] = array(
         'hypster',
         'ipsum',
         'rivelazione',
+        'news',
         'petardinelnaso'
     ),
     'contenuto' => '<p>un articolo molto interessante...</p><br><p>I\'m baby vaporware freegan brunch cray fixie, woke viral food truck duis. Paleo hella chambray trust fund, biodiesel food truck stumptown dolore jean shorts twee. Poke stumptown id intelligentsia ut four loko messenger bag elit kickstarter shaman yr thundercats aesthetic heirloom. Sunt literally intelligentsia franzen vinyl, wolf consectetur brooklyn affogato jean shorts cillum veniam nostrud est.</p><br><p>Fingerstache celiac whatever, meditation commodo heirloom jianbing single-origin coffee. Consequat pickled readymade next level normcore. Selvage cred dolor enim. Et paleo woke distillery crucifix authentic heirloom meggings aesthetic. Nulla reprehenderit dolore chartreuse poutine ethical drinking vinegar brooklyn DIY gastropub qui cred heirloom.</p><br><p>Tilde YOLO kombucha, reprehenderit tumeric activated charcoal DIY butcher beard adaptogen yr fashion axe. Bicycle rights chambray semiotics, pitchfork subway tile meditation kogi asymmetrical butcher cardigan whatever snackwave poke magna retro. Flannel scenester proident butcher, nulla poke yr everyday carry id. Next level vegan portland, scenester pok pok farm-to-table forage church-key edison bulb gochujang.</p><br><p>Godard selfies venmo, photo booth affogato pug kickstarter pariatur eu sustainable gastropub single-origin coffee ut seitan. Aute distillery pariatur narwhal pok pok blog selvage occaecat raw denim bespoke cold-pressed lo-fi cornhole. Affogato fingerstache adipisicing hoodie. Semiotics iceland tofu salvia church-key occupy cloud bread taiyaki. Kitsch pitchfork enamel pin, iPhone non shoreditch raw denim blog art party eiusmod squid elit af portland.</p><br><p>Scenester art party est crucifix aesthetic meggings, next level meh hammock street art vinyl. Sunt occupy in, semiotics selvage aute excepteur small batch laborum. Chambray keytar freegan you probably haven\'t heard of them. Echo park cold-pressed viral mustache dolor lo-fi butcher aesthetic intelligentsia. Cornhole activated charcoal irony yr small batch slow-carb chillwave taxidermy edison bulb palo santo tattooed do.</p><br><p>I\'m baby vaporware freegan brunch cray fixie, woke viral food truck duis. Paleo hella chambray trust fund, biodiesel food truck stumptown dolore jean shorts twee. Poke stumptown id intelligentsia ut four loko messenger bag elit kickstarter shaman yr thundercats aesthetic heirloom. Sunt literally intelligentsia franzen vinyl, wolf consectetur brooklyn affogato jean shorts cillum veniam nostrud est.</p><br><p>Fingerstache celiac whatever, meditation commodo heirloom jianbing single-origin coffee. Consequat pickled readymade next level normcore. Selvage cred dolor enim. Et paleo woke distillery crucifix authentic heirloom meggings aesthetic. Nulla reprehenderit dolore chartreuse poutine ethical drinking vinegar brooklyn DIY gastropub qui cred heirloom.</p><br><p>Tilde YOLO kombucha, reprehenderit tumeric activated charcoal DIY butcher beard adaptogen yr fashion axe. Bicycle rights chambray semiotics, pitchfork subway tile meditation kogi asymmetrical butcher cardigan whatever snackwave poke magna retro. Flannel scenester proident butcher, nulla poke yr everyday carry id. Next level vegan portland, scenester pok pok farm-to-table forage church-key edison bulb gochujang.</p><br><p>Godard selfies venmo, photo booth affogato pug kickstarter pariatur eu sustainable gastropub single-origin coffee ut seitan. Aute distillery pariatur narwhal pok pok blog selvage occaecat raw denim bespoke cold-pressed lo-fi cornhole. Affogato fingerstache adipisicing hoodie. Semiotics iceland tofu salvia church-key occupy cloud bread taiyaki. Kitsch pitchfork enamel pin, iPhone non shoreditch raw denim blog art party eiusmod squid elit af portland.</p><br><p>Scenester art party est crucifix aesthetic meggings, next level meh hammock street art vinyl. Sunt occupy in, semiotics selvage aute excepteur small batch laborum. Chambray keytar freegan you probably haven\'t heard of them. Echo park cold-pressed viral mustache dolor lo-fi butcher aesthetic intelligentsia. Cornhole activated charcoal irony yr small batch slow-carb chillwave taxidermy edison bulb palo santo tattooed do.</p>'
@@ -74,7 +75,8 @@ $data[] = array(
         'hypster',
         'ipsum',
         'rivelazione',
-        'petardinelnaso'
+        'petardinelnaso',
+        'news'
     ),
     'contenuto' => '<p>un articolo molto interessante...</p><br><p>I\'m baby vaporware freegan brunch cray fixie, woke viral food truck duis. Paleo hella chambray trust fund, biodiesel food truck stumptown dolore jean shorts twee. Poke stumptown id intelligentsia ut four loko messenger bag elit kickstarter shaman yr thundercats aesthetic heirloom. Sunt literally intelligentsia franzen vinyl, wolf consectetur brooklyn affogato jean shorts cillum veniam nostrud est.</p><br><p>Fingerstache celiac whatever, meditation commodo heirloom jianbing single-origin coffee. Consequat pickled readymade next level normcore. Selvage cred dolor enim. Et paleo woke distillery crucifix authentic heirloom meggings aesthetic. Nulla reprehenderit dolore chartreuse poutine ethical drinking vinegar brooklyn DIY gastropub qui cred heirloom.</p><br><p>Tilde YOLO kombucha, reprehenderit tumeric activated charcoal DIY butcher beard adaptogen yr fashion axe. Bicycle rights chambray semiotics, pitchfork subway tile meditation kogi asymmetrical butcher cardigan whatever snackwave poke magna retro. Flannel scenester proident butcher, nulla poke yr everyday carry id. Next level vegan portland, scenester pok pok farm-to-table forage church-key edison bulb gochujang.</p><br><p>Godard selfies venmo, photo booth affogato pug kickstarter pariatur eu sustainable gastropub single-origin coffee ut seitan. Aute distillery pariatur narwhal pok pok blog selvage occaecat raw denim bespoke cold-pressed lo-fi cornhole. Affogato fingerstache adipisicing hoodie. Semiotics iceland tofu salvia church-key occupy cloud bread taiyaki. Kitsch pitchfork enamel pin, iPhone non shoreditch raw denim blog art party eiusmod squid elit af portland.</p><br><p>Scenester art party est crucifix aesthetic meggings, next level meh hammock street art vinyl. Sunt occupy in, semiotics selvage aute excepteur small batch laborum. Chambray keytar freegan you probably haven\'t heard of them. Echo park cold-pressed viral mustache dolor lo-fi butcher aesthetic intelligentsia. Cornhole activated charcoal irony yr small batch slow-carb chillwave taxidermy edison bulb palo santo tattooed do.</p><br><p>I\'m baby vaporware freegan brunch cray fixie, woke viral food truck duis. Paleo hella chambray trust fund, biodiesel food truck stumptown dolore jean shorts twee. Poke stumptown id intelligentsia ut four loko messenger bag elit kickstarter shaman yr thundercats aesthetic heirloom. Sunt literally intelligentsia franzen vinyl, wolf consectetur brooklyn affogato jean shorts cillum veniam nostrud est.</p><br><p>Fingerstache celiac whatever, meditation commodo heirloom jianbing single-origin coffee. Consequat pickled readymade next level normcore. Selvage cred dolor enim. Et paleo woke distillery crucifix authentic heirloom meggings aesthetic. Nulla reprehenderit dolore chartreuse poutine ethical drinking vinegar brooklyn DIY gastropub qui cred heirloom.</p><br><p>Tilde YOLO kombucha, reprehenderit tumeric activated charcoal DIY butcher beard adaptogen yr fashion axe. Bicycle rights chambray semiotics, pitchfork subway tile meditation kogi asymmetrical butcher cardigan whatever snackwave poke magna retro. Flannel scenester proident butcher, nulla poke yr everyday carry id. Next level vegan portland, scenester pok pok farm-to-table forage church-key edison bulb gochujang.</p><br><p>Godard selfies venmo, photo booth affogato pug kickstarter pariatur eu sustainable gastropub single-origin coffee ut seitan. Aute distillery pariatur narwhal pok pok blog selvage occaecat raw denim bespoke cold-pressed lo-fi cornhole. Affogato fingerstache adipisicing hoodie. Semiotics iceland tofu salvia church-key occupy cloud bread taiyaki. Kitsch pitchfork enamel pin, iPhone non shoreditch raw denim blog art party eiusmod squid elit af portland.</p><br><p>Scenester art party est crucifix aesthetic meggings, next level meh hammock street art vinyl. Sunt occupy in, semiotics selvage aute excepteur small batch laborum. Chambray keytar freegan you probably haven\'t heard of them. Echo park cold-pressed viral mustache dolor lo-fi butcher aesthetic intelligentsia. Cornhole activated charcoal irony yr small batch slow-carb chillwave taxidermy edison bulb palo santo tattooed do.</p>'
 );
@@ -93,10 +95,7 @@ $data[] = array(
         'golarion',
         'alpha',
         'testing',
-        'news',
-        'aggiornamenti',
-        'frog',
-        'studios'
+        'news'
     ),
     'contenuto' => 'Siamo fieri di annunciare che le nostre due IP, Golarion e Toad of Duty, raggiungeranno la fase di alpha tra poco, rispettivamente il 27 agosto per Golarion e il 5 settembre per Toad of Duty!
     L’alpha testing delle due opere avverrà, per ovvi motivi, ancora su normali pc, ed è già possibile iscriversi!
@@ -120,7 +119,6 @@ $data[] = array(
         'roaming',
         'mindROVER',
         'Golarion',
-        'aggiornamenti',
     ),
     'contenuto' => 'In molti siete stati incuriositi da questo aspetto, specialmente dopo l’annuncio di Golarion: ci si stancherà davvero a camminare, saltare e combattere?
     La risposta è sì e no. Oggettivamente si tratta di un punto delicato, e abbiamo voluto dimostrarci molto democratici riguardo a questa cosa. Difatti, ogni nostro videogioco avrà la possibilità di calibrare la “realisticità” delle proprie azioni, potendo scegliere quanto effettivamente ci si stanchi, che stiate camminando o combattendo qualche creatura.
@@ -137,22 +135,13 @@ $data[] = array(
     'data_pubblicazione' => 22515060,
     'lista_tag' => array
     (
-        'mind',
-        'ROVER',
         'software',
-        'MUSIC',
-        'MOVIE',
         'mindROVER',
         'mindMUSIC',
         'mindMOVIE',
         'Golarion',
-        'toad',
-        'duty',
-        'tod',
         'early',
-        'access',
         'alpha',
-        'beta'
     ),
     'contenuto' => 'Abbiamo tanti, tantissimi progetti e tante idee per la testa quando si parla dei software e dei giochi che renderemo disponibili per il nostro sistema mindROVER. Tuttavia, per alcune di queste ci vorrà del tempo, mentre per altre possiamo già darvi alcune indicazioni. E sì, voi che avete fatto delle donazioni, tenete aperte le orecchie per capire cosa vi siete guadagnati!
     L’uscita del mindROVER sarà accompagnata da quella, ovviamente, delle nostre due IP videoludiche, Golarion e Toad of Duty. Ma non solo: come già anticipato, il sistema mindROVER avrà alcune impostazioni di base, che vi permetteranno di rendere la vostra esperienza totalmente unica e personalizzabile. Che si tratti dei colori dei menu, o delle colonne sonore di sottofondo, tutto ciò sarà intercambiabile per adattarsi allo stile di ogni utente. Alcune funzionalità avranno una sorta di app creata ad hoc, come mindMUSIC o mindMOVIE, coi quali potrete rispettivamente ascoltare musica o guardare un film in una maniera totalmente nuova, diciamo… Più tridimensionale, o più realistica se preferite.
@@ -170,14 +159,10 @@ $data[] = array(
         'mind',
         'ROVER',
         'software',
-        'IP',
-        'giovani',
         'mindMUSIC',
         'mindMOVIE',
         'early',
-        'access',
-        'alpha',
-        'beta'
+        'access'
     ),
     'contenuto' => 'Pieces of Eight lee hail-shot fire in the hole crack Jennys tea cup hardtack Sink me careen strike colors belaying pin. Clap of thunder hang the jib Arr parrel galleon black spot topgallant draught starboard knave. Spike Plate Fleet belay log hornswaggle lateen sail flogging broadside lee heave down. Capstan marooned Plate Fleet topgallant spyglass bucko scuttle fire ship pinnace carouser. Stern Blimey pressgang bring a spring upon her cable gally reef sails nipperkin chandler doubloon trysail.
 
@@ -195,7 +180,7 @@ $data[] = array(
     'titolo' => 'L\'Alimentazione in Frog Studios',
     'sottotitolo' => '"Io mangio solo pizza con wurstel!"',
     'descrizione' => 'In collaborazione con un noto nutrizionista, scopriamo il salutare mondo della pasta con tonno e della pizza con wurstel.',
-    'data_pubblicazione' => 22818990,
+    'data_pubblicazione' => 2281890,
     'lista_tag' => array
     (
         'frog',
@@ -204,11 +189,7 @@ $data[] = array(
         'wurstel',
         'pasta',
         'tonno',
-        'mindROVER',
-        'mind',
-        'ROVER',
-        'nutrizionista',
-        'alimentazione'
+        'mindROVER'
     ),
     'contenuto' => 'Corpus callosum emerged into consciousness the sky calls to us star stuff harvesting star light vanquish the impossible stirred by starlight. Citizens of distant epochs Drake Equation made in the interiors of collapsing stars extraordinary claims require extraordinary evidence something incredible is waiting to be known as a patch of light. A very small stage in a vast cosmic arena hearts of the stars dream of the mind\'s eye descended from astronomers rings of Uranus something incredible is waiting to be known.
 
@@ -228,7 +209,7 @@ $data[] = array(
     'titolo' => 'Frog Studios ai tempi del Corona Virus',
     'sottotitolo' => 'Dopo il Death Stranding, è tutto in discesa. Fidatevi.',
     'descrizione' => 'Una testimonianza da parte del noto veterano Cliff Unger.',
-    'data_pubblicazione' => 25818990,
+    'data_pubblicazione' => 2581990,
     'lista_tag' => array
     (
         'corona',
@@ -237,10 +218,6 @@ $data[] = array(
         'unger',
         'death',
         'stranding',
-        'mindROVER',
-        'frog',
-        'studios',
-        'testimonianza',
         'petardinelnaso'
     ),
     'contenuto' => 'Corpus callosum emerged into consciousness the sky calls to us star stuff harvesting star light vanquish the impossible stirred by starlight. Citizens of distant epochs Drake Equation made in the interiors of collapsing stars extraordinary claims require extraordinary evidence something incredible is waiting to be known as a patch of light. A very small stage in a vast cosmic arena hearts of the stars dream of the mind\'s eye descended from astronomers rings of Uranus something incredible is waiting to be known.
@@ -268,7 +245,6 @@ $data[] = array(
         'timidi',
         'frog',
         'studios',
-        'toad',
         'duty',
         'tod',
         'petardinelnaso'
@@ -294,7 +270,6 @@ $data[] = array(
         'studios',
         'toad',
         'duty',
-        'tod',
         'activision',
         'avocado',
         'petardinelnaso'
@@ -327,7 +302,6 @@ $data[] = array(
         'support',
         'bella',
         'avocado',
-        'greg'
     ),
     'contenuto' => 'Fore hogshead careen wench. Gold Road scallywag mizzen American Main. Snow brigantine lanyard lugger. Chantey lee ballast belaying pin. Clap of thunder pressgang plunder scourge of the seven seas. To go on account gabion Sail ho scurvy. Chandler lugger bucko spike. League sutler tender matey. Hogshead Privateer bring a spring upon her cable fore. Chase Chain Shot code of conduct hogshead. Sloop hornswaggle scurvy Sail ho. Coxswain line tender yard. Jack Tar prow port capstan. Barkadeer boom reef Jolly Roger. Furl quarter rutters haul wind. Swab wherry fathom chandler. Barque gangplank heave down hail-shot. Swing the lead fire ship lugsail salmagundi. Chain Shot barque reef fathom. Dead men tell no tales stern hornswaggle bounty. Belaying pin driver brigantine scallywag. Driver scourge of the seven seas lugsail quarterdeck. Coxswain careen jury mast crimp. Poop deck Buccaneer Yellow Jack haul wind. Careen heave to gally crack Jennys tea cup. Hardtack keelhaul avast draft. Clap of thunder case shot lad trysail. Hands topmast holystone to go on account. Measured fer yer chains quarter skysail pink. Broadside lugsail deadlights doubloon. Maroon carouser spirits Letter of Marque. Driver mizzen come about dead men tell no tales. Scourge of the seven seas swab league ahoy. Fore to go on account come about ho. Holystone Yellow Jack quarter strike colors. Spanker chase guns keel sutler. Jack booty strike colors Gold Road. Spyglass ho prow spirits. Loaded to the gunwalls lookout galleon topgallant. Pirate hands run a shot across the bow come about. Mutiny case shot Jolly Roger rope\'s end. Hands prow avast skysail. Case shot shrouds matey jib. Bounty yard execution dock Sail ho.
 
@@ -374,7 +348,6 @@ $data[] = array(
         'studios',
         'cheese',
         'avocado',
-        'dolci'
     ),
     'contenuto' => 'Cupcake ipsum dolor sit amet sweet roll pastry. Sweet gummies I love jujubes chocolate cake tart jujubes I love wafer. Pastry jelly beans ice cream I love caramels ice cream I love. Sweet roll candy canes chupa chups fruitcake cake tiramisu cake halvah jujubes. Tootsie roll cheesecake candy canes halvah tart powder. I love liquorice halvah soufflé jelly beans carrot cake. Cotton candy marzipan marzipan sugar plum jelly. Dragée toffee halvah sweet roll jelly marshmallow danish pie cupcake. Jelly beans sugar plum jelly I love I love caramels chupa chups.
 
