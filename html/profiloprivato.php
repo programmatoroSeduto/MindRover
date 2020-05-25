@@ -42,9 +42,11 @@ $dictator = false;
 require_once('../php/modules/navbar.php');
 require_once('../php/db/mysql_credentials.php');
 require_once('../php/db/ImgProfilo.php');
+require_once('../php/db/Articoli.php');
+$dbms = connect();
 $imgProfilo_stili = array();
 {
-    $table = new ImgProfilo(connect());
+    $table = new ImgProfilo($dbms);
     $imgProfilo_stili = $table->getAllStyles();
 }
 
@@ -92,10 +94,20 @@ $my_tier = ($supporter? $_SESSION['crowdfunding_tier'] : 0);
 //altri dati crowdfunding
 $crowd_count = $_SESSION['crowdfunding_count'];
 $crowd_sum = $_SESSION['crowdfunding_sum'];
-$crowd_rank = $_SESSION['crowdfunding_rank'];
+$crowd_rank = /*$_SESSION['crowdfunding_rank']*/ 22;
+
+$donation_table = $_SESSION['crowdfunding_donation_list'];
 
 //appellativo divertente prima del nome
 require_once('../php/modules/funny.php');
+
+//articoli
+$table_articoli = new Articoli($dbms);
+$articoli = array();
+if($is_author)
+{
+    $articoli = $table_articoli->searchByAuthorId($_SESSION['user_id']);
+}
 
 ?>
 
@@ -555,13 +567,67 @@ require_once('../php/modules/funny.php');
 
             <!-- Donazioni -->
             <div class="tabcontent kali" id="s3">
-                Le tue donazioni
+                <div style="display: flex; flex-direction: column;">
+                    <?php
+                        if($supporter)
+                        {
+                            echo '<h1 style="margin: 0 0 5vh 0; font-family: ganesh; font-size: 3.25rem; color: rgb(46, 46, 46);">Le tue donazioni</h1>
+                                <div style="padding: 10px; margin: 3px 0; background-color: rgb(146, 146, 146); display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; font-weight: bolder;">
+                                    <div>codice</div>
+                                    <div>data donazione</div>
+                                    <div>somma donazione</div>
+                                    <div>confermata?</div>
+                                </div>';
+                            foreach($donation_table as $row)
+                            {
+                                echo '<div style="padding: 10px; margin: 3px 0; background-color: rgb(212, 212, 212); display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; ">';
+                                    echo '<div>' . $row['id'] . '</div>';
+                                    echo '<div>' . $row['data'] . '</div>';
+                                    echo '<div>' . $row['somma'] . '</div>';
+                                    echo '<div><i class="fas fa-check" style="color: green;"></i></div>';
+                                echo '</div>';
+                            }
+                        }
+                        else
+                        {
+                            echo '<h1 style="margin: 0 0 5vh 0; font-family: ganesh; font-size: 3.25rem; color: rgb(46, 46, 46);">Nessuna donazione!</h1>';
+                        }
+                    ?>
+                </div>
+                <div style="height: 8vh;"></div>
             </div>
             
             <?php if($is_author): ?>
             <!-- Raccolta articoli postati -->
             <div class="tabcontent kali" id="s4">
-                I miei articoli
+                <div style="display: flex; flex-direction: column;">
+                    <?php
+                        if($is_author)
+                        {
+                            echo '<h1 style="margin: 0 0 5vh 0; font-family: ganesh; font-size: 3.25rem; color: rgb(46, 46, 46);">I tuoi articoli</h1>
+                                <div style="padding: 10px; margin: 3px 0; background-color: rgb(146, 146, 146); display: grid; grid-template-columns: 1fr 1fr 1fr; font-weight: bolder;">
+                                    <div>titolo</div>
+                                    <div>data pubblicazione</div>
+                                    <div></div>
+                                </div>';
+                            
+                            foreach($articoli as $row)
+                            {
+                                $row = $table_articoli->getArticle($row);
+                                echo '<div style="padding: 10px; margin: 3px 0; background-color: rgb(212, 212, 212); display: grid; grid-template-columns: 1fr 1fr 1fr;">';
+                                    echo '<div>' . $row['titolo'] . '</div>';
+                                    echo '<div>' . $row['data_pubblicazione'] . '</div>';
+                                    echo '<div><a href="' . './articolo.php?code=' . $row['id_articolo'] . '">vai all\'articolo</a></div>';
+                                echo '</div>';
+                            }
+                        }
+                        else
+                        {
+                            echo '';
+                        }
+                    ?>
+                </div>
+                <div style="height: 8vh;"></div>
             </div>
             
             <!-- Postare un nuovo articolo -->

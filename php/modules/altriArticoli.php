@@ -20,17 +20,17 @@ $altri_articoli = array(
     ),
     array(
         'titolo' => 'titolo',
-        'immagine_path' => '../assets/img/news-vr.jpg',
+        'immagine_path' => '../assets/img/news-rane.jpg',
         'url' => '#'
     ),
     array(
         'titolo' => 'titolo',
-        'immagine_path' => '../assets/img/news-work.jpg',
+        'immagine_path' => '../assets/img/news-rane.jpg',
         'url' => '#'
     ),
     array(
         'titolo' => 'titolo',
-        'immagine_path' => '../assets/img/news-volante.jpg',
+        'immagine_path' => '../assets/img/news-rane.jpg',
         'url' => '#'
     )
 );
