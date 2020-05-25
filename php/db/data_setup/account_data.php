@@ -76,7 +76,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
-    'donazioni' => array(500, 250, 300, 24.50)
+    'donazioni' => array(500, 250.50, 300, 24.50)
 );
 
 $data[] = array(
@@ -93,7 +93,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
-    'donazioni' => array(1, 2, 3, 4444)
+    'donazioni' => array(1, 2, 3, 4)
 );
 
 $data[] = array(
@@ -144,7 +144,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
-    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+    'donazioni' => array(60, 10, 20, 800, 760, 40)
 );
 
 $data[] = array(
@@ -161,7 +161,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => 15
     ),
-    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+    'donazioni' => array(6, 12, 24, 48, 76)
 );
 
 $data[] = array(
@@ -178,7 +178,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => 14
     ),
-    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+    'donazioni' => array(600, 120, 200, 40, 700, 1)
 );
 
 $data[] = array(
@@ -195,9 +195,59 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => 11
     ),
-    'donazioni' => array(600, 1200, 2400, 4800, 7600, 0.1)
+    'donazioni' => array(600, 100, 200, 40, 10, 1)
 );
 
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'aragosta@irachena.it',
+        'password' => 'arachenairagosta'
+    ),
+    'profilo' => array(
+        'nickname' => 'AragostaIrachena',
+        'nome' => 'Peter',
+        'cognome' => 'Griffin',
+        'stato' => '"Non bollitemi, sono ancora viva!"',
+        'descrizione' => 'Aragosta Irachena! Aragosta Irachena! Aragosta Irachena! Aragosta Irachena! Aragosta Irachena! Aragosta Irachena! ',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 15
+    ),
+    'donazioni' => array(120, 150, 200, 480, 20, 1)
+);
+
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'programmatoroseduto.kungkurth@frogstudios.com',
+        'password' => 'belladomanda'
+    ),
+    'profilo' => array(
+        'nickname' => 'KungKurth',
+        'nome' => 'Francesco',
+        'cognome' => 'Ganci',
+        'stato' => '"Ci penso, ci penso..."',
+        'descrizione' => '"Ci penso... Dai quelle le metto io poi..."',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 28
+    ),
+    'donazioni' => array(900, 750, 800, 180.50, 20.50, 100)
+);
+
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'moc.soidutsgorf@htrukgnuk.otudesorotammargorp',
+        'password' => 'adnamodalleb'
+    ),
+    'profilo' => array(
+        'nickname' => 'HtrukGnuk',
+        'nome' => 'Grancesco',
+        'cognome' => 'Fanci',
+        'stato' => '"Non ci penso, non ci penso..."',
+        'descrizione' => '"Non ci penso... Dai quelle non le metto io poi..."',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 29
+    ),
+    'donazioni' => array(9, 57, 8, 5.8, 5.2, 1)
+);
 
 
 
