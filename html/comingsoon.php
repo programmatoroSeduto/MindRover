@@ -23,6 +23,18 @@ $ganesh = "COMINGSOON";
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+
+    .title404{
+        text-shadow: -1px 1px 2px #000, 
+        1px 1px 2px #000, 
+        1px -1px 0 #000, 
+        -1px -1px 0 #000;"
+    }
+
+    </style>
+
 </head>
 
 <body style="background-color: #aa281e">
@@ -31,11 +43,11 @@ $ganesh = "COMINGSOON";
     opacity: 0.9; background-size: auto; background-repeat: repeat; background-position: 65px 65px;">
        
         <div class="splash-body">
-            <h1 class="splash-body-heading" style="text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;">
+            <h1 class="splash-body-heading title404">
                 Errore: pagina non esistente!
             </h1>
 
-            <p class="splash-body-paragraph" style="text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;">
+            <p class="splash-body-paragraph title404">
                 Forse non c'è proprio, forse la stiamo ancora costruendo...
             </p>
         

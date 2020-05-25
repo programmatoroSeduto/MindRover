@@ -28,7 +28,6 @@ $ganesh = "HOMEPAGE";
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <script src="../js/carousel.js"></script>
 
 </head>
@@ -65,7 +64,7 @@ $ganesh = "HOMEPAGE";
                     </h1>
 
                     <p class="splash-body-paragraph text-content">
-                        mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto. Un comodo sistema composto unicamente da un casco ergonomico, in totale sicurezza.
+                        mindROVER è il nostro progetto più ambizioso, la realtà virtuale più... reale che abbiate mai visto.
                         <a href="../HTML/mindrover.php"><i class="d">Scopri di più</i></a>
                     </p>
 
@@ -138,21 +137,21 @@ else
 
             <!-- Notizia 1 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia1.jpg');">
-                <div class="card-content">
+                <div class="card-content" onclick="location.href='../HTML/donation.php'" style="cursor:pointer">
                     Può il mindROVER essere nocivo per i più giovani?
                 </div>
             </div>
 
             <!-- Notizia 2 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia2.jpg');">
-                <div class="card-content">
+                <div class="card-content" onclick="location.href='../HTML/donation.php'" style="cursor:pointer">
                     Il free roaming e mindROVER
                 </div>
             </div>
 
             <!-- Notizia 3 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia3.jpg');">
-                <div class="card-content">
+                <div class="card-content" onclick="location.href='../HTML/donation.php'" style="cursor:pointer">
                     Aggiornamenti su Golarion© e Toad of Duty©
                 </div>
             </div>

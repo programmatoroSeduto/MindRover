@@ -23,6 +23,18 @@ require_once('../php/modules/navbar.php');
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <style>
+
+    .h2Donation{
+        font-family: ganesh; 
+        line-height: 2rem; 
+        padding: 1vh 0; 
+        font-size: medium;
+    }
+
+
+    </style>
+
     <title>Donazione</title>
 </head>
 <body class="login-bg">
@@ -38,7 +50,7 @@ require_once('../php/modules/navbar.php');
     ?>
     <div class="box">
         <h1 style="font-family: ganesh">Dona a Frog Studios!</h1><br>
-        <h2 style="font-family: ganesh; line-height: 2rem; padding: 1vh 0; font-size: medium;" >Donaci subito con il nostro sistema di transazione sicura. Puoi anche usare Paypal, in totale sicurezza!</h1>
+        <h2 class="h2Donation" >Donaci subito con il nostro sistema di transazione sicura. Puoi anche usare Paypal, in totale sicurezza!</h1>
         <form action="../php/login.php" method="POST">
             <div class="loginform-body">
                 <!-- <label for="email">Email: </label><input type="email" name="email"> -->
