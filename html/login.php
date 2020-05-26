@@ -58,18 +58,32 @@ require_once('../php/modules/navbar.php');
                 
                 <span class="auth-error">
                     <?php
-
-                    if(isset($_GET['error_email']) and isset($_GET['error_pass']))
-                        echo '<b>Attenzione!</b> Nessun dato inserito...';
-                    elseif(isset($_GET['error_pass']))
-                        echo '<b>Attenzione!</b> Manca la password...';
-                    elseif(isset($_GET['error_email']))
-                        echo '<b>Attenzione!</b> Manca la mail...';
-                    elseif(isset($_GET['error']))
-                        echo "<b>Attenzione!</b> Credenziali errate.";
-                    else
-                        echo "";
-
+                        if(isset($_GET['error']))
+                        {
+                            echo '<p><b>ERRORE:</b> ';
+                            switch($_GET['error'])
+                            {
+                                case 'no_email':
+                                    echo 'non hai inserito la tua mail!';
+                                break;
+                                case 'invalid_email':
+                                    echo 'mail non valida.';
+                                break;
+                                case 'no_password':
+                                    echo 'non hai immesso la tua password!';
+                                break;
+                                case 'invalid_data':
+                                    echo 'questo profilo non esiste.';
+                                break;
+                                default:
+                                    echo 'errore tecnico. Torna più tardi ... se pensi ci sia un errore, contattaci!';
+                            }
+                            echo '<p>';
+                        }
+                        else
+                        {
+                            echo '';
+                        }
                     ?>
                 </span>
 
@@ -79,6 +93,6 @@ require_once('../php/modules/navbar.php');
         <p class="register-here">Non ancora registrato? <a href="./registrazione.php" class="d text-content modifica"><i>Provvedi subito!</i></a></p>
     </div>
 
-    <img src="<?php echo (isset($_GET['target']) ? '../assets/img/logo.png&target=' . $_GET['target'] : '../assets/img/logo.png'); ?>" class="frog">
+    <img src="../assets/img/logo.png" class="frog">
 </body>
 </html>

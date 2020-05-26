@@ -15,13 +15,15 @@ require_once('./utils/sessionsUtils.php');
 //ricavare e sanificare le informazioni dal client
 $email = "";
 $password = "";
-$error = false;
 
 function verify_data($data)
 {
     if(isset($_POST[$data]))
     {
-        return sanitize($_POST[$data]);
+        if(strcmp('', $_POST[$data]) == 0)
+            return null;
+        else
+            return sanitize($_POST[$data]);
     }
     else
     {
@@ -32,31 +34,23 @@ function verify_data($data)
 if(!($email = verify_data("email")))
 {
     //echo "ERRORE: dato mancante. -> " . "email";
-    header('location: ../html/login.php?error_email=true');
-    $error = true;
+    header('location: ../html/login.php?error=no_email');
+    die();
 }
 
 //verifica che la mail sia effettivamente una mail
 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) 
 {
-    header('location: ../html/login.php?error_email=true');
-    $error = true;
+    header('location: ../html/login.php?error=invalid_email');
+    die();
 }
 
 if(!($password = verify_data("pass")))
 {
     //echo "ERRORE: dato mancante. -> " . "pass";
-    if($error)
-    {
-        header('location: ../html/login.php?error_pass=true&error_email=true');
-    }
-    else
-        header('location: ../html/login.php?error_pass=true');
-    $error = true;
+    header('location: ../html/login.php?error=no_password');
+    die();
 }
-
-//termina lo script in caso di errore
-if($error) /*when table deserves to */die();
 
 //interfacce col database
 $hash = new HashMethods();
@@ -70,7 +64,7 @@ $user_id = $table_credenziali->getId($email, $password);
 if($user_id < 0)
 {
     //errore durante l'accesso
-    header('location: ../html/login.php?error=true');
+    header('location: ../html/login.php?error=invalid_data');
     die();
 }
 
@@ -78,22 +72,5 @@ if($user_id < 0)
 $password_hash = $hash->getHash($password);
 openSession($user_id, $email, $password, $password_hash, new ProfiliUtenti($dbms), new Donazioni($dbms), new ImgProfilo($dbms));
 
-if(isset($_GET['target']))
-{
-    if($_GET['target'] === 'profilo')
-        header('location: ../html/profiloprivato.php');
-    elseif($_GET['target'] === 'crowdfunding')
-        header('location: ../html/crowdfunding.php'); //modificare...
-    /*
-    elseif($_GET['target'] === '')
-        header('location: ');
-    */
-    else
-        header('location: ../html/profiloprivato.php');
-}
-else
-{
-    header('location: ../html/profiloprivato.php');
-}
-
+header('location: ../html/profiloprivato.php');
 ?>
