@@ -52,7 +52,7 @@ $data[] = array(
     'titolo' => 'Ma lo sapevi che kickstarter shaman yr thundercats aesthetic heirloom?',
     'sottotitolo' => 'Tutti dovrebbero saperlo. Finalmente è stato dimostrato, era solo qeustione di tempo prima che vaporware freegan brunch cray fixie.',
     'descrizione' => 'Sconcertante! Trapanante! Supercalifragilistichespiralidosante!',
-    'data_pubblicazione' => 20000000, //lascia -1 per avere come data di pubblicazione quella dell'installazione del database
+    'data_pubblicazione' => 1590400631, //lascia -1 per avere come data di pubblicazione quella dell'installazione del database
     'lista_tag' => array
     (
         'hypster',
@@ -69,7 +69,7 @@ $data[] = array(
     'titolo' => 'Ma lo sapevi che kickstarter shaman yr thundercats aesthetic heirloom?',
     'sottotitolo' => 'Tutti dovrebbero saperlo. Finalmente è stato dimostrato, era solo qeustione di tempo prima che vaporware freegan brunch cray fixie.',
     'descrizione' => 'Sconcertante! Trapanante! Supercalifragilistichespiralidosante!',
-    'data_pubblicazione' => 20000000, //lascia -1 per avere come data di pubblicazione quella dell'installazione del database
+    'data_pubblicazione' => -1, //lascia -1 per avere come data di pubblicazione quella dell'installazione del database
     'lista_tag' => array
     (
         'hypster',
@@ -86,7 +86,7 @@ $data[] = array(
     'titolo' => 'La Alpha si Avvicina!',
     'sottotitolo' => 'Aggiornamenti su Toad of Duty e Golarion',
     'descrizione' => 'In questo articolo vi aggiorniamo sullo stato attuale delle nostre due Ip, Golarion e Toad of Duty, e del loro imminente approdo nell’alpha testing!',
-    'data_pubblicazione' => 22010030,
+    'data_pubblicazione' => 1590074001,
     'lista_tag' => array
     (
         'toad',
@@ -109,7 +109,7 @@ $data[] = array(
     'titolo' => 'Il Free Roaming su mindROVER',
     'sottotitolo' => 'Ci si stancherà davvero?',
     'descrizione' => 'Il realismo di mindROVER riguardo stanchezza e dolore',
-    'data_pubblicazione' => 22310000,
+    'data_pubblicazione' => 1590400631,
     'lista_tag' => array
     (
         'mind',
@@ -132,7 +132,7 @@ $data[] = array(
     'titolo' => 'La Collezione mindROVER!',
     'sottotitolo' => 'Quello a cui potrete accedere appena acquistato il nostro casco!',
     'descrizione' => 'Scopri da quali app e giochi verrà accompagnata l’uscita del mindROVER.',
-    'data_pubblicazione' => 22515060,
+    'data_pubblicazione' => 1590474631,
     'lista_tag' => array
     (
         'software',
@@ -153,7 +153,7 @@ $data[] = array(
     'titolo' => 'Può il mindROVER essere nocivo per i più giovani?',
     'sottotitolo' => 'Tutto quello che c\'è da sapere per fare utilizzare mindROVER ai più piccoli.',
     'descrizione' => 'In questo articolo si analizza il rapporto tra mindROVER e i suoi più giovani utenti, a cui siamo stati molto, molto attenti.',
-    'data_pubblicazione' => 22310000,
+    'data_pubblicazione' => 1590074601,
     'lista_tag' => array
     (
         'mind',
@@ -180,7 +180,7 @@ $data[] = array(
     'titolo' => 'L\'Alimentazione in Frog Studios',
     'sottotitolo' => '"Io mangio solo pizza con wurstel!"',
     'descrizione' => 'In collaborazione con un noto nutrizionista, scopriamo il salutare mondo della pasta con tonno e della pizza con wurstel.',
-    'data_pubblicazione' => 2281890,
+    'data_pubblicazione' => 159044631,
     'lista_tag' => array
     (
         'frog',
@@ -209,7 +209,7 @@ $data[] = array(
     'titolo' => 'Frog Studios ai tempi del Corona Virus',
     'sottotitolo' => 'Dopo il Death Stranding, è tutto in discesa. Fidatevi.',
     'descrizione' => 'Una testimonianza da parte del noto veterano Cliff Unger.',
-    'data_pubblicazione' => 2581990,
+    'data_pubblicazione' => 1590470000,
     'lista_tag' => array
     (
         'corona',
@@ -238,7 +238,7 @@ $data[] = array(
     'titolo' => 'La Colonna Sonora di Toad of Duty a cura di Ruggero dei Timidi!',
     'sottotitolo' => 'Una incredibile collaborazione per Frog Studios!',
     'descrizione' => 'Incredibile svolta nel reparto sonore di ToD: una guest star nazionale vi prenderà parte!',
-    'data_pubblicazione' => 20818990,
+    'data_pubblicazione' => 1000474631,
     'lista_tag' => array
     (
         'ruggero',
@@ -263,7 +263,7 @@ $data[] = array(
     'titolo' => 'L\'Infinita Diatriba per i Diritti di Toad of Duty è Finita!',
     'sottotitolo' => 'E ovviamente abbiamo vinto, è un sito fittizio, ci manca pure che perdiamo...',
     'descrizione' => 'Frog Studios vince e convince anche in tribunale, ci spiace Activision!',
-    'data_pubblicazione' => 20016777,
+    'data_pubblicazione' => 1590070601,
     'lista_tag' => array
     (
         'frog',
@@ -292,7 +292,7 @@ $data[] = array(
     'titolo' => 'Sondaggio su Golarion!',
     'sottotitolo' => 'Diteci la vostra!',
     'descrizione' => 'Come sempre, ci teniamo alle vostre considerazioni e idee. Fateci sapere cosa ne pensate anche questa volta!',
-    'data_pubblicazione' => 20016777,
+    'data_pubblicazione' => 1590004631,
     'lista_tag' => array
     (
         'golarion',
@@ -313,7 +313,7 @@ $data[] = array(
     'titolo' => 'Frog Studios e... Il formaggio!',
     'sottotitolo' => 'Un articolo a caso sul formaggio.',
     'descrizione' => 'Mi chiamo AragostaIrachena e davvero pensi che un articolo sul formaggio sia strano?',
-    'data_pubblicazione' => 28016127,
+    'data_pubblicazione' => 1590004631,
     'lista_tag' => array
     (
         'aragosta',
@@ -338,7 +338,7 @@ $data[] = array(
     'titolo' => 'Frog Studios e... I Cupcake!',
     'sottotitolo' => 'Un articolo a caso sui cupcake.',
     'descrizione' => 'Mi chiamo AragostaIrachena e davvero pensi che un articolo sui cupcake sia strano?',
-    'data_pubblicazione' => 16661666,
+    'data_pubblicazione' => 1590474631,
     'lista_tag' => array
     (
         'aragosta',

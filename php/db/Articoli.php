@@ -189,8 +189,12 @@ class Articoli
         else
         {
             $query = 'INSERT INTO ' . self::TABLE_NAME . ' (id_autore, titolo, sottotitolo, descrizione, contenuto, lista_tag, data_pubblicazione) VALUES (?, ?, ?, ?, ?, ?, ?);';
-
-            $data_pubblicazione = (new DateTime($data_pubblicazione))->format('D/M/Y h:m:s');
+            
+            {
+                $data = new DateTime();
+                $data->setTimestamp($data_pubblicazione);
+                $data_pubblicazione = $data->format('Y-m-d h:i:s');
+            }
 
             $dbms_op = $this->dbms->prepare($query);
             if(!$dbms_op->bind_param("issssss", $author_id, $title, $subtitle, $description, $content, $tag_list, $data_pubblicazione))
