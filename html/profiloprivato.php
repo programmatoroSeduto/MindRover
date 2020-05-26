@@ -71,6 +71,7 @@ $time_subscr = (new DateTime($_SESSION['subscription_timestamp']))->format('h:m'
 $email = $_SESSION['email'];
 
 $nickname = $_SESSION['nickname'];
+$dictator = ((strcmp('Kallaari', $nickname) == 0) || (strcmp('KungKurth', $nickname) == 0));
 $first_name = ucfirst($_SESSION['firstname']);
 $last_name = ucfirst($_SESSION['lastname']);
 $descr = $_SESSION['descr'];
