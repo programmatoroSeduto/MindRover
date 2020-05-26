@@ -60,7 +60,7 @@
     
     <div class="cfContainer">
     <p class="cfTitle">Attendi mentre processiamo la tua transazione!</p>
-        <div class="loader"><img src="../assets/img/money.png" style="margin: auto; max-width: 6rem;"></div>
+        <div class="loader"><img src="../assets/img/money.png" style="margin: auto; max-width: 6rem; transform: rotate(180deg);"></div>
         <img src="../assets/img/payPal_logo.png" style="margin: auto; max-width: 20vw; ">
     </div>
 
@@ -68,7 +68,7 @@
         $(document).ready(function(){
             setTimeout(function(){
                 window.location.href = end_url;
-            }, 1500);
+            }, 2000);
         });
     </script> -->
 
