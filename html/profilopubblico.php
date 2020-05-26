@@ -158,10 +158,6 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
                 <?php if($is_author): ?>
                     <p> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span> </p>
                 <?php endif ?>
-
-                <?php if(!$is_author and !$supporter): ?>
-                    <p> <span class="userinfo-tag tag-basic"><i class="fas fa-frog"></i> base </span> </p>
-                <?php endif ?>
             </div>
         </div>
     </div>
@@ -211,78 +207,41 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
             </div>
 
             <?php if($is_author): ?>
-                <div id="s2" class="tabcontent kali example" style="overflow: scroll">
-                    <!-- <div>L'Incredibile Storia del Miazza Sommergibile</div>
-                    <div>Pelato Riazza a Caccia di Marmotte</div>
-                    <div>Conturbato Miazza nel Paese delle Scolopendre</div>
-                    <div>L'Avvincente Diatriba Artistica tra Pennellato Miazza e Architetturizzato Miazza</div> -->
-                <div>
-                    <div class="result-item-article"  onclick="location.href='#';">
-                        <div class="ria-icon">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
-                            <div>
-                                <h1>Questo articolo parla di tua madre!</h1>
-                            </div>
-                        <div class="ria-inner">
-                            <p>
-                            <i>xXxGermanoGaneshxXx</i> || 20/02/2020 || 
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> allah </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> GGMosconi </span>
-                            </p>
-                        </div>
-                        <p style="margin-top: 1rem; width: 70%;"><i>"Questa stanza è bella. Anche questa stanza è bella. Questa stanza ... è bella. E guarda com'è bella anche questa stanza. Bella questa stanza. E anche questa stanza è bella. Fre, non ho mai visto stanza così bella."</i></p>
-                    </div>
+            <?php
+                require_once('../php/db/Articoli.php');
+                $table_articoli = new Articoli($dbms);
+                $articoli = $table_articoli->searchByAuthorId($profilo['id_utente']);
+            ?>
+            <div id="s2" class="tabcontent kali example" style="overflow: scroll">
+                <div style="display: flex; flex-direction: column;">
+                    <?php
+                        if($is_author)
+                        {
+                            echo '<h1 style="margin: 0 0 5vh 0; font-family: ganesh; font-size: 3.25rem; color: rgb(46, 46, 46);">Gli articoli di ' . $nickname . ' :</h1>
+                                <div style="padding: 10px; margin: 3px 0; background-color: rgb(146, 146, 146); display: grid; grid-template-columns: 1fr 1fr 1fr; font-weight: bolder;">
+                                    <div>titolo</div>
+                                    <div>data pubblicazione</div>
+                                    <div></div>
+                                </div>';
+                            
+                            foreach($articoli as $row)
+                            {
+                                $row = $table_articoli->getArticle($row);
+                                echo '<div style="padding: 10px; margin: 3px 0; background-color: rgb(212, 212, 212); display: grid; grid-template-columns: 1fr 1fr 1fr;">';
+                                    echo '<div>' . $row['titolo'] . '</div>';
+                                    echo '<div>' . $row['data_pubblicazione'] . '</div>';
+                                    echo '<div><a href="' . './articolo.php?code=' . $row['id_articolo'] . '">vai all\'articolo</a></div>';
+                                echo '</div>';
+                            }
+                        }
+                        else
+                        {
+                            echo '';
+                        }
+                    ?>
                 </div>
-
-                <div>
-                    <div class="result-item-article"  onclick="location.href='#';">
-                        <div class="ria-icon">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
-                            <div>
-                                <h1>Giulia hai cotto il razzo!</h1>
-                            </div>
-                        <div class="ria-inner">
-                            <p>
-                            <i>Kallaari</i> || 5/5/2020 || 
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> giug </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette -anche no- </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> MattiaèBello </span>
-                            </p>
-                        </div>
-                        <p style="margin-top: 1rem; width: 70%;"><i>"Piccola ebrea bastarda."</i></p>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="result-item-article"  onclick="location.href='#';">
-                        <div class="ria-icon">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
-                            <div>
-                                <h1>L'Incredibile Storia di Catapultato Miazza</h1>
-                            </div>
-                        <div class="ria-inner">
-                            <p>
-                            <i>xXxCucinatoMiazzaxXx</i> || 12/2/2020 || 
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> catapultato </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> miazza </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> ComeUnaCatapulta </span>
-                            </p>
-                        </div>
-                        <p style="margin-top: 1rem; width: 70%;"><i>"Bella Rena! Rena è stato catapultato contro una casa urlando AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!"</i></p>
-                    </div>
-                </div>
-                
-                </div>
-                <div style="height: 10vh"></div>
+                <div style="height: 8vh;"></div>
             </div>
-                </div>
             <?php endif ?>
         </div>
     </div>

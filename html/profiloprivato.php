@@ -583,7 +583,7 @@ if($is_author)
                             {
                                 echo '<div style="padding: 10px; margin: 3px 0; background-color: rgb(212, 212, 212); display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; ">';
                                     echo '<div>' . $row['id'] . '</div>';
-                                    echo '<div>' . $row['data'] . '</div>';
+                                    echo '<div>' . $row['data'] . ' ' . $row['ora']  . '</div>';
                                     echo '<div>' . $row['somma'] . '</div>';
                                     echo '<div><i class="fas fa-check" style="color: green;"></i></div>';
                                 echo '</div>';
