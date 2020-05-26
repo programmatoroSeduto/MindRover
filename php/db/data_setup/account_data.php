@@ -81,15 +81,15 @@ $data[] = array(
 
 $data[] = array(
     'credenziali' => array(
-        'email' => 'capocchia.lucente@hotmail.com',
-        'password' => 'cazziamari'
+        'email' => 'pelata.lucente@hotmail.com',
+        'password' => 'password'
     ),
     'profilo' => array(
-        'nickname' => 'xXxCapocchiaLucentexXx',
+        'nickname' => 'xXxPelataLucentexXx',
         'nome' => 'Fernando',
         'cognome' => 'Cartomastro',
         'stato' => 'Dal mattino alla sera, bella Lore bella Rena!',
-        'descrizione' => 'La mia capocchia è lucente',
+        'descrizione' => 'La mia pelata è lucente',
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
@@ -106,7 +106,7 @@ $data[] = array(
         'nome' => 'Francesco',
         'cognome' => 'Asdrubale',
         'stato' => 'Ciccio Asdrubale sta arrivando!',
-        'descrizione' => 'Sono Ciccio, ho 43 anni, vivo con mia madre e guardo i piedini online.',
+        'descrizione' => 'Sono Ciccio, ho 43 anni, vivo con mia madre e mangio gli hamburger.',
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
@@ -122,7 +122,7 @@ $data[] = array(
         'nickname' => 'xxBIGDOG',
         'nome' => 'Cangrande',
         'cognome' => 'Della Scala',
-        'stato' => 'Vuolsì così, colà, che cazzo vuol dire?',
+        'stato' => 'Niente Paradiso per me, eh?',
         'descrizione' => 'Sono un ricco figlio di papà arrabbiato con Dante.',
         'flag_anonimo' => false,
         'id_img_profilo' => -1
@@ -140,7 +140,7 @@ $data[] = array(
         'nome' => 'Cliff',
         'cognome' => 'Unger',
         'stato' => 'Dov\'è il mio BB?',
-        'descrizione' => 'Fa ridere perchè Cliff Unger sembra "cliffhanger", e la mia identità è proprio un colpo di scena. SaS.',
+        'descrizione' => 'Fa ridere perchè Cliff Unger sembra "cliffhanger", e la mia identità è proprio un colpo di scena.',
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
@@ -157,7 +157,7 @@ $data[] = array(
         'nome' => 'Lorenzo',
         'cognome' => 'Terranova',
         'stato' => '"This time I finally let you... Go."',
-        'descrizione' => 'Mi sono cotto il razzo di contare quello che mangio, Giulia mostarda.',
+        'descrizione' => 'Stavo tenendo conto di ogni mia colazione ma alla fine mi sono stancato, basta.',
         'flag_anonimo' => false,
         'id_img_profilo' => 15
     ),
@@ -247,6 +247,23 @@ $data[] = array(
         'id_img_profilo' => 29
     ),
     'donazioni' => array(9, 57, 8, 5.8, 5.2, 1)
+);
+
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'giulia.stella@gmail.com',
+        'password' => 'nonloso'
+    ),
+    'profilo' => array(
+        'nickname' => 'GiuliaStella05',
+        'nome' => 'Giulia',
+        'cognome' => 'Stella',
+        'stato' => '"<3"',
+        'descrizione' => 'Sono una trippona che tiene segreta la sua vera identità...',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 31
+    ),
+    'donazioni' => array(230, 30, 20)
 );
 
 

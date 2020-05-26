@@ -239,6 +239,20 @@ $data[] = array(
     'colore2' => array(0, 0, 0)
 );
 
+$data[] = array(
+    'path' => '../assets/avatar/ubriaco.jpg', 
+    'banner' => array(173, 216, 230),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/volume.jpg', 
+    'banner' => array(255, 118, 0),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
 //inserimento nel database
 //require_once('../ImgProfilo.php');
 //require_once('../mysql_credentials.php');
