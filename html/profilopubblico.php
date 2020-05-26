@@ -1,6 +1,6 @@
 <?php
 session_start();
-$ganesh = "ACCOUNT_PUBBLICO";
+$ganesh = "SEARCH";
 $dictator = false;
 
 

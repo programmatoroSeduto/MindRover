@@ -187,43 +187,18 @@ $ganesh = "SEARCH";
 
             <div class="result-item-article"  onclick="location.href='#';">
                 <div class="ria-icon">
-                    <i class="fas fa-book-open"></i>
+                    <i class="fas fa-search" style="color: orange; "></i>
                 </div>
-                <div class="ria-info" style="background: linear-gradient(90deg, #007882, #000050);">
+                <div class="ria-info" style="background: linear-gradient(120deg, red, orange);">
                     <div>
-                        <h1>Questo articolo parla di tua madre!</h1>
+                        <h1>Che aspetti? Inizia a cercare!</h1>
                     </div>
                     <div class="ria-inner">
-                        <p>
-                            <i>xXxGermanoGaneshxXx</i> || 20/02/2020 || 
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> allah </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> tette </span>
-                            <span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> GGMosconi </span>
-                        </p>
+                        
                     </div>
-                    <p style="margin-top: 1rem; width: 70%;"><i>"Questa stanza è bella. Anche questa stanza è bella. Questa stanza ... è bella. E guarda com'è bella anche questa stanza. Bella questa stanza. E anche questa stanza è bella. Fre, non ho mai visto stanza così bella."</i></p>
+                    <p style="margin-top: 1rem; width: 70%;">Cerca qualcosa di croccante sul nostro sito. C'è tanta roba interessante!</p>
                 </div>
             </div>
-
-            <div class="result-item-user" onclick="location.href='#';">
-                <div class="riu-icon">
-                    <img src="../assets/avatar/fagiolo.png">
-                </div>
-                <div class="riu-info" style="background: linear-gradient(90deg, rgba(150, 0, 0, 1), rgba(150, 0, 0, 0.75));">
-                    <div>
-                        <h1>xXxSEXY-MARMOTTONE-56xXx</h1>
-                        
-                        <span style="padding: 0 1.5rem;"><!-- separatore --></span>
-                        
-                        <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>
-                        <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>
-                    </div>
-                    <p style="margin-top: 1rem; width: 70%;">Lanciando aragoste ai bimbi ciechi...</p>
-                    
-                </div>
-            </div>
-
-            
 
         </div>
     </div>
