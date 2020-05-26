@@ -40,6 +40,6 @@ for($i = 0; $i < 4 && $i < count($res); $i++)
     $res[$i] = $table_articoli->getArticle($res[$i]);
 
     $altri_articoli[$i]['titolo'] = $res[$i]['titolo'];
-    $altri_articoli[$i]['url'] = './articolo.php?code=' . $res[0]['id_articolo'];
+    $altri_articoli[$i]['url'] = './articolo.php?code=' . $res[$i]['id_articolo'];
 }
 ?>

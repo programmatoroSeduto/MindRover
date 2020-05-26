@@ -633,7 +633,7 @@ if($is_author)
             
             <!-- Postare un nuovo articolo -->
             <div class="tabcontent kali" id="s5">
-                Scrivi un articolo
+                
             </div>
             <?php endif ?>
 
