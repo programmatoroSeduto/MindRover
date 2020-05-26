@@ -324,7 +324,7 @@ foreach($data as $k)
     {
         $i++;
     }
-    if($errcode = $table_profili->createAccount($id_profilo, $k['profilo']['nickname'], $k['profilo']['nome'], $k['profilo']['cognome'], $id_stili[$i]))
+    if($errcode = $table_profili->createAccount($id_profilo, $k['profilo']['nickname'], $k['profilo']['nome'], $k['profilo']['cognome'], $id_img))
     {
         echo "errore: " . $dbms->errno . ' ' . $dbms->error;
         continue;
