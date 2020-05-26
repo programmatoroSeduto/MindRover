@@ -38,7 +38,7 @@ $ora_pubblicazione = (new DateTime($profilo['data_iscrizione']))->format('h:m');
 $tags = explode(';', $articolo['lista_tag']);
 function inserisci_tag($tag)
 {
-    return '<span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i>' . $tag . '</span>';
+    return '<span class="userinfo-tag tag-tag"><i class="fas fa-frog"></i> ' . $tag . '</span>';
 }
 $contenuto_articolo = $articolo['contenuto'];
 

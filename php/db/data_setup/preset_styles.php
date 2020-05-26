@@ -240,8 +240,22 @@ $data[] = array(
 );
 
 $data[] = array(
+    'path' => '../assets/avatar/eve.png', 
+    'banner' => array(69, 0, 92),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
+$data[] = array(
     'path' => '../assets/avatar/ubriaco.jpg', 
     'banner' => array(173, 216, 230),
+    'colore1' => array(207, 166, 69),
+    'colore2' => array(0, 0, 0)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/rakan.png', 
+    'banner' => array(124, 0, 0),
     'colore1' => array(207, 166, 69),
     'colore2' => array(0, 0, 0)
 );

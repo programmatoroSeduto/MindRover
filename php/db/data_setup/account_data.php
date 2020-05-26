@@ -266,6 +266,23 @@ $data[] = array(
     'donazioni' => array(230, 30, 20)
 );
 
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'Lucinda.250@lmaoyeet.com',
+        'password' => '1234'
+    ),
+    'profilo' => array(
+        'nickname' => 'Lucinda250',
+        'nome' => 'Tizia',
+        'cognome' => 'Memes',
+        'stato' => 'Mi serve il magenta!',
+        'descrizione' => 'Mi piace il sushi e feedare su Lol :)',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 33
+    ),
+    'donazioni' => array(230, 30, 20)
+);
+
 
 
 

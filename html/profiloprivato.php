@@ -1,7 +1,7 @@
 <?php
 session_start();
 $ganesh = "ACCOUNT";
-$dictator = true;
+$dictator = false;
 ?>
 
 <!DOCTYPE html>
@@ -186,10 +186,6 @@ if($is_author)
                     <?php if($is_author): ?>
                         <p> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span> </p>
                     <?php endif ?>
-
-                    <!-- <?php if(!$is_author and !$supporter): ?>
-                        <p> <span class="userinfo-tag tag-basic"><i class="fas fa-frog" style="margin-top: 1rem"></i> base </span> </p>
-                    <?php endif ?> -->
 
                 <?php else: ?>
                     <p> <span class="userinfo-tag tag-dictator"><i class="fas fa-frog"></i> dittatore supremo </span> </p>

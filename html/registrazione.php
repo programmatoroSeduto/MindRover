@@ -75,11 +75,11 @@ require_once('../php/modules/navbar.php');
                 <!-- <input class="submin-button" type="submit" value="Registrati!"> -->
                 <input class="d text-content modifica" type="submit" value="Registrati!" style="background-color: transparent; border-style: none;"></input>
                 
-                <span class="auth-error" style="background-color: rgba(224, 224, 255, 0.568); border-radius: 1%;">
+                <span class="auth-error"><p>
                     <?php
                         if(isset($_GET['error']))
                         {
-                            echo '<p><b>Errore: </b>';
+                            echo '<b>Errore: </b>';
                             switch($_GET['error'])
                             {
                                 case 'no_email':
@@ -121,7 +121,7 @@ require_once('../php/modules/navbar.php');
                             echo '';
                         }
                     ?>
-                </span>
+                </p></span>
 
             </div>
         </form>

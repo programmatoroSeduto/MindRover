@@ -30,6 +30,18 @@ $ganesh = "HOMEPAGE";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../js/carousel.js"></script>
 
+    <style>
+
+    .newsLink:link, .newsLink:visited{
+        color: whitesmoke;
+    }
+
+    .newsLink:hover{
+        color: #da4112;
+    }
+
+    </style>
+
 </head>
 
 <!-- Sfondo generico della pagina -->
@@ -137,30 +149,30 @@ else
 
             <!-- Notizia 1 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia1.jpg'); text-align: center;">
-                <div class="card-content" onclick="location.href='./articolo.php?code=7'" style="cursor:pointer; position: relative;">
+                <div class="card-content" style="position: relative; font-size: large;">
                     Può il mindROVER essere nocivo per i più giovani?
-                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%;">
-                        <a href="./articolo.php?code=7">Leggi</a>
+                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; padding: 1vh">
+                        <a class="newsLink" href="./articolo.php?code=7">Leggi</a>
                     </div>
                 </div>
             </div>
 
             <!-- Notizia 2 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia2.jpg'); text-align: center;">
-                <div class="card-content" onclick="location.href='./articolo.php?code=5'" style="cursor:pointer; position: relative;">
+                <div class="card-content" style="position: relative; font-size: large;">
                     Il free roaming e mindROVER
-                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%;">
-                        <a href="./articolo.php?code=5">Leggi</a>
+                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; padding: 1vh">
+                        <a class="newsLink" href="./articolo.php?code=5">Leggi</a>
                     </div>
                 </div>
             </div>
 
             <!-- Notizia 3 -->
             <div class="card news" style="background-image: url('../assets/avatar/jhin.png'); text-align: center;">
-                <div class="card-content" onclick="location.href='./articolo.php?code=15'" style="cursor:pointer; position: relative;">
+                <div class="card-content" style="position: relative; font-size: large">
                     Intervista ai due CEO!
-                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%;">
-                        <a href="./articolo.php?code=15">Leggi</a>
+                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; padding: 1vh">
+                        <a class="newsLink" href="./articolo.php?code=15">Leggi</a>
                     </div>
                 </div>
             </div>
