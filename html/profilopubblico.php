@@ -1,6 +1,8 @@
 <?php
 session_start();
 $ganesh = "ACCOUNT_PUBBLICO";
+$dictator = false;
+
 
 if(!isset($_GET['code']))
 {
@@ -72,6 +74,8 @@ $supporter = $profilo['flag_supporter'];
 $is_author = $profilo['flag_autore'];
 
 $nickname = $profilo['nickname'];
+$dictator = ((strcmp('Kallaari', $nickname) == 0) || (strcmp('KungKurth', $nickname) == 0));
+
 $status = $profilo['stato'];
 $descr = $profilo['descrizione'];
 
@@ -151,12 +155,18 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
                 </p>
                 
                 <!-- ruoli -->
+                <?php if(!$dictator): ?>
+
                 <?php if($supporter): ?>
                     <p> <span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span> </p>
                 <?php endif ?>
 
                 <?php if($is_author): ?>
                     <p> <span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span> </p>
+                <?php endif ?>
+
+                <?php else: ?>
+                    <p> <span class="userinfo-tag tag-dictator"><i class="fas fa-frog"></i> dittatore supremo </span> </p>
                 <?php endif ?>
             </div>
         </div>
@@ -245,23 +255,6 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
             <?php endif ?>
         </div>
     </div>
-
-    <!-- Footer
-    <div class="profile-footer footer-bg"> 
-        <div class="footer-content">
-
-            <img src="../assets/img/logo.png" style="height: 9vh;">   
-            <img src="../assets/img/unige.png" alt="Unige" style="height: 8vh;">
-            <i class="fab fa-facebook-square d"></i>
-            <i class="fab fa-youtube d"></i>
-            <i class="fab fa-instagram d"></i>
-            <i class="fas fa-envelope d"></i>
-            <br>
-            <span style="font-size: 0.6rem; letter-spacing: normal;">©2020 Frog Studios, Inc. Tutti i diritti riservati. mindROVER©, 
-            Golarion©, Toad of Duty© sono proprietà intelletuali di Frog Studios, Inc.</span>
-            
-        </div>
-    </div> -->
 
     <?php require_once('../php/modules/footer.php'); ?>
 
