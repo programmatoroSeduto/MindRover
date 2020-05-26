@@ -84,8 +84,8 @@ require_once('../php/modules/altriArticoli.php');
     ?>
     
     <div class="contenitore">
-        <div class="example articleStyle" style="background-image: url('../assets/img/news-rane.jpg');">
-            <div class="articleContainer" style="background-color: rgba(173, 216, 230, 0.50);">
+        <div class="example articleStyle" style="background-image: url('../assets/img/patt.jpg');">
+            <div class="articleContainer" style="background-color: rgba(43, 138, 255, 0.5);">
 
                 <h1 class="articleTitle"><?php echo $titolo; ?></h1>
                 <p class="articleTitle" style="padding-bottom: 1vh"><?php echo $sottotitolo; ?></p>
@@ -95,7 +95,7 @@ require_once('../php/modules/altriArticoli.php');
                 
             </div>
 
-            <div class="article" style="background-color: rgba(250, 250, 210, 0.5);">
+            <div class="article" style="background-color: rgba(43, 138, 255, 0.33);">
                 <?php echo $contenuto_articolo; ?>
             </div>
 
