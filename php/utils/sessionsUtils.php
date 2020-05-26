@@ -38,17 +38,19 @@ function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $d
         //a che tier appartiene
         $tier_3 = 99;
         $tier_2 = 199;
-        if($crowdfunding_count > $tier_2)
+        if($crowdfunding_count > 0)
         {
-            $_SESSION['crowdfunding_tier'] = 1;
-        }
-        else if($crowdfunding_count > $tier_3)
-        {
-            $_SESSION['crowdfunding_tier'] = 2;
-        }
-        else if($crowdfunding_count > 0)
-        {
-            $_SESSION['crowdfunding_tier'] = 3;
+            if($crowdfunding_count > $tier_3)
+            {
+                if($crowdfunding_count > $tier_3)
+                {
+                    $_SESSION['crowdfunding_tier'] = 1;
+                }
+                else
+                    $_SESSION['crowdfunding_tier'] = 2;
+            }
+            else
+                $_SESSION['crowdfunding_tier'] = 3;
         }
 
         //in che posizione della classifica si trova
