@@ -25,42 +25,45 @@ $pass = "";
     {
         if(isset($_POST[$data]))
         {
-            return sanitize($_POST[$data]);
+            if(strcmp('', $_POST[$data]) == 0)
+                return null;
+            else
+                return sanitize($_POST[$data]);
         }
         else
         {
             return null;
         }
     }
-    if(!($email = verify_data("email")))
-    {
-        //echo "ERRORE: dato mancante. ->" . "email";
-        header('location: ../html/registrazione.php?' . 'error_no_email=true');
-        die();
-    }
     
     if(!($firstname = verify_data("firstname")))
     {
         //echo "ERRORE: dato mancante. ->" . "firstname";
-        header('location: ../html/registrazione.php?' . 'error_no_first=true');
+        header('location: ../html/registrazione.php?' . 'error=no_firstname');
         die();
     }
     if(!($lastname = verify_data("lastname")))
     {
         //echo "ERRORE: dato mancante. ->" . "lastname";
-        header('location: ../html/registrazione.php?' . 'error_no_last=true');
+        header('location: ../html/registrazione.php?' . 'error=no_lastname');
+        die();
+    }
+    if(!($email = verify_data("email")))
+    {
+        //echo "ERRORE: dato mancante. ->" . "email";
+        header('location: ../html/registrazione.php?' . 'error=no_email');
         die();
     }
     if(!($pass = verify_data("pass")))
     {
         //echo "ERRORE: dato mancante. ->" . "pass";
-        header('location: ../html/registrazione.php?' . 'error_no_pass=true');
+        header('location: ../html/registrazione.php?' . 'error=no_password');
         die();
     }
     if(!($confirm = verify_data("confirm")))
     {
         //echo "ERRORE: dato mancante. ->" . "confirm";
-        header('location: ../html/registrazione.php?' . 'error_no_confirm=true');
+        header('location: ../html/registrazione.php?' . 'error=no_password_confirm');
         die();
     }
 
@@ -72,7 +75,7 @@ $pass = "";
             . "password: $pass <br>"
             . "conferma: $confirm<br>";
         */
-        header('location: ../html/registrazione.php?' . 'error_pass_confirm=true');
+        header('location: ../html/registrazione.php?' . 'error=invalid_confirm');
         die();
     }
 }
@@ -90,7 +93,7 @@ if($table_credenziali->isSetEmail($email))
 {
     //l'email esiste già; rifiuta la registrazione
     //echo 'la mail ' . $email . ' esiste già nel database. REGISTRAZIONE RIFIUTATA.';
-    header('location: ../html/registrazione.php?' . 'error_email=true');
+    header('location: ../html/registrazione.php?' . 'error=invalid_email');
     die();
 }
 
@@ -133,7 +136,8 @@ if($table_profili->getIdByNickname($nickname) >= 0)
 //registrazione del profilo nel database
 if($table_credenziali->createAccount($email, $hashOfPass) === -1)
 {
-    echo "errore: " . $dbms->errno . ' ' . $dbms->error;
+    //echo "errore: " . $dbms->errno . ' ' . $dbms->error;
+    header('location: ../html/registrazione.php?' . 'error=invalid_credentials');
     die();
 }
 
@@ -142,37 +146,20 @@ $id_profilo = $table_credenziali->getId($email, $pass);
 if($id_profilo == -1)
 {
     //die("errore nella ricerca dell'id!");
-    header('location: ../html/registrazione.php?' . 'il_garbato_distruttore_colpisce_ancora=true');
+    $table_credenziali->recoverWrongRegistration($email);
+    header('location: ../html/registrazione.php?' . 'error=zampata_di_ganesh_il_dio_burlone');
     die();
 }
 
 //registrazione dei dati di profilo
 if($errcode = $table_profili->createAccount($id_profilo, $nickname, $firstname, $lastname, (new ImgProfilo($dbms))->getFirstAvailableStyleId()))
 {
-    echo $errcode . "<br>" . $dbms->errno . " - " . $dbms->error . "<br>";
-    die("errore!");
-    //header('location: ../html/registrazione.php?' . 'il_garbato_distruttore_colpisce_ancora=true');
-    //die();
+    $table_credenziali->recoverWrongRegistration($email);
+    header('location: ../html/registrazione.php?' . 'error=il_garbato_distruttore_colpisce_ancora');
+    die();
 }
 
 //registrazione completata con successo; ora, fai qualcosa
-//echo 'registrazione completata.';
-if(isset($_GET['target']))
-{
-    if($_GET['target'] === 'profilo')
-        header('location: ../html/profiloprivato.php');
-    elseif($_GET['target'] === 'crowdfunding')
-        header('location: ../html/crowdfunding.php'); //modificare...
-    /*
-    elseif($_GET['target'] === '')
-        header('location: ');
-    */
-    else
-        header('location: ../html/login.php');
-}
-else
-{
-    header('location: ../html/login.php');
-}
+header('location: ../html/login.php');
 
 ?>

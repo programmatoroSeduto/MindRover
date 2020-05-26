@@ -75,34 +75,51 @@ require_once('../php/modules/navbar.php');
                 <!-- <input class="submin-button" type="submit" value="Registrati!"> -->
                 <input class="d text-content modifica" type="submit" value="Registrati!" style="background-color: transparent; border-style: none;"></input>
                 
-                <span class="auth-error">
+                <span class="auth-error" style="background-color: rgba(224, 224, 255, 0.568); border-radius: 1%;">
                     <?php
-                        //nessun nome inserito
-                        if(isset($_GET['error_no_first'])) echo '';
-
-                        //nessun cognome inserito
-                        elseif(isset($_GET['error_no_last'])) echo '';
-
-                        //manca la mail
-                        elseif(isset($_GET['error_no_email'])) echo '';
-
-                        //la mail esiste già nel database
-                        elseif(isset($_GET['error_email'])) echo '';
-
-                        //nessuna password inserita
-                        elseif(isset($_GET['error_no_pass'])) echo '';
-
-                        //nessuna conferma password inserita
-                        elseif(isset($_GET['error_no_confirm'])) echo '';
-
-                        //la password e la conferma non coincidono
-                        elseif(isset($_GET['error_pass_confirm'])) echo '';
-
-                        //errore SQL
-                        elseif(isset($_GET['il_garbato_distruttore_colpisce_ancora'])) echo 'Errore tecnico.';
-
-                        //nessun errore
-                        else echo "";
+                        if(isset($_GET['error']))
+                        {
+                            echo '<p><b>Errore: </b>';
+                            switch($_GET['error'])
+                            {
+                                case 'no_email':
+                                    echo 'nessuna mail inserita!';
+                                break;
+                                case 'no_firstname':
+                                    echo 'non hai inserito il tuo nome.';
+                                break;
+                                case 'no_lastname':
+                                    echo 'non hai inserito il tuo cognome';
+                                break;
+                                case 'no_password':
+                                    echo 'nessuna password inserita';
+                                break;
+                                case 'no_password_confirm':
+                                    echo 'manca la conferma della password.';
+                                break;
+                                case 'invalid_confirm':
+                                    echo 'hai inserito due password non uguali, conferma fallita. Spiace? Spiace.';
+                                break;
+                                case 'invalid_email':
+                                    echo 'Questa mail è già stata presa. How about <i>dangerous.avocado@mango.kek</i> ?';
+                                break;
+                                case 'invalid_credentials':
+                                    echo 'impossibile creare i tuoi dati di profilo. Riprova, oppure contattaci se hai problemi.';
+                                break;
+                                case 'zampata_di_ganesh_il_dio_burlone':
+                                    echo 'impossibile creare le tue credenziali. Riprova, oppure contattaci!';
+                                break;
+                                case 'il_garbato_distruttore_colpisce_ancora':
+                                    echo 'impossibile generare il tuo profilo. Riprova, oppure contattaci!';
+                                break;
+                                default: 
+                                    echo 'c\'è stato un problema tecnico. Se pensi che ci sia un bug, contattaci!';
+                            }
+                        }
+                        else
+                        {
+                            echo '';
+                        }
                     ?>
                 </span>
 

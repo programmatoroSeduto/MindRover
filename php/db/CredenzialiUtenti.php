@@ -364,6 +364,17 @@ class CredenzialiUtenti
 
         return $this->dbms->errno;
     }
+
+    //RECUPERO DA REGISTRAZIONE ERRATA: elimina l'account usando la mail
+    function recoverWrongRegistration($email)
+    {
+        if(!$this->table_exists) return -1;
+
+        $query = 'DELETE FROM credenziali_utenti WHERE email = ' . $email . ';';
+        $result = $this->dbms->query($query);
+
+        return $this->dbms->errno;
+    }
 }
 
 ?>
