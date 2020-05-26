@@ -88,10 +88,15 @@ $ganesh = "SEARCH";
 
                 <div class="search-inner-panel">
                     <div id="search-settings-panel-1" class="panel">
-                        <div style="display: grid; grid-template-rows: 1fr 1fr 1fr">
+                        <div style="display: grid; grid-template-rows: 1fr 1fr 1fr 1fr; overflo: scroll;">
                             <div class="form-container">
                                 <input type="text" name="a_title" id="a_title" placeholder="Titolo articolo" class="form">
                                 <i class="fas fa-book-open"></i>
+                            </div>
+
+                            <div class="form-container" style="margin-bottom: 0">
+                                <input type="text" name="a_author" id="a_author" placeholder="Autore dell'articolo" class="form" title="Occhio alle maiuscole e le minuscole!">
+                                <i class="fas fa-bookmark"></i>
                             </div>
 
                             <div class="form-container">
@@ -100,7 +105,7 @@ $ganesh = "SEARCH";
                             </div>
 
                             <div class="form-container" style="margin-bottom: 0">
-                                <input type="text" name="a_content" id="a_content" placeholder="Contenuto articolo" class="form">
+                                <input type="text" name="a_content" id="a_content" placeholder="Qualche riga dell'articolo che stai cercando" class="form">
                                 <i class="fas fa-bookmark"></i>
                             </div>
                         </div>
@@ -125,7 +130,7 @@ $ganesh = "SEARCH";
                         <div style="display: grid; grid-template-rows: 2fr 1fr 2fr">
                             <div> </div>
                             <div class="form-container">
-                                <input type="text" name="u_nickname" id="u_nickname" placeholder="Cerca un nickname utente" class="form">
+                                <input type="text" name="u_nickname" id="u_nickname" placeholder="Cerca un nickname utente" class="form"  title="Occhio alle maiuscole e le minuscole!">
                                 <i class="fas fa-user"></i>
                             </div>
                             <div> </div>
