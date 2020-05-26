@@ -149,30 +149,30 @@ else
 
             <!-- Notizia 1 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia1.jpg'); text-align: center;">
-                <div class="card-content" style="position: relative; font-size: large;">
-                    Può il mindROVER essere nocivo per i più giovani?
-                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; padding: 1vh">
-                        <a class="newsLink" href="./articolo.php?code=7">Leggi</a>
+                <div class="card-content" style="position: relative;">
+                    <p style="font-size: 1.33rem">Può il mindROVER essere nocivo per i più giovani?</p>
+                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; line-height: 2rem">
+                        <a class="newsLink" href="./articolo.php?code=7" style="font-size: large">Leggi</a>
                     </div>
                 </div>
             </div>
 
             <!-- Notizia 2 -->
             <div class="card news" style="background-image: url('../assets/img/home-notizia2.jpg'); text-align: center;">
-                <div class="card-content" style="position: relative; font-size: large;">
-                    Il free roaming e mindROVER
-                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; padding: 1vh">
-                        <a class="newsLink" href="./articolo.php?code=5">Leggi</a>
+                <div class="card-content" style="position: relative;">
+                <p style="font-size: 1.33rem">Il free roaming e mindROVER</p>
+                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; line-height: 2rem">
+                        <a class="newsLink" href="./articolo.php?code=5" style="font-size: large">Leggi</a>
                     </div>
                 </div>
             </div>
 
             <!-- Notizia 3 -->
             <div class="card news" style="background-image: url('../assets/img/jhin.jpg'); text-align: center;">
-                <div class="card-content" style="position: relative; font-size: large">
-                    Intervista ai due CEO!
-                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; padding: 1vh">
-                        <a class="newsLink" href="./articolo.php?code=15">Leggi</a>
+                <div class="card-content" style="position: relative;">
+                <p style="font-size: 1.33rem">Intervista ai due CEO!</p>
+                    <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; line-height: 2rem">
+                        <a class="newsLink" href="./articolo.php?code=15" style="font-size: large">Leggi</a>
                     </div>
                 </div>
             </div>

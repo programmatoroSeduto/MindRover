@@ -228,9 +228,9 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
                         if($is_author)
                         {
                             echo '<h1 style="margin: 0 0 5vh 0; font-family: ganesh; font-size: 3.25rem; color: rgb(46, 46, 46);">Gli articoli di ' . $nickname . ' :</h1>
-                                <div style="padding: 10px; margin: 3px 0; background-color: rgb(146, 146, 146); display: grid; grid-template-columns: 1fr 1fr 1fr; font-weight: bolder;">
-                                    <div>titolo</div>
-                                    <div>data pubblicazione</div>
+                                <div style="padding: 10px; margin: 3px 0; background-color: #8f281d; font-family: ganesh; color: white; display: grid; grid-template-columns: 1fr 1fr 1fr; font-weight: bolder;">
+                                    <div>Titolo</div>
+                                    <div>Data pubblicazione</div>
                                     <div></div>
                                 </div>';
                             

@@ -31,12 +31,14 @@ $ganesh = "CHI SIAMO";
             cursor: pointer; 
             font-size: xxx-large; 
             border: 0.4vh solid #8f281d;
+            font-family: "ganesh", sans-serif;
         }
 
         /* Hover per bottone donazione */
         .btn:hover{
             background-color: whitesmoke;
-            transition: 0.5s
+            transition: 0.5s;
+            color: #8f281d;
         }
 
     </style>
@@ -131,7 +133,7 @@ else
 
         <!-- Bottone contatti -->
         <div>
-            <div class="d text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/comingsoon.php'" class="btn">Contattaci per un posto!</b></div>
+            <div class="text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/comingsoon.php'" class="btn">Contattaci per un posto!</b></div>
         </div>
         
     </div>

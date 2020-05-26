@@ -569,11 +569,11 @@ if($is_author)
                         if($supporter)
                         {
                             echo '<h1 style="margin: 0 0 5vh 0; font-family: ganesh; font-size: 3.25rem; color: rgb(46, 46, 46);">Le tue donazioni</h1>
-                                <div style="padding: 10px; margin: 3px 0; background-color: rgb(146, 146, 146); display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; font-weight: bolder;">
-                                    <div>codice</div>
-                                    <div>data donazione</div>
-                                    <div>somma donazione</div>
-                                    <div>confermata?</div>
+                                <div style="padding: 10px; font-family: ganesh; margin: 3px 0; color:white; background-color: #8f281d; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; font-weight: bolder;">
+                                    <div>Codice</div>
+                                    <div>Data donazione</div>
+                                    <div>Somma donazione</div>
+                                    <div>Confermata?</div>
                                 </div>';
                             //var_dump($donation_table);die();
                             foreach($donation_table as $row)
@@ -603,9 +603,9 @@ if($is_author)
                         if($is_author)
                         {
                             echo '<h1 style="margin: 0 0 5vh 0; font-family: ganesh; font-size: 3.25rem; color: rgb(46, 46, 46);">I tuoi articoli</h1>
-                                <div style="padding: 10px; margin: 3px 0; background-color: rgb(146, 146, 146); display: grid; grid-template-columns: 1fr 1fr 1fr; font-weight: bolder;">
-                                    <div>titolo</div>
-                                    <div>data pubblicazione</div>
+                                <div style="padding: 10px; margin: 3px 0; font-family: ganesh; color: white; background-color: #8f281d; display: grid; grid-template-columns: 1fr 1fr 1fr; font-weight: bolder;">
+                                    <div>Titolo</div>
+                                    <div>Data pubblicazione</div>
                                     <div></div>
                                 </div>';
                             
@@ -631,17 +631,18 @@ if($is_author)
             <!-- Postare un nuovo articolo -->
             <div class="tabcontent kali" id="s5">
                 <div style="display: block;">
-                    <h1>Ehi! Vuoi scrivere un nuovo articolo?</h1>
+                    <h1 style="font-family: ganesh">Ehi! Vuoi scrivere un nuovo articolo?</h1>
                     <p>Fantastico! Ti spiego come fare:</p>
                     <ol>
-                        <li><b>Scrivi prima il tuo articolo!</b> E' sufficiente un documento word, o anche uno scanner del tuo scritto. <br> Puoi anche inviarci direttamente il documento in formato HTML, per darci un'idea più precisa di come dovrà apparire all'utente il tuo articolo.</li>
-                        <li><b>Inviaci il tuo scritto.</b><br> Scrivimi, sono KungKurth, mi trovi sul motore di ricerca. La mia email è <i style="text-decoration: underline;">kung.autori@frogstudios.com</i> (per favore, niente spam o pacchi bomba ...)</li>
-                        <li><b>Sorseggia la tua bevanda preferita</b> mentre lavoriamo per pubblicare il tuo articolo.<br>Tipicamente impieghiamo una settimana per valutare e ottimizzare la grafica del tuo articolo (eh sì, siamo molto impegnati da queste parti); ti contatteremo per informarti su come procede il lavoro.</li>
-                        <li><b>Controlla la tua pubblicazione</b> e vantatene con gli amici.</li>
+                        <li><b style="font-family: ganesh">Scrivi prima il tuo articolo!</b> E' sufficiente un documento word, o anche uno scanner del tuo scritto. <br> Puoi anche inviarci direttamente il documento in formato HTML, per darci un'idea più precisa di come dovrà apparire all'utente il tuo articolo.</li>
+                        <li><b style="font-family: ganesh">Inviaci il tuo scritto.</b> Scrivimi, sono KungKurth, mi trovi sul motore di ricerca. 
+                        <br>La mia email è <i style="text-decoration: underline;">kung.autori@frogstudios.com</i> (per favore, niente spam o pacchi bomba ...)</li>
+                        <li><b style="font-family: ganesh">Sorseggia la tua bevanda preferita</b> mentre lavoriamo per pubblicare il tuo articolo.<br>Tipicamente impieghiamo una settimana per valutare e ottimizzare la grafica del tuo articolo (eh sì, siamo molto impegnati da queste parti); ti contatteremo per informarti su come procede il lavoro.</li>
+                        <li><b style="font-family: ganesh">Controlla la tua pubblicazione</b> e vantatene con gli amici.</li>
                     </ol>
                     <br>
-                    <h1>A te che ci supporti: <i>GRAZIE!</i></h1>
-                    <p>... altre parole di conforto? ...</p>
+                    <h1 style="font-family: ganesh">A te che ci supporti: <i>GRAZIE!</i></h1>
+                    <p>Ti ringraziamo per il tuo tempo e il tuo impegno, stai partecipando a qualcosa di grande!</p>
                     <p style="text-align: center; text-transform: capitalize; font-style: italic;">Kallaari, KungKurth</p>
                 </div>
             </div>

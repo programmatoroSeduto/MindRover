@@ -96,7 +96,7 @@ $ganesh = "SEARCH";
 
                             <div class="form-container" style="margin-bottom: 0">
                                 <input type="text" name="a_author" id="a_author" placeholder="Autore dell'articolo" class="form" title="Occhio alle maiuscole e le minuscole!">
-                                <i class="fas fa-bookmark"></i>
+                                <i class="fas fa-user"></i>
                             </div>
 
                             <div class="form-container">

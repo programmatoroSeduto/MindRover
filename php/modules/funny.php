@@ -14,7 +14,8 @@ function funny()
     $funny[] = "Supremo imburratore";
     $funny[] = "É un uccello? É un ufo? No, è";
     $funny[] = "Sei stato eliminato da";
-    $funny[] = "L'incredibile pompelmo denonminato";
+    $funny[] = "L'incredibile pompelmo denominato";
+    $funny[] = "L'appena permabannato";
     $funny[] = "Il fantomatico profilo di";
     $funny[] = "Attenti, è davvero scarso";
     $funny[] = "Nascondete i bambini, è arrivato";

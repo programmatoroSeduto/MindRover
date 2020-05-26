@@ -30,12 +30,14 @@ $ganesh = "CROWDFUNDING";
         cursor: pointer; 
         font-size: xxx-large; 
         border: 0.4vh solid #8f281d;
+        font-family: "ganesh", sans-serif;
     }
 
     .btn:hover{
 
         background-color: whitesmoke;
-        transition: 0.5s
+        transition: 0.5s;
+        color: #8f281d;
     }
 
     </style>
@@ -94,7 +96,7 @@ else
 
         <!-- Bottone donazioni -->
         <div>
-            <div class="d text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/donation.php'" class="btn" class="sas">Fai subito una donazione!</b></div>
+            <div class="text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/donation.php'" class="btn" class="sas">Fai subito una donazione!</b></div>
         </div>
         
     </div>
@@ -233,7 +235,7 @@ else
 
         <!-- Bottone donazioni -->
         <div>
-            <div class="d text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/donation.php'" class="btn">Fai subito una donazione!</b></div>
+            <div class="text-content modifica" style="transform: skewX(-15deg);"><b onclick="location.href='../HTML/donation.php'" class="btn">Fai subito una donazione!</b></div>
         </div>
         
     </div>

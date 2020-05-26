@@ -263,7 +263,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => 31
     ),
-    'donazioni' => array(230, 30, 20)
+    'donazioni' => array(130, 30, 20)
 );
 
 $data[] = array(
@@ -280,7 +280,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => 33
     ),
-    'donazioni' => array(230, 30, 20)
+    'donazioni' => array(10, 30, 20)
 );
 
 
