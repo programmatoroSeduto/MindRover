@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transazione in corso ...</title>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/carousel.js"></script>
+
 </head>
 <body style="background-color:rgb(224, 224, 224)">
     
@@ -12,13 +17,20 @@
         <img src="../assets/img/payPal_logo.jpg" style="margin: auto; max-width: 40vw;">
         <p style="font-size: 3rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 1rem;">Transazione in corso ...</p>
     </div>
+    <script>
+        $(document).ready(function(){
+            setTimeout(function(){
+                window.location.href = end_url;
+            }, 1500);
+        });
+    </script>
 
 </body>
 </html>
 
 <?php
 
-var_dump($_GET);
+//var_dump($_GET);
         
 //controlla che sia stato effettuato l'accesso
 session_start();
@@ -53,8 +65,8 @@ if(pay())
 {
     //registra la donazione
     //var_dump($_SESSION);
-    echo 'ritorna ' . $table_profili->setSupporter($_SESSION['user_id'], true);
-    echo 'ritorna ' . $table_donazioni->recordDonation($_SESSION['user_id'], $_GET['amount']);
+    $table_profili->setSupporter($_SESSION['user_id'], true);
+    $table_donazioni->recordDonation($_SESSION['user_id'], $_GET['amount']);
 }
 else
 {
@@ -66,7 +78,7 @@ else
 $_SESSION['crowdfunding_donation_list'] = $table_donazioni->getDonationListFrom($_SESSION['user_id']);
 //header('location: ../html/profiloprivato.php');
 echo '<script>';
-
+    echo 'var end_url = "../html/profiloprivato.php";';
 echo '</script>';
 
 ?>
