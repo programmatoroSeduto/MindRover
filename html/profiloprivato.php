@@ -633,7 +633,20 @@ if($is_author)
             
             <!-- Postare un nuovo articolo -->
             <div class="tabcontent kali" id="s5">
-                
+                <div style="display: block;">
+                    <h1>Ehi! Vuoi scrivere un nuovo articolo?</h1>
+                    <p>Fantastico! Ti spiego come fare:</p>
+                    <ol>
+                        <li><b>Scrivi prima il tuo articolo!</b> E' sufficiente un documento word, o anche uno scanner del tuo scritto. <br> Puoi anche inviarci direttamente il documento in formato HTML, per darci un'idea più precisa di come dovrà apparire all'utente il tuo articolo.</li>
+                        <li><b>Inviaci il tuo scritto.</b><br> Scrivimi, sono KungKurth, mi trovi sul motore di ricerca. La mia email è <i style="text-decoration: underline;">kung.autori@frogstudios.com</i> (per favore, niente spam o pacchi bomba ...)</li>
+                        <li><b>Sorseggia la tua bevanda preferita</b> mentre lavoriamo per pubblicare il tuo articolo.<br>Tipicamente impieghiamo una settimana per valutare e ottimizzare la grafica del tuo articolo (eh sì, siamo molto impegnati da queste parti); ti contatteremo per informarti su come procede il lavoro.</li>
+                        <li><b>Controlla la tua pubblicazione</b> e vantatene con gli amici.</li>
+                    </ol>
+                    <br>
+                    <h1>A te che ci supporti: <i>GRAZIE!</i></h1>
+                    <p>... altre parole di conforto? ...</p>
+                    <p style="text-align: center; text-transform: capitalize; font-style: italic;">Kallaari, KungKurth</p>
+                </div>
             </div>
             <?php endif ?>
 
