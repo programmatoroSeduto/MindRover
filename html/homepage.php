@@ -168,7 +168,7 @@ else
             </div>
 
             <!-- Notizia 3 -->
-            <div class="card news" style="background-image: url('../assets/avatar/jhin.png'); text-align: center;">
+            <div class="card news" style="background-image: url('../assets/img/jhin.jpg'); text-align: center;">
                 <div class="card-content" style="position: relative; font-size: large">
                     Intervista ai due CEO!
                     <div style="position: absolute; bottom: 5px; text-align: center; width: 100%; background-color: rgba(211, 211, 211, 0.548); border-radius: 3%; padding: 1vh">
