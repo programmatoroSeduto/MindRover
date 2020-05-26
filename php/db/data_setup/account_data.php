@@ -142,7 +142,7 @@ $data[] = array(
         'stato' => 'Dov\'è il mio BB?',
         'descrizione' => 'Fa ridere perchè Cliff Unger sembra "cliffhanger", e la mia identità è proprio un colpo di scena.',
         'flag_anonimo' => false,
-        'id_img_profilo' => -1
+        'id_img_profilo' => 32
     ),
     'donazioni' => array(60, 10, 20, 800, 760, 40)
 );

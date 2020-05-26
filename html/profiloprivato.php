@@ -1,7 +1,7 @@
 <?php
 session_start();
 $ganesh = "ACCOUNT";
-$dictator = false;
+$dictator = true;
 ?>
 
 <!DOCTYPE html>

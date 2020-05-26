@@ -228,7 +228,7 @@
     margin-bottom: 1rem
 }
 
-.tag-dictator
+/* .tag-dictator
 {
     background-color: blueviolet;
 }
@@ -237,7 +237,47 @@
 {
     color:white;
     margin-bottom: 1rem
+} */
+
+/* .tag-dictator
+{
+    background-color: black;
+    border: 0.1vh solid goldenrod;
+    color: goldenrod;
 }
+
+.tag-dictator i
+{
+    color:goldenrod;
+    margin-bottom: 1rem;
+} */
+
+/* .tag-dictator
+{
+    background-color: black;
+    border: 0.1vh solid rgb(10, 255, 0);
+    color: rgb(10, 255, 0);
+}
+
+.tag-dictator i
+{
+    color:rgb(10, 255, 0);
+    margin-bottom: 1rem;
+} */
+
+.tag-dictator
+{
+    background-image: linear-gradient(to right, black,rgb(10, 255, 0),black,rgb(10, 255, 0),black,rgb(10, 255, 0),black);
+    border: 0.1vh solid whitesmoke;
+    color: whitesmoke;
+}
+
+.tag-dictator i
+{
+    color:whitesmoke;
+    margin-bottom: 1rem;
+}
+
 
 .error
 {
