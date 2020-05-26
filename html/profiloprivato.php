@@ -578,6 +578,7 @@ if($is_author)
                                     <div>somma donazione</div>
                                     <div>confermata?</div>
                                 </div>';
+                            //var_dump($donation_table);die();
                             foreach($donation_table as $row)
                             {
                                 echo '<div style="padding: 10px; margin: 3px 0; background-color: rgb(212, 212, 212); display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; ">';

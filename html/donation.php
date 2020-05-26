@@ -39,13 +39,13 @@ require_once('../php/modules/navbar.php');
 </head>
 <body class="login-bg">
     <?php
-        if(isset($_SESSION['user_id']))
+        if(!isset($_SESSION['user_id']))
         {
-            header('location: ./profiloprivato.php');
+            header('location: ./login.php');
         }
         else
         {
-            get_public_navbar('LOGIN');
+            get_private_navbar('CROWDFUNDING');
         }
     ?>
     <div class="box">
@@ -58,12 +58,32 @@ require_once('../php/modules/navbar.php');
                     <input type="number" name="donation" id="amount" placeholder="Inserisci la somma che vuoi donare!" min="1.00" max="1000.00"class="form">
                     <i class="fas fa-coins" style="top: 2.2vh;"></i>
                 </div>
+                <p id="error" class="auth-error" style="text-align: right; font-size: 1rem; letter-spacing: 0.2rem; background-color: rgb(212, 211, 211); border-radius: 2.5%;">
+                    <?php
+                    if(isset($_GET['error']))
+                    {
+                        echo '<b>ERRORE</b>: ';
+                        switch($_GET['error'])
+                        {
+                            case 'no_amount':
+                                echo 'non hai inserito alcuna cifra!';
+                            break;
+                            default:
+                                echo 'errore tecnico. Prova più tardi...';
+                        }
+                    }
+                    else
+                        echo '';
+                    ?>
+                </p>
             </div>
         </form>
         
         <div style="display: flex; flex-direction: row;">
-        <img src="../assets/img/payPal_logo.png" style="flex: 1; max-width: 10rem; margin-left: 4rem"></img>
-        <div class="d text-content modifica" style="flex: 1; margin: auto; text-align: center; font-size: larger"><i onclick="window.location.href='../php/crowdfunding.php?amount='+ $('#amount').val();">Conferma donazione!</i></div>
+            <img src="../assets/img/payPal_logo.png" style="flex: 1; max-width: 10rem; margin-left: 4rem"></img>
+            <div class="d text-content modifica" style="flex: 1; margin: auto; text-align: center; font-size: larger">
+                <i onclick="window.location.href='../php/crowdfunding.php?amount='+ $('#amount').val();">Conferma donazione!</i>
+            </div>
         </div>
     </div>
 

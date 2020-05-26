@@ -59,7 +59,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => 4
     ),
-    'donazioni' => array(500, 250, 300, 24.50)
+    'donazioni' => array(500, 250, 300, 24)
 );
 
 $data[] = array(
@@ -76,7 +76,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
-    'donazioni' => array(500, 250.50, 300, 24.50)
+    'donazioni' => array(500, 250, 300, 24)
 );
 
 $data[] = array(
@@ -157,7 +157,7 @@ $data[] = array(
         'nome' => 'Lorenzo',
         'cognome' => 'Terranova',
         'stato' => '"This time I finally let you... Go."',
-        'descrizione' => 'Mi sono rotto il cazzo di contare quello che mangio, Giulia bastarda.',
+        'descrizione' => 'Mi sono cotto il razzo di contare quello che mangio, Giulia mostarda.',
         'flag_anonimo' => false,
         'id_img_profilo' => 15
     ),
@@ -173,8 +173,8 @@ $data[] = array(
         'nickname' => 'pep_PINO',
         'nome' => 'Giuseppe',
         'cognome' => 'Inguastato',
-        'stato' => '"Ci sono molte cose che mi piacciono, ma IL CAZZO è ciò che mi ispira."',
-        'descrizione' => 'Mi chiamo Giuseppe però le arance me le infilo nel culo lo stesso.',
+        'stato' => '"Ci sono molte cose che mi piacciono, ma IL QUADRO è ciò che mi ispira."',
+        'descrizione' => 'Mi chiamo Giuseppe però le arance me le infilo nel baule lo stesso.',
         'flag_anonimo' => false,
         'id_img_profilo' => 14
     ),
@@ -191,7 +191,7 @@ $data[] = array(
         'nome' => 'Nicola',
         'cognome' => 'Scarpino',
         'stato' => '"Qualcuno ha detto SCARPA?"',
-        'descrizione' => 'Mi piacciono le scarpe, gli scarponi, gli scarpini, i sandali, le infradito, il cazzo, e i piedini di Giulia.',
+        'descrizione' => 'Mi piacciono le scarpe, gli scarponi, gli scarpini, i sandali, le infradito, il matto, e i nani da giardino di Giulia.',
         'flag_anonimo' => false,
         'id_img_profilo' => 11
     ),

@@ -165,8 +165,11 @@ class Donazioni
         $query = 'INSERT INTO donazioni (id_utente, somma_donazione) VALUES (?, ?) ;';
 
         //inserimento (prepared statement)
-        $dbms_op = $this->dbms->prepare($query);
-        if(!$dbms_op->bind_param("ss", $user_id, $amount))
+        if(!$dbms_op = $this->dbms->prepare($query))
+        {
+            return -1;
+        }
+        if(!$dbms_op->bind_param("id", $user_id, $amount))
         {
             return $this->dbms->errno;
         }
