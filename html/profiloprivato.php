@@ -132,7 +132,7 @@ if($is_author)
                         </div>
                         <div class="modal-body">
                             <div style="min-height: 50vh; max-height: 50vh; overflow-y: scroll; padding: 3vh 3vh; display: flex; flex-direction: column;">
-                                <!-- <div style="min-height: 2.5rem;"></div> -->
+                                
                                 <?php
                                     foreach($imgProfilo_stili as $stile)
                                     {
@@ -148,7 +148,7 @@ if($is_author)
                                         echo '</div>';
                                     }
                                 ?>
-                                <!-- <div style="min-height: 2.5rem;"></div> -->
+                                
                             </div>
                         </div>
                         <div class="modal-footer"><!-- solo per decorazione --></div>
@@ -334,12 +334,12 @@ if($is_author)
                                                 <input type="email" name="email" placeholder="La tua nuova email" class="form">
                                                 <i class="fas fa-envelope"></i>
                                             </div>
-                                            <!-- <label for="email">La tua nuova email: </label><input type="email" name="email"><br> -->
+                                            
                                             <div class="form-container">
                                                 <input type="password" name="password" placeholder="Conferma inserendo la tua password" class="form">
                                                 <i class="fas fa-key"></i>
                                             </div>
-                                            <!-- <label for="password">Per conferma, devi inserire anche la tua password: </label><input type="password" name="password"> -->
+                                            
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -368,22 +368,22 @@ if($is_author)
                                                 <input type="password" name="new_password" placeholder="La tua nuova password" class="form">
                                                 <i class="fas fa-key"></i>
                                             </div>
-                                            <!-- <label for="new_password">La tua nuova password: </label><input type="password" name="new_password"><br> -->
+
                                             <div class="form-container">
                                                 <input type="password" name="confirm_password" placeholder="Conferma la tua nuova password" class="form">
                                                 <i class="fas fa-key"></i>
                                             </div>
-                                            <!-- <label for="confirm_password">Conferma la tua nuova password: </label><input type="password" name="confirm_password"><br> -->
+
                                             <div class="form-container">
                                                 <input type="email" name="email" placeholder="Conferma inserendo la tua email" class="form">
                                                 <i class="fas fa-envelope"></i>
                                             </div>
-                                            <!-- <label for="email">Per conferma, devi inserire anche la tua email: </label><input type="email" name="email"><br> -->
+
                                             <div class="form-container">
                                                 <input type="password" name="password" placeholder="La tua attuale password" class="form">
                                                 <i class="fas fa-key"></i>
                                             </div>
-                                            <!-- <label for="password">Serve anche la tua attuale password: </label><input type="password" name="password"> -->
+
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -424,7 +424,6 @@ if($is_author)
                                                 <input type="text" name="nickname" placeholder="Un nuovo incredibile nickname" class="form">
                                                 <i class="fas fa-user"></i>
                                             </div>
-                                            <!-- <label for="nickname">Nuovo nickname: </label><input type="text" name="nickname"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -453,7 +452,6 @@ if($is_author)
                                                     <input type="text" name="firstname" placeholder="Hai davvero cambiato nome?" class="form">
                                                     <i class="fas fa-signature"></i>
                                                 </div>
-                                                <!-- <label for="firstname">Nuovo nome: </label><input type="text" name="firstname"><br> -->
                                                 <br>
                                                 <div>
                                                     <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -482,7 +480,6 @@ if($is_author)
                                                 <input type="text" name="lastname" placeholder="Hai davvero cambiato cognome?" class="form">
                                                 <i class="fas fa-signature"></i>
                                             </div>
-                                            <!-- <label for="lastname">Nuovo cognome: </label><input type="text" name="lastname"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -513,7 +510,6 @@ if($is_author)
                                                 <input type="text" name="status" placeholder="Una citazione acculturata, magari?" class="form">
                                                 <i class="fas fa-comment"></i>
                                             </div>
-                                            <!-- <label for="status">Nuovo stato: </label><input type="text" name="status"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>
@@ -544,7 +540,6 @@ if($is_author)
                                                 <input type="text" name="description" placeholder="Parlaci di te, non so, dicci se hai dei cani." class="form">
                                                 <i class="fas fa-book-open"></i>
                                             </div>
-                                            <!-- <label for="description">Descrizione: </label><input type="text" name="description"><br> -->
                                             <br>
                                             <div>
                                                 <input class="d text-content modifica" type="submit" value="Applica" style="background-color: transparent; border-style: none;"></input>

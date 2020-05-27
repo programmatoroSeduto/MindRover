@@ -6,26 +6,6 @@ echo '<br><br>';
 echo '>> --- IMPORTAZIONE Account utente --- <<';
 echo '<br><br><br><br><br>';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 $data[] = array(
     'credenziali' => array(
@@ -51,7 +31,7 @@ $data[] = array(
         'password' => 'abc'
     ),
     'profilo' => array(
-        'nickname' => 'signorSignaro',
+        'nickname' => 'SignorSignaro',
         'nome' => 'Bella',
         'cognome' => 'Greg',
         'stato' => 'la password è abc.',
@@ -59,7 +39,7 @@ $data[] = array(
         'flag_anonimo' => false,
         'id_img_profilo' => 4
     ),
-    'donazioni' => array(500, 250, 300, 24)
+    'donazioni' => array(5, 25, 3, 24)
 );
 
 $data[] = array(
@@ -69,14 +49,14 @@ $data[] = array(
     ),
     'profilo' => array(
         'nickname' => 'BellaGreg',
-        'nome' => 'Bella',
-        'cognome' => 'Greg',
+        'nome' => 'Depennato',
+        'cognome' => 'Miazza',
         'stato' => 'Bella greg?',
         'descrizione' => 'Bella greg.',
         'flag_anonimo' => false,
         'id_img_profilo' => -1
     ),
-    'donazioni' => array(500, 250, 300, 24)
+    'donazioni' => array(5, 25, 3, 24)
 );
 
 $data[] = array(

@@ -22,10 +22,6 @@ body {
   margin: 0;
 }
 
-/* section {
-  height: 100vh;
-} */
-
 /*-------------Helpers-------------*/
 .skew {
   transform: skew(-20deg);

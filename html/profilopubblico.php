@@ -106,21 +106,6 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f61875768d.js" crossorigin="anonymous"></script>
 
-    <style>
-
-        .example::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Hide scrollbar for IE,Edge e Firefox  */
-        .example {
-            overflow: auto;
-            -ms-overflow-style: none;
-            scrollbar-width: none; /* Firefox 64 */
-        }      
-
-    </style>
-
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>

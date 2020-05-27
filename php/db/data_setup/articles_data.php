@@ -49,7 +49,7 @@ $data[] = array(
 
 $data[] = array(
     'nickname_autore' => 'PetardoIndiano777',
-    'titolo' => 'Ma lo sapevi che kickstarter shaman yr thundercats aesthetic heirloom?',
+    'titolo' => 'Ma lo sapevi che i kickstarter shaman stanno nei thundercats aesthetic?',
     'sottotitolo' => 'Tutti dovrebbero saperlo. Finalmente è stato dimostrato, era solo qeustione di tempo prima che vaporware freegan brunch cray fixie.',
     'descrizione' => 'Sconcertante! Trapanante! Supercalifragilistichespiralidosante!',
     'data_pubblicazione' => 1590400631, //lascia -1 per avere come data di pubblicazione quella dell'installazione del database

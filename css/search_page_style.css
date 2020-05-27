@@ -24,7 +24,6 @@
 
 .result-item-article
 {
-    /* flex: 1; */
     margin-top: 4vh;
     background-color: white;
     min-height: 20vh;
@@ -37,7 +36,6 @@
 
 .result-item-user
 {
-    /* flex: 1; */
     margin-top: 4vh;
     background-color: white;
     min-height: 16vh;
@@ -106,7 +104,6 @@
 
 .search-settings-button
 {
-    /* background: linear-gradient(45deg, #8f281d, #da4112); */
     background-color: #da4112;
     display: flex; 
     flex-direction: column-reverse;
@@ -172,7 +169,7 @@
 .tag-tag i
 {
     color:rgb(255, 0, 160);
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 .tag-dictator
@@ -199,7 +196,7 @@
 .ria-info
 {
     padding: 1.5rem 3rem;
-    font-family: ganesh;
+    font-family: 'ganesh';
 }
 
 .ria-info div h1
@@ -225,7 +222,7 @@
 .riu-info
 {
     padding: 1.5rem 3rem;
-    font-family: ganesh
+    font-family: 'ganesh';
 }
 
 .riu-info h1
@@ -253,7 +250,6 @@
 }
 
 .form-container{
-    /* margin-bottom: 1vh; */
     position: relative;
 }
 

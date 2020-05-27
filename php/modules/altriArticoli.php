@@ -15,22 +15,22 @@ if(count($res) < 4)
 $altri_articoli = array(
     array(
         'titolo' => 'titolo',
-        'immagine_path' => '../assets/img/news-rane.jpg',
+        'immagine_path' => '../assets/img/pattr.jpg',
         'url' => '#'
     ),
     array(
         'titolo' => 'titolo',
-        'immagine_path' => '../assets/img/news-rane.jpg',
+        'immagine_path' => '../assets/img/pattr.jpg',
         'url' => '#'
     ),
     array(
         'titolo' => 'titolo',
-        'immagine_path' => '../assets/img/news-rane.jpg',
+        'immagine_path' => '../assets/img/pattr.jpg',
         'url' => '#'
     ),
     array(
         'titolo' => 'titolo',
-        'immagine_path' => '../assets/img/news-rane.jpg',
+        'immagine_path' => '../assets/img/pattr.jpg',
         'url' => '#'
     )
 );

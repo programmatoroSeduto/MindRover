@@ -38,20 +38,6 @@
     max-height: 75vh;
 }
 
-/* .loginform-body
-{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    row-gap: 0.8rem;
-} */
-
-/* .registrationform-body
-{
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    row-gap: 0.8rem;
-} */
-
 .registrationform-body label
 {
     line-height: 4vh;
