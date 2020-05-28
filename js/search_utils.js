@@ -124,7 +124,7 @@ function showResults(data)
     {
         //nessun risultato
         var descr = 'Questo è un articolo che parla del fatto che non hai trovato nessun risultato sul motore di ricerca... hai capito bene.';
-        $('#search-body').append(getArticleHTML('#', 'Nessun risultato. Spiace? Spiace.', 'KungKurth', '29/09/1995 alle 17.43', descr, ['nessun', 'risultato', 'spiace?', 'spiace.'],  false));
+        $('#search-body').append(getArticleHTML('./articolo.php?code=16', 'Nessun risultato. Spiace? Spiace.', 'KungKurth', '29/09/1995 alle 17.43', descr, ['nessun', 'risultato', 'spiace?', 'spiace.'],  false));
     }
 }
 
