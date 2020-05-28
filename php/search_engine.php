@@ -505,7 +505,7 @@ if($use_users_search)
         $user_obj_json->url = $baseURL . '?' . 'code=' . $id;
         $user_obj_json->nick = $data['nickname'];
         $user_obj_json->status = $data['stato'];
-        $user_obj_json->style = $stili->getStyle($data['id_utente']);
+        $user_obj_json->style = $stili->getStyle($data['id_img_profilo']);
         $user_obj_json->flag_supporter = $data['flag_supporter'];
         $user_obj_json->flag_author = $data['flag_autore'];
 

@@ -38,11 +38,11 @@ function openSession($user_id, $email, $password, $pass_hash, $profiliUtenti, $d
         //a che tier appartiene
         $tier_3 = 99;
         $tier_2 = 199;
-        if($crowdfunding_count > 0)
+        if($_SESSION['crowdfunding_sum'] > 0)
         {
-            if($crowdfunding_count > $tier_3)
+            if($_SESSION['crowdfunding_sum'] > $tier_3)
             {
-                if($crowdfunding_count > $tier_3)
+                if($_SESSION['crowdfunding_sum'] > $tier_2)
                 {
                     $_SESSION['crowdfunding_tier'] = 1;
                 }

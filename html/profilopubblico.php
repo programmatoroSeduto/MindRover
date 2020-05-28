@@ -17,6 +17,7 @@ elseif(!is_numeric($_GET['code']))
     die();
 }
 ?>
+
 <?php
 require_once('../php/modules/navbar.php');
 require_once('../php/db/mysql_credentials.php');
@@ -30,7 +31,7 @@ $stile = new ImgProfilo($dbms);
 $donazioni = new Donazioni($dbms);
 
 $profilo = $profilo->getProfileDataById($_GET['code']);
-$stile = $stile->getStyle($_GET['code']);
+$stile = $stile->getStyle($profilo['id_img_profilo']);
 if(!$profilo || !$stile)
 {
     //header('location: ./comingsoon.php');
@@ -43,26 +44,27 @@ $my_tier = 0;
 {
     $tier_3 = 99;
     $tier_2 = 199;
-    if($donazioni > $tier_2)
+    if($donazioni > 0)
     {
-        $my_tier = 1;
-    }
-    elseif($donazioni > $tier_3)
-    {
-        $my_tier = 2;
-    }
-    elseif($donazioni > 0)
-    {
-        $my_tier = 3;
+        if($donazioni > $tier_3)
+        {
+            if($donazioni > $tier_2)
+            {
+                $my_tier = 1;
+            }
+            else
+                $my_tier = 2;
+        }
+        else
+            $my_tier = 3;
     }
 }
-
 $tier_icon = array
 (
     '',
-    /* -- TIER 1 -- */'<img class="brahma-tier" src="../assets/img/scambio.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
+    /* -- TIER 1 -- */'<img class="brahma-tier" src="../assets/img/logo.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
     /* -- TIER 2 -- */'<img class="brahma-tier" src="../assets/img/imbrogliona.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
-    /* -- TIER 3 -- */'<img class="brahma-tier" src="../assets/img/logo.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">'
+    /* -- TIER 3 -- */'<img class="brahma-tier" src="../assets/img/scambio.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
 );
 
 $banner_rgb = implode(', ', $stile['banner']);
@@ -84,6 +86,8 @@ $last_name = $profilo['last_name'];
 
 $date_subscr = (new DateTime($profilo['data_iscrizione']))->format('d/m/Y');
 $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
+
+
 ?>
 
 <!DOCTYPE html>
@@ -154,6 +158,10 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
                     <p> <span class="userinfo-tag tag-dictator"><i class="fas fa-frog"></i> dittatore supremo </span> </p>
                 <?php endif ?>
             </div>
+
+            <div>
+                <?php echo $tier_icon[$my_tier];?>
+            </div>
         </div>
     </div>
 
@@ -185,7 +193,7 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
 
             <?php if($is_author): ?>
                 <!-- voci riservate agli autori -->
-                <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('I miei articoli');">Gli Articoli di barbagianni</button>
+                <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('I miei articoli');">Gli Articoli di <?php echo $nickname; ?></button>
             <?php endif ?>
         </div>
 
