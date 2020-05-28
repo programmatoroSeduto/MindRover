@@ -32,8 +32,10 @@ $profilo = (new ProfiliUtenti($dbms))->getProfileDataById($articolo['id_autore']
 $titolo = $articolo['titolo'];
 $sottotitolo = $articolo['sottotitolo'];
 $nick_autore = $profilo['nickname'];
-$data_pubblicazione = (new DateTime($profilo['data_iscrizione']))->format('d/m/Y');
-$ora_pubblicazione = (new DateTime($profilo['data_iscrizione']))->format('h:m');
+
+$data_pub = date_create($articolo['data_pubblicazione']); 
+$data_pubblicazione = date_format($data_pub, 'd/m/Y');
+$ora_pubblicazione = date_format($data_pub, 'H:i');
 
 $tags = explode(';', $articolo['lista_tag']);
 function inserisci_tag($tag)
