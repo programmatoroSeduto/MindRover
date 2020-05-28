@@ -25,7 +25,8 @@ require_once('../php/modules/navbar.php');
 
     <style>
 
-    .h2Donation{
+    .h2Donation
+    {
         font-family: ganesh; 
         line-height: 2rem; 
         padding: 1vh 0; 
@@ -42,6 +43,7 @@ require_once('../php/modules/navbar.php');
         if(!isset($_SESSION['user_id']))
         {
             header('location: ./login.php');
+            die();
         }
         else
         {

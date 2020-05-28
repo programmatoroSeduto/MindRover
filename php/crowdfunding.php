@@ -68,7 +68,7 @@
         $(document).ready(function(){
             setTimeout(function(){
                 window.location.href = end_url;
-            }, 2000);
+            }, 1000);
         });
     </script>
 
@@ -4229,6 +4229,12 @@ if(!isset($_GET['amount']))
 $_GET['amount'] = sanitize($_GET['amount']);
 //echo 'amount = ' . $_GET['amount'] . ' ';
 
+if($_GET['amount'] < 0)
+{
+    header('location: ../html/donation.php');
+    die();
+}
+
 //effettua il pagamento con qualche servizio di pagamento ...
 if(pay())
 {
@@ -4244,7 +4250,25 @@ else
     die();
 }
 
+$_SESSION['crowdfunding_supporter'] = true;
 $_SESSION['crowdfunding_donation_list'] = $table_donazioni->getDonationListFrom($_SESSION['user_id']);
+$_SESSION['crowdfunding_count'] = count($_SESSION['crowdfunding_donation_list']);
+$_SESSION['crowdfunding_sum'] = $table_donazioni->getDonationAmountFrom($_SESSION['user_id']);
+
+$tier_3 = 99;
+$tier_2 = 199;
+if($_SESSION['crowdfunding_sum'] > $tier_3)
+{
+    if($_SESSION['crowdfunding_sum'] > $tier_2)
+    {
+        $_SESSION['crowdfunding_tier'] = 1;
+    }
+    else
+        $_SESSION['crowdfunding_tier'] = 2;
+}
+else
+    $_SESSION['crowdfunding_tier'] = 3;
+
 //header('location: ../html/profiloprivato.php');
 echo '<script>';
     echo 'var end_url = "../html/profiloprivato.php";';
