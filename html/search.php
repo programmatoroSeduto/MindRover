@@ -88,7 +88,7 @@ $ganesh = "SEARCH";
 
                 <div class="search-inner-panel">
                     <div id="search-settings-panel-1" class="panel">
-                        <div style="display: grid; grid-template-rows: 1fr 1fr 1fr 1fr; overflow: scroll;">
+                        <div style="display: grid; grid-template-rows: 1fr 1fr 1fr 1fr;">
                             <div class="form-container">
                                 <input type="text" name="a_title" id="a_title" placeholder="Titolo articolo" class="form">
                                 <i class="fas fa-book-open"></i>

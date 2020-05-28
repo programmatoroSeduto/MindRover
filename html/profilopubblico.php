@@ -63,7 +63,7 @@ $tier_icon = array
 (
     '',
     /* -- TIER 1 -- */'<img class="brahma-tier" src="../assets/img/logo.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
-    /* -- TIER 2 -- */'<img class="brahma-tier" src="../assets/img/imbrogliona.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
+    /* -- TIER 2 -- */'<img class="brahma-tier" src="../assets/img/imbrogliona.png" style="width: 7vh; height: 7vh; margin: 8vh 0; margin-left: 3vw;">',
     /* -- TIER 3 -- */'<img class="brahma-tier" src="../assets/img/scambio.png" style="width: 7vh; margin: 8vh 0; margin-left: 3vw;">',
 );
 

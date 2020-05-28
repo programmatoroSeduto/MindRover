@@ -70,7 +70,7 @@ $ganesh = "COMINGSOON";
 
     ?>
 
-    <div style="min-height: 25vh; text-align: center; font-size: 1.5rem;">
+    <div style="min-height: 25vh; text-align: center; font-size: 1.5rem; margin-top: 4rem">
         <?php
         if(isset($_GET['error']))
         {
@@ -88,7 +88,7 @@ $ganesh = "COMINGSOON";
         }
         else
         {
-            echo '<br><br><br><p title="Se hai riconosciuto questa citazione, sei pronto per diventare una rana come noi.">Immagina la più bella pagina che tu abbia mai visto. Tu la sogni, noi la creiamo. <br> A meno che non abbia troppe dita, in quel caso è dura.<br><i>KungKurth</i></p>';
+            echo '<p title="Se hai riconosciuto questa citazione, sei pronto per diventare una rana come noi.">Immagina la più bella pagina che tu abbia mai visto. Tu la sogni, noi la creiamo. <br> A meno che non abbia troppe dita, in quel caso è dura.<br><i>KungKurth</i></p>';
         }
         ?>
     </div>

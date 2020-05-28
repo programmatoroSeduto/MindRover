@@ -241,7 +241,7 @@ $data[] = array(
         'stato' => '"<3"',
         'descrizione' => 'Sono una trippona che tiene segreta la sua vera identità...',
         'flag_anonimo' => false,
-        'id_img_profilo' => 31
+        'id_img_profilo' => 35
     ),
     'donazioni' => array(130, 30, 20)
 );
