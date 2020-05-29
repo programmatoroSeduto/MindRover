@@ -42,7 +42,7 @@ require_once('../php/modules/navbar.php');
     <?php
         if(!isset($_SESSION['user_id']))
         {
-            header('location: ./login.php');
+            header('location: ./login.php?info=crowdfunding_no_login');
             die();
         }
         else

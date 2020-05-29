@@ -80,6 +80,17 @@ require_once('../php/modules/navbar.php');
                             }
                             echo '<p>';
                         }
+                        elseif(isset($_GET['info']))
+                        {
+                            switch($_GET['info'])
+                            {
+                                case 'crowdfunding_no_login':
+                                    echo '<p><b>Attenzione:</b> ';
+                                    echo 'devi essere loggato per poter fare una donazione.';
+                                    echo '<p>';
+                                break;
+                            }
+                        }
                         else
                         {
                             echo '';

@@ -68,7 +68,7 @@
         $(document).ready(function(){
             setTimeout(function(){
                 window.location.href = end_url;
-            }, 1000);
+            }, 1500);
         });
     </script>
 
