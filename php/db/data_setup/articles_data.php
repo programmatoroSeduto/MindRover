@@ -19,7 +19,7 @@ $data[] = array(
     'titolo' => '',
     'sottotitolo' => '',
     'descrizione' => '',
-    'data_pubblicazione' => '',
+    'data_pubblicazione' => strtotime('1 january 2020 00:00:00'),
     'lista_tag' => array
     (
         ''
@@ -378,7 +378,7 @@ $data[] = array(
     'titolo' => 'Frog Studios e... I Cupcake!',
     'sottotitolo' => 'Un articolo a caso sui cupcake.',
     'descrizione' => 'Mi chiamo AragostaIrachena e davvero pensi che un articolo sui cupcake sia strano?',
-    'data_pubblicazione' => 1444474631,
+    'data_pubblicazione' => strtotime('15 February 2019 13:15:14'),
     'lista_tag' => array
     (
         'aragosta',
@@ -407,7 +407,7 @@ $data[] = array(
     'titolo' => 'Intervista ai due CEO!',
     'sottotitolo' => 'I due volti (e che volti) della Frog Studios.',
     'descrizione' => 'La Frog Studios l\'abbiamo creata noi, animali. E adesso vi forniremo una carrellata di aneddoti imbarazzanti a riguardo',
-    'data_pubblicazione' => 1444474631,
+    'data_pubblicazione' => strtotime('15 January 2019 13:15:14'),
     'lista_tag' => array
     (
         'aragosta',
@@ -438,7 +438,7 @@ $data[] = array(
     'titolo' => 'Nessun risultato. Spiace? Spiace.',
     'sottotitolo' => 'Questo è un articolo che parla del fatto che non hai trovato nessun risultato sul motore di ricerca... hai capito bene.',
     'descrizione' => 'Questo è un articolo che parla del fatto che non hai trovato nessun risultato sul motore di ricerca... hai capito bene.',
-    'data_pubblicazione' => 812329200,
+    'data_pubblicazione' => strtotime('29 September 1995 21:47:16'),
     'lista_tag' => array
     (
         'aragosta',
