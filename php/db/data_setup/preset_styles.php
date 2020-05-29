@@ -267,6 +267,35 @@ $data[] = array(
     'colore2' => array(0, 0, 0)
 );
 
+$data[] = array(
+    'path' => '../assets/avatar/jack.png', 
+    'banner' => array(165, 30, 30),
+    'colore1' => array(20, 40, 60),
+    'colore2' => array(0, 0, 0)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/burns.jpeg', 
+    'banner' => array(0, 123, 97),
+    'colore1' => array(40, 80, 120),
+    'colore2' => array(0, 0, 0)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/v.png', 
+    'banner' => array(247, 197, 197),
+    'colore1' => array(80, 160, 240),
+    'colore2' => array(160, 32, 48)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/kallari.png', 
+    'banner' => array(90, 0, 0),
+    'colore1' => array(180, 0, 0),
+    'colore2' => array(255, 105, 0)
+);
+
+
 //inserimento nel database
 //require_once('../ImgProfilo.php');
 //require_once('../mysql_credentials.php');

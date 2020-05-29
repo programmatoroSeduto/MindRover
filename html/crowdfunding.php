@@ -200,7 +200,7 @@ else
         
         <div class="text-content">
             Con "collezione" ci riferiamo ai contenuti disponibili all’uscita del mindROVER, escluse quindi le pubblicazioni future. 
-            Per consultare la lista dei progetti che saranno commercializzati assieme all’uscita del mindRover, passa da <i>qui</i>.
+            Per consultare la lista dei progetti che saranno commercializzati assieme all’uscita del mindRover, passa dalla sezione notizie!
             <br><br>Quando parliamo di early access a contenuti come le demo, intendiamo la possibilità di utilizzare i prodotti che 
             usciranno per mindROVER, in anteprima, sul vostro computer. In questo modo, potrete provare in anteprima giochi e applicazioni 
             in corso di sviluppo, anche per iniziare a farvi un’idea di dove il mindROVER andrà a parare. E tutto questo già da adesso!
