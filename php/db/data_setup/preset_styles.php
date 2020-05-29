@@ -302,6 +302,21 @@ $data[] = array(
     'colore2' => array(124, 255, 255)
 );
 
+$data[] = array(
+    'path' => '../assets/avatar/sb.jpg', 
+    'banner' => array(0, 150, 230),
+    'colore1' => array(0, 255, 255),
+    'colore2' => array(0, 45, 205)
+);
+
+$data[] = array(
+    'path' => '../assets/avatar/consuela.jpg', 
+    'banner' => array(196, 206, 0),
+    'colore1' => array(0, 255, 255),
+    'colore2' => array(0, 45, 205)
+);
+
+
 
 
 //inserimento nel database

@@ -193,11 +193,11 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
         </script>
         <div class="tab">
             <!-- voci generali per il profilo privato -->
-            <button class="tablinks active" onclick="activator('#s1', this); changeTitlePage('Benvenuto <?php echo $nickname; ?>!');"><?php echo $nickname; ?></button>
+            <button class="tablinks active" onclick="activator('#s1', this); changeTitlePage('<?php echo $nickname; ?>');"><?php echo $nickname; ?></button>
 
             <?php if($is_author): ?>
                 <!-- voci riservate agli autori -->
-                <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('I miei articoli');">Gli Articoli di <?php echo $nickname; ?></button>
+                <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('Articoli di <?php echo $nickname; ?>');">Gli Articoli di <?php echo $nickname; ?></button>
             <?php endif ?>
         </div>
 

@@ -78,15 +78,50 @@ $data[] = array(
 
 $data[] = array(
     'credenziali' => array(
-        'email' => 'killing.wendy@',
-        'password' => ''
+        'email' => 'killing.wendy@shining.sas',
+        'password' => 'subito'
     ),
     'profilo' => array(
         'nickname' => 'iTzJohnny',
         'nome' => 'Jack',
         'cognome' => 'Torrance',
         'stato' => 'Wendy, non hai sentito il mio toc toc?',
-        'descrizione' => 'Sono un amorevole padre di famiglia che vive per sua moglie e il suo splendido bambino. Ho una passione sfrenata per la falegnameria e',
+        'descrizione' => 'Sono un amorevole padre di famiglia che vive per sua moglie e il suo splendido bambino. Ho una passione sfrenata per la falegnameria e le accette.
+        <br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>
+        Tutto lavoro e niente svago rendono Jack un ragazzo annoiato.<br>',
+
         'flag_anonimo' => false,
         'id_img_profilo' => 37
     ),
@@ -119,7 +154,7 @@ $data[] = array(
         'nickname' => 'V',
         'nome' => 'Guy',
         'cognome' => 'Fawkes',
-        'stato' => 'Nascondi ciò che sono e aiutami a trovare la maschera più adatta alle mie intenzioni.',
+        'stato' => '"Nascondi ciò che sono e aiutami a trovare la maschera più adatta alle mie intenzioni."',
         'descrizione' => 'Io sono il frutto di ciò che mi è stato fatto. È la legge fondamentale dell\'universo, a ogni azione corrisponde una reazione uguale e contraria.',
         'flag_anonimo' => false,
         'id_img_profilo' => 39
@@ -188,7 +223,10 @@ $data[] = array(
         'nome' => 'Lorenzo',
         'cognome' => 'Terranova',
         'stato' => '"This time I finally let you... Go."',
-        'descrizione' => 'Stavo tenendo conto di ogni mia colazione ma alla fine mi sono stancato, basta.',
+        'descrizione' => 'Stavo tenendo conto di ogni mia colazione ma alla fine mi sono stancato, basta.<br>
+        Il CSS è bello, ma fa schifo.<br>
+        Studi recenti mi fanno affermare con certezza che le scritture sataniche siano interpretabili dall\'HTML.<br>
+        Alla mia laurea ringrazierò la Riot Games per avermi insegnato come NON si programma.',
         'flag_anonimo' => false,
         'id_img_profilo' => 15
     ),
@@ -384,6 +422,29 @@ $data[] = array(
         'descrizione' => 'Io sono il sergente maggiore Hartman, vostro Capo Istruttore. Da questo momento potete parlare soltanto quando vi sarà richiesto, e la prima e l\'ultima parola che dovrà uscire dalle vostre fogne sarà "Signore". Tutto chiaro luridissimi vermi?',
         'flag_anonimo' => false,
         'id_img_profilo' => 41
+    ),
+    'donazioni' => array()
+);
+
+$data[] = array(
+    'credenziali' => array(
+        'email' => 'consuela@gmail.mx',
+        'password' => 'supermannocasa'
+    ),
+    'profilo' => array(
+        'nickname' => 'Consuela',
+        'nome' => 'Consuela',
+        'cognome' => 'sconosciuto',
+        'stato' => 'Nooooooooooooooooooooooooo, noooooooo. No.',
+        'descrizione' => '<b>Signor Superman no casa...</b><br>
+        <i>Senta, stiamo cercando un bambino...</i><br>
+        <b>No continua, Signor Superman lui no qui, no casa...</b><br>
+        <i>Sì, va bene, va bene... Può dargli almeno questo volantino?</i><br>
+        <b>Grazie nooooo, noooo io non compra, io non ha soldi.</b><br>
+        <i>Coraggio, lo prenda! E se vede questo bambino...</i><br>
+        <b>Nooooooo, io deto nooooooooooo...</b><br>',
+        'flag_anonimo' => false,
+        'id_img_profilo' => 43
     ),
     'donazioni' => array()
 );

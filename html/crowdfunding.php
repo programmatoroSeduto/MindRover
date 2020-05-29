@@ -92,12 +92,12 @@ else
         </h1>
 
         <div class="text-content">
-            Un progetto ambizioso e dispendioso come quello del mindROVER ha bisogno di più supporto possibile.
-            Ed è anche per questo che chiunque, anche tu, puoi aiutarci con una donazione! Non devi essere necessariamente un grosso 
-            imprenditore, accettiamo ed apprezziamo anche un semplice ragazzo che crede in noi e ci offre virtualmente un caffè donandoci 
+            <p>Un progetto ambizioso e dispendioso come quello del mindROVER ha bisogno di più <b>supporto</b> possibile.
+            Ed è anche per questo che chiunque - <i>anche tu</i> - può aiutarci con una donazione! Non devi essere necessariamente un grosso 
+            imprenditore; accettiamo ed apprezziamo anche un semplice ragazzo che crede in noi e ci offre virtualmente un caffè donandoci 
             qualche euro.
             <br><br>Se invece fossi interessato a supportarci in maniera più decisiva, continua a leggere per scoprire cosa propone il 
-            nostro programma di crowdfunding! 
+            nostro <b>programma di crowdfunding!</b></p>
         </div>
 
         <!-- Bottone donazioni -->
@@ -116,9 +116,9 @@ else
     <div class="text-container" style="background-image: linear-gradient(to right,rgba(163, 22, 22, 0.40),rgba(255, 0, 0, 0.2)),url('../assets/img/crowd-pertutti.jpg'); grid-template-columns: 4fr 4fr"> 
 
         <div class="text-content">
-            Abbiamo pensato ad un metodo di crowdfunding funzionale sia per noi che per voi, i donatori. Questo nostro programma di 
-            supporto prevede tre grosse categorie di donatori, ognuna con i relativi bonus: Tier III, Tier II e Tier I. 
-            <br><br>Pare subito chiaro che chi donerà di più avrà di conseguenza più privilegi e premi, per ringraziarlo del suo supporto, passando dai vantaggi più "blandi" del Tier III alle vere e proprie esclusive del Tier I.        
+            <p>Abbiamo pensato ad un metodo di crowdfunding <b>funzionale</b> sia per noi che per voi, i donatori. Questo nostro programma di 
+            supporto prevede tre grosse <b>categorie</b> di donatori, ognuna con i relativi bonus: <b>Tier III</b>, <b>Tier II</b> e <b>Tier I</b>. 
+            <br><br>Pare subito chiaro che <b>chi donerà di più avrà più privilegi e premi</b>, per ringraziarlo del suo supporto, passando dai vantaggi più "blandi" del Tier III alle vere e proprie esclusive del Tier I.</p>       
         </div>
 
         <h1 class="title">
@@ -149,10 +149,10 @@ else
                 <div class="card-content ganesh" style=" min-height: 350px; text-align: center;">
                     <div>Il tuo sguardo è come quello della Rana Scambio: non hai idea di quello che stia succedendo.</div>
                     <div style="font-size: larger;"><br>1 - 99 €<br></div>
-                    <ul style="list-style-type: square; text-align: left;">
+                    <p><ul style="list-style-type: square; text-align: left;">
                         <li>Sconti speciali per l’intera collezione videoludica del mindROVER</li>
                         <li>Contenuti extra in-game per l’intera collezione videoludica del mindROVER</li>
-                    </ul>  
+                    </ul> </p> 
                 </div>
 
             </div>
@@ -164,11 +164,11 @@ else
                 <div class="card-content ganesh" style="min-height: 355px; text-align: center;">
                     <div>Come la Rana Imbrogliona, vuoi fare quel passo in più.</div>
                     <div style="font-size: larger;"><br>100 - 199 €<br></div>
-                    <ul style="list-style-type: square; text-align: left;">
+                    <p><ul style="list-style-type: square; text-align: left;">
                         <li>Accesso all’intera collezione di demo in early access</li>
                         <li>Sconti speciali per l’intera collezione del mindROVER</li>
                         <li>Contenuti extra per l’intera collezione del mindROVER</li>
-                    </ul>  
+                    </ul></p>
                 </div>
 
             </div>
@@ -180,13 +180,13 @@ else
                 <div class="card-content ganesh" style="text-align: center;">
                     <div>Sei Davvero Rospotente!</div>
                     <div style="font-size: larger;"><br>200€ ed oltre<br></div>
-                    <ul style="list-style-type: square; text-align: left;">
+                    <p><ul style="list-style-type: square; text-align: left;">
                         <li>Accesso all’intera collezione di demo in early access</li>
                         <li>Sconti speciali per l’intera collezione del mindROVER</li>
                         <li>Contenuti extra per l’intera collezione del mindROVER</li>
                         <li>Accesso all’intera collezione videoludica del mindROVER in maniera totalmente gratuita</li>
                         <li>Possibilità di preordinare il mindROVER e riceverlo in early access fino ad un mese prima dell’effettiva uscita sul mercato</li>
-                    </ul>  
+                    </ul></p>  
                 </div>
 
             </div>
@@ -205,11 +205,11 @@ else
     <div class="text-container" style="background-image: linear-gradient(to right,rgba(163, 22, 22, 0.40),rgba(255, 0, 0, 0.2)),url('../assets/img/crowd-precisazioni.jpg'); grid-template-columns: 4fr 4fr"> 
         
         <div class="text-content">
-            Con "collezione" ci riferiamo ai contenuti disponibili all’uscita del mindROVER, escluse quindi le pubblicazioni future. 
+            <p>Con "collezione" ci riferiamo ai contenuti disponibili all’uscita del mindROVER, <b>escluse quindi le pubblicazioni future</b>. 
             Per consultare la lista dei progetti che saranno commercializzati assieme all’uscita del mindRover, passa dalla sezione notizie!
             <br><br>Quando parliamo di early access a contenuti come le demo, intendiamo la possibilità di utilizzare i prodotti che 
-            usciranno per mindROVER, in anteprima, sul vostro computer. In questo modo, potrete provare in anteprima giochi e applicazioni 
-            in corso di sviluppo, anche per iniziare a farvi un’idea di dove il mindROVER andrà a parare. E tutto questo già da adesso!
+            usciranno per mindROVER, <b>in anteprima</b>, sul vostro computer. In questo modo, potrete provare in anteprima giochi e applicazioni 
+            in corso di sviluppo, anche per iniziare a farvi un’idea di dove il mindROVER andrà a parare. <b>E tutto questo già da adesso!</b></p>
          </div>
 
          <h1 class="title">
@@ -231,12 +231,12 @@ else
         </h1>
 
         <div class="text-content">
-            La ciliegina sulla torta è il progetto Top Donators: si tratta di premiare quei donatori che più hanno creduto in noi. 
-            I Tier I con le donazioni più alte, non solo saranno ben visibili qui sul sito, ma avranno anche dei riconoscimenti nelle 
-            nostre opere! Queste persone potrebbero scoprire che il proprio nome (o nickname) è lo stesso di quel Boss del Dungeon Segreto 
+            <p>La ciliegina sulla torta è il progetto <b>Top Donators</b>: si tratta di premiare quei donatori che più hanno creduto in noi. 
+            I Tier I con le <b>donazioni più alte</b>, non solo saranno <b>ben visibili qui sul sito</b>, ma avranno anche dei <b>riconoscimenti nelle 
+            nostre opere</b>! Queste persone potrebbero scoprire che il proprio nome (o nickname) è lo stesso di quel Boss del Dungeon Segreto 
             di Golarion, o lo stesso del sergente maggiore di Toad of Duty!
             <br><br>
-            Questo è l'ennesimo modo per ringraziarvi e dimostrarvi quanto il vostro supporto sia importante per noi.
+            Questo è l'ennesimo modo per ringraziarvi e dimostrarvi quanto il vostro supporto sia importante per noi.</p>
         </div>
 
         <!-- Bottone donazioni -->

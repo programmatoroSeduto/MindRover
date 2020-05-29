@@ -62,7 +62,7 @@ require_once('../php/modules/navbar.php');
             <div class="loginform-body">
                 <!-- <label for="email">Email: </label><input type="email" name="email"> -->
                 <div class="form-container">
-                    <input type="number" name="donation" id="amount" placeholder="Inserisci la somma che vuoi donare!" min="1.00" max="1000.00"class="form">
+                    <input type="number" name="donation" id="amount" placeholder="Inserisci la somma che vuoi donare!" class="form">
                     <i class="fas fa-coins" style="top: 2.2vh;"></i>
                 </div>
                 <p id="error" class="auth-error" style="text-align: right; font-size: 1rem; letter-spacing: 0.2rem; background-color: rgb(212, 211, 211); border-radius: 2.5%;">

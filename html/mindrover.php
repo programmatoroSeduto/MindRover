@@ -68,15 +68,15 @@ else
     <div class="text-container" style="background-image: linear-gradient(to right,rgba(255, 0, 0, 0.30),rgba(0, 4, 255, 0.20)),url('../assets/img/mr-cos.png'); grid-template-columns: 5fr 4fr">
         
         <h1 class="title" style="text-align: right;">
-            Cos'è mindROVER? 
+            <img src="../assets/img/mindROVER.png" style="width: 666px">
         </h1>
 
         <div class="text-content">
-            Il progetto più folle e ambizioso di Frog Studios: il mindROVER. Se cogliete la citazione “link: start!”, allora siete già 
-            sulla buona strada per capire come funziona. Quello che propone è qualcosa senza precedenti: basta sensori supplementari, 
-            basta pedane per il movimento. 
-            <br><br>La nostra idea prevede solamente l’uso del nostro casco e, a quel punto, sarà letteralmente 
-            come un sogno. Solo che, questa volta, sarete voi e solo voi a scegliere il Mondo dove catapultarvi!
+            <p>Il progetto più folle e ambizioso di Frog Studios: il mindROVER. Se cogliete la citazione “link: start!”, allora siete già 
+            sulla buona strada per capire come funziona. Quello che propone è qualcosa senza precedenti: <b>basta sensori supplementari</b>, 
+            <b>basta pedane per il movimento</b>. 
+            <br><br>La nostra idea prevede <b>solamente l’uso del nostro casco</b> e, a quel punto, sarà letteralmente 
+            come un sogno. Solo che, questa volta, sarete voi e solo voi a scegliere il Mondo dove catapultarvi!</p>
         </div>
         
     </div>
@@ -89,12 +89,12 @@ else
     <!-- Scheda -->
     <div class="text-container" style="background-image: linear-gradient(to left,rgba(255, 0, 0, 0.30),rgba(0, 4, 255, 0.20)),url('../assets/img/mr-sistema.jpg'); grid-template-columns: 3fr 5fr;">
         <div class="text-content">
-            Il mindROVER, tramite una raffinata e rivoluzionaria tecnologia di transricevitori, prenderà contatto con il 
-            vostro cervello per reindirizzare, in tutta sicurezza, gli impulsi cerebrali dal casco e verso il casco. 
-            <br><br>Cosa vuol dire? 
+            <p>Il mindROVER, tramite una raffinata e rivoluzionaria tecnologia di transricevitori, prenderà contatto con il 
+            vostro cervello per reindirizzare gli impulsi cerebrali dal casco e verso il casco, <b>in tutta sicurezza</b>. 
+            <br><br><i>Cosa vuol dire? </i>
             Vuol dire che mentre vedrete le immagini in realtà virtuale del casco, potrete interagire con il Mondo che vi si presenterà 
-            a 360 gradi e in completa libertà, come se steste sognando. E rimanendo fedeli al paragone appena fatto, il vostro corpo 
-            rimarrà in realtà fermo, in totale sicurezza.         
+            a 360 gradi e <b>in completa libertà</b>, come se steste sognando. E rimanendo fedeli al paragone appena fatto, il vostro corpo 
+            rimarrà in realtà fermo, senza nessun pericolo.</p>         
         </div>
 
         <h1 class="title" style="text-align: right;">
@@ -115,12 +115,12 @@ else
         </h1>
 
         <div class="text-content">
-            Ovviamente sappiamo quanto sia delicata e pericolosa una tale tecnologia, difatti il nostro crescente team si avvale anche 
-            di altri esperti in materie differenti, non solo di programmatori. Un progetto così ambizioso deve essere raffinato quanto 
-            sicuro, l’esperienza che vogliamo offrire vuole essere indimenticabile quanto sicura. 
+            <p>Ovviamente sappiamo quanto sia delicata e pericolosa una tale tecnologia, difatti il nostro crescente team si avvale anche 
+            di esperti in materie differenti, non solo di programmatori. Un progetto così ambizioso deve essere <b>raffinato quanto 
+            sicuro</b>, l’esperienza che vogliamo offrire vuole essere <b>indimenticabile quanto sicura</b>. 
             <br><br>Quello che vogliamo ottenere è un prodotto che possa catapultare, nella maniera più realistica possibile, 
             chiunque nel più vasto numero di Mondi immaginari possibili: qualsiasi cosa tu sogni di poter vivere che trascende 
-            l’ordinaria e comune realtà, mindRover potrà realizzarla. 
+            l’ordinaria e comune realtà, mindROVER potrà realizzarla.</p>
         </div>
         
     </div>
@@ -133,14 +133,14 @@ else
     <!-- Scheda -->
     <div class="text-container" style="background-image: linear-gradient(to left,rgba(255, 0, 0, 0.30),rgba(0, 4, 255, 0.20)),url('../assets/img/mr-pertutti.jpg'); grid-template-columns: 3fr 5fr"> 
         <div class="text-content">
-            Noi di Frog Studios abbiamo in mente anche altre applicazioni per il mindROVER.
+            <p>Noi di Frog Studios abbiamo in mente anche altre applicazioni per il mindROVER.
             Per esempio, siamo fieri di riferirci anche a quelle persone con gravi handicap e difficoltà motorie: lavoriamo per fornire 
-            uno strumento che possa anche ridare la possibilità di camminare, anche se solo virtualmente, a chi non può più, 
-            o anche aiutare nella riabilitazione motoria. 
-            <br><br>Vogliamo che il nostro mindRover possa regalare emozioni forti anche e 
-            soprattutto a coloro che hanno avuto delle grosse sfortune nella loro vita, e saremo fieri e decisi a dare anima e corpo 
+            uno strumento che possa anche <b>ridare la possibilità di camminare</b>, anche se solo virtualmente, a chi non può più, 
+            o anche <b>aiutare nella riabilitazione motoria</b>. 
+            <br><br>Vogliamo che il nostro mindROVER possa regalare emozioni forti anche e 
+            soprattutto a coloro che hanno avuto delle grosse sfortune nella loro vita, e siamo fieri e decisi a dare anima e corpo 
             perché questa particolare implicazione del nostro progetto sia una parte rilevante e ben strutturata, una volta che sarà in 
-            commecio.        
+            commecio.</p>        
         </div>
 
         <h1 class="title" style="text-align: right;">

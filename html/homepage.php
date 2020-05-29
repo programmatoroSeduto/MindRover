@@ -200,9 +200,9 @@ else
         </h1>
 
         <div class="text-content">
-            Frog Studios è una famiglia, e anche voi da casa potete far parte del nostro team. 
-            Supportaci oggi stesso, ottenendo una vasta gamma di vantaggi e accessi anticipati ed esclusivi a mindROVER! 
-            <a href="../HTML/crowdfunding.php"><i class="d">Scopri di più</i></a>
+            <p><b>Frog Studios è una famiglia</b>, e anche voi da casa potete far parte del nostro team. 
+            <b>Supportaci oggi stesso</b>, ottenendo una vasta gamma di vantaggi e accessi anticipati ed esclusivi a mindROVER! 
+            <a href="../HTML/crowdfunding.php"><i class="d">Scopri di più</i></a></p>
         </div>
     </div>
 
@@ -215,9 +215,9 @@ else
     <div class="text-container" style="background-image: linear-gradient(to left,rgba(255, 174, 0, 0.3),rgba(255, 0, 0, 0.20)),url('../assets/img/home-unisciti.jpg'); grid-template-columns: 5fr 5fr"> 
         
         <div class="text-content">
-            Pensi di avere quel che serve per portare grosse novità nel team Frog Studios? Facci subito sapere le tue abilità! 
+            <p>Pensi di avere quel che serve per portare grosse novità nel team Frog Studios? <b>Facci subito sapere le tue abilità!</b>
             Frog Studios è sempre alla ricerca di nuove menti per i suoi ranghi! 
-            <a href="../HTML/frogstudios.php"><i class="d">Scopri di più</i></a>
+            <a href="../HTML/frogstudios.php"><i class="d">Scopri di più</i></a></p>
         </div>
 
         <h1 class="title">

@@ -165,7 +165,7 @@ if($is_author)
                                 
                             </div>
                         </div>
-                        <div class="modal-footer"><!-- solo per decorazione --></div>
+                        <div class="modal-footer">Non trovi il tuo stile? Vuoi suggerircene uno? <b>Contattaci!</b></div>
                     </div>
                 </div>
             
@@ -243,13 +243,13 @@ if($is_author)
         <div class="tab">
             <!-- voci generali per il profilo privato -->
             <button class="tablinks active" onclick="activator('#s1', this); changeTitlePage('Benvenuto <?php echo $nickname; ?>!');" title="Un'occhiata generale al tuo profilo.">Il tuo profilo</button>
-            <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('Impostazioni di Profilo');" title="Puoi modificare da qui le tue credenziali, il tuo nickname, la tua bio, e molto altro.">Modifica il tuo profilo</button>
-            <button class="tablinks" onclick="activator('#s3', this); changeTitlePage('Donazioni');" title="Vedi quante donazioni hai fatto, quando le hai fatte, la tua posizione in classifica, e molto altro.">Le tue donazioni</button>
+            <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('Impostazioni di Profilo');" title="Puoi modificare da qui le tue credenziali, il tuo nickname, e molto altro.">Modifica il tuo profilo</button>
+            <button class="tablinks" onclick="activator('#s3', this); changeTitlePage('Donazioni');" title="Vedi quante donazioni hai fatto, quando le hai fatte, e molto altro.">Le tue donazioni</button>
 
             <?php if($is_author): ?>
                 <!-- voci riservate agli autori -->
                 <button class="tablinks" onclick="activator('#s4', this); changeTitlePage('I miei articoli');" tilte="Una lista di tutti gli articoli che hai scritto finora.">I miei articoli</button>
-                <button class="tablinks" onclick="activator('#s5', this); changeTitlePage('Scrivi un articolo');" tilte="Puoi pubblicare un nuovo articolo da qui.">Scrivi un articolo</button>
+                <button class="tablinks" onclick="activator('#s5', this); changeTitlePage('Scrivi un articolo');" tilte="Come pubblicare un nuovo articolo.">Scrivi un articolo</button>
             <?php endif ?>
 
             <!-- logout -->
@@ -321,7 +321,7 @@ if($is_author)
 
                         <div title="Evvai!">Quante donazioni hai effettuato:</div> <div title="evviva!"><?php echo $crowd_count; ?></div>
                         <div title="Evviva!">Somma donata alla causa:</div> <div title="evvai!"><?php echo $crowd_sum; ?> €</div>
-                        <div title="Scala la vetta! E soprattutto, vantatene coi tuoi amici"><b>Posizione classifica Top Donators:</b></div> <div title="Scala la vetta! E soprattutto, vantatene coi tuoi amici"><b>n° <?php echo $crowd_rank; ?></b></div>
+                        <div title="Scala la vetta! E soprattutto, vantatene coi tuoi amici"><b>Posizione classifica Top Donators:</b></div> <div title="Scala la vetta! E soprattutto, vantatene coi tuoi amici"><b><i>prossimamente...</i></b></div>
                     <?php endif ?>
                 </div>
 
