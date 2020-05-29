@@ -31,6 +31,17 @@ $dictator = false;
         {
             flex: 1;
         }
+
+        .example::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE,Edge e Firefox  */
+        .example {
+            overflow: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none; /* Firefox 64 */
+        }
     </style>
 </head>
 
@@ -558,7 +569,7 @@ if($is_author)
             </div>
 
             <!-- Donazioni -->
-            <div class="tabcontent kali" id="s3">
+            <div class="tabcontent kali example" id="s3">
                 <div style="display: flex; flex-direction: column;">
                     <?php
                         if($supporter)
@@ -592,7 +603,7 @@ if($is_author)
             
             <?php if($is_author): ?>
             <!-- Raccolta articoli postati -->
-            <div class="tabcontent kali" id="s4">
+            <div class="tabcontent kali example" id="s4">
                 <div style="display: flex; flex-direction: column;">
                     <?php
                         if($is_author)
@@ -624,7 +635,7 @@ if($is_author)
             </div>
             
             <!-- Postare un nuovo articolo -->
-            <div class="tabcontent kali" id="s5">
+            <div class="tabcontent kali example" id="s5">
                 <div style="display: block;">
                     <h1 style="font-family: ganesh">Ehi! Vuoi scrivere un nuovo articolo?</h1>
                     <p>Fantastico! Ti spiego come fare:</p>
