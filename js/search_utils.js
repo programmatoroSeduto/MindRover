@@ -140,8 +140,8 @@ function getUserHTML(u_url, u_icon, u_nick, u_status, u_is_supporter, u_is_autho
                     +'<div>'
                         +'<h1>' + u_nick + '</h1>'
                         +'<span style="padding: 0 1.5rem;"><!-- separatore --></span>'
-                        + (u_is_supporter ? '<span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>' : '')
-                        + (u_is_author ? '<span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>' : '')
+                        + (u_is_supporter >0 ? '<span class="userinfo-tag tag-supporter"><i class="fas fa-frog"></i> supporter </span>' : '')
+                        + (u_is_author >0 ? '<span class="userinfo-tag tag-author"><i class="fas fa-frog"></i> autore </span>' : '')
                     +'</div>'
                     +'<p style="margin-top: 1rem; width: 70%;"><i>' + u_status + '</i></p>'
                 +'</div>'

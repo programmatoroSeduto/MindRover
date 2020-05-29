@@ -440,7 +440,7 @@ $data[] = array(
         <i>Senta, stiamo cercando un bambino...</i><br>
         <b>No continua, Signor Superman lui no qui, no casa...</b><br>
         <i>Sì, va bene, va bene... Può dargli almeno questo volantino?</i><br>
-        <b>Grazie nooooo, noooo io non compra, io non ha soldi.</b><br>
+        <b>Grazie nooooo, noooo io no compra, io no ha soldi.</b><br>
         <i>Coraggio, lo prenda! E se vede questo bambino...</i><br>
         <b>Nooooooo, io deto nooooooooooo...</b><br>',
         'flag_anonimo' => false,
