@@ -4229,7 +4229,7 @@ if(!isset($_GET['amount']))
 $_GET['amount'] = sanitize($_GET['amount']);
 //echo 'amount = ' . $_GET['amount'] . ' ';
 
-if($_GET['amount'] < 0)
+if($_GET['amount'] <= 0)
 {
     header('location: ../html/donation.php');
     die();
