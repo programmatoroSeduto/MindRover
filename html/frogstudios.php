@@ -24,6 +24,12 @@ $ganesh = "CHI SIAMO";
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="Vuoi sapere di più su di noi? Questa è la pagina giusta!">
+    <meta name="keywords" content="ROVER, mindROVER, mind ROVER, frog, frogs, frogstudios, frog studios, videogames, videogame, vr, virtual, virtualreality, virtual reality, programming, golarion, toad of duty, tod, videogiochi, pc gaming, pc, gaming, console, chi siamo, la società">
+
     <style>
 
         /* Bottone donazione */

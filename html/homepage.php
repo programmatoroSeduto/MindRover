@@ -30,6 +30,12 @@ $ganesh = "HOMEPAGE";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../js/carousel.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="Benvenuto nella Homepage della start-up Frog Studios, giovane casa produttrice di videogiochi e della console a realtà virtuale mindROVER. Prego, fai come se fossi a casa tua!">
+    <meta name="keywords" content="ROVER, mindROVER, mind ROVER, frog, frogs, frogstudios, frog studios, videogames, videogame, vr, virtual, virtualreality, virtual reality, programming, golarion, toad of duty, tod, videogiochi, pc gaming, pc, gaming, console">
+
     <style>
 
     .newsLink:link, .newsLink:visited{

@@ -24,6 +24,12 @@ $ganesh = "CROWDFUNDING";
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="Se sei interessato al nostro sistema di crowdfunding per supportarci, troverai tutto ciò che ti serve sapere su questa pagina.">
+    <meta name="keywords" content="ROVER, mindROVER, mind ROVER, frog, frogs, frogstudios, frog studios, videogames, videogame, vr, virtual, virtualreality, virtual reality, programming, golarion, toad of duty, tod, videogiochi, pc gaming, pc, gaming, console, crowdfunding, support, supporto, money raise, raccolta fondi">
+
     <style>
     
     .btn{

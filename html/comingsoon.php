@@ -24,6 +24,10 @@ $ganesh = "COMINGSOON";
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+
     <style>
 
     .title404{

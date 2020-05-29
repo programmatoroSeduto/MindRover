@@ -30,6 +30,11 @@ $ganesh = "SEARCH";
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="Cerchi qualcosa o qualcuno in particolare? Un articolo interessante, magari? Sei nel posto giusto!">
+
     <title>Cerca ...</title>
 </head>
 

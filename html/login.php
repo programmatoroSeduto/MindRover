@@ -20,6 +20,11 @@ require_once('../php/modules/navbar.php');
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="Bentornato amico mio! Fai subito qui il login!">
+
     <title>Accedi</title>
 </head>
 <body class="login-bg">

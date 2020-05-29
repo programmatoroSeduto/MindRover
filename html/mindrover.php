@@ -23,6 +23,13 @@ $ganesh = "MINDROVER";
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="In questa pagina potrete scoprire tutto quanto sul mindROVER, il rivoluzionario ed eccezionale sistema di intrattenimento in realtà virtuale firmato Frog Studios!">
+    <meta name="keywords" content="ROVER, mindROVER, mind ROVER, frog, frogs, frogstudios, frog studios, videogames, videogame, vr, virtual, virtualreality, virtual reality, programming, golarion, toad of duty, tod, videogiochi, pc gaming, pc, gaming, console, vr gaming, vr console, vr games">
+
 </head>
 
 <body>

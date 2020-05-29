@@ -20,6 +20,11 @@ require_once('../php/modules/navbar.php');
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="Non sei ancora registrato? Provvedi subito ed entra nella grande e calorosa famiglia di Frog Studios!">
+
     <title>Registrazione</title>
 </head>
 <body  class="login-bg">

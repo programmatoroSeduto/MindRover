@@ -23,6 +23,11 @@ require_once('../php/modules/navbar.php');
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+    <meta name="author" content="Francesco Ganci, Lorenzo Terranova">
+    <meta name="description" content="Vuoi supportarci? Questa è la pagina perfetta per te!">
+
     <style>
 
     .h2Donation

@@ -112,6 +112,10 @@ $time_subscr = (new DateTime($profilo['data_iscrizione']))->format('h:m');
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- METADATI -->
+    <link rel="icon" href="../assets/img/frog-icon.png">
+
 </head>
 <body>
     <?php
