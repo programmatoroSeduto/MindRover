@@ -316,6 +316,13 @@ $data[] = array(
     'colore2' => array(0, 45, 205)
 );
 
+$data[] = array(
+    'path' => '../assets/avatar/bravagiovannabrava.png', 
+    'banner' => array(255, 118, 0),
+    'colore1' => array(0, 255, 255),
+    'colore2' => array(0, 45, 205)
+);
+
 
 
 

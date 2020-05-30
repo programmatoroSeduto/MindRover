@@ -244,7 +244,10 @@ if($is_author)
             <!-- voci generali per il profilo privato -->
             <button class="tablinks active" onclick="activator('#s1', this); changeTitlePage('Benvenuto <?php echo $nickname; ?>!');" title="Un'occhiata generale al tuo profilo.">Il tuo profilo</button>
             <button class="tablinks" onclick="activator('#s2', this); changeTitlePage('Impostazioni di Profilo');" title="Puoi modificare da qui le tue credenziali, il tuo nickname, e molto altro.">Modifica il tuo profilo</button>
-            <button class="tablinks" onclick="activator('#s3', this); changeTitlePage('Donazioni');" title="Vedi quante donazioni hai fatto, quando le hai fatte, e molto altro.">Le tue donazioni</button>
+
+            <?php if($supporter): ?>
+                <button class="tablinks" onclick="activator('#s3', this); changeTitlePage('Donazioni');" title="Vedi quante donazioni hai fatto, quando le hai fatte, e molto altro.">Le tue donazioni</button>
+            <?php endif ?>
 
             <?php if($is_author): ?>
                 <!-- voci riservate agli autori -->
@@ -253,7 +256,12 @@ if($is_author)
             <?php endif ?>
 
             <!-- logout -->
-            <button class="ghandi" style="<?php if(!$is_author) echo 'flex: 4;'; else echo 'flex: 2;' ?>"> </button>
+            <button class="ghandi" style="<?php 
+                if(!$is_author && $supporter) echo 'flex: 4;'; 
+                elseif($is_author && !$supporter) echo 'flex: 3';
+                elseif($is_author && $supporter) echo 'flex: 2';
+                else echo 'flex: 5;' 
+            ?>"> </button>
             <button class="tablinks" onclick="location.href='../php/logout.php';"><p style="color: blue;">Logout</p></button>
         </div>
 
