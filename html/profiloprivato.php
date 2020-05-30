@@ -640,6 +640,12 @@ if($is_author)
             <!-- Postare un nuovo articolo -->
             <div class="tabcontent kali example" id="s5">
                 <div style="display: block;">
+                    <!-- ELIMINARE PRIMA DELL'ESAME! -->
+                    <p><i>Pssssss ehi tester! Usa questo form per scrivere un articolo, <a href="./createArticle.php"><b>è qui!</b></a></i></p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <h1 style="font-family: ganesh">Ehi! Vuoi scrivere un nuovo articolo?</h1>
                     <p>Fantastico! Ti spiego come fare:</p>
                     <ol>
