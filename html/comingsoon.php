@@ -87,6 +87,9 @@ $ganesh = "COMINGSOON";
                 case 'quattrocentoquattro':
                     echo 'Ci sono 404 motivi per cui questa pagina non esiste. <br> (eh già, hai capito bene)';
                 break;
+                case 'no_article':
+                    echo 'L\'articolo che tanto volevi leggere ... l\'ho cancellato, spiace? spiace.';
+                break;
             }
             echo '</p>';
         }

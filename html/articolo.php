@@ -5,13 +5,15 @@ $ganesh = "SEARCH";
 if(!isset($_GET['code']))
 {
     //header('location: ./comingsoon.php');
-    echo 'niente get del code';
+    //echo 'niente get del code';
+    hader('location: ./comingsoon.php?error=no_article');
     die();
 }
 elseif(!is_numeric($_GET['code']))
 {
     //header('location: ./comingsoon.php');
-    echo 'code non valido.';
+    //echo 'code non valido.';
+    hader('location: ./comingsoon.php?error=no_article');
     die();
 }
 
@@ -24,7 +26,8 @@ $dbms = connect();
 $articolo = (new Articoli($dbms))->getArticle($_GET['code']);
 if(!$articolo)
 {
-    echo 'l\'articolo selezionato non esiste.';
+    //echo 'l\'articolo selezionato non esiste.';
+    hader('location: ./comingsoon.php?error=no_article');
     die();
 }
 $profilo = (new ProfiliUtenti($dbms))->getProfileDataById($articolo['id_autore']);
