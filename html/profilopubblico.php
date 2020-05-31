@@ -6,14 +6,14 @@ $dictator = false;
 
 if(!isset($_GET['code']))
 {
-    //header('location: ./comingsoon.php');
-    echo 'niente get del code';
+    header('location: ./comingsoon.php?error=quattrocentoquattro');
+    // echo 'niente get del code';
     die();
 }
 elseif(!is_numeric($_GET['code']))
 {
-    //header('location: ./comingsoon.php');
-    echo 'niente get del code';
+    header('location: ./comingsoon.php?error=quattrocentoquattro');
+    // echo 'niente get del code';
     die();
 }
 ?>
@@ -31,11 +31,17 @@ $stile = new ImgProfilo($dbms);
 $donazioni = new Donazioni($dbms);
 
 $profilo = $profilo->getProfileDataById($_GET['code']);
+if ($profilo['flag_anonimo'])
+{
+    header('location: ./comingsoon.php?error=profilo_anonimo');
+    die();
+}
+
 $stile = $stile->getStyle($profilo['id_img_profilo']);
 if(!$profilo || !$stile)
 {
-    //header('location: ./comingsoon.php');
-    echo 'niente get del code';
+    header('location: ./comingsoon.php?error=quattrocentoquattro');
+    // echo 'niente get del code';
     die();
 }
 $donazioni = $donazioni->getDonationAmountFrom($_GET['code']);

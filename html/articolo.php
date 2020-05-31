@@ -6,14 +6,14 @@ if(!isset($_GET['code']))
 {
     //header('location: ./comingsoon.php');
     //echo 'niente get del code';
-    hader('location: ./comingsoon.php?error=no_article');
+    header('location: ./comingsoon.php?error=no_article');
     die();
 }
 elseif(!is_numeric($_GET['code']))
 {
     //header('location: ./comingsoon.php');
     //echo 'code non valido.';
-    hader('location: ./comingsoon.php?error=no_article');
+    header('location: ./comingsoon.php?error=no_article');
     die();
 }
 
@@ -27,7 +27,7 @@ $articolo = (new Articoli($dbms))->getArticle($_GET['code']);
 if(!$articolo)
 {
     //echo 'l\'articolo selezionato non esiste.';
-    hader('location: ./comingsoon.php?error=no_article');
+    header('location: ./comingsoon.php?error=no_article');
     die();
 }
 $profilo = (new ProfiliUtenti($dbms))->getProfileDataById($articolo['id_autore']);
@@ -99,7 +99,7 @@ require_once('../php/modules/altriArticoli.php');
                 <h1 class="articleTitle"><?php echo $titolo; ?></h1>
                 <p class="articleTitle" style="padding-bottom: 1vh"><?php echo $sottotitolo; ?></p>
                 <div class="articleTags">
-                    <p><i><?php echo $nick_autore; ?></i> || <?php echo $data_pubblicazione; ?> alle <?php echo $ora_pubblicazione; ?> || <?php foreach($tags as $tag) { echo inserisci_tag($tag); } ?> </p> 
+                    <p> <a href="./profilopubblico.php?code=<?php echo $articolo['id_autore']; ?>"><i><?php echo $nick_autore; ?></i> </a>  || <?php echo $data_pubblicazione; ?> alle <?php echo $ora_pubblicazione; ?> || <?php foreach($tags as $tag) { echo inserisci_tag($tag); } ?> </p> 
                 </div>
                 
             </div>

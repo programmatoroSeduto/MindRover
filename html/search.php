@@ -152,7 +152,7 @@ $ganesh = "SEARCH";
                                 <option value="user">Utenti</option>
                             </select>
                         </div>
-                        <span style=" font-family: ganesh; cursor: help" title="Questa opzione permette di visualizzare tutti i contenuti più recenti del server">Ricerca totale:</span>
+                        <span style=" font-family: ganesh; cursor: help" title="Questa opzione permette di visualizzare tutti i contenuti più recenti del server">Ricerca totale (articoli):</span>
                         <input type="checkbox" id="use_all_data" name="use_all_data" value="1">
                         <span style=" font-family: ganesh; cursor: help" title="Questa opzione permette di visualizzare tutti i contenuti che hanno precisamente gli attributi da te inseriti">Modalità strict: </span>
                         <input type="checkbox" id="strict" name="strict" value="1">

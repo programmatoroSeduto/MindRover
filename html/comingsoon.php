@@ -90,6 +90,10 @@ $ganesh = "COMINGSOON";
                 case 'no_article':
                     echo 'L\'articolo che tanto volevi leggere ... l\'ho cancellato, spiace? spiace.';
                 break;
+                case 'profilo_anonimo':
+                    echo 'TU NON PUOI PASSARE! Questo profilo è anonimo...';
+                break;
+
             }
             echo '</p>';
         }
