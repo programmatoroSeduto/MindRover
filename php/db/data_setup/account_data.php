@@ -584,7 +584,7 @@ $data[] = array(
         'nome' => 'Gerheim',
         'cognome' => 'Hartfrog',
         'stato' => 'Lawrence? Lawrence come, d\'Arabia?',
-        'descrizione' => 'Io sono il sergente maggiore Hartman, vostro Capo Istruttore. Da questo momento potete parlare soltanto quando vi sarà richiesto, e la prima e l\'ultima parola che dovrà uscire dalle vostre fogne sarà "Signore". Tutto chiaro luridissimi vermi?',
+        'descrizione' => 'Io sono il sergente maggiore Hartfrog, vostro Capo Istruttore. Da questo momento potete parlare soltanto quando vi sarà richiesto, e la prima e l\'ultima parola che dovrà uscire dalle vostre fogne sarà "Signore". Tutto chiaro luridissimi vermi?',
         'flag_anonimo' => false,
         'id_img_profilo' => 41
     ),
